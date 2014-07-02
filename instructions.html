@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+	<title>Mobile CME - Instructions Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body id="mobileCME">
+	<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+	<div class="container-fluid" id="content">
+		<div id="hdr" class="row">
+			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+				<a href="#back-btn" onclick="window.history.back()" class="navicons icon-back">back</a>
+			</div>
+			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+				<span class="navicons icon-sound on">sound</span>
+			</div>
+			<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				<div class="page-ctn"><span class="pgenum">1</span> of <span class="num">13</span></div>
+				<div class="progress">
+				  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+				    <span class="sr-only">60% Complete</span>
+				  </div>
+				</div>
+			</div>
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<a class="btn-default next-control">Next</a>
+			</div>
+		</div>
+		<div class="row"><div class="headline"><p>Virtual Patient Encounters: Improving Outcomes in CRC Patients<p></div></div>
+		
+
+		<div class="row row-offcanvas row-offcanvas-left">
+			<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+			<div class="list-group">
+				<a href="#" class="list-group-item active">Link</a>
+				<a href="#" class="list-group-item">Link</a>
+				<a href="#" class="list-group-item">Link</a>
+				<a href="#" class="list-group-item">Link</a>
+			</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-9">
+			<div id="main-content" class="row">
+				<div class="instructions content-wrapper">
+		            <ul class="instructionslist list-menu">
+		                <li class="topleft instructionposition"><span class="arrow icon-arrow-up"></span><strong>Mute</strong> Audio</li>
+		                <li class="topright instructionposition"><span class="arrow icon-arrow-up"></span>Click <strong>Next</strong> or swipe left to advance</li>
+		                <li class="imginstructions"><img src="images/img-instructions.png" /></li>
+		                <li class="bottomleft instructionposition"></span>Go to <strong>Next Program</strong> in Series<span class="arrow icon-arrow-down"></li>
+		                <li class="bottomright instructionposition"><strong>Skip</strong> to Post Test<span class="arrow icon-arrow-down"></span></li>
+		            </ul>
+		        </div>
+			</div>
+			</div>
+		</div>
+		<nav id="ftr" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+			<footer>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<a href="#" class="nextprogram" data-toggle="offcanvas"><span class="glyphicon glyphicon-list"></span></a>
+					 <!--<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>-->
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href="privacy.html">Privacy</a>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href="feedback.html">Feedback</a>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<div>Get Certificate&nbsp;&#62;</div>
+				</div>
+			</footer>
+		</nav>
+
+	</div>
+	<!--<script src="js/jquery.js"></script>-->
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('[data-toggle="offcanvas"]').click(function (event) {
+				event.preventDefault();
+				if ($("#sidebar").position().left < -1.0) {
+					$('.row-offcanvas').toggleClass('active');
+				} else {
+					$('.row-offcanvas').removeClass('active');
+				}
+			});
+		});
+	</script>
+</body><!--#mobileCME-->
+</html>
