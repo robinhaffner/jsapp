@@ -4,7 +4,7 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
-	<title>Mobile CME - faculty Page</title>
+	<title>Mobile CME - incorrect Page</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -51,28 +51,62 @@
 
 		<div class="row row-offcanvas row-offcanvas-left">
 			<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-			<div class="list-group">
-				<a href="#" class="list-group-item active">Link</a>
-				<a href="#" class="list-group-item">Link</a>
-				<a href="#" class="list-group-item">Link</a>
-				<a href="#" class="list-group-item">Link</a>
-			</div>
+				<div class="sidebar-hdr">
+					<h1>Company Logo</h1>
+					<p>Virtual Patient Encounters: Improving Outcomes in CRC Patients<p>
+				</div>
+				<div class="list-group sidebar-list">
+					<div class="list-group-item active">
+						<div class="media">
+						  <a class="pull-left" href="#">
+						    <img class="media-object" src="images/fpo/fpo-img-1.jpg" alt="">
+						  </a>
+						  <div class="media-body">
+						    <h4 class="media-heading">Media heading</h4>
+						    <p>Improving Outcomes in CRC Patients</p>
+						  </div>
+						</div>
+					</div>
+
+					<div class="list-group-item">
+						<div class="media">
+						  <a class="pull-left" href="#">
+						    <img class="media-object" src="images/fpo/fpo-img-2.jpg" alt="">
+						  </a>
+						  <div class="media-body">
+						    <h4 class="media-heading">Media heading</h4>
+						    <p>Improving Outcomes in CRC Patients</p>
+						  </div>
+						</div>
+					</div>
+
+					<div class="list-group-item">
+						<div class="media">
+						  <a class="pull-left" href="#">
+						    <img class="media-object" src="images/fpo/fpo-img-1.jpg" alt="">
+						  </a>
+						  <div class="media-body">
+						    <h4 class="media-heading">Media heading</h4>
+						    <p>Improving Outcomes in CRC Patients</p>
+						  </div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<div class="col-xs-12 col-sm-9">
 			<div id="main-content" class="row">
-				<div class="content-wrapper case-study">
-		            <h1>Faculty</h1>
-		            <div class="row">
-		              <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1"><img src="images/fpo/fpo-img-1.jpg" alt=""></div>
-		              <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-		                <h3>Cathy Eng, MD, FACP</h3>
-		                <p>Associate Professor Department of Gastrointestinal (GI) Medical Oncology The University of Texas MD Anderson Cancer Center Houston, Texas</p>
-		                <h4>Sources of Funding for Research:</h4>
-		                <p>Daiichi Sankyo, Inc.; Keryx Biopharmaceuticals, Inc. Consulting Agreements: Bayer HealthCare Pharmaceuticals</p>
-		              </div>
-		            </div><!-- /grid-a -->
-		        </div>
+				<div class="content-wrapper">
+					<h1 class="qhdr icon-question incorrect">Incorrect</h1>
+					<ul class="list-menu">
+						<li>Married, two stepchildren</li>
+						<li>Works part-time in retail clothing store</li>
+						<li>Non-smoker</li>
+						<li>Blood pressure controlled with medication</li>
+						<li>Diagnosed with stage IIIa CRC, 3 mos ago</li>
+						<li>Hemicolectomy performed (successful, no complicantions)</li>
+		            </ul>
+				</div>
 			</div>
 			</div>
 		</div>
@@ -100,17 +134,5 @@
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('[data-toggle="offcanvas"]').click(function (event) {
-				event.preventDefault();
-				if ($("#sidebar").position().left < -1.0) {
-					$('.row-offcanvas').toggleClass('active');
-				} else {
-					$('.row-offcanvas').removeClass('active');
-				}
-			});
-		});
-	</script>
 </body><!--#mobileCME-->
 </html>

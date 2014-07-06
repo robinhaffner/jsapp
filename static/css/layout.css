@@ -218,17 +218,24 @@ a {
   border-top: 1px solid rgb(198,32,38);
 }
 #ftr a:hover, #ftr a:link,
-#ftr a:active, #ftr a:visited { color: rgb(212,186,187); padding: 0; margin: 0; text-transform: capitalize; }
-
-/*
- * Style tweaks
- * --------------------------------------------------
- */
-html,
-body {
-  overflow-x: hidden; /* Prevent scroll on narrow devices */
+#ftr a:active, #ftr a:visited, #ftr a:focus { 
+  color: rgb(212,186,187); 
+  padding: 0; margin: 0; 
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: 0; 
 }
 
+/*
+ * Style Sidebar
+ * --------------------------------------------------
+ */
+#sidebar.sidebar-offcanvas {padding-bottom: 10px; background-color: #eee; }
+#sidebar .sidebar-hdr { padding: 15px; }
+#sidebar .sidebar-list {}
+#sidebar .list-group-item:first-child, #sidebar .list-group-item:last-child { border-radius: 0; }
+#sidebar .list-group-item.active { background-color: #999; border-color: #999; opacity:0.5; }
+#sidebar .media .media-object { width: 60px; }
 /*
  * Off Canvas
  * --------------------------------------------------
@@ -240,7 +247,9 @@ body {
          -o-transition: all .25s ease-out;
             transition: all .25s ease-out;
   }
-
+  
+  .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus { border-radius: 0; }
+  
   .row-offcanvas-right {
     right: 0;
   }
@@ -270,7 +279,7 @@ body {
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
-    width: 50%; /* 6 columns */
+    width: 48%; /* 6 columns */
   }
 }
 

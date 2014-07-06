@@ -4,7 +4,7 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
-	<title>Mobile CME - chart 2 Page</title>
+	<title>Mobile CME - chart Page</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -51,21 +51,59 @@
 
 		<div class="row row-offcanvas row-offcanvas-left">
 			<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-			<div class="list-group">
-				<a href="#" class="list-group-item active">Link</a>
-				<a href="#" class="list-group-item">Link</a>
-				<a href="#" class="list-group-item">Link</a>
-				<a href="#" class="list-group-item">Link</a>
-			</div>
+				<div class="sidebar-hdr">
+					<h1>Company Logo</h1>
+					<p>Virtual Patient Encounters: Improving Outcomes in CRC Patients<p>
+				</div>
+				<div class="list-group sidebar-list">
+					<div class="list-group-item active">
+						<div class="media">
+						  <a class="pull-left" href="#">
+						    <img class="media-object" src="images/fpo/fpo-img-1.jpg" alt="">
+						  </a>
+						  <div class="media-body">
+						    <h4 class="media-heading">Media heading</h4>
+						    <p>Improving Outcomes in CRC Patients</p>
+						  </div>
+						</div>
+					</div>
+
+					<div class="list-group-item">
+						<div class="media">
+						  <a class="pull-left" href="#">
+						    <img class="media-object" src="images/fpo/fpo-img-2.jpg" alt="">
+						  </a>
+						  <div class="media-body">
+						    <h4 class="media-heading">Media heading</h4>
+						    <p>Improving Outcomes in CRC Patients</p>
+						  </div>
+						</div>
+					</div>
+
+					<div class="list-group-item">
+						<div class="media">
+						  <a class="pull-left" href="#">
+						    <img class="media-object" src="images/fpo/fpo-img-1.jpg" alt="">
+						  </a>
+						  <div class="media-body">
+						    <h4 class="media-heading">Media heading</h4>
+						    <p>Improving Outcomes in CRC Patients</p>
+						  </div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<div class="col-xs-12 col-sm-9">
 			<div id="main-content" class="row">
 				<div class="content-wrapper">
-					<h1>TML</h1>
-					<p>Purpose: Assess continued use of bevacizumab + 2nd line chemotherapy in patients with mCRC and who had progressed after 1st-line bevacizumab-based treatment</p>
-					<p>Second-line chemotherapy = Oxaliplatin- or Irinotecan-based (switch cemo) with or without bevacizumab (2.5mg/kg/week)</p>
-					<div class="imageGesture" id="enlargechart"><img src="images/fpo/fpo-chart-1.jpg" alt="" /></div>
+					<h1>It is likely that Grace has oxaiplatin-induced sensory neurotoxicity. What would you try first in the hopes of alleviating Grace's neuropathy?</h1>
+					<ul data-role="listview" data-listview-type="question-result-2" data-inset="true" data-theme="c" class="listview selection-list single-result qlist">
+						<li><div class="color-fill"></div><div class="choice-percent">7%</div><p>Mauris at augue dui. Lorem ipsum dolor sit.</p></li>
+						<li><div class="color-fill"></div><div class="choice-percent">29%</div><p>Proin quis malesuada turpis. Proin varius placerat dolor.</p></li>
+						<li><div class="color-fill"></div><div class="choice-percent">85%</div><p>Pellentesque a elit orci. Curabitur laoreet mollis sapien.</p></li>
+						<li><div class="color-fill"></div><div class="choice-percent">40%</div><p>Aenean quis orci nisi. Quisque quam diam, adipiscing vel ligula.</p></li>
+					</ul>
 				</div>
 			</div>
 			</div>
@@ -94,17 +132,6 @@
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('[data-toggle="offcanvas"]').click(function (event) {
-				event.preventDefault();
-				if ($("#sidebar").position().left < -1.0) {
-					$('.row-offcanvas').toggleClass('active');
-				} else {
-					$('.row-offcanvas').removeClass('active');
-				}
-			});
-		});
-	</script>
+	<script type="text/javascript" src="js/site.js"></script>
 </body><!--#mobileCME-->
 </html>

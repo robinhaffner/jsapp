@@ -4,7 +4,7 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
-	<title>Mobile CME - Video Page</title>
+	<title>Mobile CME - question Page</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -51,28 +51,60 @@
 
 		<div class="row row-offcanvas row-offcanvas-left">
 			<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-			<div class="list-group">
-				<a href="#" class="list-group-item active">Link</a>
-				<a href="#" class="list-group-item">Link</a>
-				<a href="#" class="list-group-item">Link</a>
-				<a href="#" class="list-group-item">Link</a>
-			</div>
+				<div class="sidebar-hdr">
+					<h1>Company Logo</h1>
+					<p>Virtual Patient Encounters: Improving Outcomes in CRC Patients<p>
+				</div>
+				<div class="list-group sidebar-list">
+					<div class="list-group-item active">
+						<div class="media">
+						  <a class="pull-left" href="#">
+						    <img class="media-object" src="images/fpo/fpo-img-1.jpg" alt="">
+						  </a>
+						  <div class="media-body">
+						    <h4 class="media-heading">Media heading</h4>
+						    <p>Improving Outcomes in CRC Patients</p>
+						  </div>
+						</div>
+					</div>
+
+					<div class="list-group-item">
+						<div class="media">
+						  <a class="pull-left" href="#">
+						    <img class="media-object" src="images/fpo/fpo-img-2.jpg" alt="">
+						  </a>
+						  <div class="media-body">
+						    <h4 class="media-heading">Media heading</h4>
+						    <p>Improving Outcomes in CRC Patients</p>
+						  </div>
+						</div>
+					</div>
+
+					<div class="list-group-item">
+						<div class="media">
+						  <a class="pull-left" href="#">
+						    <img class="media-object" src="images/fpo/fpo-img-1.jpg" alt="">
+						  </a>
+						  <div class="media-body">
+						    <h4 class="media-heading">Media heading</h4>
+						    <p>Improving Outcomes in CRC Patients</p>
+						  </div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<div class="col-xs-12 col-sm-9">
 			<div id="main-content" class="row">
 				<div class="content-wrapper">
-		            <h1>Followup</h1>
-		            <p>A PET scan was conducted as followup after 3 years and revealed lymph node involvement. This video shows the results of that PET scan. Note the third and fourth axial lymph nodes.</p>
-		            <a href="#popupVideo" data-rel="popup" data-position-to="window" class="ui-link"><img class="center-block" src="img/fpo/fpo-video-1.jpg" alt=""></a>
-		            <div data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
-		                <video poster="img/fpo/fpo-poster-1.jpg" style="width:100%;height:360px;" controls>
-		                  <source src="video/mov_bbb.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
-		                  <source src="video/mov_bbb.ogg" type="video/ogg">
-		                  	Your browser does not support HTML5 video.
-		                </video>
-		            </div>
-		        </div>
+					<h1>What grade of sensory neuropathy is Grace experiencing? <strong>Choose one.</strong></h1>
+					<ul data-role="listview" data-listview-type="question-result-2" data-inset="true" data-theme="c" class="listview selection-list single-result qlist">
+						<li><div class="color-fill"></div><div class="choice-percent">17%</div><p>Pellentesque risus diam, vulputate at mattis in; pellentesque.</p></li>
+						<li><div class="color-fill"></div><div class="choice-percent">37%</div><p>Mauris ullamcorper justo vel massa.</p></li>
+						<li><div class="color-fill"></div><div class="choice-percent">77%</div><p>Quisque eget dui augue. Class.</p></li>
+						<li><div class="color-fill"></div><div class="choice-percent">90%</div><p>Duis nibh nisl, cursus at.</p></li>
+					</ul>
+				</div>
 			</div>
 			</div>
 		</div>
@@ -100,17 +132,6 @@
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('[data-toggle="offcanvas"]').click(function (event) {
-				event.preventDefault();
-				if ($("#sidebar").position().left < -1.0) {
-					$('.row-offcanvas').toggleClass('active');
-				} else {
-					$('.row-offcanvas').removeClass('active');
-				}
-			});
-		});
-	</script>
+	<script type="text/javascript" src="js/site.js"></script>
 </body><!--#mobileCME-->
 </html>
