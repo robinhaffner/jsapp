@@ -230,8 +230,8 @@ a {
  * Style Sidebar
  * --------------------------------------------------
  */
-#sidebar.sidebar-offcanvas {padding-bottom: 10px; background-color: #eee; }
-#sidebar .sidebar-hdr { padding: 15px; }
+#sidebar.sidebar-offcanvas { padding: 10px 0; background-color: #eee; }
+#sidebar .sidebar-hdr { padding: 0; margin-left: 15px; }
 #sidebar .sidebar-list {}
 #sidebar .list-group-item:first-child, #sidebar .list-group-item:last-child { border-radius: 0; }
 #sidebar .list-group-item.active { background-color: #999; border-color: #999; opacity:0.5; }
@@ -279,7 +279,7 @@ a {
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
-    width: 48%; /* 6 columns */
+    width: 50%; /* 6 columns */
   }
 }
 
