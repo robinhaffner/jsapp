@@ -11,7 +11,7 @@ define(function (require) {
         InstructionsView    = require("app/InstructionsView"),
 
         detailsURL = /^#(\w+)/,
-        homeView = new HomeView().render(),
+        homeView = new HomeView(),
         navView = new NavView(),
 
         route = function () {
@@ -19,11 +19,13 @@ define(function (require) {
                 view,
                 match;
             if (!hashpath) {
+                homeView.render();
                 navView.setNextPage("index");
                 return;
             }
             match = hashpath.match(detailsURL);
             if (match) {
+                console.log("match",match,match[1]);
                 siteAdapter.getTitle(match[1]).done(function (_site) {
                     $("title").html(_site);
                 });

@@ -30,11 +30,12 @@ define(function (require) {
 
         this.setNextPage = function (_h) {
             pageAdapter.getPage().done(function (_page) {
+                $(".page-ctn .num").empty().append(_page.length);
                 for (var i = 0; i < _page.length; i++) {
-                    //console.log("_page[i]",_page[i],_h);
 
                     if (_page[i] == _h) {
-                        //console.log("i",i,_page.length,_page[i],_page[]);
+                        $(".page-ctn .pgenum").empty().append(i+1);
+                        $(".next-control").attr('href', "#"+_page[i+1]);
                     } else { return false} ;
                 };
             });
