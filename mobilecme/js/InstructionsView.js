@@ -16,8 +16,8 @@ define(function (require) {
             this.$el = $('.content-wrapper');
         };
 
-        this.render = function () {
-            this.$el.html(instructionsTpl());
+        this.render = function (content) {
+            this.$el.html(instructionsTpl(content));
             return this;
         };
 
@@ -26,4 +26,3 @@ define(function (require) {
     };
 
 });
-

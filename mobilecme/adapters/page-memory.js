@@ -2,19 +2,6 @@ define(function (require) {
 
     "use strict";
 
-    /*var findById = function (id) {
-            var deferred = $.Deferred(),
-                page = null,
-                l = pages.length;
-            for (var i = 0; i < l; i++) {
-                if (pages[i].id === id) {
-                    page = pages[i];
-                    break;
-                }
-            }
-            deferred.resolve(page);
-            return deferred.promise();
-        },*/
         var getPage = function () {
             var deferred = $.Deferred();
             deferred.resolve(pages);
@@ -39,7 +26,6 @@ define(function (require) {
 
     // The public API
     return {
-        //findById: findById,
         getPage: getPage
     };
 

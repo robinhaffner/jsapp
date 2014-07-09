@@ -9,6 +9,9 @@ define(function (require) {
         FooterView          = require("app/FooterView"),
         HomeView            = require("app/HomeView"),
         InstructionsView    = require("app/InstructionsView"),
+        FacultyView         = require("app/FacultyView"),
+        OverviewView        = require("app/OverviewView"),
+        QuestionView        = require("app/QuestionView"),
 
         detailsURL = /^#(\w+)/,
         homeView = new HomeView(),
@@ -26,9 +29,15 @@ define(function (require) {
             match = hashpath.match(detailsURL);
             if (match) {
                 console.log("match",match,match[1]);
+                var data = siteAdapter.getContent(match[1]);
+                console.log("data",data);
+                var tpl = eval(data.template+"View");
+                var handler = new tpl();
+
                 siteAdapter.getTitle(match[1]).done(function (_site) {
                     $("title").html(_site);
                 });
+                handler.render(data);
                 navView.setNextPage(match[1]);
             }
 

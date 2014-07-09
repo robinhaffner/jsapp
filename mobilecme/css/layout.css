@@ -26,7 +26,20 @@ a {
 #hdr .navicons.icon-back { background-position: 0 0; width: 13px; } 
 #hdr .navicons.icon-next { background-position: 0 -32px; width: 13px; display: inline-block; margin-left: 14px; } 
 #hdr .navicons.icon-sound.on { background-position: 0 -64px; width: 23px; } 
-
+#hdr .next-control {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    color: rgb(255, 255, 255);
+    font-size: 1.8em;
+    font-weight: 200;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    outline: none;
+}
 .headline {
     background-color: rgb(230, 234, 233);
     font-size: 14px;
@@ -131,7 +144,7 @@ a {
 }
 
 
-.instructions, .instructionslist { position: relative; min-height: 375px; }
+.instructions, .instructionslist { position: relative; min-height: 375px; list-style: none; }
 .instructionslist li.instructionposition {
   position: absolute;
   width: 30%;
@@ -201,6 +214,13 @@ a {
   display: inline-block; 
   border: 1px solid #999; 
 }
+
+.progress {
+  border: 1px solid rgb(119, 119, 119)
+  border-radius: 10px;
+  height: 10px;
+}
+.progress-bar { background-color: rgb(198, 32, 38); }
 
 /* ==========================================================================
       Custom Styles: Footer

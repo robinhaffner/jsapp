@@ -7,6 +7,7 @@ define(function (require) {
         siteAdapter     = require('adapters/site'),
         pageAdapter     = require('adapters/page'),
         navHtml         = require('text!tpl/nav.html'),
+        errHtml         = require('text!tpl/404.html'),
 
         navTpl         = Handlebars.compile(navHtml);
 
@@ -36,7 +37,7 @@ define(function (require) {
                     if (_page[i] == _h) {
                         $(".page-ctn .pgenum").empty().append(i+1);
                         $(".next-control").attr('href', "#"+_page[i+1]);
-                    } else { return false} ;
+                    } //else { return false} ;
                 };
             });
         }

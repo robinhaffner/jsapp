@@ -1,0 +1,17 @@
+<h1>{{this.header}}</h1>
+<ul class="list-inline small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+	{{#this.faculty}}
+	<li>
+	  <div class="details media">
+	    <a class="pull-left content-left" ><img src="{{this.faculty_thumbnail}}" alt=""></a>
+	    <div class="content-right media-body">
+	      <h4 class="media-heading">{{this.faculty_name}}</h4>
+	      <h5>{{#this.faculty_titles}}
+	        {{{this.title}}}<br>
+	        {{/this.faculty_titles}}</h5>
+            <!--<p>{{this.faculty_descript}}</p>-->
+	    </div>
+	  </div>
+	</li>
+	{{/this.faculty}}
+</ul>
