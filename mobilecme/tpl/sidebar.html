@@ -1,0 +1,19 @@
+<div class="sidebar-hdr">
+	<h1>{{this.header}}</h1>
+	<p>{{this.headline}}<p>
+</div>
+<div class="list-group sidebar-list">
+	{{#this.sidebarlist}}
+	<div class="list-group-item">
+		<div class="media">
+		  <a class="pull-left" href="#">
+		    <img class="media-object" src="{{this.media-img}}" alt="">
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading">{{this.media-heading}}</h4>
+		    {{{this.media-subtext}}}
+		  </div>
+		</div>
+	</div>
+	{{/this.sidebarlist}}
+</div>

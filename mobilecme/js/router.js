@@ -6,6 +6,7 @@ define(function (require) {
         siteAdapter         = require('adapters/site'),
         pageAdapter         = require('adapters/page'),
         NavView             = require("app/NavView"),
+        SidebarView         = require("app/SidebarView"),
         FooterView          = require("app/FooterView"),
         HomeView            = require("app/HomeView"),
         InstructionsView    = require("app/InstructionsView"),
@@ -46,6 +47,11 @@ define(function (require) {
             navView.render()
             navView.getTopNav()
         },
+        sidebarCanvas = function () {
+            var sidebarView = new SidebarView()
+            sidebarView.render()
+            sidebarView.getSidebar()
+        },
         ftr = function () {
             var footerView = new FooterView()
             footerView.render();
@@ -54,6 +60,7 @@ define(function (require) {
         start = function () {
             $(window).on('hashchange', route);
             nav();
+            sidebarCanvas();
             route();
             ftr();
         };

@@ -4,15 +4,15 @@ define(function (require) {
 
     var getSideBar = function (id) {
             var deferred = $.Deferred(),
-                sidecontent = null,
+                sidebarcontent = null,
                 l = sidebar.length;
             for (var i = 0; i < l; i++) {
                 if (sidebar[i].id === id) {
-                    sidecontent = sidecontent[i];
+                    sidebarcontent = sidebar[i];
                     break;
                 }
             }
-            deferred.resolve(sidecontent);
+            deferred.resolve(sidebarcontent);
             return deferred.promise();
         },
         getTitle = function (_hash) {
@@ -97,28 +97,28 @@ define(function (require) {
         }],
         sidebar = [
             {
-                "sidebar-title": "Company Name",
-                "sidebar-logo": "images/fpo/company-logo.png",
-                "sidebar-header": "Company Header",
+                "name": "Company Name",
+                "logo": "images/fpo/company-logo.png",
+                "header": "Company Header",
                 "headline": "Virtual Outcomes in CRC Patients",
-                "sidebar-list": [
+                "sidebarlist": [
                     {
                         "media": 1,
                         "media-img": "images/fpo/fpo-img-1.jpg",
                         "media-heading": "Media heading 1",
-                        "media-subtext": "This is subtext"
+                        "media-subtext": "<p>This is subtext</p>"
                     },
                     {
                         "media": 2,
                         "media-img": "images/fpo/fpo-img-2.jpg",
                         "media-heading": "Media heading 2",
-                        "media-subtext": "This is subtext for second media"
+                        "media-subtext": "<p>This is subtext for second media</p>"
                     },
                     {
                         "media": 3,
                         "media-img": "images/fpo/fpo-img-1.jpg",
                         "media-heading": "Media heading 3",
-                        "media-subtext": "This is subtext for third media"
+                        "media-subtext": "<p>This is subtext for third media</p>"
                     }
                 ]
             }
