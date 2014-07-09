@@ -6,9 +6,9 @@ define(function (require) {
         Handlebars      = require('handlebars'),
         siteAdapter     = require('adapters/site'),
         pageAdapter     = require('adapters/page'),
-        footerHtml        = require('text!tpl/footer.html'),
+        footerHtml      = require('text!tpl/footer.html'),
 
-        footerTpl         = Handlebars.compile(footerHtml);
+        footerTpl       = Handlebars.compile(footerHtml);
 
     return function () {
 
