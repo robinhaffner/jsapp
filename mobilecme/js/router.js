@@ -47,7 +47,8 @@ define(function (require) {
             navView.getTopNav()
         },
         ftr = function () {
-            var footerView = new FooterView().render()
+            var footerView = new FooterView()
+            footerView.render();
             footerView.getFooter()
         },
         start = function () {
