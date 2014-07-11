@@ -13,6 +13,10 @@ define(function (require) {
         FacultyView         = require("app/FacultyView"),
         OverviewView        = require("app/OverviewView"),
         QuestionView        = require("app/QuestionView"),
+        ChartView           = require("app/ChartView"),
+        TableView           = require("app/TableView"),
+        Chart2View          = require("app/Chart2View"),
+        VideoView           = require("app/VideoView"),
 
         detailsURL = /^#(\w+)/,
         homeView = new HomeView(),

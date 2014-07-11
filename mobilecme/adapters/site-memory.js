@@ -62,16 +62,6 @@ define(function (require) {
           deferred.resolve(content);
           return deferred.promise();
         },
-         getFaculty = function () {
-            var deferred = $.Deferred();
-            deferred.resolve(faculty);
-            return deferred.promise();
-        },
-         getOverview = function () {
-            var deferred = $.Deferred();
-            deferred.resolve(overview);
-            return deferred.promise();
-        },
 
         pagetitle = {
             "index":"Mobile CME - Index",
@@ -205,6 +195,66 @@ define(function (require) {
                   }
                 ]
             },
+            {   "id": "chart",
+                "template": "Chart",
+                "title": "Mobile CME - Chart",
+                "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
+                "header": "It is likely that Grace has oxaiplatin-induced sensory neurotoxicity. What would you try first in the hopes of alleviating Grace's neuropathy?",
+                "questions": [
+                  {
+                    "percent": "17",
+                    "question": "<p>Pellentesque risus diam, vulputate at mattis in; pellentesque.</p>"
+                  },
+                  {
+                    "percent": "20",
+                    "question": "<p>Proin quis malesuada turpis. Proin varius placerat dolor.</p>"
+                  },
+                  {
+                    "percent": "80",
+                    "question": "<p>Pellentesque a elit orci. Curabitur laoreet mollis sapien.</p>"
+                  },
+                  {
+                    "percent": "4",
+                    "question": "<p>Aenean quis orci nisi. Quisque quam diam, adipiscing vel ligula.</p>"
+                  }
+                ]
+            },
+            {   "id": "table",
+                "template": "Table",
+                "title": "Mobile CME - Table",
+                "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
+                "header": "MOSAIC Trial",
+                "details": "<p>Patients with stage II or III CRC underwent curative resection followed by 12 cycles of LV5FU2 or FOLFOX4</p><p>Patients followed every 2 weeks for the first 6 mos; then every 6 mos for 6 years</p><p>Results showed a benefit of adjuvant FOLFOX4 (ie, addition of oxaliplatin) in stage III CRC in terms of both OS and DFS</p>",
+                "enlargetable": "images/fpo/fpo-table-1.jpg"
+            },
+            {   "id": "chart2",
+                "template": "Chart2",
+                "title": "Mobile CME - Second Chart",
+                "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
+                "header": "TML",
+                "details": "<p>Purpose: Assess continued use of bevacizumab + 2nd line chemotherapy in patients with mCRC and who had progressed after 1st-line bevacizumab-based treatment</p><p>Second-line chemotherapy = Oxaliplatin- or Irinotecan-based (switch cemo) with or without bevacizumab (2.5mg/kg/week)</p>",
+                "enlargetable": "images/fpo/fpo-chart-1.jpg"
+            },
+            {   "id": "video",
+                "template": "Video",
+                "title": "Mobile CME - Video",
+                "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
+                "header": "Video",
+                "details": "<p>A PET scan was conducted as followup after 3 years and revealed lymph node involvement. This video shows the results of that PET scan. Note the third and fourth axial lymph nodes.</p>",
+                "popupVideo": "images/fpo/fpo-video-1.jpg",
+                "poster": "images/fpo/fpo-video-1.jpg",
+                "media": [
+                  {
+                    "mediatype": "video/mp4;codecs='avc1.42E01E, mp4a.40.2'",
+                    "mediavideo": "video/mov_bbb.mp4"
+                  },
+                  {
+                    "mediatype": "video/ogg",
+                    "mediavideo": "video/mov_bbb.mp4"
+                  }
+                ]
+            }
+
         ];
 
     // The public API
@@ -213,9 +263,7 @@ define(function (require) {
         getTitle: getTitle,
         getTopNav: getTopNav,
         getFooter: getFooter,
-        getContent: getContent,
-        getFaculty: getFaculty,
-        getOverview: getOverview
+        getContent: getContent
     };
 
 }());
