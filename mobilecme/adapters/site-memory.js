@@ -65,7 +65,18 @@ define(function (require) {
 
         pagetitle = {
             "index":"Mobile CME - Index",
-            "instructions": "Mobile CME - Instructions"
+            "instructions": "Mobile CME - Instructions",
+            "faculty": "Mobile CME - Faculty",
+            "overview": "Mobile CME - Overview",
+            "question": "Mobile CME - Question",
+            "chart": "Mobile CME - Chart",
+            "table": "Mobile CME - Table",
+            "chart2": "Mobile CME - Second Chart",
+            "video": "Mobile CME - Video",
+            "question2": "Mobile CME - Second Question",
+            "incorrect": "Mobile CME - Question Incorrect",
+            "correct": "Mobile CME - Question Correct",
+            "scale": "Mobile CME - Scale"
         },
         topnav = {
             "next-control": "Next",
@@ -116,12 +127,10 @@ define(function (require) {
         sitecontent = [
             {   "id": "instructions",
                 "template": "Instructions",
-                "title": "Mobile CME",
                 "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients"
             },
              {   "id": "faculty",
                 "template": "Faculty",
-                "title": "Mobile CME",
                 "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
                 "header": "Presenting Faculty",
                 "faculty": [
@@ -157,7 +166,6 @@ define(function (require) {
              },
             {   "id": "overview",
                 "template": "Overview",
-                "title": "Mobile CME - overview",
                 "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
                 "header": "Grace: Overview",
                 "subheader": "<p>70-year old Caucasian female</p><p><strong>Patient History</strong></p>",
@@ -173,7 +181,6 @@ define(function (require) {
             },       
             {   "id": "question",
                 "template": "Question",
-                "title": "Mobile CME - Question",
                 "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
                 "header": "What grade of sensory neuropathy is Grace experiencing? <strong>Choose one.</strong>",
                 "questions": [
@@ -197,7 +204,6 @@ define(function (require) {
             },
             {   "id": "chart",
                 "template": "Chart",
-                "title": "Mobile CME - Chart",
                 "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
                 "header": "It is likely that Grace has oxaiplatin-induced sensory neurotoxicity. What would you try first in the hopes of alleviating Grace's neuropathy?",
                 "questions": [
@@ -221,7 +227,6 @@ define(function (require) {
             },
             {   "id": "table",
                 "template": "Table",
-                "title": "Mobile CME - Table",
                 "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
                 "header": "MOSAIC Trial",
                 "details": "<p>Patients with stage II or III CRC underwent curative resection followed by 12 cycles of LV5FU2 or FOLFOX4</p><p>Patients followed every 2 weeks for the first 6 mos; then every 6 mos for 6 years</p><p>Results showed a benefit of adjuvant FOLFOX4 (ie, addition of oxaliplatin) in stage III CRC in terms of both OS and DFS</p>",
@@ -229,7 +234,6 @@ define(function (require) {
             },
             {   "id": "chart2",
                 "template": "Chart2",
-                "title": "Mobile CME - Second Chart",
                 "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
                 "header": "TML",
                 "details": "<p>Purpose: Assess continued use of bevacizumab + 2nd line chemotherapy in patients with mCRC and who had progressed after 1st-line bevacizumab-based treatment</p><p>Second-line chemotherapy = Oxaliplatin- or Irinotecan-based (switch cemo) with or without bevacizumab (2.5mg/kg/week)</p>",
@@ -237,7 +241,6 @@ define(function (require) {
             },
             {   "id": "video",
                 "template": "Video",
-                "title": "Mobile CME - Video",
                 "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
                 "header": "Video",
                 "details": "<p>A PET scan was conducted as followup after 3 years and revealed lymph node involvement. This video shows the results of that PET scan. Note the third and fourth axial lymph nodes.</p>",
@@ -253,6 +256,34 @@ define(function (require) {
                     "mediavideo": "video/mov_bbb.mp4"
                   }
                 ]
+            },       
+            {   "id": "question2",
+                "template": "Question2",
+                "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
+                "header": "What grade of sensory neuropathy is Grace experiencing? <strong>Choose one.",
+                "questions": [
+                  {
+                    "questionprecent": "17",
+                    "questiontxt": "<p>Pellentesque risus diam, vulputate at mattis in; pellentesque.</p>"
+                  },
+                  {
+                    "questionprecent": "20",
+                    "questiontxt": "<p>Mauris ullamcorper justo vel massa.</p>"
+                  },
+                  {
+                    "questionprecent": "80",
+                    "questiontxt": "<p>Quisque eget dui augue. Class.</p>"
+                  },
+                  {
+                    "questionprecent": "4",
+                    "questiontxt": "<p>Duis nibh nisl, cursus at.</p>"
+                  }
+                ]
+            },
+            {   "id": "playagain",
+                "template": "Playagain",
+                "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
+                "header": "Play again",
             }
 
         ];

@@ -17,6 +17,8 @@ define(function (require) {
         TableView           = require("app/TableView"),
         Chart2View          = require("app/Chart2View"),
         VideoView           = require("app/VideoView"),
+        Question2View       = require("app/Question2View"),
+        PlayagainView       = require("app/PlayagainView"),
 
         detailsURL = /^#(\w+)/,
         homeView = new HomeView(),

@@ -31,14 +31,25 @@ define(function (require) {
 
         this.setNextPage = function (_h) {
             pageAdapter.getPage().done(function (_page) {
-                $(".page-ctn .num").empty().append(_page.length);
-                for (var i = 0; i < _page.length; i++) {
+                var pagemax = _page.length;
+                $(".page-ctn .num").empty().append(pagemax);
+                for (var i = 0; i < pagemax; i++) {
 
                     if (_page[i] == _h) {
                         $(".page-ctn .pgenum").empty().append(i+1);
+                        $(".next-control").show();
                         $(".next-control").attr('href', "#"+_page[i+1]);
                     } //else { return false} ;
                 };
+                    if (parseInt($(".page-ctn .pgenum").text()) == pagemax) {
+                        $(".next-control").attr('href', "#playagain");
+                    };
+                        $(".progress-bar").attr({
+                            "aria-valuemin": 0,
+                            "aria-valuenow": parseInt($(".page-ctn .pgenum").text()),
+                            "aria-valuemax": pagemax
+                        })
+                        .css("width", parseInt($(".page-ctn .pgenum").text()) / pagemax * 100 + "%");
             });
         }
 

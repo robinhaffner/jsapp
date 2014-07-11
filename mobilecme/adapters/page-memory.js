@@ -18,10 +18,10 @@ define(function (require) {
             "table",
             "chart2",
             "video",
-            "question2",
-            "incorrect",
-            "correct",
-            "scale"
+            "question2"
+            //"incorrect",
+            //"correct",
+            //"scale"
         ];
 
     // The public API
