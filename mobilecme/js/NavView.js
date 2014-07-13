@@ -9,7 +9,7 @@ define(function (require) {
         navHtml         = require('text!tpl/nav.html'),
         errHtml         = require('text!tpl/404.html'),
 
-        navTpl         = Handlebars.compile(navHtml);
+        navTpl          = Handlebars.compile(navHtml);
 
     return function () {
 

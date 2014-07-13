@@ -9,4 +9,10 @@ function offCanvas () {
 }
 
 $(document).ready(function () {
+	$('#footerModal').on('show.bs.modal', function (e) {
+		var container = $(e.currentTarget).attr('id');
+		$.get( $(e.relatedTarget).attr('href'), function( data ) {
+		  $( "#"+container + " .modal-content").html( data );
+		});
+	});
 });

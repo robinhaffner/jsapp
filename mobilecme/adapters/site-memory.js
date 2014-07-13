@@ -85,11 +85,11 @@ define(function (require) {
         footer = [{
             "col-1": {
                 "txt": "Privacy",
-                "link": "#privacy"
+                "link": "tpl/privacy.html"
             },
             "col-2": {
                 "txt": "Feedback",
-                "link": "#feedback"
+                "link": "tpl/feedback.html"
             },
             "col-3": {
                 "txt": "Get Certificate&nbsp;&#62;",
