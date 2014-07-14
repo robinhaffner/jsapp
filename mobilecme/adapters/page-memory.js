@@ -9,7 +9,7 @@ define(function (require) {
         },
 
         pages = [
-            "index",
+            "main",
             "instructions",
             "faculty",
             "overview",

@@ -8,7 +8,7 @@ define(function (require) {
         NavView             = require("app/NavView"),
         SidebarView         = require("app/SidebarView"),
         FooterView          = require("app/FooterView"),
-        HomeView            = require("app/HomeView"),
+        MainView            = require("app/MainView"),
         InstructionsView    = require("app/InstructionsView"),
         FacultyView         = require("app/FacultyView"),
         OverviewView        = require("app/OverviewView"),
@@ -21,7 +21,7 @@ define(function (require) {
         PlayagainView       = require("app/PlayagainView"),
 
         detailsURL = /^#(\w+)/,
-        homeView = new HomeView(),
+        mainView = new MainView(),
         navView = new NavView(),
 
         route = function () {
@@ -29,15 +29,19 @@ define(function (require) {
                 view,
                 match;
             if (!hashpath) {
-                homeView.render();
-                navView.setNextPage("index");
+                var data = siteAdapter.getContent("main");
+                var tpl = eval(data.template+"View");
+                var handler = new tpl();
+                
+                handler.render(data);
+                navView.setNextPage("main");
                 return;
             }
             match = hashpath.match(detailsURL);
             if (match) {
                 console.log("match",match,match[1]);
                 var data = siteAdapter.getContent(match[1]);
-                console.log("data",data);
+                console.log("data",data,data.template);
                 var tpl = eval(data.template+"View");
                 var handler = new tpl();
 

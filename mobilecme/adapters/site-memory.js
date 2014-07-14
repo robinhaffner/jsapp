@@ -64,7 +64,7 @@ define(function (require) {
         },
 
         pagetitle = {
-            "index":"Mobile CME - Index",
+            "main":"Mobile CME - Index",
             "instructions": "Mobile CME - Instructions",
             "faculty": "Mobile CME - Faculty",
             "overview": "Mobile CME - Overview",
@@ -125,6 +125,17 @@ define(function (require) {
             }
         ],
         sitecontent = [
+            {   "id": "main",
+                "template": "Main",
+                "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
+                "header": "Select your Specialty",
+                "listviewer": [
+                    "Colorectal Surgeon",
+                    "Oncologist",
+                    "Non-smoker",
+                    "Other Healthcare Professional Interested in CRC"
+                ]
+            },
             {   "id": "instructions",
                 "template": "Instructions",
                 "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients"
