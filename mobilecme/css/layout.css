@@ -14,13 +14,13 @@ a {
 
 #hdr .navicons {
   height: 22px;
-    background: url(../images/icons-nav.png) no-repeat top left;
+  background: url(../images/icons-nav.png) no-repeat top left;
   text-indent: -9999px;
-    white-space: nowrap !important;
-    display: block;
-    margin: 0 auto;
-    margin-top: 8%;
-    padding: 0;
+  white-space: nowrap !important;
+  display: block;
+  margin: 0 auto;
+  margin-top: 12px;
+  padding: 0;
 }
 
 #hdr .navicons.icon-back { background-position: 0 0; width: 13px; } 
