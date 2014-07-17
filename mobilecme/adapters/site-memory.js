@@ -105,18 +105,21 @@ define(function (require) {
                 "sidebarlist": [
                     {
                         "media": 1,
+                        "media-url": "https://www.google.ca/",
                         "media-img": "images/fpo/fpo-img-1.jpg",
                         "media-heading": "Media heading 1",
                         "media-subtext": "<p>This is subtext</p>"
                     },
                     {
                         "media": 2,
+                        "media-url": "#faculty",
                         "media-img": "images/fpo/fpo-img-2.jpg",
                         "media-heading": "Media heading 2",
                         "media-subtext": "<p>This is subtext for second media</p>"
                     },
                     {
                         "media": 3,
+                        "media-url": "",
                         "media-img": "images/fpo/fpo-img-1.jpg",
                         "media-heading": "Media heading 3",
                         "media-subtext": "<p>This is subtext for third media</p>"
@@ -134,7 +137,9 @@ define(function (require) {
                     "Oncologist",
                     "Non-smoker",
                     "Other Healthcare Professional Interested in CRC"
-                ]
+                ],
+                "audio_url": "audio/long-canada_anthem.mp3",
+                "audio_autoplay": "0"
             },
             {   "id": "instructions",
                 "template": "Instructions",

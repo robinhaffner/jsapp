@@ -18,8 +18,14 @@ define(function (require) {
 
         this.render = function (content) {
             this.$el.html(tableTpl(content));
+            this.pinchImg();
             return this;
         };
+
+        this.pinchImg = function (argument) {
+            var imgEnlargeContainer = $(document).find('.imageGesture').attr('id');
+            pinchZoomImg(imgEnlargeContainer);
+        }
 
         this.initialize();
 

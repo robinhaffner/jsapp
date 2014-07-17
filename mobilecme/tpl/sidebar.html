@@ -6,11 +6,11 @@
 	{{#this.sidebarlist}}
 	<div class="list-group-item">
 		<div class="media">
-		  <a class="pull-left" href="#">
+		  <a class="pull-left" href="{{this.media-url}}">
 		    <img class="media-object" src="{{this.media-img}}" alt="">
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading">{{this.media-heading}}</h4>
+		    <h4 class="media-heading"><a href="{{this.media-url}}">{{this.media-heading}}</a></h4>
 		    {{{this.media-subtext}}}
 		  </div>
 		</div>

@@ -4,7 +4,6 @@ require.config({
 
     paths: {
         root: '../',
-        //images: '../images',
         app: '../js',
         tpl: '../tpl'
     },
