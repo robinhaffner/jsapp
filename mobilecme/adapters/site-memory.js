@@ -123,6 +123,34 @@ define(function (require) {
                         "media-img": "images/fpo/fpo-img-1.jpg",
                         "media-heading": "Media heading 3",
                         "media-subtext": "<p>This is subtext for third media</p>"
+                    },
+                    {
+                        "media": 3,
+                        "media-url": "?h=3#faculty",
+                        "media-img": "images/fpo/fpo-img-2.jpg",
+                        "media-heading": "Media heading 3",
+                        "media-subtext": "<p>This is subtext for third media</p>"
+                    },
+                    {
+                        "media": 4,
+                        "media-url": "?h=4#faculty",
+                        "media-img": "images/fpo/fpo-img-2.jpg",
+                        "media-heading": "Media heading 3",
+                        "media-subtext": "<p>This is subtext for third media</p>"
+                    },
+                    {
+                        "media": 5,
+                        "media-url": "?h=5#faculty",
+                        "media-img": "images/fpo/fpo-img-1.jpg",
+                        "media-heading": "Media heading 3",
+                        "media-subtext": "<p>This is subtext for third media</p>"
+                    },
+                    {
+                        "media": 6,
+                        "media-url": "?h=6#faculty",
+                        "media-img": "images/fpo/fpo-img-1.jpg",
+                        "media-heading": "Media heading 3",
+                        "media-subtext": "<p>This is subtext for third media</p>"
                     }
                 ]
             }
