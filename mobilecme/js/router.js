@@ -29,7 +29,7 @@ define(function (require) {
                 view,
                 match;
             if (!hashpath) {
-                var data = siteAdapter.getContent("main");
+                var data = siteAdapter.getData("sitecontent","main");
                 var tpl = eval(data.template+"View");
                 var handler = new tpl();
                 
@@ -40,16 +40,14 @@ define(function (require) {
             match = hashpath.match(detailsURL);
             if (match) {
                 console.log("match",match,match[1]);
-                var data = siteAdapter.getContent(match[1]);
-                console.log("data",data,data.template);
+
+                var data = siteAdapter.getData("sitecontent",match[1]);
                 var tpl = eval(data.template+"View");
                 var handler = new tpl();
-
-                siteAdapter.getTitle(match[1]).done(function (_site) {
-                    $("title").html(_site);
-                });
                 handler.render(data);
+
                 navView.setNextPage(match[1]);
+                $("title").html(data.title);
             }
 
         },

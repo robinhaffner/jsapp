@@ -264,9 +264,9 @@ a {
 #sidebar .sidebar-hdr { padding: 0; margin-left: 15px; }
 #sidebar .sidebar-list { 
   margin-bottom: 100px; 
-  max-height: 300px;
+  /*max-height: 300px;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: auto;*/
 }
 #sidebar .list-group-item:first-child, #sidebar .list-group-item:last-child { border-radius: 0; }
 #sidebar .list-group-item.selected { background-color: #999; border-color: #999; /*opacity:0.5;*/ }
