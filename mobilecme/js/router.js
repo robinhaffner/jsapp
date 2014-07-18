@@ -61,6 +61,7 @@ define(function (require) {
             var sidebarView = new SidebarView()
             sidebarView.render()
             sidebarView.getSidebar()
+            getPageParam();
         },
         ftr = function () {
             var footerView = new FooterView()

@@ -119,7 +119,7 @@ define(function (require) {
                     },
                     {
                         "media": 3,
-                        "media-url": "",
+                        "media-url": "https://www.google.ca/",
                         "media-img": "images/fpo/fpo-img-1.jpg",
                         "media-heading": "Media heading 3",
                         "media-subtext": "<p>This is subtext for third media</p>"

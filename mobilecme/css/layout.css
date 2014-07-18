@@ -264,7 +264,7 @@ a {
 #sidebar .sidebar-hdr { padding: 0; margin-left: 15px; }
 #sidebar .sidebar-list {}
 #sidebar .list-group-item:first-child, #sidebar .list-group-item:last-child { border-radius: 0; }
-#sidebar .list-group-item.active { background-color: #999; border-color: #999; /*opacity:0.5;*/ }
+#sidebar .list-group-item.selected { background-color: #999; border-color: #999; /*opacity:0.5;*/ }
 #sidebar .media .media-object { width: 60px; }
 /*
  * Off Canvas
