@@ -1,3 +1,9 @@
+var multiselectArr = new Array();
+
+Cookies.defaults = {
+    path: '/'
+};
+
 function offCanvas () {
     var setwidth = $(window).width();
     if ( setwidth < 767) {
@@ -79,13 +85,12 @@ $(document).ready(function () {
     $(document).on('click','.selection-list li',function(event){
         event.preventDefault();
         var selectionlist = $(this).parent();
-        console.log("this",$(this),selectionlist);
+        var listtype = $( selectionlist ).data( "listview-type" );
 
         if ($( selectionlist ).hasClass('single')) {
 
             $( selectionlist ).find('li').removeClass('selected');
             $(this).addClass('selected');
-            var listtype = $( selectionlist ).data( "listview-type" );
             var listtext = $(this).text();
 
             Cookies(listtype, undefined);
@@ -95,7 +100,6 @@ $(document).ready(function () {
             $( selectionlist ).find('li').removeClass('selectedresult');
 
             $(this).addClass('selectedresult');
-            var listtype = $( selectionlist ).data( "listview-type" );
             var listtext = $(this).find('p').text();
 
             $($( selectionlist ).find('li')).each( function(i, ele) {
@@ -112,7 +116,17 @@ $(document).ready(function () {
                 Cookies(listtype, undefined);
                 Cookies.set(listtype, listtext, { expires: 600 });
             });
+        } else if ($( selectionlist ).hasClass('multi-result')) {
+            $(this).addClass('selected');
 
+            if ($(this).hasClass('selected')) {
+                var listtext = $(this).text();
+                multiselectArr.push(listtext);
+            };
+
+            Cookies(listtype, undefined);
+            Cookies.set(listtype, multiselectArr, { expires: 600 });
+            //console.log("Cookies.get",Cookies.get(listtype));
         }
         else {
             $(this).addClass('selected');
