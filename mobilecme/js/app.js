@@ -10,8 +10,7 @@ require.config({
 
     map: {
         '*': {
-            'adapters/site': 'root/adapters/site-memory',
-            'adapters/page': 'root/adapters/page-memory'
+            'adapters/site': 'root/adapters/site-memory'
         }
     },
     shim: {

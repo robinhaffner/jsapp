@@ -4,7 +4,6 @@ define(function (require) {
 
     var $                   = require('jquery'),
         siteAdapter         = require('adapters/site'),
-        pageAdapter         = require('adapters/page'),
         NavView             = require("app/NavView"),
         SidebarView         = require("app/SidebarView"),
         FooterView          = require("app/FooterView"),
