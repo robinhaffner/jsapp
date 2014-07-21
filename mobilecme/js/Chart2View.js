@@ -5,7 +5,6 @@ define(function (require) {
     var $               = require('jquery'),
         Handlebars      = require('handlebars'),
         siteAdapter     = require('adapters/site'),
-        pageAdapter     = require('adapters/page'),
         chart2Html       = require('text!tpl/chart2.html'),
 
         chart2Tpl = Handlebars.compile(chart2Html);

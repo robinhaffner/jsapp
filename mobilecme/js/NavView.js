@@ -5,11 +5,11 @@ define(function (require) {
     var $               = require('jquery'),
         Handlebars      = require('handlebars'),
         siteAdapter     = require('adapters/site'),
-        pageAdapter     = require('adapters/page'),
         navHtml         = require('text!tpl/nav.html'),
         errHtml         = require('text!tpl/404.html'),
 
-        navTpl          = Handlebars.compile(navHtml);
+        navTpl          = Handlebars.compile(navHtml),
+        siteData        = siteAdapter.getData("sitecontent");
 
     return function () {
 
@@ -30,27 +30,24 @@ define(function (require) {
         };
 
         this.setNextPage = function (_h) {
-            pageAdapter.getPage().done(function (_page) {
-                var pagemax = _page.length;
-                $(".page-ctn .num").empty().append(pagemax);
-                for (var i = 0; i < pagemax; i++) {
-
-                    if (_page[i] == _h) {
-                        $(".page-ctn .pgenum").empty().append(i+1);
-                        $(".next-control").show();
-                        $(".next-control").attr('href', "#"+_page[i+1]);
-                    } //else { return false} ;
-                };
-                    if (parseInt($(".page-ctn .pgenum").text()) == pagemax) {
-                        $(".next-control").attr('href', "#playagain");
-                    };
-                        $(".progress-bar").attr({
-                            "aria-valuemin": 0,
-                            "aria-valuenow": parseInt($(".page-ctn .pgenum").text()),
-                            "aria-valuemax": pagemax
-                        })
-                        .css("width", parseInt($(".page-ctn .pgenum").text()) / pagemax * 100 + "%");
-            });
+            var pagemax = siteData.length;
+            $(".page-ctn .num").empty().append(pagemax);
+            for (var i = 0; i < pagemax; i++) {
+                if (siteData[i].id == _h) {
+                    $(".page-ctn .pgenum").empty().append(i+1);
+                    $(".next-control").show().attr('href', "#"+siteData[i+1].id);
+                    $(".next-control").removeClass('disabled');
+                }
+            };
+            if (parseInt($(".page-ctn .pgenum").text()) == (pagemax - 1)) {
+                $(".next-control").attr('href', "#playagain");
+            }
+            $(".progress-bar").attr({
+                "aria-valuemin": 0,
+                "aria-valuenow": parseInt($(".page-ctn .pgenum").text()),
+                "aria-valuemax": pagemax
+            })
+            .css("width", parseInt($(".page-ctn .pgenum").text()) / pagemax * 100 + "%");
         }
 
         this.initialize();
