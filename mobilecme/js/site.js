@@ -79,7 +79,9 @@ $(document).ready(function () {
 
     // Do responsive stuff
     $(window).on('resize', function(e){
-        offCanvas ();
+        if ($("html").hasClass('no-touch')) {
+            offCanvas ();
+        };
     });
 
     $(document).on('click','.selection-list li',function(event){
