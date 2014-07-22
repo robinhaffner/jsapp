@@ -2,8 +2,8 @@ define(function (require) {
 
     "use strict";
 
-    var $                   = require('jquery'),
-        siteAdapter         = require('adapters/site'),
+    var $                   = require("jquery"),
+        siteAdapter         = require("adapters/site"),
         NavView             = require("app/NavView"),
         SidebarView         = require("app/SidebarView"),
         FooterView          = require("app/FooterView"),

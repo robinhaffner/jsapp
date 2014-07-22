@@ -6,11 +6,12 @@ require.config({
         root: '../',
         app: '../js',
         tpl: '../tpl'
+        //,data: '../data'
     },
 
     map: {
         '*': {
-            'adapters/site': 'root/adapters/site-memory'
+           'adapters/site': 'root/adapters/site-memory'
         }
     },
     shim: {
