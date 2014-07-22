@@ -8,9 +8,8 @@ define(function (require) {
         navHtml         = require('text!tpl/nav.html'),
         errHtml         = require('text!tpl/404.html'),
 
-        navTpl          = Handlebars.compile(navHtml),
-        siteData        = siteAdapter.getData("sitecontent");
-
+        navTpl          = Handlebars.compile(navHtml);
+        
     return function () {
 
         this.initialize = function () {
@@ -23,13 +22,15 @@ define(function (require) {
         };
 
         this.getTopNav = function () {
-            siteAdapter.getTopNav().done(function (_nav) {
+            siteAdapter.getData('topnav',0).done(function (_nav) {
                 $("#nav-container").html(navTpl(_nav));
                 return;
             });
         };
 
         this.setNextPage = function (_h) {
+          
+          siteAdapter.getData("sitecontent").done(function(siteData) {
             var pagemax = siteData.length;
             $(".page-ctn .num").empty().append(pagemax);
             for (var i = 0; i < pagemax; i++) {
@@ -48,6 +49,7 @@ define(function (require) {
                 "aria-valuemax": pagemax
             })
             .css("width", parseInt($(".page-ctn .pgenum").text()) / pagemax * 100 + "%");
+          });
         }
 
         this.initialize();

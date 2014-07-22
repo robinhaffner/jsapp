@@ -27,26 +27,38 @@ define(function (require) {
             var hashpath = window.location.hash,
                 view,
                 match;
+        
             if (!hashpath) {
-                var data = siteAdapter.getData("sitecontent","main");
-                var tpl = eval(data.template+"View");
-                var handler = new tpl();
+              
+                siteAdapter.getData("sitecontent","main").done(function(_content) {
+                  var tpl = eval(_content.template+"View");
+                  var handler = new tpl();
+
+                  handler.render(_content);
+                  navView.setNextPage("main");
+                });
                 
-                handler.render(data);
-                navView.setNextPage("main");
                 return;
             }
+            
             match = hashpath.match(detailsURL);
             if (match) {
+                
                 console.log("match",match,match[1]);
 
-                var data = siteAdapter.getData("sitecontent",match[1]);
-                var tpl = eval(data.template+"View");
-                var handler = new tpl();
-                handler.render(data);
+                siteAdapter.getData("sitecontent",match[1]).done(function(_content){
+                  var tpl = eval(_content.template+"View");
+                  var handler = new tpl();
+                  handler.render(_content);
 
-                navView.setNextPage(match[1]);
-                $("title").html(data.title);
+                  navView.setNextPage(match[1]);
+                  $("title").html(_content.title);
+                }).fail(function() {
+                  
+                  // 404 goes here
+                  
+                });
+                
             }
 
         },
