@@ -21,7 +21,7 @@ define(function (require) {
         };
 
         this.getFooter = function () {
-            siteAdapter.getData('footer').done(function (_ftr) {
+            siteAdapter.getData('footer',0).done(function (_ftr) {
                 $("#ftr").html(footerTpl(_ftr));
                 return;
             });

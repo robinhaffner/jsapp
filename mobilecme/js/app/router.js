@@ -75,7 +75,7 @@ define(function (require) {
         ftr = function () {
             var footerView = new FooterView()
             footerView.render();
-            footerView.getFooter()
+            footerView.getFooter();
         },
         start = function () {
             $(window).on('hashchange', route);
