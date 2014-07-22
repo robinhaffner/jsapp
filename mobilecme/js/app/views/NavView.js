@@ -29,27 +29,27 @@ define(function (require) {
         };
 
         this.setNextPage = function (_h) {
-          
-          siteAdapter.getData("sitecontent").done(function(siteData) {
-            var pagemax = siteData.length;
-            $(".page-ctn .num").empty().append(pagemax);
-            for (var i = 0; i < pagemax; i++) {
-                if (siteData[i].id == _h) {
-                    $(".page-ctn .pgenum").empty().append(i+1);
-                    $(".next-control").show().attr('href', "#"+siteData[i+1].id);
-                    $(".next-control").removeClass('disabled');
+            siteAdapter.getData("manifesto",0).done(function(manifesto) {
+                var pagemax = manifesto.pages.length;
+                $(".page-ctn .num").empty().append(pagemax);
+
+                for (var i = 0; i < pagemax; i++) {
+                    if (manifesto.pages[i] == _h) {
+                        $(".page-ctn .pgenum").empty().append(i+1);
+                        $(".next-control").show().attr('href', "#"+manifesto.pages[i+1]);
+                    }
                 }
-            };
-            if (parseInt($(".page-ctn .pgenum").text()) == (pagemax - 1)) {
-                $(".next-control").attr('href', "#playagain");
-            }
-            $(".progress-bar").attr({
-                "aria-valuemin": 0,
-                "aria-valuenow": parseInt($(".page-ctn .pgenum").text()),
-                "aria-valuemax": pagemax
-            })
-            .css("width", parseInt($(".page-ctn .pgenum").text()) / pagemax * 100 + "%");
-          });
+                if (parseInt($(".page-ctn .pgenum").text()) == (pagemax - 1)) {
+                    $(".next-control").attr('href', "#playagain");
+                }
+    
+                $(".progress-bar").attr({
+                    "aria-valuemin": 0,
+                    "aria-valuenow": parseInt($(".page-ctn .pgenum").text()),
+                    "aria-valuemax": pagemax
+                })
+                .css("width", parseInt($(".page-ctn .pgenum").text()) / pagemax * 100 + "%");
+            });
         }
 
         this.initialize();

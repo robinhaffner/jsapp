@@ -1,4 +1,18 @@
 {
+  "manifesto": [{
+    "pages": [
+      "main",
+      "instructions",
+      "faculty",
+      "overview",
+      "question",
+      "chart",
+      "table",
+      "chart2",
+      "video",
+      "question2"
+    ]
+  }],
   "topnav": [{
       "next-control": "Next",
       "headline": "<p>Virtual Patient Encounters: Improving Outcomes in CRC Patients</p>"
