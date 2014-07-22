@@ -74,6 +74,8 @@ function getPageParam() {
 
         var findsidebar = 'h' in b;
 
+        console.log("b",b);
+
         if ( findsidebar == false || b.specialty == ""){
             Cookies.set('first_time_visit_program', 0, { expires: 600 });
             $('.list-group-item:eq(0)').addClass('selected');
