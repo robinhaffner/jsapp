@@ -1,17 +1,18 @@
 require.config({
 
-    baseUrl: 'lib',
+    baseUrl: 'js/lib',
 
     paths: {
-        root: '../',
-        app: '../js',
-        tpl: '../tpl'
-        //,data: '../data'
+        root: '../../',
+        app: '../../js/app',
+        tpl: '../../tpl',
+        views:'../../js/app/views'
+        //,data: '../../data'
     },
 
     map: {
         '*': {
-           'adapters/site': 'root/adapters/site-memory'
+           'adapters/site': 'root/js/adapters/site-memory'
         }
     },
     shim: {

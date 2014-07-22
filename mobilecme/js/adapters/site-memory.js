@@ -32,7 +32,7 @@ define(function(require) {
     
   },
   
-  data = require('json!root/data/jsontest.json');
+  data = require('json!../../data/jsontest.json');
 
   // The public API
   return {
