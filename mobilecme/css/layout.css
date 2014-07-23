@@ -1,14 +1,17 @@
 #mobileCME {
     font-family: "HelveticaNeueLTStdRoman","Helvetica Neue",Helvetica,Arial,sans-serif;
     padding-bottom: 72px;
+    color: rgb(51,51,51);
 }
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 200;
+    font-weight: 400;
     margin-top: 0;
 }
-a {
+a, a:hover, a:focus, a:active {
     text-decoration: none;
     word-wrap: break-word;
+    outline: none;
+    color: rgb(51,51,51);
 }
 .container-fluid, .main-canvas { padding:0; }
 .row { margin-left: 0; margin-right: 0; }
@@ -18,7 +21,7 @@ a {
 
 #hdr .navicons {
   height: 22px;
-  background: url(../images/icons-nav.png) no-repeat top left;
+  background: url(../images/icons/icons-nav.png) no-repeat top left;
   text-indent: -9999px;
   white-space: nowrap !important;
   display: block;
@@ -31,15 +34,15 @@ a {
 #hdr .navicons.icon-next { background-position: 0 -32px; width: 13px; display: inline-block; margin-left: 14px; } 
 #hdr .navicons.icon-sound.on { background-position: 0 -64px; width: 23px; } 
 #hdr .next-control {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: transparent url(../images/icons/icons-nav.png) no-repeat right -22px;
     border: 0 none;
     color: rgb(255, 255, 255);
     font-size: 1.8em;
     font-weight: 200;
     line-height: 40px;
     margin: 0;
-    padding: 0;
-    text-align: center;
+    padding: 0 32px 0 0;
+    text-align: right;
     text-decoration: none;
     display: block;
     outline: none;
@@ -57,6 +60,7 @@ a {
 .content-wrapper { padding: 1em; }
 .content-wrapper h1 {
     font-size: 20px;
+    font-weight: 200;
     text-transform: none;
 }
 
@@ -163,7 +167,7 @@ a {
 
 .instructionslist li.instructionposition .arrow {
   display: block;
-    background: url(../images/icon-arrows.png) no-repeat top left;
+    background: url(../images/icons/icon-arrows.png) no-repeat top left;
 }
 
 .instructionslist li.instructionposition .arrow.icon-arrow-down { 
@@ -187,7 +191,7 @@ a {
     padding: 2px;
 }
 .list-menu li {
-    background: url("../images/icon-bullet.jpg") no-repeat scroll 0 center transparent;
+    background: url(../images/icons/icon-bullet.jpg) no-repeat scroll 0 center transparent;
     margin-bottom: 8px;
     padding-left: 10px;
 }
@@ -200,7 +204,7 @@ a {
 
 .content-wrapper h1.qhdr { margin-bottom: 42px; }
 .icon-question {
-  background: url(../images/icon-question.png) no-repeat top left;
+  background: url(../images/icons/icon-question.png) no-repeat top left;
   padding-left: 26px;
 }
 .icon-question.correct {
@@ -264,14 +268,20 @@ a {
  */
 #sidebar.sidebar-offcanvas { padding: 10px 0; background-color: rgb(225,229,227); }
 #sidebar .sidebar-hdr { padding: 0; margin-left: 15px; }
-#sidebar .sidebar-list { 
-  /*margin-bottom: 100px; 
-  max-height: 300px;
-  overflow-x: hidden;
-  overflow-y: auto;*/
-}
+
+#sidebar .list-group-item { background: url(../images/bg-sidebar.jpg) repeat scroll 0 0 transparent; padding: 15px; }
 #sidebar .list-group-item:first-child, #sidebar .list-group-item:last-child { border-radius: 0; }
-#sidebar .list-group-item.selected { background-color: #999; border-color: #999; opacity:0.5; }
+#sidebar .list-group-item.selected { 
+  background-color: #999; 
+  border-color: #999; 
+  opacity:0.42; 
+  color: rgb(51,153,204);
+}
+#sidebar .list-group-item.selected .media * { color: rgb(51,153,204); }
+
+#sidebar .media { background: transparent url(../images/icons/icon-sidebar.png) no-repeat center right; }
+#sidebar .media .media-heading small { display: block; padding-bottom: 8px; color: rgb(51, 51, 51); }
+#sidebar .media .media-heading { padding-right: 28px; font-size: 16px; }
 #sidebar .media .media-object { width: 60px; }
 /*
  * Off Canvas
@@ -319,5 +329,11 @@ a {
     width: 100%;
     /* width: 320px; 6 columns */
   }
+}
+@media (max-width: 480px) {
+  #hdr .next-control {
+    padding: 0;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  }  
 }
 

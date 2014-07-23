@@ -34,7 +34,7 @@
   "sidebar": [
     {
       "name": "Company Name",
-      "logo": "images/fpo/company-logo.png",
+      "logo": "images/fpo/logo-sidebar.png",
       "header": "Company Header",
       "headline": "Virtual Outcomes in CRC Patients",
       "sidebarlist": [
@@ -42,50 +42,41 @@
           "media": 1,
           "media-url": "https://www.google.ca/",
           "media-img": "images/fpo/fpo-img-1.jpg",
-          "media-heading": "Media heading 1",
-          "media-subtext": "<p>This is subtext</p>"
+          "media-credit": "0.25 Credits",
+          "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
+          "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
         },
         {
           "media": 2,
           "media-url": "#faculty",
           "media-img": "images/fpo/fpo-img-2.jpg",
-          "media-heading": "Media heading 2",
-          "media-subtext": "<p>This is subtext for second media</p>"
+          "media-credit": "0.25 Credits",
+          "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
+          "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
         },
         {
           "media": 3,
           "media-url": "?h=2#faculty",
-          "media-img": "images/fpo/fpo-img-1.jpg",
-          "media-heading": "Media heading 3",
-          "media-subtext": "<p>This is subtext for third media</p>"
-        },
-        {
-          "media": 3,
-          "media-url": "?h=3#faculty",
-          "media-img": "images/fpo/fpo-img-2.jpg",
-          "media-heading": "Media heading 3",
-          "media-subtext": "<p>This is subtext for third media</p>"
+          "media-img": "images/fpo/fpo-img-3.jpg",
+          "media-credit": "0.25 Credits",
+          "media-heading": "Best Practices with Targeted Therapies in Advanced CRC",
+          "media-subtext": "<p>John L. Marshall, MD</p>"
         },
         {
           "media": 4,
-          "media-url": "?h=4#faculty",
-          "media-img": "images/fpo/fpo-img-2.jpg",
-          "media-heading": "Media heading 3",
-          "media-subtext": "<p>This is subtext for third media</p>"
+          "media-url": "?h=3#faculty",
+          "media-img": "images/fpo/fpo-img-4.jpg",
+          "media-credit": "0.25 Credits",
+          "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
+          "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
         },
         {
           "media": 5,
-          "media-url": "?h=5#faculty",
-          "media-img": "images/fpo/fpo-img-1.jpg",
-          "media-heading": "Media heading 3",
-          "media-subtext": "<p>This is subtext for third media</p>"
-        },
-        {
-          "media": 6,
-          "media-url": "?h=6#faculty",
-          "media-img": "images/fpo/fpo-img-1.jpg",
-          "media-heading": "Media heading 3",
-          "media-subtext": "<p>This is subtext for third media</p>"
+          "media-url": "?h=4#faculty",
+          "media-img": "images/fpo/fpo-img-2.jpg",
+          "media-credit": "0.25 Credits",
+          "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
+          "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
         }
       ]
     }

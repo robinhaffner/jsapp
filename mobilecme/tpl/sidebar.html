@@ -1,5 +1,9 @@
 <div class="sidebar-hdr">
-	<h1>{{this.header}}</h1>
+	{{#if logo }}
+		<img src="{{this.logo}}" alt="{{this.header}}" />
+	{{else}}
+		<h1>{{this.header}}</h1>
+	{{/if}}
 	<p>{{this.headline}}<p>
 </div>
 <div class="list-group sidebar-list">
@@ -10,7 +14,7 @@
 		    <img class="media-object" src="{{this.media-img}}" alt="">
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="{{this.media-url}}">{{this.media-heading}}</a></h4>
+		    <h4 class="media-heading"><a href="{{this.media-url}}"><small>{{this.media-credit}}</small>{{this.media-heading}}</a></h4>
 		    {{{this.media-subtext}}}
 		  </div>
 		</div>
