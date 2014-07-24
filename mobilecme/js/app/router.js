@@ -7,6 +7,7 @@ define(function (require) {
         NavView             = require("views/NavView"),
         SidebarView         = require("views/SidebarView"),
         FooterView          = require("views/FooterView"),
+        AudioView           = require("views/AudioView"),
         MainView            = require("views/MainView"),
         InstructionsView    = require("views/InstructionsView"),
         FacultyView         = require("views/FacultyView"),
@@ -22,6 +23,7 @@ define(function (require) {
         detailsURL = /^#(\w+)/,
         mainView = new MainView(),
         navView = new NavView(),
+        audioView = new AudioView(),
         startPageNum = siteAdapter.getStartPage("start"),
 
         route = function () {
@@ -54,6 +56,7 @@ define(function (require) {
                   handler.render(_content);
 
                   navView.setNextPage(match[1]);
+                  audiomedia(match[1]);
                   $("title").html(_content.title);
                 }).fail(function() {
                   
@@ -67,6 +70,9 @@ define(function (require) {
         nav = function () {
             navView.render()
             navView.getTopNav()
+        },
+        audiomedia = function (_c) {
+            audioView.render(_c)
         },
         sidebarCanvas = function () {
             var sidebarView = new SidebarView()
@@ -85,6 +91,7 @@ define(function (require) {
             sidebarCanvas();
             route();
             ftr();
+            
         };
 
     // The public API
