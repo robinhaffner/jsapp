@@ -108,34 +108,21 @@
         {
           "faculty_name": "Cynthia M. Bulik, PhD, FAED",
           "faculty_thumbnail": "images/fpo/fpo-img-1.jpg",
-          "faculty_titles": [
-            {
-              "title": "Distinguished Professor of Eating Disorders, Department of Psychiatry; Professor of Nutrition, Gillings School of Public Health; Director, UNC Center of Excellence for Eating Disorders; Co-Director, UNC Center for Psychiatric Genomics, University of North Carolina at Chapel Hill, Chapel Hill, North Carolina"
-            }
-          ],
+          "faculty_accreditation": "Distinguished Professor of Eating Disorders, Department of Psychiatry; Professor of Nutrition, Gillings School of Public Health; Director, UNC Center of Excellence for Eating Disorders; Co-Director, UNC Center for Psychiatric Genomics, University of North Carolina at Chapel Hill, Chapel Hill, North Carolina",
           "faculty_descript": "Phasellus sit amet orci non erat venenatis tempor quis in tellus. Phasellus semper tincidunt odio, sed facilisis erat tincidunt et.",
           "sequence": 1
         },
         {
           "faculty_name": "Susan L. McElroy, MD",
-          "faculty_thumbnail": "images/fpo/fpo-img-1.jpg",
-          "faculty_titles": [
-            {
-              "title": "Chief Research Officer, Lindner Center of HOPE; Professor of Psychiatry and Behavioral Neuroscience, University of Cincinnati College of Medicine, Mason, Ohio"
-            }
-          ],
+          "faculty_thumbnail": "images/fpo/fpo-img-4.jpg",
+          "faculty_accreditation": "Chief Research Officer, Lindner Center of HOPE; Professor of Psychiatry and Behavioral Neuroscience, University of Cincinnati College of Medicine, Mason, Ohio",
           "faculty_descript": "Phasellus sit amet orci non erat venenatis tempor quis in tellus. Phasellus semper tincidunt odio, sed facilisis erat tincidunt et.",
           "sequence": 2
         },
         {
           "faculty_name": "Chevese Turner",
-          "faculty_thumbnail": "images/fpo/fpo-img-1.jpg",
-          "faculty_titles":
-                  [
-                    {
-                      "title": "President and CEO, Binge Eating Disorder Association, Severna Park, Maryland"
-                    }
-                  ],
+          "faculty_thumbnail": "images/fpo/fpo-img-3.jpg",
+          "faculty_accreditation": "President and CEO, Binge Eating Disorder Association, Severna Park, Maryland",
           "faculty_descript": "Phasellus sit amet orci non erat venenatis tempor quis in tellus. Phasellus semper tincidunt odio, sed facilisis erat tincidunt et.",
           "sequence": 3
         }

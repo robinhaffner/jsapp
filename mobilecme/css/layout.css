@@ -201,6 +201,7 @@ a, a:hover, a:focus, a:active {
 #main-content .case-study h4 { margin-bottom: 0; }
 #main-content .case-study p { margin-top: 0; }
 
+.details.media { margin-bottom: 12px; }
 
 .content-wrapper h1.qhdr { margin-bottom: 42px; }
 .icon-question {

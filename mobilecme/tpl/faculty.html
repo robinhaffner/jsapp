@@ -3,13 +3,11 @@
 	{{#this.faculty}}
 	<li>
 	  <div class="details media">
-	    <a class="pull-left content-left" ><img src="{{this.faculty_thumbnail}}" alt=""></a>
+	    <a class="pull-left content-left" ><img src="{{this.faculty_thumbnail}}" alt="{{this.faculty_name}}" width="60"></a>
 	    <div class="content-right media-body">
 	      <h4 class="media-heading">{{this.faculty_name}}</h4>
-	      <p>{{#this.faculty_titles}}
-	        {{{this.title}}}<br>
-	        {{/this.faculty_titles}}</p>
-            <!--<p>{{this.faculty_descript}}</p>-->
+	      <p>{{this.faculty_accreditation}}</p>
+          <!--<p>{{this.faculty_descript}}</p>-->
 	    </div>
 	  </div>
 	</li>
