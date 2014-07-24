@@ -32,7 +32,10 @@ a, a:hover, a:focus, a:active {
 
 #hdr .navicons.icon-back { background-position: 0 0; width: 13px; } 
 #hdr .navicons.icon-next { background-position: 0 -32px; width: 13px; display: inline-block; margin-left: 14px; } 
+#hdr .navicons.icon-sound { cursor: pointer; }
 #hdr .navicons.icon-sound.on { background-position: 0 -64px; width: 23px; } 
+#hdr .navicons.icon-sound.none { background-position: 0 -64px; width: 23px; opacity: 0.5; } 
+#hdr .navicons.icon-sound.pause { background-position: 0 -96px; width: 23px; opacity: 0.8; } 
 #hdr .next-control {
     background: transparent url(../images/icons/icons-nav.png) no-repeat right -22px;
     border: 0 none;
@@ -253,6 +256,7 @@ a, a:hover, a:focus, a:active {
   color: rgb(255,255,255);
   font-size: 0.7em;
   border-top: 1px solid rgb(40,115,63);
+  max-height: 50px;
 }
 #ftr a:hover, #ftr a:link,
 #ftr a:active, #ftr a:visited, #ftr a:focus { 
@@ -267,9 +271,10 @@ a, a:hover, a:focus, a:active {
  * Style Sidebar
  * --------------------------------------------------
  */
-#sidebar.sidebar-offcanvas { padding: 10px 0; background-color: rgb(225,229,227); }
+#sidebar.sidebar-offcanvas { padding: 10px 0 0 0; background-color: rgb(225,229,227); }
 #sidebar .sidebar-hdr { padding: 0; margin-left: 15px; }
 
+#sidebar .list-group { margin-bottom: 0; }
 #sidebar .list-group-item { background: url(../images/bg-sidebar.jpg) repeat scroll 0 0 transparent; padding: 15px; }
 #sidebar .list-group-item:first-child, #sidebar .list-group-item:last-child { border-radius: 0; }
 #sidebar .list-group-item.selected { 

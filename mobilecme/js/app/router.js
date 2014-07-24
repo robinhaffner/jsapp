@@ -46,8 +46,7 @@ define(function (require) {
                 
             } 
 
-            if (match && specialty) {
-                
+            if (match && specialty) {                
                 console.log("match",match,match[1]);
 
                 siteAdapter.getData("sitecontent",match[1]).done(function(_content){
@@ -72,7 +71,7 @@ define(function (require) {
             navView.getTopNav()
         },
         audiomedia = function (_c) {
-            audioView.render(_c)
+            audioView.render(_c, $('.audio-container'))
         },
         sidebarCanvas = function () {
             var sidebarView = new SidebarView()

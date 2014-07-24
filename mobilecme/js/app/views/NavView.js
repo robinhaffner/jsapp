@@ -55,7 +55,6 @@ define(function (require) {
         }
 
         this.initialize();
-
     };
 
 });

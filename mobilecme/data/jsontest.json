@@ -90,15 +90,15 @@
         "Other Healthcare Professional Interested in CRC"
       ],
       "audio_url": "audio/long-canada_anthem.mp3",
-      "audio_autoplay": "0"
+      "audio_autoplay": "true"
     },
     {
       "id": "instructions",
       "template": "Instructions",
       "title": "Mobile CME - Instructions",
       "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
-      "audio_url": "audio/long-canada_anthem.mp3",
-      "audio_autoplay": "0"
+      "audio_url": "audio/long-canada_anthm.mp3",
+      "audio_autoplay": "false"
     },
     {
       "id": "faculty",
@@ -107,7 +107,7 @@
       "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
       "header": "Presenting Faculty",
       "audio_url": "audio/long-canada_anthem.mp3",
-      "audio_autoplay": "0",
+      "audio_autoplay": "true",
       "faculty": [
         {
           "faculty_name": "Cynthia M. Bulik, PhD, FAED",
@@ -141,7 +141,7 @@
       "subheader": "<p>70-year old Caucasian female</p><p><strong>Patient History</strong></p>",
       "img": "images/fpo/fpo-img-2.jpg",
       "audio_url": "audio/long-canada_anthem.mp3",
-      "audio_autoplay": "0",
+      "audio_autoplay": "true",
       "listviewer": [
         "Married, two stepchildren",
         "Works part-time in retail clothing store",
@@ -158,7 +158,7 @@
       "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
       "header": "What grade of sensory neuropathy is Grace experiencing? <strong>Choose one.</strong>",
       "audio_url": "audio/sm-spring.mp3",
-      "audio_autoplay": "1",
+      "audio_autoplay": "false",
       "questions": [
         {
           "questionprecent": "17",
@@ -185,7 +185,7 @@
       "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
       "header": "It is likely that Grace has oxaiplatin-induced sensory neurotoxicity. What would you try first in the hopes of alleviating Grace's neuropathy?",
       "audio_url": "audio/sm-spring.mp3",
-      "audio_autoplay": "0",
+      "audio_autoplay": "true",
       "questions": [
         {
           "percent": "17",
@@ -214,7 +214,7 @@
       "details": "<p>Patients with stage II or III CRC underwent curative resection followed by 12 cycles of LV5FU2 or FOLFOX4</p><p>Patients followed every 2 weeks for the first 6 mos; then every 6 mos for 6 years</p><p>Results showed a benefit of adjuvant FOLFOX4 (ie, addition of oxaliplatin) in stage III CRC in terms of both OS and DFS</p>",
       "enlargetable": "images/fpo/fpo-table-1.jpg",
       "audio_url": "audio/long-canada_anthem.mp3",
-      "audio_autoplay": "0"
+      "audio_autoplay": "true"
     },
     {
       "id": "chart2",
@@ -224,7 +224,7 @@
       "details": "<p>Purpose: Assess continued use of bevacizumab + 2nd line chemotherapy in patients with mCRC and who had progressed after 1st-line bevacizumab-based treatment</p><p>Second-line chemotherapy = Oxaliplatin- or Irinotecan-based (switch cemo) with or without bevacizumab (2.5mg/kg/week)</p>",
       "enlargetable": "images/fpo/fpo-chart-1.jpg",
       "audio_url": "audio/med-siren.mp3",
-      "audio_autoplay": "0"
+      "audio_autoplay": "true"
     },
     {
       "id": "video",
@@ -236,7 +236,7 @@
       "popupVideo": "images/fpo/fpo-video-1.jpg",
       "poster": "images/fpo/fpo-video-1.jpg",
       "audio_url": "audio/long-canada_anthem.mp3",
-      "audio_autoplay": "0",
+      "audio_autoplay": "true",
       "media": [
         {
           "mediatype": "video/mp4;codecs='avc1.42E01E, mp4a.40.2'",
@@ -255,7 +255,7 @@
       "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
       "header": "What grade of sensory neuropathy is Grace experiencing? <strong>Choose one.",
       "audio_url": "audio/med-siren.mp3",
-      "audio_autoplay": "0",
+      "audio_autoplay": "true",
       "questions": [
         {
           "questionprecent": "17",
