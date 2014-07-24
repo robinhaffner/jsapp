@@ -7,7 +7,12 @@
 	    <div class="content-right media-body">
 	      <h4 class="media-heading">{{this.faculty_name}}</h4>
 	      <p>{{this.faculty_accreditation}}</p>
-          <!--<p>{{this.faculty_descript}}</p>-->
+	      {{#if faculty_descript }}
+	          <p>{{this.faculty_descript}}</p>
+          {{/if}}
+	      {{#if faculty_disclaimer }}
+	          <p>{{this.faculty_disclaimer}}</p>
+          {{/if}}
 	    </div>
 	  </div>
 	</li>
