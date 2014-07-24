@@ -1,4 +1,5 @@
 var multiselectArr = new Array();
+var highlightchapter, specialty, paramObj,passedJoinedVars,startPageNum;
 
 var urlParams = {};
 (function () {
@@ -72,25 +73,31 @@ function getPageParam() {
         passedJoinedVars = joinedVars.join("&");
         Cookies.set('user_passedpage_params', passedJoinedVars, { expires: 600 });
 
-        var findsidebar = 'h' in b;
+        highlightchapter = 'chapter' in b;
+        specialty = 'specialty' in b;
+        paramObj = b;
 
         console.log("b",b);
-
-        if ( findsidebar == false || b.specialty == ""){
-            Cookies.set('first_time_visit_program', 0, { expires: 600 });
-            $('.list-group-item:eq(0)').addClass('selected');
-        } else {
-            $('.list-group-item:eq('+b.h+')').addClass('selected');
-        }
-
     } else {
         Cookies.set('first_time_visit_program', 0, { expires: 600 });
     }
 }
 
+function selectSpecialty(s) {
+    var doclocation = document.location.href,
+    search = /([^&=]+)=?([^&]*)/g,
+    strsplit = doclocation.split(document.location.search)[0],    
+    userselectedspecialty = s.text();
+
+    Cookies.set('specialty', userselectedspecialty, { expires: 600 });
+    if (passedJoinedVars == undefined){
+        document.location = document.location.href+"?specialty="+userselectedspecialty+"#"+startPageNum;
+    }else{
+        document.location = strsplit+"?specialty="+userselectedspecialty+"&"+passedJoinedVars+"#"+startPageNum;
+    }
+}
 
 $(document).ready(function () {
-
     // Do responsive stuff
     $(window).on('resize', function(e){
         if ($("html").hasClass('no-touch')) {
@@ -147,6 +154,10 @@ $(document).ready(function () {
         else {
             $(this).addClass('selected');
         }
+
+        if (listtype == "specialty") {
+            selectSpecialty($(this));
+        };
     });
 
 

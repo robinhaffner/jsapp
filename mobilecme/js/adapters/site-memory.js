@@ -7,7 +7,7 @@ define(function(require) {
     var deferred = $.Deferred(),
                    item = undefined;
     
-    if (id === undefined) {
+    if (id === undefined || id === "null") {
       item = data[section];
     }
 
@@ -31,12 +31,16 @@ define(function(require) {
     return deferred.promise();
     
   },
+  getStartPage = function (section) {
+    return data[section][0].id;
+  },
   
   data = require('json!../../data/jsontest.json');
 
   // The public API
   return {
-    getData: getData
+    getData: getData,
+    getStartPage: getStartPage
   };
 
 });

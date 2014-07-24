@@ -5,9 +5,9 @@ define(function (require) {
     var $               = require('jquery'),
         Handlebars      = require('handlebars'),
         siteAdapter     = require('adapters/site'),
-        mainHtml    = require('text!tpl/main.html'),
+        mainHtml        = require('text!tpl/main.html'),
 
-        mainTpl = Handlebars.compile(mainHtml);
+        mainTpl         = Handlebars.compile(mainHtml);
 
     return function () {
 
@@ -16,7 +16,9 @@ define(function (require) {
         };
 
         this.render = function (content) {
+            startPageNum = siteAdapter.getStartPage("start")
             this.$el.html(mainTpl(content));
+            $('#hdr .next-control').remove()
             return this;
         };
 

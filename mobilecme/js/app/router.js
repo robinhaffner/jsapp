@@ -22,27 +22,29 @@ define(function (require) {
         detailsURL = /^#(\w+)/,
         mainView = new MainView(),
         navView = new NavView(),
+        startPageNum = siteAdapter.getStartPage("start"),
 
         route = function () {
             var hashpath = window.location.hash,
                 view,
                 match;
-        
-            if (!hashpath) {
-              
+            
+            match = hashpath.match(detailsURL);
+            console.log("specialty",specialty);
+
+            if (!hashpath || !specialty) {
                 siteAdapter.getData("sitecontent","main").done(function(_content) {
                   var tpl = eval(_content.template+"View");
                   var handler = new tpl();
 
                   handler.render(_content);
                   navView.setNextPage("main");
+                  $("title").html(_content.title);
                 });
                 
-                return;
-            }
-            
-            match = hashpath.match(detailsURL);
-            if (match) {
+            } 
+
+            if (match && specialty) {
                 
                 console.log("match",match,match[1]);
 
@@ -70,7 +72,6 @@ define(function (require) {
             var sidebarView = new SidebarView()
             sidebarView.render()
             sidebarView.getSidebar()
-            getPageParam();
         },
         ftr = function () {
             var footerView = new FooterView()
@@ -79,6 +80,7 @@ define(function (require) {
         },
         start = function () {
             $(window).on('hashchange', route);
+            getPageParam();
             nav();
             sidebarCanvas();
             route();

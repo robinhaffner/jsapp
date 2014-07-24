@@ -1,4 +1,7 @@
 {
+  "start": [{
+    "id": "instructions"
+  }], 
   "manifesto": [{
     "pages": [
       "main",
@@ -69,14 +72,6 @@
           "media-credit": "0.25 Credits",
           "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
           "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
-        },
-        {
-          "media": 5,
-          "media-url": "?h=4#faculty",
-          "media-img": "images/fpo/fpo-img-2.jpg",
-          "media-credit": "0.25 Credits",
-          "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
-          "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
         }
       ]
     }
@@ -85,7 +80,7 @@
     {
       "id": "main",
       "template": "Main",
-      "title": "Mobile CME - Index",
+      "title": "Mobile CME - Specialty",
       "headline": "Virtual Patient Encounters: Improving Outcomes in CRC Patients",
       "header": "Select your Specialty",
       "listviewer": [

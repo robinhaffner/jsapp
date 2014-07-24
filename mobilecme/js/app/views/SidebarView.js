@@ -25,6 +25,14 @@ define(function (require) {
                 $('.sidebar-offcanvas').html(sidebarTpl(_sidebar));
                 return;
             });
+
+            if ( !highlightchapter){
+                Cookies.set('first_time_visit_program', 0, { expires: 600 });
+                $('.list-group-item:eq(0)').addClass('selected');
+            } else {
+                $('.list-group-item:eq('+paramObj.chapter+')').addClass('selected');
+            }
+
         };
 
         this.initialize();

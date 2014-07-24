@@ -33,16 +33,18 @@ define(function (require) {
                 var pagemax = manifesto.pages.length;
                 $(".page-ctn .num").empty().append(pagemax);
 
-                for (var i = 0; i < pagemax; i++) {
-                    if (manifesto.pages[i] == _h) {
-                        $(".page-ctn .pgenum").empty().append(i+1);
-                        $(".next-control").show().attr('href', "#"+manifesto.pages[i+1]);
+                for (var key in manifesto.pages){
+                    
+                    if (manifesto.pages[key] == _h) {
+                        $(".page-ctn .pgenum").empty().append(parseInt(key)+1);
+                        $(".next-control").show().attr('href', "#"+manifesto.pages[parseInt(key)+1]);
                     }
                 }
-                if (parseInt($(".page-ctn .pgenum").text()) == (pagemax - 1)) {
+
+                if (parseInt($(".page-ctn .pgenum").text()) == pagemax) {
                     $(".next-control").attr('href', "#playagain");
                 }
-    
+
                 $(".progress-bar").attr({
                     "aria-valuemin": 0,
                     "aria-valuenow": parseInt($(".page-ctn .pgenum").text()),
