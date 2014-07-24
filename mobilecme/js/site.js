@@ -127,7 +127,7 @@ $(document).ready(function () {
                 Cookies(listtype, undefined);
                 Cookies.set(listtype, listtext, { expires: 600 });
             });
-        } else if ($( selectionlist ).hasClass('multi-result')) {
+        } else if ($( selectionlist ).hasClass('multiple')) {
             $(this).addClass('selected');
 
             if ($(this).hasClass('selected')) {
