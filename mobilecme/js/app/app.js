@@ -6,8 +6,8 @@ require.config({
         root: '../../',
         app: '../../js/app',
         tpl: '../../tpl',
-        views:'../../js/app/views'
-        //,data: '../../data'
+        views:'../../js/app/views',
+        data: '../../data'
     },
 
     map: {

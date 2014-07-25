@@ -1,3 +1,5 @@
 <h1>{{this.header}}</h1>
-{{{this.details}}}
+<div ic="{{this.id}}" class="txtContainer">{{{this.content}}}</div>
+{{#if enlargetable}}
 <div class="imageGesture" id="enlargetable"><img src="{{this.enlargetable}}" alt="" width="300" height="227" /></div>
+{{/if}}

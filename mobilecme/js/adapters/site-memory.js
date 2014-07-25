@@ -35,7 +35,7 @@ define(function(require) {
     return data[section][0].id;
   },
   
-  data = require('json!../../data/jsontest.json');
+  data = require('json!data/jsontest.json');
 
   // The public API
   return {

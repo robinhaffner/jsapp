@@ -5,9 +5,9 @@ define(function (require) {
     var $               = require('jquery'),
         Handlebars      = require('handlebars'),
         siteAdapter     = require('adapters/site'),
-        instructionsHtml        = require('text!tpl/instructions.html'),
+        contentHtml     = require('text!tpl/content.html'),
 
-        instructionsTpl = Handlebars.compile(instructionsHtml);
+        contentTpl = Handlebars.compile(contentHtml);
 
     return function () {
 
@@ -16,7 +16,7 @@ define(function (require) {
         };
 
         this.render = function (content) {
-            this.$el.html(instructionsTpl(content));
+            this.$el.html(contentTpl(content));
             return this;
         };
 
