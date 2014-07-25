@@ -1,0 +1,266 @@
+{
+  "start": [{
+    "id": "instructions"
+  }], 
+  "manifesto": [{
+    "pages": [
+      "main",
+      "instructions",
+      "faculty",
+      "overview",
+      "question",
+      "chart",
+      "table",
+      "chart2",
+      "video",
+      "question2"
+    ]
+  }],
+  "topnav": [{
+      "next-control": "Next",
+      "headline": "<p>From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?</p>"
+    }],
+  "footer": [{
+      "col-1": {
+        "txt": "Privacy",
+        "link": "tpl/privacy.html"
+      },
+      "col-2": {
+        "txt": "Feedback",
+        "link": "tpl/feedback.html"
+      },
+      "col-3": {
+        "txt": "Get Certificate&nbsp;&#62;",
+        "link": "tpl/getcertificate.html"
+      }
+    }],
+  "sidebar": [
+    {
+      "name": "Company Name",
+      "logo": "images/fpo/Penn.gif",
+      "header": "Company Header",
+      "headline": "Virtual Outcomes in CRC Patients",
+      "sidebarlist": [
+        {
+          "media": 1,
+          "media-url": "https://www.google.ca/",
+          "media-img": "images/fpo/fpo-img-1.jpg",
+          "media-credit": "0.25 Credits",
+          "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
+          "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
+        },
+        {
+          "media": 2,
+          "media-url": "#faculty",
+          "media-img": "images/fpo/fpo-img-2.jpg",
+          "media-credit": "0.25 Credits",
+          "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
+          "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
+        },
+        {
+          "media": 3,
+          "media-url": "?h=2#faculty",
+          "media-img": "images/fpo/fpo-img-3.jpg",
+          "media-credit": "0.25 Credits",
+          "media-heading": "Best Practices with Targeted Therapies in Advanced CRC",
+          "media-subtext": "<p>John L. Marshall, MD</p>"
+        },
+        {
+          "media": 4,
+          "media-url": "?h=3#faculty",
+          "media-img": "images/fpo/fpo-img-4.jpg",
+          "media-credit": "0.25 Credits",
+          "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
+          "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
+        }
+      ]
+    }
+  ],
+  "sitecontent": [
+    {
+      "id": "main",
+      "template": "Main",
+      "title": "ProCME - Specialty",
+      "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
+      "header": "Select your Specialty",
+      "listviewer": [
+        "Pulmonology",
+        "Other"
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "instructions",
+      "template": "Content",
+      "title": "ProCME - Instructions",
+      "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
+      "content": "<div class=\"instructions\"><ul class=\"instructionslist\"><li class=\"topleft instructionposition\"><span class=\"arrow icon-arrow-up\"></span><strong>Mute</strong> Audio</li><li class=\"topright instructionposition\"><span class=\"arrow icon-arrow-up\"></span>Click <strong>Next</strong> or swipe left to advance</li><li class=\"imginstructions\"><img src=\"images/img-instructions.png\" /></li><li class=\"bottomleft instructionposition\"></span>Go to <strong>Next Program</strong> in Series<span class=\"arrow icon-arrow-down\"></li><li class=\"bottomright instructionposition\"><strong>Skip</strong> to Post Test<span class=\"arrow icon-arrow-down\"></span></li></ul></div>",
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "faculty",
+      "template": "Faculty",
+      "title": "ProCME - Faculty",
+      "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
+      "header": "Presenting Faculty",
+      "faculty": [
+        {
+          "faculty_name": "Stanley B. Fiel, MD, FACP, FCCP",
+          "faculty_thumbnail": "images/fpo/Fiel_Stanley_1213.jpg",
+          "faculty_accreditation": "Stanley B. Fiel, MD, FACP, FCCP, has a financial interest/relationship or affiliation in the form of: Consultant for Bayer Corporation; Boehringer Ingelheim Pharmaceuticals, Inc.; Novartis Corporation; and Pfizer Inc. Grant/Research Support from Cystic Fibrosis Foundation; Gilead; Novartis Corporation; and Vertex Pharmaceuticals Incorporated. Speakers Bureau participant with Dey Pharma; Genentech, Inc.; Gilead; GlaxoSmithKline; Novartis Corporation; and Pfizer Inc.",
+          "faculty_descript": "",
+          "faculty_disclaimer": "The Icahn School of Medicine at Mount Sinai<br>Atlantic Health System<br> Morristown Medical Center<br> Morristown, New Jersey<br>"
+        },
+        {
+          "faculty_name": "Kadrin Wilfong, MD",
+          "faculty_thumbnail": "images/fpo/fpo-img-4.jpg",
+          "faculty_accreditation": "Kadrin Wilfong, MD, has no financial interests/relationships or affiliations in relation to this activity.",
+          "faculty_descript": "",
+          "faculty_disclaimer": "Answers in CME, Inc."
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "overview",
+      "template": "Content",
+      "title": "ProCME - Overview",
+      "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
+      "header": "Grace: Overview",
+      "img": "images/fpo/fpo-img-2.jpg",
+      "content": "<p>70-year old Caucasian female</p><p><strong>Patient History</strong></p><p>Cystic fibrosis (CF) is a complex, chronic, multisystem disease for which there is currently no cure. CF is caused by mutations in a single large gene on chromosome 7 that encodes the cystic fibrosis transmembrane conductance regulator, or CFTR, protein.</p><p>The phenotypic expression of disease varies according to the presence of specific mutation or mutations. According to the Cystic Fibrosis Mutation Database, there are more than 1,300 different mutations in the CFTR gene with a potential to cause disease. The mutations of the CFTR gene have been divided into five different classes. However, the clinical implications of specific combinations of mutations are not always clear, possibly due to the influence of gene modifiers. Significant progress has been and continues to be made in the treatment of patients with CF using strategies to address both the underlying genetic defect and its downstream consequences. For example, two disease pathways that are potentially modifiable by pharmacotherapy include the \"potentiators,\" for gating type mutations which increase the time that the CFTR ion channel remains open, and \"correctors,\" which increase the quantity of CFTR that can be inserted into the apical membrane.</p>",
+      "audio_url": "audio/simples/long-canada_anthem.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "question",
+      "template": "Question",
+      "title": "ProCME - Clinical Practice",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "What is the latest status in the development of gene therapy for CF?",
+      "type": "single-result",
+      "answers": [
+        {
+          "answersid": "55",
+          "answerstxt": "<p>One of the hopes for cure of this disease, or complete disease modification, is related to gene therapy for cystic fibrosis. Unfortunately, some problems in the transfection of the gene vector were unsuccessful in meeting the original expectations, and the flurry of excitement that occurred over a decade ago has waned. Only a couple of clinical trials are still ongoing through the international CF community, using liposomal and/or viral vectors to accomplish their ends.</p>"
+        },
+        {
+          "answersid": "600",
+          "answerstxt": "<p>Current research efforts related to gene therapy continue to focus on finding ways for the safe delivery of a normal cystic fibrosis transmembrane conductance regulator, or CFTR, gene to the airways of patients with cystic fibrosis, as well as vector efficiency, transgene persistence, and overcoming host immune responses.<sup>1,2</sup></p>"
+        },
+        {
+          "answersid": "12",
+          "answerstxt": "<p>1. Prickett M, Jain M. <i>Transl Res</i>. 2013;161:255-264.<br> 2. Griesenbach U, Alton EW. <i>Curr Pharm Des</i>. 2012;18:642-662.</p>"
+        }
+      ],
+      "audio_url": "audio/cf_s2.mp3",
+      "audio_autoplay": "false"
+    },
+    {
+      "id": "chart",
+      "template": "Question",
+      "title": "ProCME - Gene Therapy",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "What is the latest status in the development of gene therapy for CF?",
+      "type": "single-result",
+      "answers": [
+        {
+          "answersid": "330",
+          "answerstxt": "<p>The UK Cystic Fibrosis Gene Therapy Consortium is actively involved in clinical trials of gene therapy for patients with CF, using liposomes to transfer plasmids containing a functional CFTR cDNA. In a randomized phase 2 study, patients are administered CFTR-containing plasmid in liposomes or placebo every 4 weeks for 48 weeks.<sup>1</sup></p>"
+        },
+        {
+          "answersid": "100",
+          "answerstxt": "<p>Preclinical work is also underway to develop lentivirus-based vectors and adeno-associated virus-based vectors for CFTR gene transfer to airway epithelium.<sup>2,3</sup></p>"
+        },
+        {
+          "answersid": "170",
+          "answerstxt": "<p>1. Alton EW et al. <i>Thorax</i>. 2013;68:1075-1077.<br> 2. Griesenbach U et al. <i>Am J Respir Crit Care Med</i>. 2012;186:846-856.<br> 3.  Keswani SG <i>et al</i>. <i>PLoS One</i>. 2012;7:e43633.</p>"
+        }
+      ],
+      "audio_url": "audio/cf_s3.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "table",
+      "template": "Content",
+      "title": "ProCME - Table",
+      "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
+      "header": "What is the latest on new treatment approaches to replace the abnormal CFTR gene, to reverse the consequences of the genetic defect on protein function?",
+      "content": "<p>We're specifically looking at drugs that will improve the gating and conductance function of CFTR, which affects the proteins already at the cell membrane, and those defects that affect the amount or quantity of CFTR that gets to the cell surface. In <i>ΔF508</i>, not a significant amount of protein is getting to the cell surface. And in the <i>G551D</i> [mutation], there is plenty of protein at the apical membrane, but the chloride channel or the protein itself is not functioning properly by either not gating or conducting properly.</p><p>So in looking at the class mutations, we have functional abnormalities such as the class 3 and 4 defects, which includes <i>G551D</i> and <i>R117H</i>; and quantitative problems where the corrector drugs hopefully will be of value in the future.</p>",
+      "enlargetable": "images/fpo/fpo-table-1.jpg",
+      "audio_url": "audio/cf_s4.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "chart2",
+      "template": "Content",
+      "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
+      "header": "TML",
+      "content": "<p>Purpose: Assess continued use of bevacizumab + 2nd line chemotherapy in patients with mCRC and who had progressed after 1st-line bevacizumab-based treatment</p><p>Second-line chemotherapy = Oxaliplatin- or Irinotecan-based (switch cemo) with or without bevacizumab (2.5mg/kg/week)</p>",
+      "enlargetable": "images/fpo/fpo-chart-1.jpg",
+      "audio_url": "audio/simples/med-siren.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "video",
+      "template": "Video",
+      "title": "ProCME - Video",
+      "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
+      "header": "Video",
+      "details": "<p>A PET scan was conducted as followup after 3 years and revealed lymph node involvement. This video shows the results of that PET scan. Note the third and fourth axial lymph nodes.</p>",
+      "popupVideo": "images/fpo/fpo-video-1.jpg",
+      "poster": "images/fpo/fpo-video-1.jpg",
+      "media": [
+        {
+          "mediatype": "video/mp4;codecs='avc1.42E01E, mp4a.40.2'",
+          "mediavideo": "video/mov_bbb.mp4"
+        },
+        {
+          "mediatype": "video/ogg",
+          "mediavideo": "video/mov_bbb.mp4"
+        }
+      ],
+      "audio_url": "audio/simples/long-canada_anthem.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "question2",
+      "template": "Question",
+      "title": "ProCME - Question",
+      "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
+      "header": "What grade of sensory neuropathy is Grace experiencing? <strong>Choose one.",
+      "type": "single-result",
+      "answers": [
+        {
+          "answersid": "17",
+          "answerstxt": "<p>Pellentesque risus diam, vulputate at mattis in; pellentesque.</p>"
+        },
+        {
+          "answersid": "33",
+          "answerstxt": "<p>Mauris ullamcorper justo vel massa.</p>"
+        },
+        {
+          "answersid": "9",
+          "answerstxt": "<p>Quisque eget dui augue. Class.</p>"
+        },
+        {
+          "answersid": "16",
+          "answerstxt": "<p>Duis nibh nisl, cursus at.</p>"
+        }
+      ],
+    "audio_url": "audio/simples/med-siren.mp3",
+    "audio_autoplay": "true"
+   },
+    {
+      "id": "playagain",
+      "template": "Playagain",
+      "title": "Play Again",
+      "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
+      "header": "Play again"
+    }
+
+  ]
+}
