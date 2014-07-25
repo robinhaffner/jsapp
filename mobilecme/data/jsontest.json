@@ -8,12 +8,24 @@
       "instructions",
       "faculty",
       "overview",
+      "genetherapy",
+      "development",
+      "cftrgene",
+      "defect",
+      "consequences",
+      "abnormal",
+      "antibiotics",
+      "antiinfectives",
+      "studied",
+      "cf",
+      "conclusion",
+      "posttest",
       "question",
-      "chart",
-      "table",
-      "chart2",
-      "video",
-      "question2"
+      "question2",
+      "question3",
+      "question4",
+      "question5",
+      "video"
     ]
   }],
   "topnav": [{
@@ -129,80 +141,260 @@
       "template": "Content",
       "title": "ProCME - Overview",
       "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
-      "header": "Grace: Overview",
-      "img": "images/fpo/fpo-img-2.jpg",
-      "content": "<p>70-year old Caucasian female</p><p><strong>Patient History</strong></p><p>Cystic fibrosis (CF) is a complex, chronic, multisystem disease for which there is currently no cure. CF is caused by mutations in a single large gene on chromosome 7 that encodes the cystic fibrosis transmembrane conductance regulator, or CFTR, protein.</p><p>The phenotypic expression of disease varies according to the presence of specific mutation or mutations. According to the Cystic Fibrosis Mutation Database, there are more than 1,300 different mutations in the CFTR gene with a potential to cause disease. The mutations of the CFTR gene have been divided into five different classes. However, the clinical implications of specific combinations of mutations are not always clear, possibly due to the influence of gene modifiers. Significant progress has been and continues to be made in the treatment of patients with CF using strategies to address both the underlying genetic defect and its downstream consequences. For example, two disease pathways that are potentially modifiable by pharmacotherapy include the \"potentiators,\" for gating type mutations which increase the time that the CFTR ion channel remains open, and \"correctors,\" which increase the quantity of CFTR that can be inserted into the apical membrane.</p>",
-      "audio_url": "audio/simples/long-canada_anthem.mp3",
+      "header": "Overview",
+      "enlargetable": "images/fpo/512px-CFTR_Protein_Panels.svg.png",
+      "content": "<p>Cystic fibrosis (CF) is a complex, chronic, multisystem disease for which there is currently no cure. CF is caused by mutations in a single large gene on chromosome 7 that encodes the cystic fibrosis transmembrane conductance regulator, or CFTR, protein.</p><p>The phenotypic expression of disease varies according to the presence of specific mutation or mutations. According to the Cystic Fibrosis Mutation Database, there are more than 1,300 different mutations in the CFTR gene with a potential to cause disease. The mutations of the CFTR gene have been divided into five different classes. However, the clinical implications of specific combinations of mutations are not always clear, possibly due to the influence of gene modifiers. Significant progress has been and continues to be made in the treatment of patients with CF using strategies to address both the underlying genetic defect and its downstream consequences. For example, two disease pathways that are potentially modifiable by pharmacotherapy include the \"potentiators,\" for gating type mutations which increase the time that the CFTR ion channel remains open, and \"correctors,\" which increase the quantity of CFTR that can be inserted into the apical membrane.</p>",
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "genetherapy",
+      "template": "Content",
+      "title": "ProCME - Clinical Practice",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "What is the latest status in the development of gene therapy for CF?",
+      "content": "<p>One of the hopes for cure of this disease, or complete disease modification, is related to gene therapy for cystic fibrosis. Unfortunately, some problems in the transfection of the gene vector were unsuccessful in meeting the original expectations, and the flurry of excitement that occurred over a decade ago has waned. Only a couple of clinical trials are still ongoing through the international CF community, using liposomal and/or viral vectors to accomplish their ends.</p><p>Current research efforts related to gene therapy continue to focus on finding ways for the safe delivery of a normal cystic fibrosis transmembrane conductance regulator, or CFTR, gene to the airways of patients with cystic fibrosis, as well as vector efficiency, transgene persistence, and overcoming host immune responses.<sup>1,2</sup></p><p>1. Prickett M, Jain M. <i>Transl Res</i>. 2013;161:255-264.<br> 2. Griesenbach U, Alton EW. <i>Curr Pharm Des</i>. 2012;18:642-662.</p>",
+      "audio_url": "audio/cf_s2.mp3",
+      "audio_autoplay": "false"
+    },
+    {
+      "id": "development",
+      "template": "Content",
+      "title": "ProCME - Gene Therapy",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "What is the latest status in the development of gene therapy for CF?",
+      "content":"<p>The UK Cystic Fibrosis Gene Therapy Consortium is actively involved in clinical trials of gene therapy for patients with CF, using liposomes to transfer plasmids containing a functional CFTR cDNA. In a randomized phase 2 study, patients are administered CFTR-containing plasmid in liposomes or placebo every 4 weeks for 48 weeks.<sup>1</sup></p><p>Preclinical work is also underway to develop lentivirus-based vectors and adeno-associated virus-based vectors for CFTR gene transfer to airway epithelium.<sup>2,3</sup></p><p>1. Alton EW et al. <i>Thorax</i>. 2013;68:1075-1077.<br> 2. Griesenbach U et al. <i>Am J Respir Crit Care Med</i>. 2012;186:846-856.<br> 3.  Keswani SG <i>et al</i>. <i>PLoS One</i>. 2012;7:e43633.</p>",
+      "audio_url": "audio/cf_s3.mp3",
       "audio_autoplay": "true"
     },
+    {
+      "id": "cftrgene",
+      "template": "Content",
+      "title": "ProCME - Protein Function",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "What is the latest on new treatment approaches to replace the abnormal CFTR gene, to reverse the consequences of the genetic defect on protein function?",
+      "content": "<p>We're specifically looking at drugs that will improve the gating and conductance function of CFTR, which affects the proteins already at the cell membrane, and those defects that affect the amount or quantity of CFTR that gets to the cell surface. In <i>ΔF508</i>, not a significant amount of protein is getting to the cell surface. And in the <i>G551D</i> [mutation], there is plenty of protein at the apical membrane, but the chloride channel or the protein itself is not functioning properly by either not gating or conducting properly.</p><p>So in looking at the class mutations, we have functional abnormalities such as the class 3 and 4 defects, which includes <i>G551D</i> and <i>R117H</i>; and quantitative problems where the corrector drugs hopefully will be of value in the future.</p>",
+      "audio_url": "audio/cf_s4.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "defect",
+      "template": "Content",
+      "title": "ProCME - Protein Function",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "What is the latest on new treatment approaches to replace the abnormal CFTR gene, to reverse the consequences of the genetic defect on protein function?",
+      "content": "<p>Two of these candidate “corrector” molecules that assist with <i>F508del</i> folding and allow <i>F508del</i> CFTR to be transported to the apical surface include lumacaftor, or VX-809, and VX-661, both of which have reached clinical trials.<sup>1,2</sup></p><p>In a phase 2 trial, adult patients with homozygous <i>F508del</i> mutations were randomized to receive lumacaftor or placebo. Lumacaftor treatment resulted in a small but statistically significant decrease in sweat chloride values in a dose-dependent manner, but no improvements in pulmonary function or nasal potential difference were detected.<sup>8</sup> Combination strategies with this agent are being assessed as well.</i><p>1. ClinicalTrials.gov. Trial identifier NCT00865904.<br> 2. ClinicalTrials.gov. Trial identifier NCT01531673.</p>",
+      "audio_url": "audio/cf_s5.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "consequences",
+      "template": "Content",
+      "title": "ProCME - CFTR gene",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "What is the latest on new treatment approaches to replace the abnormal CFTR gene, to reverse the consequences of the genetic defect on protein function?",
+      "content": "<p>The <i>F508del</i> mutation manifests both Class II and Class III defects, which means that it may be possible to address both functional defects through combined use of a corrector such as VX-809 or VX-661 and a potentiator such as ivacaftor. A phase 2 trial of combined treatment with lumacaftor and ivacaftor in adult patients with homozygous or heterozygous <i>F508del</i> has evaluated different dose combinations.</p><p>Available data indicate that the regimen of 600 mg lumacaftor daily combined with ivacaftor at a dose of 250 mg twice daily resulted in an improvement in lung function in homozygous patients compared with those given placebo.<sup>1</sup> Among patients in the treatment arm, 19% achieved an absolute improvement in FEV1 of ≥10%compared with no patients in the placebo arm. Additional phase 3 studies are underway to evaluate lumacaftor in combination with ivacaftor.<sup>2,3</sup></p><p>VX-661 is another small-molecular-weight compound that is being evaluated in combination with ivacaftor.<sup>4</sup></p><p>1.Boyle MP <i>et al</i>. <i>Pediatr Pulmonol Suppl</i>. 2012;47:315. Abstract 260.<br>2.ClinicalTrials.gov. Trial identifier NCT01807923.<br> 3.ClinicalTrials.gov. Trial identifier NCT01807949.<br> 4.ClinicalTrials.gov. Trial identifier NCT01531673.</p>",
+      "audio_url": "audio/cf_s6.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "abnormal",
+      "template": "Content",
+      "title": "ProCME - CFTR gene",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "What is the latest on new treatment approaches to replace the abnormal CFTR gene, to reverse the consequences of the genetic defect on protein function?",
+      "content": "<p>The problem in patients—and about 80% of our North American CF population has at least one copy of the <i>ΔF[508]</i>—is in the folding of the protein, such that the protein cannot get to the cell surface. If a corrector can improve the amount of drug that gets to the cell surface, then the combination of a corrector and a promoter may well be the future of CF care.</p><p>Looking at all of our CF mutations and their functional defects and classifying each of these into a quantitative or corrector problem and/or a functional problem—we will then be able to treat many more of our patients with CF and hopefully change the way this disease is looked at, and disease-modify CF completely such that survival may improve and this may no longer be the lethal disease that it is today.</p>",
+      "audio_url": "audio/cf_s7.mp3",
+      "audio_autoplay": "false"
+    },
+    {
+      "id": "antibiotics",
+      "template": "Content",
+      "title": "ProCME - CFTR gene",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "Are any new antibiotics and anti-infectives being studied for CF?",
+      "content": "<p>Tobramycin and aztreonam are two antibiotic agents currently approved by the FDA for delivery by aerosol to patients with CF infected with <i>Pseudomonas aeruginosa</i>. A powdered form of tobramycin also received approval from the FDA in March 2013, for CF patients six years of age and older.</p><p>The future antibiotics being studied are levofloxacin by aerosol<sup>1</sup> and the liposomal amikacin aerosol,<sup>2,3</sup> along with colistin [colistimethate] dry powder.<sup>4</sup></p><p>1. ClinicalTrials.gov. Trial identifier NCT01180634.<br>2. ClinicalTrials.gov. Trial identifier NCT00558844.<br>3. ClinicalTrials.gov. Trial identifier NCT00777296.<br>4. ClinicalTrials.gov. Trial identifier NCT01537614.</p>",
+      "enlargetable": "images/fpo/800px-Pseudomonas.jpg",
+      "audio_url": "audio/cf_s8.mp3",
+      "audio_autoplay": "false"
+    },    
+    {
+      "id": "antiinfectives",
+      "template": "Content",
+      "title": "ProCME - CFTR gene",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "Are any new antibiotics and anti-infectives being studied for CF?",
+      "content": "<p>Some initial data from trials with these agents have already become available. For example, the noninferiority of levofloxacin to tobramycin inhalation solution was found in a randomized open-label trial.<sup>1</sup> In another study, patients with CF who were chronically infected with <i>P. aeruginosa</i> were randomized to once-daily inhaled liposomal amikacin at different doses or placebo.<sup>2</sup> Improvements in FEV1 and in respiratory symptoms were significantly greater in the group receiving the highest dose of amikacin versus placebo. That group also had a greater incidence of dysphonia compared with the placebo group, but there were no other differences in safety measures.</p><p>A phase 3 trial demonstrated noninferiority of dry powder colistin to tobramycin solution.<sup>3</sup> Because of the success that can be achieved with antibiotic treatments in patients with <i>Pseudomonas</i> infections, similar strategies are also being tested on patients who have acquired methicillin-resistant <i>Staphylococcus aureus</i>, or MRSA. However, it should be noted that it is not yet clear if or how MRSA may contribute to CF lung disease.</p><p>1. Elborn JS <i>et al</i>. <i>J Cyst Fibros</i>. 2013;12:S35.<br>2. Clancy JP et al. <i>Thorax</i>. 2013;68:818-825.<br>3.Schuster A et al. <i>Thorax</i>. 2013;68:344- 350.<br></p>",
+      "audio_url": "audio/cf_s9.mp3",
+      "audio_autoplay": "false"
+    },    
+    {
+      "id": "studied",
+      "template": "Content",
+      "title": "ProCME - CFTR gene",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "Are any new antibiotics and anti-infectives being studied for CF?",
+      "content": "<p>There are presently no drugs available for MRSA via the aerosol route, but a vancomycin preparation is presently being looked at.<sup>1</sup></p><p>There are also some combination antibiotics in the liquid and dry powder format that are being studied to determine whether or not using these different approaches can decrease exacerbations and improve lung function.</p><p>Finally, there have been some very early studies looking at anti-Pseudomonal antibody treatments to try to decrease the load of Pseudomonas in the airway and/or decrease the acquisition of Pseudomonas. As we know, once patients develop Pseudomonas in the airway, their lung function degenerates more rapidly than those who had not acquired Pseudomonas.</p><p>1. ClinicalTrials.gov. Trial identifier NCT01746095.</p>",
+      "audio_url": "audio/cf_s10.mp3",
+      "audio_autoplay": "false"
+    },
+    {
+      "id": "cf",
+      "template": "Content",
+      "title": "ProCME - CFTR gene",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "Are any new antibiotics and anti-infectives being studied for CF?",
+      "content": "<p>For example, intravenous infusion of an anti- Pseudomonal recombinant human Fab'-antibody fragment, KB001, is being assessed in one clinical trial.<sup>1</sup> Another study is assessing an avian polyclonal anti-Pseudomonal antibody that is administered by gargling and swallowing the liquid preparation.<sup>2</sup></p><p>1. ClinicalTrials.gov. Trial identifier NCT00638365.<br>2. ClinicalTrials.gov. Trial identifier NCT01455675.</p>",
+      "audio_url": "audio/cf_s11.mp3",
+      "audio_autoplay": "false"
+    },    
+    {
+      "id": "conclusion",
+      "template": "Content",
+      "title": "ProCME - Conclusion",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "Are any new antibiotics and anti-infectives being studied for CF?",
+      "content": "<p>I would like to conclude to by offering some hope for our CF patients, that we may have improvement in overall care as we learn more about ways to improve the adherence of our patients, have therapies that may be delivered much more efficiently, and decrease time to administer, and finally to truly disease-modify with looking at CFTR modulation, such that we can improve the quantity and the function of this abnormal protein in affected CF patients.</p>",
+      "audio_url": "audio/cf_s12.mp3",
+      "audio_autoplay": "false"
+    },    
+    {
+      "id": "posttest",
+      "template": "Content",
+      "title": "ProCME - Conclusion",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "header": "Are any new antibiotics and anti-infectives being studied for CF?",
+      "content": "<p>The Penn State College of Medicine and Answers in CME respect and appreciate your opinions.</p><p>To obtain CME credit, please complete the CME Post-Test. To assist us in evaluating the effectiveness of this activity and to make recommendations for future educational offerings, please take a few minutes to complete the evaluation form. The correct answers, with detailed explanations to the questions below, will be provided on page 2. </p><p>After you submit the form, your statement of credit will be emailed to you.</p><p>All questions are required for CME credit. A score of 80% or higher is needed to obtain CME credit</p>",
+      "audio_url": "",
+      "audio_autoplay": "false"
+    },    
     {
       "id": "question",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
-      "header": "What is the latest status in the development of gene therapy for CF?",
+      "question": "Which of the following gene therapy strategies are currently being evaluated in clinical trials in patients with cystic fibrosis (CF)?",
       "type": "single-result",
       "answers": [
         {
           "answersid": "55",
-          "answerstxt": "<p>One of the hopes for cure of this disease, or complete disease modification, is related to gene therapy for cystic fibrosis. Unfortunately, some problems in the transfection of the gene vector were unsuccessful in meeting the original expectations, and the flurry of excitement that occurred over a decade ago has waned. Only a couple of clinical trials are still ongoing through the international CF community, using liposomal and/or viral vectors to accomplish their ends.</p>"
+          "answerstxt": "<p>Use of lentivirus-based vectors for CFTR gene transfer to airway epithelium</p>"
         },
         {
           "answersid": "600",
-          "answerstxt": "<p>Current research efforts related to gene therapy continue to focus on finding ways for the safe delivery of a normal cystic fibrosis transmembrane conductance regulator, or CFTR, gene to the airways of patients with cystic fibrosis, as well as vector efficiency, transgene persistence, and overcoming host immune responses.<sup>1,2</sup></p>"
+          "answerstxt": "<p>Use of adeno-associated virus-based vectors for CFTR gene transfer to airway epithelium</p>"
         },
         {
           "answersid": "12",
-          "answerstxt": "<p>1. Prickett M, Jain M. <i>Transl Res</i>. 2013;161:255-264.<br> 2. Griesenbach U, Alton EW. <i>Curr Pharm Des</i>. 2012;18:642-662.</p>"
+          "answerstxt": "<p>Use of liposomes to transfer plasmids containing a functional CFTR cDNA to airway epithelium</p>"
         }
       ],
-      "audio_url": "audio/cf_s2.mp3",
-      "audio_autoplay": "false"
+      "audio_url": "",
+      "audio_autoplay": ""
     },
     {
-      "id": "chart",
+      "id": "question2",
       "template": "Question",
-      "title": "ProCME - Gene Therapy",
+      "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
-      "header": "What is the latest status in the development of gene therapy for CF?",
+      "question": "Ivacaftor is a small-molecular-weight compound approved to treat patients with CF with which of the following mutations?",
       "type": "single-result",
       "answers": [
         {
-          "answersid": "330",
-          "answerstxt": "<p>The UK Cystic Fibrosis Gene Therapy Consortium is actively involved in clinical trials of gene therapy for patients with CF, using liposomes to transfer plasmids containing a functional CFTR cDNA. In a randomized phase 2 study, patients are administered CFTR-containing plasmid in liposomes or placebo every 4 weeks for 48 weeks.<sup>1</sup></p>"
+          "answersid": "55",
+          "answerstxt": "<p>F508D</p>"
         },
         {
-          "answersid": "100",
-          "answerstxt": "<p>Preclinical work is also underway to develop lentivirus-based vectors and adeno-associated virus-based vectors for CFTR gene transfer to airway epithelium.<sup>2,3</sup></p>"
+          "answersid": "600",
+          "answerstxt": "<p>G551D</p>"
         },
         {
-          "answersid": "170",
-          "answerstxt": "<p>1. Alton EW et al. <i>Thorax</i>. 2013;68:1075-1077.<br> 2. Griesenbach U et al. <i>Am J Respir Crit Care Med</i>. 2012;186:846-856.<br> 3.  Keswani SG <i>et al</i>. <i>PLoS One</i>. 2012;7:e43633.</p>"
+          "answersid": "12",
+          "answerstxt": "<p>R117H-CFTR</p>"
         }
       ],
-      "audio_url": "audio/cf_s3.mp3",
-      "audio_autoplay": "true"
+      "audio_url": "",
+      "audio_autoplay": ""
     },
     {
-      "id": "table",
-      "template": "Content",
-      "title": "ProCME - Table",
-      "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
-      "header": "What is the latest on new treatment approaches to replace the abnormal CFTR gene, to reverse the consequences of the genetic defect on protein function?",
-      "content": "<p>We're specifically looking at drugs that will improve the gating and conductance function of CFTR, which affects the proteins already at the cell membrane, and those defects that affect the amount or quantity of CFTR that gets to the cell surface. In <i>ΔF508</i>, not a significant amount of protein is getting to the cell surface. And in the <i>G551D</i> [mutation], there is plenty of protein at the apical membrane, but the chloride channel or the protein itself is not functioning properly by either not gating or conducting properly.</p><p>So in looking at the class mutations, we have functional abnormalities such as the class 3 and 4 defects, which includes <i>G551D</i> and <i>R117H</i>; and quantitative problems where the corrector drugs hopefully will be of value in the future.</p>",
-      "enlargetable": "images/fpo/fpo-table-1.jpg",
-      "audio_url": "audio/cf_s4.mp3",
-      "audio_autoplay": "true"
+      "id": "question3",
+      "template": "Question",
+      "title": "ProCME - Clinical Practice",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "question": "Which of the following agents represent “corrector” molecules currently undergoing clinical trials in CF that assist with <i>F508del</i> folding and allow <i>F508del</i> CFTR to be transported to the apical surface of expressing cells?",
+      "type": "single-result",
+      "answers": [
+        {
+          "answersid": "55",
+          "answerstxt": "<p>Ivacaftor</p>"
+        },
+        {
+          "answersid": "600",
+          "answerstxt": "<p>Lumacaftor (VX-809)</p>"
+        },
+        {
+          "answersid": "12",
+          "answerstxt": "<p>VX-661</p>"
+        },
+        {
+          "answersid": "120",
+          "answerstxt": "<p>Both a and b</p>"
+        },
+        {
+          "answersid": "122",
+          "answerstxt": "<p>Both b and c</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
     },
     {
-      "id": "chart2",
-      "template": "Content",
-      "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
-      "header": "TML",
-      "content": "<p>Purpose: Assess continued use of bevacizumab + 2nd line chemotherapy in patients with mCRC and who had progressed after 1st-line bevacizumab-based treatment</p><p>Second-line chemotherapy = Oxaliplatin- or Irinotecan-based (switch cemo) with or without bevacizumab (2.5mg/kg/week)</p>",
-      "enlargetable": "images/fpo/fpo-chart-1.jpg",
-      "audio_url": "audio/simples/med-siren.mp3",
-      "audio_autoplay": "true"
+      "id": "question4",
+      "template": "Question",
+      "title": "ProCME - Clinical Practice",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "question": "<p>Please indicate your level of agreement with the following statement:</p><p><i>In patients with CF, the F508del mutation manifests both Class II and Class III defects, which means that it may be possible to address both functional defects through combined use of a corrector such as VX-809 or VX-661 and a potentiator such as ivacaftor.</i></p>",
+      "type": "single-result",
+      "answers": [
+        {
+          "answersid": "55",
+          "answerstxt": "<p>Levofloxacin</p>"
+        },
+        {
+          "answersid": "600",
+          "answerstxt": "<p>Liposomal amikacin</p>"
+        },
+        {
+          "answersid": "12",
+          "answerstxt": "<p>Colistin</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },    
+    {
+      "id": "question5",
+      "template": "Question",
+      "title": "ProCME - Clinical Practice",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "question": "Dry powder formulation of which of the following inhaled antibiotics is currently under investigation in patients with CF?",
+      "type": "single-result",
+      "answers": [
+        {
+          "answersid": "55",
+          "answerstxt": "<p>Agree</p>"
+        },
+        {
+          "answersid": "600",
+          "answerstxt": "<p>Disagree</p>"
+        },
+        {
+          "answersid": "12",
+          "answerstxt": "<p>Not sure</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
     },
     {
       "id": "video",
@@ -226,34 +418,6 @@
       "audio_url": "audio/simples/long-canada_anthem.mp3",
       "audio_autoplay": "true"
     },
-    {
-      "id": "question2",
-      "template": "Question",
-      "title": "ProCME - Question",
-      "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
-      "header": "What grade of sensory neuropathy is Grace experiencing? <strong>Choose one.",
-      "type": "single-result",
-      "answers": [
-        {
-          "answersid": "17",
-          "answerstxt": "<p>Pellentesque risus diam, vulputate at mattis in; pellentesque.</p>"
-        },
-        {
-          "answersid": "33",
-          "answerstxt": "<p>Mauris ullamcorper justo vel massa.</p>"
-        },
-        {
-          "answersid": "9",
-          "answerstxt": "<p>Quisque eget dui augue. Class.</p>"
-        },
-        {
-          "answersid": "16",
-          "answerstxt": "<p>Duis nibh nisl, cursus at.</p>"
-        }
-      ],
-    "audio_url": "audio/simples/med-siren.mp3",
-    "audio_autoplay": "true"
-   },
     {
       "id": "playagain",
       "template": "Playagain",

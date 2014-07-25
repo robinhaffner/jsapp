@@ -34,13 +34,18 @@ define(function(require) {
   getStartPage = function (section) {
     return data[section][0].id;
   },
+  getAnswers = function (section) {
+    return answers[section][0];
+  },
   
-  data = require('json!data/jsontest.json');
+  data = require('json!data/jsontest.json'),
+  answers = require('json!data/answer.json');
 
   // The public API
   return {
     getData: getData,
-    getStartPage: getStartPage
+    getStartPage: getStartPage,
+    getAnswers: getAnswers
   };
 
 });
