@@ -5,9 +5,9 @@ define(function (require) {
     var $               = require('jquery'),
         Handlebars      = require('handlebars'),
         siteAdapter     = require('adapters/site'),
-        playagainHtml   = require('text!tpl/playagain.html'),
+        finalstepHtml   = require('text!tpl/finalstep.html'),
 
-        playagainTpl = Handlebars.compile(playagainHtml);
+        finalstepTpl = Handlebars.compile(finalstepHtml);
 
     return function () {
 
@@ -16,7 +16,7 @@ define(function (require) {
         };
 
         this.render = function (content) {
-            this.$el.html(playagainTpl(content));
+            this.$el.html(finalstepTpl(content));
             $(".next-control").hide();
             return this;
         };

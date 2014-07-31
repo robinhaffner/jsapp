@@ -42,7 +42,7 @@ define(function (require) {
                 }
 
                 if (parseInt($(".page-ctn .pgenum").text()) == pagemax) {
-                    $(".next-control").attr('href', "#playagain");
+                    $(".next-control").attr('href', "#finalstep");
                 }
 
                 $(".progress-bar").attr({

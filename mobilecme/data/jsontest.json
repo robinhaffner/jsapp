@@ -1,11 +1,10 @@
 {
   "start": [{
-    "id": "instructions"
+    "id": "faculty"
   }], 
   "manifesto": [{
     "pages": [
       "main",
-      "instructions",
       "faculty",
       "overview",
       "genetherapy",
@@ -43,7 +42,7 @@
       },
       "col-3": {
         "txt": "Get Certificate&nbsp;&#62;",
-        "link": "tpl/getcertificate.html"
+        "link": "#finalstep"
       }
     }],
   "sidebar": [
@@ -103,34 +102,25 @@
       "audio_autoplay": ""
     },
     {
-      "id": "instructions",
-      "template": "Content",
-      "title": "ProCME - Instructions",
-      "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
-      "content": "<div class=\"instructions\"><ul class=\"instructionslist\"><li class=\"topleft instructionposition\"><span class=\"arrow icon-arrow-up\"></span><strong>Mute</strong> Audio</li><li class=\"topright instructionposition\"><span class=\"arrow icon-arrow-up\"></span>Click <strong>Next</strong> or swipe left to advance</li><li class=\"imginstructions\"><img src=\"images/img-instructions.png\" /></li><li class=\"bottomleft instructionposition\"></span>Go to <strong>Next Program</strong> in Series<span class=\"arrow icon-arrow-down\"></li><li class=\"bottomright instructionposition\"><strong>Skip</strong> to Post Test<span class=\"arrow icon-arrow-down\"></span></li></ul></div>",
-      "audio_url": "",
-      "audio_autoplay": ""
-    },
-    {
       "id": "faculty",
-      "template": "Faculty",
+      "template": "Content",
       "title": "ProCME - Faculty",
       "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
       "header": "Presenting Faculty",
-      "faculty": [
+      "listmedia": [
         {
-          "faculty_name": "Stanley B. Fiel, MD, FACP, FCCP",
-          "faculty_thumbnail": "images/fpo/Fiel_Stanley_1213.jpg",
-          "faculty_accreditation": "Stanley B. Fiel, MD, FACP, FCCP, has a financial interest/relationship or affiliation in the form of: Consultant for Bayer Corporation; Boehringer Ingelheim Pharmaceuticals, Inc.; Novartis Corporation; and Pfizer Inc. Grant/Research Support from Cystic Fibrosis Foundation; Gilead; Novartis Corporation; and Vertex Pharmaceuticals Incorporated. Speakers Bureau participant with Dey Pharma; Genentech, Inc.; Gilead; GlaxoSmithKline; Novartis Corporation; and Pfizer Inc.",
-          "faculty_descript": "",
-          "faculty_disclaimer": "The Icahn School of Medicine at Mount Sinai<br>Atlantic Health System<br> Morristown Medical Center<br> Morristown, New Jersey<br>"
+          "media_name": "Stanley B. Fiel, MD, FACP, FCCP",
+          "media_thumbnail": "images/fpo/Fiel_Stanley_1213.jpg",
+          "media_accreditation": "Stanley B. Fiel, MD, FACP, FCCP, has a financial interest/relationship or affiliation in the form of: Consultant for Bayer Corporation; Boehringer Ingelheim Pharmaceuticals, Inc.; Novartis Corporation; and Pfizer Inc. Grant/Research Support from Cystic Fibrosis Foundation; Gilead; Novartis Corporation; and Vertex Pharmaceuticals Incorporated. Speakers Bureau participant with Dey Pharma; Genentech, Inc.; Gilead; GlaxoSmithKline; Novartis Corporation; and Pfizer Inc.",
+          "media_descript": "",
+          "media_disclaimer": "The Icahn School of Medicine at Mount Sinai<br>Atlantic Health System<br> Morristown Medical Center<br> Morristown, New Jersey<br>"
         },
         {
-          "faculty_name": "Kadrin Wilfong, MD",
-          "faculty_thumbnail": "images/fpo/fpo-img-4.jpg",
-          "faculty_accreditation": "Kadrin Wilfong, MD, has no financial interests/relationships or affiliations in relation to this activity.",
-          "faculty_descript": "",
-          "faculty_disclaimer": "Answers in CME, Inc."
+          "media_name": "Kadrin Wilfong, MD",
+          "media_thumbnail": "images/fpo/fpo-img-4.jpg",
+          "media_accreditation": "Kadrin Wilfong, MD, has no financial interests/relationships or affiliations in relation to this activity.",
+          "media_descript": "",
+          "media_disclaimer": "Answers in CME, Inc."
         }
       ],
       "audio_url": "",
@@ -419,11 +409,12 @@
       "audio_autoplay": "true"
     },
     {
-      "id": "playagain",
-      "template": "Playagain",
-      "title": "Play Again",
+      "id": "finalstep",
+      "template": "Finalstep",
+      "title": "Get Certificate",
       "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
-      "header": "Play again"
+      "header": "Get Certificate",
+      "content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, excepturi, vero, quidem nisi inventore odit totam quos earum facere iure veritatis magnam nobis necessitatibus voluptates quibusdam recusandae quaerat facilis. Debitis.</p>"
     }
 
   ]

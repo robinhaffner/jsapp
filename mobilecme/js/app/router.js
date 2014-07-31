@@ -9,11 +9,10 @@ define(function (require) {
         FooterView          = require("views/FooterView"),
         AudioView           = require("views/AudioView"),
         MainView            = require("views/MainView"),
-        FacultyView         = require("views/FacultyView"),
         QuestionView        = require("views/QuestionView"),
         VideoView           = require("views/VideoView"),
         ContentView         = require("views/ContentView"),
-        PlayagainView       = require("views/PlayagainView"),
+        FinalstepView       = require("views/FinalstepView"),
 
         detailsURL = /^#(\w+)/,
         mainView = new MainView(),
@@ -27,7 +26,7 @@ define(function (require) {
                 match;
             
             match = hashpath.match(detailsURL);
-            console.log("specialty",specialty);
+            console.log("specialty",specialty,hashpath,match);
 
             if (!hashpath || !specialty) {
                 siteAdapter.getData("sitecontent","main").done(function(_content) {
@@ -39,7 +38,7 @@ define(function (require) {
                   $("title").html(_content.title);
                 });
                 
-            } 
+            }
 
             if (match && specialty) {                
                 console.log("match",match,match[1]);
@@ -53,7 +52,7 @@ define(function (require) {
                   audiomedia(match[1]);
                   $("title").html(_content.title);
                 }).fail(function() {
-                  
+                  console.log("fail");
                   // 404 goes here
                   
                 });
