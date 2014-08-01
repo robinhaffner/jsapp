@@ -2,7 +2,8 @@ var multiselectArr = new Array();
 var highlightchapter, specialty, paramObj,passedJoinedVars,startPageNum;
 
 Cookies.defaults = {
-    path: '/'
+    path: '/',
+    expires: 600
 };
 
 function offCanvas () {
@@ -59,7 +60,7 @@ function getPageParam() {
         });
 
         passedJoinedVars = joinedVars.join("&");
-        Cookies.set('user_passedpage_params', passedJoinedVars, { expires: 600 });
+        Cookies.set('user_passedpage_params', passedJoinedVars);
 
         highlightchapter = 'chapter' in b;
         specialty = 'specialty' in b;
@@ -67,7 +68,7 @@ function getPageParam() {
 
         console.log("b",b);
     } else {
-        Cookies.set('first_time_visit_program', 0, { expires: 600 });
+        Cookies.set('first_time_visit_program', 0);
     }
 }
 
@@ -77,7 +78,7 @@ function selectSpecialty(s) {
     strsplit = doclocation.split(document.location.search)[0],    
     userselectedspecialty = s.text();
 
-    Cookies.set('specialty', userselectedspecialty, { expires: 600 });
+    Cookies.set('specialty', userselectedspecialty);
     if (passedJoinedVars == undefined){
         document.location = document.location.href+"?specialty="+userselectedspecialty+"#"+startPageNum;
     }else{
@@ -105,7 +106,7 @@ $(document).ready(function () {
             var listtext = $(this).text();
 
             Cookies(listtype, undefined);
-            Cookies.set(listtype, listtext, { expires: 600 });
+            Cookies.set(listtype, listtext);
 
         } else if ($( selectionlist ).hasClass('single-result')) {
             $( selectionlist ).find('li').removeClass('selectedresult');
@@ -125,7 +126,7 @@ $(document).ready(function () {
                 $(this).find('.choice-percent').show();
 
                 Cookies(listtype, undefined);
-                Cookies.set(listtype, listtext, { expires: 600 });
+                Cookies.set(listtype, listtext);
             });
         } else if ($( selectionlist ).hasClass('multiple')) {
             $(this).addClass('selected');
@@ -136,7 +137,7 @@ $(document).ready(function () {
             };
 
             Cookies(listtype, undefined);
-            Cookies.set(listtype, multiselectArr, { expires: 600 });
+            Cookies.set(listtype, multiselectArr);
             //console.log("Cookies.get",Cookies.get(listtype));
         }
         else {

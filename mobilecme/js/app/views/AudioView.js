@@ -7,8 +7,10 @@ define(function (require) {
         siteAdapter     = require('adapters/site'),
         audioHtml       = require('text!tpl/audio.html'),
         _getaudio, sound,
-
         audioTpl        = Handlebars.compile(audioHtml);
+
+        $.browser = {};
+        $.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
 
     return function () {
 
@@ -32,7 +34,10 @@ define(function (require) {
                     };
                 }
             });
-            this.pageAudioPlayer();
+
+            if ( $.browser.msie == false) {
+                this.pageAudioPlayer();
+            }
         };
 
         this.pageAudioPlayer = function () {
@@ -78,6 +83,7 @@ define(function (require) {
                     $(apContainer).data('controller','pause');
                 }
 
+
             } else { 
                 if (sound) { //destroy player
                     sound.unload();
@@ -89,9 +95,13 @@ define(function (require) {
 
         $(document).on('click',".icon-sound", function(event) {
             var getController = $(_getaudio).find('.audioplay').data('controller');
+            //Cookies("appplayer", undefined);
+            console.log("getController",getController);
             if (getController == 'pause') {
+                Cookies.set("appplayer", "play");
                 sound.play();
             } else if (getController == 'play') {
+                Cookies.set("appplayer", "pause");
                 sound.pause();
             } else { return }
                 
