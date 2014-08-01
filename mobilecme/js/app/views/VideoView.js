@@ -17,6 +17,7 @@ define(function (require) {
 
         this.render = function (content) {
             this.$el.html(videoTpl(content));
+            Cookies.set("cmeaudio","pause");
             return this;
         };
 

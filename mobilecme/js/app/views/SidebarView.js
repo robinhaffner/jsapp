@@ -21,7 +21,7 @@ define(function (require) {
         };
 
         this.getSidebar = function () {
-            siteAdapter.getData('sidebar',0).done(function (_sidebar) {
+            siteAdapter.getSidebarData('sidebar',0).done(function (_sidebar) {
                 $('.sidebar-offcanvas').html(sidebarTpl(_sidebar));
                 return;
             });

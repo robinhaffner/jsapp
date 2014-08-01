@@ -68,7 +68,6 @@ define(function (require) {
                     $('.icon-sound').removeClass('none pause')
                     $('.icon-sound').addClass('on')
                     $(apContainer).data('cmeaudio','play')
-                    console.log("message",Cookies("cmeaudio"));
                     if (Cookies("cmeaudio") == "pause") { sound.pause(); };
                     console.log('Play!');
                     },
