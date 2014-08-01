@@ -1,0 +1,3 @@
+window.app.config = {
+  "parent-site":"[*MOBILECME_PARENT_SITE*]"
+};

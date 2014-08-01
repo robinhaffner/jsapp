@@ -4,6 +4,11 @@
   }], 
   "manifesto": [{
     "pages": [
+      "question",
+      "question2",
+      "question3",
+      "question4",
+      "question5",
       "main",
       "faculty",
       "overview",
@@ -19,11 +24,6 @@
       "cf",
       "conclusion",
       "posttest",
-      "question",
-      "question2",
-      "question3",
-      "question4",
-      "question5",
       "video"
     ]
   }],
@@ -45,48 +45,6 @@
         "link": "#finalstep"
       }
     }],
-  "sidebar": [
-    {
-      "name": "Company Name",
-      "logo": "images/fpo/Penn.gif",
-      "header": "Company Header",
-      "headline": "Virtual Outcomes in CRC Patients",
-      "sidebarlist": [
-        {
-          "media": 1,
-          "media-url": "https://www.google.ca/",
-          "media-img": "images/fpo/fpo-img-1.jpg",
-          "media-credit": "0.25 Credits",
-          "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
-          "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
-        },
-        {
-          "media": 2,
-          "media-url": "#faculty",
-          "media-img": "images/fpo/fpo-img-2.jpg",
-          "media-credit": "0.25 Credits",
-          "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
-          "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
-        },
-        {
-          "media": 3,
-          "media-url": "?h=2#faculty",
-          "media-img": "images/fpo/fpo-img-3.jpg",
-          "media-credit": "0.25 Credits",
-          "media-heading": "Best Practices with Targeted Therapies in Advanced CRC",
-          "media-subtext": "<p>John L. Marshall, MD</p>"
-        },
-        {
-          "media": 4,
-          "media-url": "?h=3#faculty",
-          "media-img": "images/fpo/fpo-img-4.jpg",
-          "media-credit": "0.25 Credits",
-          "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
-          "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
-        }
-      ]
-    }
-  ],
   "sitecontent": [
     {
       "id": "main",
@@ -264,18 +222,19 @@
       "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Which of the following gene therapy strategies are currently being evaluated in clinical trials in patients with cystic fibrosis (CF)?",
+      "qid":"BBBq1",
       "type": "single-result",
       "answers": [
         {
-          "answersid": "55",
+          "answersid": "c1",
           "answerstxt": "<p>Use of lentivirus-based vectors for CFTR gene transfer to airway epithelium</p>"
         },
         {
-          "answersid": "600",
+          "answersid": "c2",
           "answerstxt": "<p>Use of adeno-associated virus-based vectors for CFTR gene transfer to airway epithelium</p>"
         },
         {
-          "answersid": "12",
+          "answersid": "c3",
           "answerstxt": "<p>Use of liposomes to transfer plasmids containing a functional CFTR cDNA to airway epithelium</p>"
         }
       ],
@@ -288,18 +247,19 @@
       "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Ivacaftor is a small-molecular-weight compound approved to treat patients with CF with which of the following mutations?",
+      "qid":"BBBq2",
       "type": "single-result",
       "answers": [
         {
-          "answersid": "55",
+          "answersid": "c1",
           "answerstxt": "<p>F508D</p>"
         },
         {
-          "answersid": "600",
+          "answersid": "c2",
           "answerstxt": "<p>G551D</p>"
         },
         {
-          "answersid": "12",
+          "answersid": "c3",
           "answerstxt": "<p>R117H-CFTR</p>"
         }
       ],
@@ -312,26 +272,27 @@
       "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Which of the following agents represent “corrector” molecules currently undergoing clinical trials in CF that assist with <i>F508del</i> folding and allow <i>F508del</i> CFTR to be transported to the apical surface of expressing cells?",
+      "qid":"BBBq3",
       "type": "single-result",
       "answers": [
         {
-          "answersid": "55",
+          "answersid": "c1",
           "answerstxt": "<p>Ivacaftor</p>"
         },
         {
-          "answersid": "600",
+          "answersid": "c2",
           "answerstxt": "<p>Lumacaftor (VX-809)</p>"
         },
         {
-          "answersid": "12",
+          "answersid": "c3",
           "answerstxt": "<p>VX-661</p>"
         },
         {
-          "answersid": "120",
+          "answersid": "c4",
           "answerstxt": "<p>Both a and b</p>"
         },
         {
-          "answersid": "122",
+          "answersid": "c5",
           "answerstxt": "<p>Both b and c</p>"
         }
       ],
@@ -344,18 +305,19 @@
       "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "<p>Please indicate your level of agreement with the following statement:</p><p><i>In patients with CF, the F508del mutation manifests both Class II and Class III defects, which means that it may be possible to address both functional defects through combined use of a corrector such as VX-809 or VX-661 and a potentiator such as ivacaftor.</i></p>",
+      "qid":"BBBq4",
       "type": "single-result",
       "answers": [
         {
-          "answersid": "55",
+          "answersid": "c1",
           "answerstxt": "<p>Levofloxacin</p>"
         },
         {
-          "answersid": "600",
+          "answersid": "c2",
           "answerstxt": "<p>Liposomal amikacin</p>"
         },
         {
-          "answersid": "12",
+          "answersid": "c3",
           "answerstxt": "<p>Colistin</p>"
         }
       ],
@@ -368,18 +330,19 @@
       "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Dry powder formulation of which of the following inhaled antibiotics is currently under investigation in patients with CF?",
+      "qid":"BBBq5",
       "type": "single-result",
       "answers": [
         {
-          "answersid": "55",
+          "answersid": "c1",
           "answerstxt": "<p>Agree</p>"
         },
         {
-          "answersid": "600",
+          "answersid": "c2",
           "answerstxt": "<p>Disagree</p>"
         },
         {
-          "answersid": "12",
+          "answersid": "c3",
           "answerstxt": "<p>Not sure</p>"
         }
       ],
