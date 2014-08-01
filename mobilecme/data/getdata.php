@@ -10,7 +10,7 @@ function resolveRequest() {
       break;
   }
   
-  //header('Content-Type: application/json');
+  header('Content-Type: application/json');
   exit($return);
   
 }
@@ -24,8 +24,7 @@ function getChoiceResponse($questionid,$choiceid) {
   
   $percents = array();
   $counts = array();
-  $numchoices = $_GET['count'];
-  if(empty($numchoices)) $numchoices = 3;
+  $numchoices = isset($_GET['count']) ? $_GET['count'] : 3;
   
   $total = rand(100,1000);
   $totalamt = $total;
