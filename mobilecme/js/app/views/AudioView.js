@@ -67,20 +67,23 @@ define(function (require) {
                 onplay: function() {
                     $('.icon-sound').removeClass('none pause')
                     $('.icon-sound').addClass('on')
-                    $(apContainer).data('controller','play');
+                    $(apContainer).data('cmeaudio','play')
+                    console.log("message",Cookies("cmeaudio"));
+                    if (Cookies("cmeaudio") == "pause") { sound.pause(); };
                     console.log('Play!');
                     },
                 onpause: function() {
                     $('.icon-sound').removeClass('none on')
                     $('.icon-sound').addClass('pause')
-                    $(apContainer).data('controller','pause');
+                    $(apContainer).data('cmeaudio','pause');
+                    Cookies.set("cmeaudio","pause");
                     console.log('Pause!');
                     }
                 });
 
                 if (!getAutoPlay) { //disable autoplay and set to pause
                     $('.icon-sound').addClass('pause')
-                    $(apContainer).data('controller','pause');
+                    $(apContainer).data('cmeaudio','pause');
                 }
 
 
@@ -94,14 +97,12 @@ define(function (require) {
         };
 
         $(document).on('click',".icon-sound", function(event) {
-            var getController = $(_getaudio).find('.audioplay').data('controller');
-            //Cookies("appplayer", undefined);
+            var getController = $(_getaudio).find('.audioplay').data('cmeaudio');
             console.log("getController",getController);
             if (getController == 'pause') {
-                Cookies.set("appplayer", "play");
+                Cookies.set("cmeaudio","play");
                 sound.play();
             } else if (getController == 'play') {
-                Cookies.set("appplayer", "pause");
                 sound.pause();
             } else { return }
                 
