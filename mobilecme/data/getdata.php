@@ -1,4 +1,7 @@
 <?php
+
+header('Content-Type: application/json');
+
 function resolveRequest() {
   switch($_GET['type']) {
     case 'program':
@@ -10,7 +13,6 @@ function resolveRequest() {
       break;
   }
   
-  header('Content-Type: application/json');
   exit($return);
   
 }
