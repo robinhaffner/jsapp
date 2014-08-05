@@ -34,7 +34,11 @@ define(['text'], function(text){
                         buildMap[name] = data;
                         onLoad(data);
                     } else {
-                        onLoad(jsonParse(data));
+                        if (data || data.length > 0) {
+                            onLoad(jsonParse(data));
+                        } else {
+                            alert("NOT FOUND")
+                        }
                     }
                 },
                     onLoad.error, {
