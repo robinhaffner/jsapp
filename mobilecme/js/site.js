@@ -1,5 +1,5 @@
 var multiselectArr = new Array();
-var highlightchapter, specialty, paramObj,passedJoinedVars,startPageNum;
+var specialty, paramObj,passedJoinedVars,startPageNum;
 
 Cookies.defaults = {
     path: '/',
@@ -62,7 +62,6 @@ function getPageParam() {
         passedJoinedVars = joinedVars.join("&");
         Cookies.set('user_passedpage_params', passedJoinedVars);
 
-        highlightchapter = 'chapter' in b;
         specialty = 'specialty' in b;
         paramObj = b;
 
@@ -148,7 +147,6 @@ $(document).ready(function () {
             selectSpecialty($(this));
         };
     });
-
 
 	$('#footerModal').on('show.bs.modal', function (e) {
 		var container = $(e.currentTarget).attr('id');
