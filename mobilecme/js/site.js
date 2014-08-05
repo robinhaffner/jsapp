@@ -66,7 +66,7 @@ function getPageParam() {
         specialty = 'specialty' in b;
         paramObj = b;
 
-        console.log("b",b);
+        console.log("getPageParam b: ",b);
     } else {
         Cookies.set('first_time_visit_program', 0);
     }
