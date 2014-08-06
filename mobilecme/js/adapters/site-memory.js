@@ -6,9 +6,12 @@ if (document.location.search.length > 0) {
       params[temp[0]] = temp[1];
   }
   collection = params.collection, program = params.program;
-} else {
+} /*else {
   collection = "FPO", program = "BBB";
 };
+
+console.log("collection, program",params,collection, program);*/
+
 
 define(['json!data/getdata.php?type=program&id='+program, 'json!data/getdata.php?type=collection&id='+collection], function(data,sidebar){
 

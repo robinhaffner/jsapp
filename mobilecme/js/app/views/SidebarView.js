@@ -25,17 +25,22 @@ define(function (require) {
                 $('.sidebar-offcanvas').html(sidebarTpl(_sidebar));
                 return;
             });
+            var highlightchapter = Cookies("highlightchapter");
 
             if ( !highlightchapter){
                 Cookies.set('first_time_visit_program', 0, { expires: 600 });
                 $('.list-group-item:eq(0)').addClass('selected');
             } else {
-                $('.list-group-item:eq('+paramObj.chapter+')').addClass('selected');
+                $('.list-group-item#'+highlightchapter).addClass('selected');
             }
 
         };
 
         this.initialize();
+
+        $(document).on('click','#sidebar .list-group-item',function(){
+            Cookies.set("highlightchapter", $(this).attr('id'));
+        });
 
     };
 
