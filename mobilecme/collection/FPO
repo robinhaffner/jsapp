@@ -2,14 +2,14 @@
   "sidebar": [
     {
       "name": "Company Name",
-      "logo": "images/fpo/Penn.gif",
+      "logo": "http://c.pro-c.me/programs/demo/images/Penn.gif",
       "header": "Company Header",
       "headline": "Virtual Outcomes in CRC Patients",
       "sidebarlist": [
         {
           "media": 1,
           "media-url": "index.html?collection=FPO&program=AAA",
-          "media-img": "images/fpo/fpo-img-1.jpg",
+          "media-img": "http://c.pro-c.me/programs/demo/images/fpo-img-1.jpg",
           "media-credit": "0.25 Credits",
           "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
           "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
@@ -17,7 +17,7 @@
         {
           "media": 2,
           "media-url": "index.html?collection=FPO&program=BBB",
-          "media-img": "images/fpo/fpo-img-2.jpg",
+          "media-img": "http://c.pro-c.me/programs/demo/images/fpo-img-2.jpg",
           "media-credit": "0.25 Credits",
           "media-heading": "Second Program BBB",
           "media-subtext": "<p>Mrs Green, MD, FACP</p>"
