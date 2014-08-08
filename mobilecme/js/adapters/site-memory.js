@@ -14,7 +14,7 @@ console.log("collection, program",params,collection, program);*/
 
 
 //define(['json!data/getdata.php?type=program&id='+program, 'json!data/getdata.php?type=collection&id='+collection], function(data,sidebar){
-define(['json!/program/'+program, 'json!/collection/'+collection], function(data,sidebar){
+define(['json!root/program/'+program, 'json!root/collection/'+collection], function(data,sidebar){
 
   "use strict";
 

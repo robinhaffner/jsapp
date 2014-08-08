@@ -39,7 +39,7 @@ function getChoiceResponse($questionid,$choiceid) {
   }
   
   array_push($counts,$totalamt);
-  array_push($percents,$totalamt/$total*100);
+  array_push($percents,round($totalamt/$total*100));
   
   $correct = rand(1,$numchoices);
   
