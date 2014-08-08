@@ -338,6 +338,7 @@ a, a:hover, a:focus, a:active {
   }
 }
 @media (max-width: 480px) {
+  #ftr footer > div { padding-right: 5px; padding-left: 5px; } 
   #hdr .next-control {
     padding: 0;
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
