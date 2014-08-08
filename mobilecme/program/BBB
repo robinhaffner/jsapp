@@ -43,6 +43,10 @@
       "col-3": {
         "txt": "Get Certificate&nbsp;&#62;",
         "link": "#finalstep"
+      },
+      "col-4": {
+        "txt": "CME Info",
+        "link": "tpl/cmeinfo.html"
       }
     }],
   "sitecontent": [
