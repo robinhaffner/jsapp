@@ -58,7 +58,8 @@ define(function (require) {
                 onloaderror: function(){
                     $('.icon-sound').removeClass('on pause')
                     $('.icon-sound').addClass('none');
-                    alert("An error occurred.  Unable to load sound: "+getAudioURL); 
+                    console.log("onloaderror",this);
+                    //alert("An error occurred.  Unable to load sound: "+getAudioURL); 
                 },
                 onend: function() {
                     console.log('Finished!');
@@ -83,7 +84,7 @@ define(function (require) {
                     $('.icon-sound').addClass('pause')
                     $(apContainer).data('cmeaudio','pause');
                 }
-
+                console.log("sound",sound);
 
             } else { 
                 if (sound) { //destroy player
