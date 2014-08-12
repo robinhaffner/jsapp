@@ -227,7 +227,7 @@
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Which of the following gene therapy strategies are currently being evaluated in clinical trials in patients with cystic fibrosis (CF)?",
       "qid":"AAAq1",
-      "type": "single-result",
+      "type": "single",
       "answers": [
         {
           "answersid": "c1",
@@ -252,7 +252,7 @@
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Ivacaftor is a small-molecular-weight compound approved to treat patients with CF with which of the following mutations?",
       "qid":"AAAq2",
-      "type": "single-result",
+      "type": "multiple-choice",
       "answers": [
         {
           "answersid": "c1",
@@ -276,7 +276,7 @@
       "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Which of the following agents represent “corrector” molecules currently undergoing clinical trials in CF that assist with <i>F508del</i> folding and allow <i>F508del</i> CFTR to be transported to the apical surface of expressing cells?",
-      "type": "single-result",
+      "type": "multiple-choice",
       "qid":"AAAq3",
       "answers": [
         {
@@ -310,7 +310,7 @@
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "<p>Please indicate your level of agreement with the following statement:</p><p><i>In patients with CF, the F508del mutation manifests both Class II and Class III defects, which means that it may be possible to address both functional defects through combined use of a corrector such as VX-809 or VX-661 and a potentiator such as ivacaftor.</i></p>",
       "qid":"AAAq4",
-      "type": "single-result",
+      "type": "single",
       "answers": [
         {
           "answersid": "c1",
@@ -335,7 +335,7 @@
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Dry powder formulation of which of the following inhaled antibiotics is currently under investigation in patients with CF?",
       "qid":"AAAq5",
-      "type": "single-result",
+      "type": "single",
       "answers": [
         {
           "answersid": "c1",

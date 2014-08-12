@@ -59,7 +59,6 @@ define(function (require) {
                     $('.icon-sound').removeClass('on pause')
                     $('.icon-sound').addClass('none');
                     alert("An error occurred.  Unable to load sound: "+getAudioURL); 
-                    return
                 },
                 onend: function() {
                     console.log('Finished!');

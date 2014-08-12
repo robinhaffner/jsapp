@@ -5,6 +5,8 @@ define(function (require) {
     var $               = require('jquery'),
         Handlebars      = require('handlebars'),
         siteAdapter     = require('adapters/site'),
+        QuestionView    = require("views/QuestionView"),
+        questionView    = new QuestionView(),
         navHtml         = require('text!tpl/nav.html'),
         errHtml         = require('text!tpl/404.html'),
 
@@ -30,6 +32,8 @@ define(function (require) {
 
         this.setNextPage = function (_h) {
             siteAdapter.getData("manifesto",0).done(function(manifesto) {
+                console.log("manifesto",manifesto);
+                
                 var pagemax = manifesto.pages.length;
                 $(".page-ctn .num").empty().append(pagemax);
 
@@ -51,10 +55,20 @@ define(function (require) {
                     "aria-valuemax": pagemax
                 })
                 .css("width", parseInt($(".page-ctn .pgenum").text()) / pagemax * 100 + "%");
+
             });
         }
 
         this.initialize();
+
+        $(document).on('click', '.next-control', function(event) {
+            /* Act on the event */
+            if ($(document).find('.listview').data('role') == "listview") {
+                event.preventDefault();
+                questionView.getDataAnswer();                    
+            };
+
+        });
     };
 
 });
