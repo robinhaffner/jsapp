@@ -60,14 +60,6 @@ define(function (require) {
         }
 
         this.initialize();
-
-        /*$(document).on('click', '.next-control', function(event) {
-            if ($(document).find('.listview').data('role') == "listview") {
-                event.preventDefault();
-                questionView.getDataAnswer();                    
-            };
-
-        });*/
     };
 
 });

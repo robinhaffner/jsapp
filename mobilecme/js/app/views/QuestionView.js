@@ -21,12 +21,11 @@ define(function (require) {
         };
 
         this.getDataAnswer = function (arg) {
-            console.log("getDataAnswer",$(this),arg);
+            console.log("getDataAnswer",arg,arg.originalEvent);
+            
         }
 
         this.initialize();
-
-
 
     };
 

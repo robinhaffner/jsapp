@@ -85,6 +85,10 @@ function selectSpecialty(s) {
     }
 }
 
+function showAnswer(qa) {
+    console.log('showAnswer',qa);
+}
+
 $(document).ready(function () {
     // Do responsive stuff
     $(window).on('resize', function(e){
@@ -92,61 +96,76 @@ $(document).ready(function () {
             offCanvas ();
         };
     });
-        $(document).on('click','.selection-list li',function(event){
-            event.preventDefault();
-            var selectionlist = $(this).parent();
-            var listtype = $( selectionlist ).data( "listview-type" );
 
-            if ($( selectionlist ).hasClass('single')) {
-            console.log("selectionlist,listtype",selectionlist,listtype);
+    //Questions function
+    $(document).on('click','.selection-list li',function(event){
+        event.preventDefault();
+        var selectionlist = $(this).parent();
+        var listtype = $( selectionlist ).data( "listview-type" );
 
-                $( selectionlist ).find('li').removeClass('selected');
-                $(this).addClass('selected');
-                var listtext = $(this).text();
+        if ($( selectionlist ).hasClass('single')) {
+        console.log("selectionlist,listtype",selectionlist,listtype);
+
+            $( selectionlist ).find('li').removeClass('selected');
+            $(this).addClass('selected');
+            var listtext = $(this).text();
+
+            Cookies(listtype, undefined);
+            Cookies.set(listtype, listtext);
+
+        } else if ($( selectionlist ).hasClass('single-result')) {
+            $( selectionlist ).find('li').removeClass('selectedresult');
+
+            $(this).addClass('selectedresult');
+            var listtext = $(this).find('p').text();
+
+            $($( selectionlist ).find('li')).each( function(i, ele) {
+                var getprecent = parseInt($(this).find('.choice-percent').text());
+                if (getprecent >= 100) {
+                    $(this).find('.color-fill').addClass('percent-fill')
+                };
+                $(this).find('.color-fill')
+                    .stop().addClass('color-animate')
+                    .css('height', ($(this).outerHeight() - 2)+'px')
+                    .animate({width: getprecent+'%'}, 300);
+                $(this).find('.choice-percent').show();
 
                 Cookies(listtype, undefined);
                 Cookies.set(listtype, listtext);
+            });
+        } else if ($( selectionlist ).hasClass('multiple-choice')) {
+            $(this).addClass('selected');
 
-            } else if ($( selectionlist ).hasClass('single-result')) {
-                $( selectionlist ).find('li').removeClass('selectedresult');
-
-                $(this).addClass('selectedresult');
-                var listtext = $(this).find('p').text();
-
-                $($( selectionlist ).find('li')).each( function(i, ele) {
-                    var getprecent = parseInt($(this).find('.choice-percent').text());
-                    if (getprecent >= 100) {
-                        $(this).find('.color-fill').addClass('percent-fill')
-                    };
-                    $(this).find('.color-fill')
-                        .stop().addClass('color-animate')
-                        .css('height', ($(this).outerHeight() - 2)+'px')
-                        .animate({width: getprecent+'%'}, 300);
-                    $(this).find('.choice-percent').show();
-
-                    Cookies(listtype, undefined);
-                    Cookies.set(listtype, listtext);
-                });
-            } else if ($( selectionlist ).hasClass('multiple-choice')) {
-                $(this).addClass('selected');
-
-                if ($(this).hasClass('selected')) {
-                    var listtext = $(this).text();
-                    multiselectArr.push(listtext);
-                };
-
-                Cookies(listtype, undefined);
-                Cookies.set(listtype, multiselectArr);
-                //console.log("Cookies.get",Cookies.get(listtype));
-            }
-            else {
-                $(this).addClass('selected');
-            }
-
-            if (listtype == "specialty") {
-                selectSpecialty($(this));
+            if ($(this).hasClass('selected')) {
+                var listtext = $(this).text();
+                multiselectArr.push(listtext);
             };
-        });
+
+            Cookies(listtype, undefined);
+            Cookies.set(listtype, multiselectArr);
+            //console.log("Cookies.get",Cookies.get(listtype));
+        }
+        else {
+            $(this).addClass('selected');
+        }
+
+        if (listtype == "specialty") {
+            selectSpecialty($(this));
+        };
+    });
+    $(document).on('click', '.next-control', function(event) {
+        if ($(document).find('.listview').data('role') == "listview" && !$(this).hasClass('click-control')) {
+            event.preventDefault();
+            $(this).addClass('click-control');
+            showAnswer(this);
+            return;
+        } else if($(this).hasClass('click-control')) {
+
+            $(this).removeClass('click-control');
+
+        }
+    });
+
 
 	$('#footerModal').on('show.bs.modal', function (e) {
 		var container = $(e.currentTarget).attr('id');
