@@ -35,74 +35,73 @@ define(function (require) {
                 }
             });
 
-            if ( $.browser.msie == false) {
+            //if ( $.browser.msie == false) {
                 this.pageAudioPlayer();
-            }
+           // }
         };
 
         this.pageAudioPlayer = function () {
             var apContainer = $(_getaudio).find('.audioplay'),
                 getAudioURL = apContainer.data('audiourl'),
                 getAutoPlay = apContainer.data('autoplay');
+            var _playState = Cookies.get("cmeaudio"); //check to see if the user has paused the audio
+            if (_playState == undefined) { //if the audi state cookie has not been set - initialize it here.
+                Cookies.set('cmeaudio','play');
+            }
 
-            if (apContainer.length == 1) {
-                if (sound) {
-                    sound.unload();
-                };
-
-                sound = new Howl({
-                urls: [getAudioURL],
-                autoplay: getAutoPlay,
-                loop: false,
-                volume: 0.5,
-                onloaderror: function(){
-                    $('.icon-sound').removeClass('on pause')
-                    $('.icon-sound').addClass('none');
-                    console.log("onloaderror",this);
-                    //alert("An error occurred.  Unable to load sound: "+getAudioURL); 
-                },
-                onend: function() {
-                    console.log('Finished!');
-                    },
-                onplay: function() {
-                    $('.icon-sound').removeClass('none pause')
-                    $('.icon-sound').addClass('on')
-                    $(apContainer).data('cmeaudio','play')
-                    if (Cookies("cmeaudio") == "pause") { sound.pause(); };
-                    console.log('Play!');
-                    },
-                onpause: function() {
-                    $('.icon-sound').removeClass('none on')
-                    $('.icon-sound').addClass('pause')
-                    $(apContainer).data('cmeaudio','pause');
-                    Cookies.set("cmeaudio","pause");
-                    console.log('Pause!');
-                    }
+            if (apContainer.length == 1 ){ // set up the jwPlayer for audio
+                jwplayer('audioPlayer').setup({
+                    file: getAudioURL,
+                    height: '0',
+                    width: '0'
+            
                 });
+                if (_playState != "pause" || _playState == undefined){ //set the icon state and play or pause the video
+                        if (getAutoPlay ){
+                            $('.icon-sound').removeClass('none pause');
+                            $('.icon-sound').addClass('on');
+                            jwplayer('audioPlayer').play(true);
+                            $(apContainer).data('cmeaudio','play');
+                            console.log('Play!');
+                        }else if (!getAutoPlay){
+                            $('.icon-sound').removeClass('none on');
+                            $('.icon-sound').addClass('pause');
+                            jwplayer('audioPlayer').play(false);
+                            $(apContainer).data('cmeaudio','pause');
+                            console.log('Pause!');
+                        }else{
+                            $('.icon-sound').addClass('none');
+                        }
+                    }
 
-                if (!getAutoPlay) { //disable autoplay and set to pause
-                    $('.icon-sound').addClass('pause')
-                    $(apContainer).data('cmeaudio','pause');
-                }
-                console.log("sound",sound);
-
-            } else { 
-                if (sound) { //destroy player
-                    sound.unload();
-                    $('.icon-sound').addClass('none')
-                };
+            } else { //No video for this page
+                $('.icon-sound').addClass('none');
                 return
             }
         };
 
+
         $(document).on('click',".icon-sound", function(event) {
+            var _audioPlayer = jwplayer('audioPlayer');
+            var apContainer = $(_getaudio).find('.audioplay');
             var getController = $(_getaudio).find('.audioplay').data('cmeaudio');
-            console.log("getController",getController);
-            if (getController == 'pause') {
-                Cookies.set("cmeaudio","play");
-                sound.play();
-            } else if (getController == 'play') {
-                sound.pause();
+
+            var _playState = Cookies.get("cmeaudio");
+            
+            if (_playState == 'pause') {
+                Cookies.set('cmeaudio','play');
+                $(apContainer).data('cmeaudio','play');
+                _audioPlayer.play(true);
+                $('.icon-sound').removeClass('none pause');
+                $('.icon-sound').addClass('on');
+
+            } else if (_playState == 'play') {
+                Cookies.set('cmeaudio','pause');
+                $(apContainer).data('cmeaudio','pause');
+                _audioPlayer.pause(true);
+                $('.icon-sound').removeClass('none on');
+                $('.icon-sound').addClass('pause');
+
             } else { return }
                 
         });
