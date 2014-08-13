@@ -252,7 +252,7 @@
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Ivacaftor is a small-molecular-weight compound approved to treat patients with CF with which of the following mutations?",
       "qid":"AAAq2",
-      "type": "multiple-choice",
+      "type": "multiplechoice",
       "answers": [
         {
           "answersid": "c1",
@@ -276,7 +276,7 @@
       "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Which of the following agents represent “corrector” molecules currently undergoing clinical trials in CF that assist with <i>F508del</i> folding and allow <i>F508del</i> CFTR to be transported to the apical surface of expressing cells?",
-      "type": "multiple-choice",
+      "type": "multiplechoice",
       "qid":"AAAq3",
       "answers": [
         {

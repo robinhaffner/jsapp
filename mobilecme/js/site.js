@@ -1,5 +1,5 @@
 var multiselectArr = new Array();
-var specialty, paramObj,passedJoinedVars,startPageNum;
+var specialty, paramObj, passedJoinedVars, startPageNum;
 
 Cookies.defaults = {
     path: '/',
@@ -85,8 +85,19 @@ function selectSpecialty(s) {
     }
 }
 
-function showAnswer(qa) {
-    console.log('showAnswer',qa);
+var showanswers = {
+    answer: function (argument) {
+        console.log("answer ajax");
+    },
+    single: function(qa) {
+        console.log("showanswers single",qa);
+    },
+    multiplechoice: function() {
+        console.log("multiplechoice");
+    },
+    evalquestions: function(){
+        console.log("eval");
+    }
 }
 
 $(document).ready(function () {
@@ -133,7 +144,7 @@ $(document).ready(function () {
                 Cookies(listtype, undefined);
                 Cookies.set(listtype, listtext);
             });
-        } else if ($( selectionlist ).hasClass('multiple-choice')) {
+        } else if ($( selectionlist ).hasClass('multiplechoice')) {
             $(this).addClass('selected');
 
             if ($(this).hasClass('selected')) {
@@ -153,11 +164,27 @@ $(document).ready(function () {
             selectSpecialty($(this));
         };
     });
+
     $(document).on('click', '.next-control', function(event) {
         if ($(document).find('.listview').data('role') == "listview" && !$(this).hasClass('click-control')) {
             event.preventDefault();
             $(this).addClass('click-control');
-            showAnswer(this);
+            var _list = $(document).find('.listview');
+            var listviewType = _list.data('listview-type');
+            console.log(listviewType,showanswers);
+            switch (listviewType) {
+                case "single":
+                    showanswers.single(_list);
+                    break;
+                case "multiplechoice":
+                    showanswers.multiplechoice(_list);
+                    break;
+                case "evalquestions":
+                    showanswers.evalquestions(_list);
+                    break;
+                default:
+                    showanswers.single();
+            }
             return;
         } else if($(this).hasClass('click-control')) {
 
