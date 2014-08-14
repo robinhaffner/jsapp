@@ -92,6 +92,7 @@ var showanswers = {
 }
 
 $(document).ready(function () {
+
     // Do responsive stuff
     $(window).on('resize', function(e){
         if ($("html").hasClass('no-touch')) {
@@ -166,7 +167,7 @@ $(document).ready(function () {
                 listviewType = _list.data('listview-type'),
                 listviewQid = _list.data('qid'),
                 listselect = _list.find('li.selected');
-            console.log("listviewType,listselect",listviewType,listselect);
+            console.log("listviewType,listselect",listviewType,listselect,$('body').data('programid'));
             if(listselect.length > 0){
                 $(listselect).each(function(index, val) {
                      console.log("index, val",index, val);
@@ -174,13 +175,14 @@ $(document).ready(function () {
                 });
                 console.log("_qalist",_qalist);
                 var request = $.ajax({
-                    url: "data/getdata.php",
+                    url: "http://int-pro.peer-cme.pslgroup.com/js/peer_quiz/answer",
                     type: "POST",
                     data: {
                         //type:   listviewType,
-                        type:   'choice',
+                        type:   'multiplechoice',
                         qid:    listviewQid,
-                        cid:    _qalist
+                        cid:    _qalist,
+                        programid: $('body').data('programid')
                     },
                     dataType: "json"
                 });

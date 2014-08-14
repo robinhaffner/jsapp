@@ -47,6 +47,9 @@ define(['json!root/program/'+program, 'json!root/collection/'+collection], funct
     return deferred.promise();
     
   },
+  getProgramID = function (section) {
+    return data[section];
+  },
   getStartPage = function (section) {
     return data[section][0].id;
   },
@@ -90,6 +93,7 @@ define(['json!root/program/'+program, 'json!root/collection/'+collection], funct
   // The public API
   return {
     getData: getData,
+    getProgramID: getProgramID,
     getStartPage: getStartPage,
     getSidebarData: getSidebarData,
     getAnswers: getAnswers

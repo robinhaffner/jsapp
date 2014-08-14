@@ -18,6 +18,7 @@ define(function (require) {
         mainView = new MainView(),
         navView = new NavView(),
         audioView = new AudioView(),
+        programIDView = siteAdapter.getProgramID("programid"),
         startPageNum = siteAdapter.getStartPage("start"),
 
         route = function () {
@@ -26,7 +27,8 @@ define(function (require) {
                 match;
             
             match = hashpath.match(detailsURL);
-            console.log("specialty",specialty,hashpath,match);
+            console.log("route",specialty,hashpath,match,programIDView);
+            $('body').data('programid', programIDView);
 
             if (!hashpath || !specialty) {
                 siteAdapter.getData("sitecontent","main").done(function(_content) {
