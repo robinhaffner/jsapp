@@ -9,9 +9,6 @@ define(function (require) {
         _getaudio, sound,
         audioTpl        = Handlebars.compile(audioHtml);
 
-        $.browser = {};
-        $.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
-
     return function () {
 
         this.initialize = function () {
@@ -35,9 +32,7 @@ define(function (require) {
                 }
             });
 
-            //if ( $.browser.msie == false) {
-                this.pageAudioPlayer();
-           // }
+            this.pageAudioPlayer();
         };
 
         this.pageAudioPlayer = function () {
@@ -56,17 +51,18 @@ define(function (require) {
                     width: '0'
             
                 });
+                console.log("_playState",_playState);
                 if (_playState != "pause" || _playState == undefined){ //set the icon state and play or pause the video
                         if (getAutoPlay ){
+                            jwplayer('audioPlayer').play(true);
                             $('.icon-sound').removeClass('none pause');
                             $('.icon-sound').addClass('on');
-                            jwplayer('audioPlayer').play(true);
                             $(apContainer).data('cmeaudio','play');
                             console.log('Play!');
                         }else if (!getAutoPlay){
+                            jwplayer('audioPlayer').play(false);
                             $('.icon-sound').removeClass('none on');
                             $('.icon-sound').addClass('pause');
-                            jwplayer('audioPlayer').play(false);
                             $(apContainer).data('cmeaudio','pause');
                             console.log('Pause!');
                         }else{
@@ -87,6 +83,7 @@ define(function (require) {
             var getController = $(_getaudio).find('.audioplay').data('cmeaudio');
 
             var _playState = Cookies.get("cmeaudio");
+            console.log("click",_playState);
             
             if (_playState == 'pause') {
                 Cookies.set('cmeaudio','play');
@@ -96,11 +93,11 @@ define(function (require) {
                 $('.icon-sound').addClass('on');
 
             } else if (_playState == 'play') {
-                Cookies.set('cmeaudio','pause');
-                $(apContainer).data('cmeaudio','pause');
                 _audioPlayer.pause(true);
+                $(apContainer).data('cmeaudio','pause');
                 $('.icon-sound').removeClass('none on');
                 $('.icon-sound').addClass('pause');
+                Cookies.set('cmeaudio','pause');
 
             } else { return }
                 

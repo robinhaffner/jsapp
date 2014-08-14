@@ -86,17 +86,8 @@ function selectSpecialty(s) {
 }
 
 var showanswers = {
-    answer: function (argument) {
-        console.log("answer ajax");
-    },
-    single: function(qa) {
-        console.log("showanswers single",qa);
-    },
-    multiplechoice: function() {
-        console.log("multiplechoice");
-    },
-    evalquestions: function(){
-        console.log("eval");
+    animation: function (argument) {
+        console.log("answer animation");
     }
 }
 
@@ -169,25 +160,43 @@ $(document).ready(function () {
         if ($(document).find('.listview').data('role') == "listview" && !$(this).hasClass('click-control')) {
             event.preventDefault();
             $(this).addClass('click-control');
-            var _list = $(document).find('.listview');
-            var listviewType = _list.data('listview-type');
-            console.log(listviewType,showanswers);
-            switch (listviewType) {
-                case "single":
-                    showanswers.single(_list);
-                    break;
-                case "multiplechoice":
-                    showanswers.multiplechoice(_list);
-                    break;
-                case "evalquestions":
-                    showanswers.evalquestions(_list);
-                    break;
-                default:
-                    showanswers.single();
+            var _qalist = [],
+                _list = $(document).find('.listview'),
+                listviewType = _list.data('listview-type'),
+                listviewQid = _list.data('qid'),
+                listselect = _list.find('li.selected');
+            console.log("listviewType,listselect",listviewType,listselect);
+            if(listselect){
+                $(listselect).each(function(index, val) {
+                     console.log("index, val",index, val);
+                     _qalist.push($(val).attr('id'));
+                });
+                console.log("_qalist",_qalist);
+                var request = $.ajax({
+                    url: "data/getdata.php",
+                    type: "POST",
+                    data: {
+                        //type:   listviewType,
+                        type:   'choice',
+                        qid:    listviewQid,
+                        cid:    _qalist
+                    },
+                    dataType: "json"
+                });
+
+                request.done(function( msg ) {
+                    console.log("done",msg);
+                });
+
+                request.fail(function( jqXHR, textStatus ) {
+                    console.log("jqXHR, textStatus",jqXHR, textStatus);
+                    alert( "Request failed: " + textStatus );
+                });
             }
+
             return;
         } else if($(this).hasClass('click-control')) {
-
+            console.log("else");
             $(this).removeClass('click-control');
 
         }
