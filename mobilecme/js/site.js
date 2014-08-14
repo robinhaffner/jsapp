@@ -157,6 +157,7 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.next-control', function(event) {
+        console.log("this",$(this));
         if ($(document).find('.listview').data('role') == "listview" && !$(this).hasClass('click-control')) {
             event.preventDefault();
             $(this).addClass('click-control');
@@ -166,7 +167,7 @@ $(document).ready(function () {
                 listviewQid = _list.data('qid'),
                 listselect = _list.find('li.selected');
             console.log("listviewType,listselect",listviewType,listselect);
-            if(listselect){
+            if(listselect.length > 0){
                 $(listselect).each(function(index, val) {
                      console.log("index, val",index, val);
                      _qalist.push($(val).attr('id'));
@@ -192,7 +193,7 @@ $(document).ready(function () {
                     console.log("jqXHR, textStatus",jqXHR, textStatus);
                     alert( "Request failed: " + textStatus );
                 });
-            }
+            } 
 
             return;
         } else if($(this).hasClass('click-control')) {
