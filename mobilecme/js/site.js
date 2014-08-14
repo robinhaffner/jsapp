@@ -86,8 +86,63 @@ function selectSpecialty(s) {
 }
 
 var showanswers = {
-    animation: function (argument) {
-        console.log("answer animation");
+    answercall: function (_qtype,_qid,_qalist) {
+        if (_qtype == "single") { _qtype = "multiplechoice"; }
+        var request = $.ajax({
+            url: "http://int.pro-cme.pslgroup.com/js/peer_quiz/answer",
+            type: "POST",
+            data: {
+                type:   _qtype,
+                qid:    _qid,
+                cid:    _qalist,
+                programid: $('body').data('programid')
+            },
+            dataType: "json"
+        });
+
+        request.done(function( data ) {
+            console.log("done",data);
+            if (data) {
+                showanswers.inputdata(data.responses);
+            };
+        });
+
+        request.fail(function( jqXHR, textStatus ) {
+            console.log("jqXHR, textStatus",jqXHR, textStatus);
+            alert( "Request failed: " + textStatus );
+        });
+    },
+    inputdata: function (data) {
+        $(document).find('.listview li').removeClass('selected');
+
+        $.each(data, function(index, val) {
+            var _qlist = $(document).find('.listview li#'+index+' .color-fill');
+            var _correct = (val.correct = 0 ) ? "correct":"incorrect";
+            var html = '<div class="choice-percent '+_correct+'">'+val.percent+'%</div>';
+             $(_qlist).append(html);
+        });
+
+        $(document).find('.listview li').each( function(i, ele) {
+            var getprecent = parseInt($(this).find('.choice-percent').text());
+            if($(this).find('.correct').length){
+                $(this).addClass('selectedresult');
+            }
+
+            if (getprecent >= 100) {
+                $(this).find('.color-fill').addClass('percent-fill')
+            };
+            $(this).find('.color-fill')
+                .stop().addClass('color-animate')
+                .css('height', ($(this).outerHeight() - 2)+'px')
+                .animate({width: getprecent+'%'}, 300);
+            $(this).find('.choice-percent').show();
+
+            /*Cookies(listtype, undefined);
+            Cookies.set(listtype, listtext);*/
+        });
+
+
+
     }
 }
 
@@ -107,7 +162,6 @@ $(document).ready(function () {
         var listtype = $( selectionlist ).data( "listview-type" );
 
         if ($( selectionlist ).hasClass('single')) {
-        console.log("selectionlist,listtype",selectionlist,listtype);
 
             $( selectionlist ).find('li').removeClass('selected');
             $(this).addClass('selected');
@@ -116,26 +170,6 @@ $(document).ready(function () {
             Cookies(listtype, undefined);
             Cookies.set(listtype, listtext);
 
-        } else if ($( selectionlist ).hasClass('single-result')) {
-            $( selectionlist ).find('li').removeClass('selectedresult');
-
-            $(this).addClass('selectedresult');
-            var listtext = $(this).find('p').text();
-
-            $($( selectionlist ).find('li')).each( function(i, ele) {
-                var getprecent = parseInt($(this).find('.choice-percent').text());
-                if (getprecent >= 100) {
-                    $(this).find('.color-fill').addClass('percent-fill')
-                };
-                $(this).find('.color-fill')
-                    .stop().addClass('color-animate')
-                    .css('height', ($(this).outerHeight() - 2)+'px')
-                    .animate({width: getprecent+'%'}, 300);
-                $(this).find('.choice-percent').show();
-
-                Cookies(listtype, undefined);
-                Cookies.set(listtype, listtext);
-            });
         } else if ($( selectionlist ).hasClass('multiplechoice')) {
             $(this).addClass('selected');
 
@@ -158,7 +192,7 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.next-control', function(event) {
-        console.log("this",$(this));
+
         if ($(document).find('.listview').data('role') == "listview" && !$(this).hasClass('click-control')) {
             event.preventDefault();
             $(this).addClass('click-control');
@@ -167,41 +201,17 @@ $(document).ready(function () {
                 listviewType = _list.data('listview-type'),
                 listviewQid = _list.data('qid'),
                 listselect = _list.find('li.selected');
-            console.log("listviewType,listselect",listviewType,listselect,$('body').data('programid'));
+
             if(listselect.length > 0){
                 $(listselect).each(function(index, val) {
-                     console.log("index, val",index, val);
                      _qalist.push($(val).attr('id'));
                 });
-                console.log("_qalist",_qalist);
-                var request = $.ajax({
-                    url: "http://int-pro.peer-cme.pslgroup.com/js/peer_quiz/answer",
-                    type: "POST",
-                    data: {
-                        //type:   listviewType,
-                        type:   'multiplechoice',
-                        qid:    listviewQid,
-                        cid:    _qalist,
-                        programid: $('body').data('programid')
-                    },
-                    dataType: "json"
-                });
-
-                request.done(function( msg ) {
-                    console.log("done",msg);
-                });
-
-                request.fail(function( jqXHR, textStatus ) {
-                    console.log("jqXHR, textStatus",jqXHR, textStatus);
-                    alert( "Request failed: " + textStatus );
-                });
+                showanswers.answercall(listviewType,listviewQid,_qalist)
             } 
 
             return;
         } else if($(this).hasClass('click-control')) {
-            console.log("else");
             $(this).removeClass('click-control');
-
         }
     });
 

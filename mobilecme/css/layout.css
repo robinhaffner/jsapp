@@ -146,6 +146,7 @@ a, a:hover, a:focus, a:active {
   text-align: left;
   font-weight: 600;
   display: none; 
+  padding-left: 8px;
 }
 .selection-list > li.selectedresult .choice-percent {
     color: rgb(0,102,26);
