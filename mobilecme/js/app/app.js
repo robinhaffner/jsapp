@@ -7,7 +7,8 @@ require.config({
         app: '../../js/app',
         tpl: '../../tpl',
         views:'../../js/app/views',
-        data: '../../data'
+        data: '../../data',
+        server: window.config.serverpath
     },
 
     map: {

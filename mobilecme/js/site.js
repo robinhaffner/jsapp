@@ -89,7 +89,7 @@ var showanswers = {
     answercall: function (_qtype,_qid,_qalist) {
         if (_qtype == "single") { _qtype = "multiplechoice"; }
         var request = $.ajax({
-            url: "http://int.pro-cme.pslgroup.com/js/peer_quiz/answer",
+            url: window.config.serverpath+"/js/peer_quiz/answer",
             type: "POST",
             data: {
                 type:   _qtype,
