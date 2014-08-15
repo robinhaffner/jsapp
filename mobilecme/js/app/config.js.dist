@@ -1,3 +1,9 @@
+// Copy this file to config.js and modify the tokens below to fit your environment
+// paths.server should be the root url of the application
+// paths.quizapi should be the root url of where the quiz adapter is
 window.config = {
-  "serverpath":"[*MOBILECME_PARENT_SITE*]"
+  paths:{
+    "server":"[*MOBILECME_PARENT_SITE*]", // ex. http://localhost:8888/mobilecme
+    "quizapi":"[*MOBILECME_PARENT_SITE*]" // ex. http://dev.pro-cme.com
+  }
 };
