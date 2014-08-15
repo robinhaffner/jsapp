@@ -373,6 +373,8 @@
           "mediavideo": "http://c.pro-c.me/programs/demo/video/mov_bbb.mp4"
         }
       ],
+         "video_url": "//jwpsrv.com/feed/YaKGhCoY.rss",
+      "video_autoplay": "true",
       "audio_url": "http://c.pro-c.me/programs/demo/audio/simples/long-canada_anthem.mp3",
       "audio_autoplay": "true"
     },
