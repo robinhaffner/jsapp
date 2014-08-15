@@ -8,7 +8,7 @@ require.config({
         tpl: '../../tpl',
         views:'../../js/app/views',
         data: '../../data',
-        server: window.config.serverpath
+        server: window.config.path.server
     },
 
     map: {
