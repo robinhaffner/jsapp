@@ -24,13 +24,14 @@ define(function (require) {
         route = function () {
             var hashpath = window.location.hash,
                 view,
-                match;
+                match = hashpath.match(detailsURL),
+                getStoredSpecialty = Cookies.get('specialty');
             
-            match = hashpath.match(detailsURL);
-            console.log("route",specialty,hashpath,match,programIDView);
+            console.log("route",specialty,hashpath,match,programIDView,getStoredSpecialty);
+            console.log("startPageNum",startPageNum);
             $('body').data('programid', programIDView);
 
-            if (!hashpath || !specialty) {
+            if (!hashpath || !specialty && getStoredSpecialty == '') {
                 siteAdapter.getData("sitecontent","main").done(function(_content) {
                   var tpl = eval(_content.template+"View");
                   var handler = new tpl();
@@ -42,8 +43,9 @@ define(function (require) {
                 
             }
 
-            if (match && specialty) {                
-                console.log("match",match,match[1]);
+            if (match && specialty || getStoredSpecialty != undefined) {
+
+                if (match == null) { match= []; match[1] = startPageNum; }; // setcookie
 
                 siteAdapter.getData("sitecontent",match[1]).done(function(_content){
                   var tpl = eval(_content.template+"View");
