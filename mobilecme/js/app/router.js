@@ -29,6 +29,7 @@ define(function (require) {
             
             console.log("route",specialty,hashpath,match,programIDView,getStoredSpecialty);
             console.log("startPageNum",startPageNum);
+            
             $('body').data('programid', programIDView);
 
             if (!hashpath || !specialty && getStoredSpecialty == '') {

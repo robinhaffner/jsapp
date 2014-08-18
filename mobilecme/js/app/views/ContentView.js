@@ -16,7 +16,7 @@ define(function (require) {
         };
 
         this.render = function (content) {
-            this.$el.html(contentTpl(content));
+            this.$el.html(contentTpl(content)).addClass('contenttpl');
             return this;
         };
 
