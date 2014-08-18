@@ -231,7 +231,7 @@
       "type": "single",
       "answers": [
         {
-          "answersid": "c1",
+          "answersid": "c1", "correct":"1", "correct":"1",
           "answerstxt": "<p>Use of lentivirus-based vectors for CFTR gene transfer to airway epithelium</p>"
         },
         {
@@ -256,7 +256,7 @@
       "type": "multiplechoice",
       "answers": [
         {
-          "answersid": "c1",
+          "answersid": "c1", "correct":"1",
           "answerstxt": "<p>F508D</p>"
         },
         {
@@ -281,7 +281,7 @@
       "qid":"AAAq3",
       "answers": [
         {
-          "answersid": "c1",
+          "answersid": "c1", "correct":"1",
           "answerstxt": "<p>Ivacaftor</p>"
         },
         {
@@ -314,7 +314,7 @@
       "type": "single",
       "answers": [
         {
-          "answersid": "c1",
+          "answersid": "c1", "correct":"1",
           "answerstxt": "<p>Levofloxacin</p>"
         },
         {
@@ -339,7 +339,7 @@
       "type": "single",
       "answers": [
         {
-          "answersid": "c1",
+          "answersid": "c1", "correct":"1",
           "answerstxt": "<p>Agree</p>"
         },
         {
