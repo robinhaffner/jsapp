@@ -16,9 +16,10 @@ a, a:hover, a:focus, a:active {
 .container-fluid, .main-canvas { padding:0; }
 .row { margin-left: 0; margin-right: 0; }
 
+.fixed-hdr-bar .main-canvas { padding-top: 84px; position: relative; }
+.fixed-hdr-bar #nav-container { position: fixed; top: 0; width: 66.6667%; z-index: 999; }
 
 #hdr { background-color: rgb(102,102,102); color: rgb(255,255,255); border: 0; }
-
 #hdr .navicons {
   height: 22px;
   background: url(../images/icons/icons-nav.png) no-repeat top left;
@@ -29,7 +30,6 @@ a, a:hover, a:focus, a:active {
   margin-top: 12px;
   padding: 0;
 }
-
 #hdr .navicons.icon-back { background-position: 0 0; width: 13px; } 
 #hdr .navicons.icon-next { background-position: 0 -32px; width: 13px; display: inline-block; margin-left: 14px; } 
 #hdr .navicons.icon-sound { cursor: pointer; }
@@ -49,6 +49,10 @@ a, a:hover, a:focus, a:active {
     text-decoration: none;
     display: block;
     outline: none;
+}
+#hdr .icon-loading {
+    display: block;
+    margin: 10px auto;
 }
 .headline {
     background-color: rgb(230, 234, 233);
@@ -100,17 +104,11 @@ a, a:hover, a:focus, a:active {
   background-color: rgb(102,102,102);
   color: rgb(255,255,255);
 }
-.selection-list > li.selectedresult {
-  border: 1px solid rgb(1,178,1);
-}
 .selection-list.qlist > li p {
     margin: 0 auto;
     width: 90%;
     position: relative;
     z-index: 999;
-}
-.selection-list > li.selectedresult p {
-  font-weight: 600;
 }
 .selection-list > li .color-fill {
   position: absolute;
@@ -123,7 +121,6 @@ a, a:hover, a:focus, a:active {
   border-top-right-radius: 0.6em;
   border-bottom-right-radius: 0.6em;
 }
-
 .selection-list > li .color-fill.color-animate {
     background-color: rgb(170,170,170);
     -webkit-transition: background-color 1000ms linear;
@@ -131,6 +128,13 @@ a, a:hover, a:focus, a:active {
     -o-transition: background-color 1000ms linear;
     -ms-transition: background-color 1000ms linear;
     transition: background-color 1000ms linear;
+}
+
+.selection-list > li.selectedresult {
+  border: 1px solid rgb(1,178,1);
+}
+.selection-list > li.selectedresult p {
+  font-weight: 600;
 }
 .selection-list > li.selectedresult .color-fill.color-animate {
     background-color: rgb(158,218,137);
