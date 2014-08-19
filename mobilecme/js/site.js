@@ -87,6 +87,9 @@ function selectSpecialty(s) {
 
 var showanswers = {
     answercall: function (_qtype,_qid,_qalist) {
+        var msg, 
+            htmlErr = '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Error!</strong> </div>';
+
         if (_qtype == "single") { _qtype = "multiplechoice"; }
         var request = $.ajax({
             url: window.config.path.quizapi+"/js/pquiz/answer",
@@ -118,7 +121,15 @@ var showanswers = {
 
         request.fail(function( jqXHR, textStatus ) {
             console.log("jqXHR, textStatus",jqXHR, textStatus);
-            alert( "Request failed: " + textStatus );
+            msg = jqXHR.statusText;
+
+            $(".alert").remove();
+            $(htmlErr).insertBefore('.content-wrapper h1');
+            $('.alert').append(msg);
+
+            $(document).find('.listview').addClass('pass');
+            $('.icon-loading').remove();
+            $('.next-control').show();
         });
     },
     inputdata: function (data) {
@@ -156,7 +167,7 @@ var showanswers = {
             Cookies.set(listtype, listtext);*/
         });
 
-        $(document).find('.listview').addClass('answered'); //answers completed
+        $(document).find('.listview').addClass('pass'); //answers completed
         $(".alert").remove(); //remove alert box
     }
 }
@@ -176,7 +187,7 @@ $(document).ready(function () {
         var selectionlist = $(this).parent();
         var listtype = $( selectionlist ).data( "listview-type" );
 
-        if ($( selectionlist ).hasClass('single') && !$(selectionlist).hasClass('answered')){
+        if ($( selectionlist ).hasClass('single') && !$(selectionlist).hasClass('pass')){
 
             $( selectionlist ).find('li').removeClass('selected');
             $(this).addClass('selected');
@@ -185,7 +196,7 @@ $(document).ready(function () {
             Cookies(listtype, undefined);
             Cookies.set(listtype, listtext);
 
-        } else if ($( selectionlist ).hasClass('multiplechoice') && !$(selectionlist).hasClass('answered')) {
+        } else if ($( selectionlist ).hasClass('multiplechoice') && !$(selectionlist).hasClass('pass')) {
             $(this).toggleClass('selected');
 
             if ($(this).hasClass('selected')) {
@@ -206,7 +217,7 @@ $(document).ready(function () {
     $(document).on('click', '.next-control', function(event) {
         var questionpage = $('.content-wrapper.questionstpl').length; //check for question template
         if (questionpage) {
-            if ($(document).hasClass('.listview.answered') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {
+            if ($(document).hasClass('.listview.pass') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {
                 
                 if ($(document).find('.listview').data('role') == "listview" && !$(this).hasClass('click-control')) {
                     event.preventDefault();
@@ -232,7 +243,7 @@ $(document).ready(function () {
             }
             else { 
                 event.preventDefault(); 
-                var htmlAlert = '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Warning!</strong> Please select an answer</div>';
+                var htmlAlert = '<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Warning!</strong> Please select an answer</div>';
                 $(".alert").remove();
                 $(htmlAlert).insertBefore('.content-wrapper h1');
                 return; 
