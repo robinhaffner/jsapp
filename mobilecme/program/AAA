@@ -7,6 +7,11 @@
     "pages": [
       "main",
       "faculty",
+	  "prequestion1",
+      "prequestion2",
+      "prequestion3",
+      "prequestion4",
+      "prequestion5",
       "overview",
       "genetherapy",
       "development",
@@ -20,11 +25,11 @@
       "cf",
       "conclusion",
       "posttest",
-      "question",
-      "question2",
-      "question3",
-      "question4",
-      "question5",
+      "postquestion1",
+      "postquestion2",
+      "postquestion3",
+      "postquestion4",
+      "postquestion5",
       "video",
 	  "equestion1",
       "equestion2",
@@ -407,7 +412,7 @@
       "audio_autoplay": "false"
     },  
 	    {
-      "id": "prequestion",
+      "id": "prequestion1",
 	  "groupid": "1",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
@@ -550,7 +555,7 @@
       "audio_autoplay": ""
     },
     {
-      "id": "question",
+      "id": "postquestion1",
 	  "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
@@ -577,7 +582,7 @@
       "audio_autoplay": ""
     },
     {
-      "id": "question2",
+      "id": "postquestion2",
 	  "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
@@ -604,7 +609,7 @@
       "audio_autoplay": ""
     },
     {
-      "id": "question3",
+      "id": "postquestion3",
 	  "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
@@ -639,7 +644,7 @@
       "audio_autoplay": ""
     },
     {
-      "id": "question4",
+      "id": "postquestion4",
 	  "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
@@ -666,7 +671,7 @@
       "audio_autoplay": ""
     },    
     {
-      "id": "question5",
+      "id": "postquestion5",
 	  "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
