@@ -134,14 +134,11 @@ var showanswers = {
     inputdata: function (data) {
         $(document).find('.listview li').removeClass('selected');
 
-        /**random correct**/
-        var tempcorrect = Math.floor(Math.random() * $(document).find('.listview li').length);
-        $(document).find('.listview li:eq('+tempcorrect+')').addClass('selectedresult');
-        /**end**/
-
         $.each(data, function(index, val) {
             var _qlist = $(document).find('.listview li#'+index+' .color-fill');
-            var _correct = (val.correct = 0 ) ? "correct":"incorrect";
+            if (val.correct == 1) {
+                $(document).find('.listview li#'+index).addClass('selectedresult');
+            };
             var html = '<div class="choice-percent">'+val.percent+'%</div>';
              $(_qlist).append(html);
         });
