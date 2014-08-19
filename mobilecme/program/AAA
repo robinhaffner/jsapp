@@ -25,7 +25,12 @@
       "question3",
       "question4",
       "question5",
-      "video"
+      "video",
+	  "equestion1",
+      "equestion2",
+      "equestion3",
+      "equestion4",
+      "equestion5"
     ]
   }],
   "topnav": [{
@@ -61,6 +66,186 @@
         "Pulmonology",
         "Other"
       ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+	 {
+      "id": "equestion1",
+	  "group_id": "eval",
+      "template": "Question",
+      "title": "Course Evaluation",
+      "headline": "Evaluation",
+	  "question": "Please rate your level of agreement with the following statement: The content of this activity was fair, balanced, and free of commercial bias.",
+      "qid":"eval1",
+      "type": "single",
+	  "answer":"false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Strongly Disagree</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Disagree</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Neither Agree nor Disagree</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Agree</p>"
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>Strongly Agree</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },{
+      "id": "equestion2",
+	  "group_id": "eval",
+      "template": "Question",
+      "title": "Course Evaluation",
+      "headline": "Evaluation",
+	  "question": "Please rate your level of agreement with the following statement: The content of this activity was evidence-based.",
+      "qid":"eval2",
+      "type": "single",
+	  "answer":"false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Strongly Disagree</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Disagree</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Neither Agree nor Disagree</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Agree</p>"
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>Strongly Agree</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },{
+      "id": "equestion3",
+	  "group_id": "eval",
+      "template": "Question",
+      "title": "Course Evaluation",
+      "headline": "Evaluation",
+	  "question": "This activity has or will improve my (check all that apply)",
+      "qid":"eval3",
+      "type": "multiplechoice",
+	  "answer":"false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Knowledge</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Competence</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Performance</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Patient Outcomes</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },{
+      "id": "equestion4",
+	  "group_id": "eval",
+      "template": "Question",
+      "title": "Course Evaluation",
+      "headline": "Evaluation",
+	  "question": "Please rate the likelihood of participating in future activities on this topic presented in a similar format.",
+      "qid":"eval4",
+      "type": "single",
+	  "answer":"false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Never</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Not Likely</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Neutral/Not Sure</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Likely</p>"
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>Very Likely</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },{
+      "id": "equestion5",
+	  "group_id": "eval",
+      "template": "Question",
+      "title": "Course Evaluation",
+      "headline": "Evaluation",
+	  "question": "Please rate your level of agreement with the following statement: The content of this activity was fair, balanced, and free of commercial bias.",
+      "qid":"eval5",
+      "type": "single",
+	  "answer":"false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Strongly Disagree</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Disagree</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Neither Agree nor Disagree</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Agree</p>"
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>Strongly Agree</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+	{
+      "id": "equestion6",
+	  "group_id": "eval",
+      "template": "Question",
+      "title": "Course Evaluation",
+      "headline": "Evaluation",
+	  "question": "Please provide any other feedback or comments regarding this activity.",
+      "qid":"eval6",
+      "type": "freeform",
+	  "answer":"false",
       "audio_url": "",
       "audio_autoplay": ""
     },
@@ -220,15 +405,160 @@
       "content": "<p>The Penn State College of Medicine and Answers in CME respect and appreciate your opinions.</p><p>To obtain CME credit, please complete the CME Post-Test. To assist us in evaluating the effectiveness of this activity and to make recommendations for future educational offerings, please take a few minutes to complete the evaluation form. The correct answers, with detailed explanations to the questions below, will be provided on page 2. </p><p>After you submit the form, your statement of credit will be emailed to you.</p><p>All questions are required for CME credit. A score of 80% or higher is needed to obtain CME credit</p>",
       "audio_url": "",
       "audio_autoplay": "false"
-    },    
-    {
-      "id": "question",
+    },  
+	    {
+      "id": "prequestion",
+	  "groupid": "1",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Which of the following gene therapy strategies are currently being evaluated in clinical trials in patients with cystic fibrosis (CF)?",
       "qid":"AAAq1",
       "type": "single",
+	  "answer":"false",
+      "answers": [
+        {
+          "answersid": "c1", "correct":"1", "correct":"1",
+          "answerstxt": "<p>Use of lentivirus-based vectors for CFTR gene transfer to airway epithelium</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Use of adeno-associated virus-based vectors for CFTR gene transfer to airway epithelium</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Use of liposomes to transfer plasmids containing a functional CFTR cDNA to airway epithelium</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "prequestion2",
+	  "groupid": "1",
+      "template": "Question",
+      "title": "ProCME - Clinical Practice",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "question": "Ivacaftor is a small-molecular-weight compound approved to treat patients with CF with which of the following mutations?",
+      "qid":"AAAq2",
+      "type": "multiplechoice",
+	  "answer":"false",
+      "answers": [
+        {
+          "answersid": "c1", "correct":"1",
+          "answerstxt": "<p>F508D</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>G551D</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>R117H-CFTR</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "prequestion3",
+	  "groupid": "1",
+      "template": "Question",
+      "title": "ProCME - Clinical Practice",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "question": "Which of the following agents represent “corrector” molecules currently undergoing clinical trials in CF that assist with <i>F508del</i> folding and allow <i>F508del</i> CFTR to be transported to the apical surface of expressing cells?",
+      "type": "multiplechoice",
+      "qid":"AAAq3",
+	  "answer":"false",
+      "answers": [
+        {
+          "answersid": "c1", "correct":"1",
+          "answerstxt": "<p>Ivacaftor</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Lumacaftor (VX-809)</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>VX-661</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Both a and b</p>"
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>Both b and c</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "prequestion4",
+	  "groupid": "1",
+      "template": "Question",
+      "title": "ProCME - Clinical Practice",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "question": "<p>Please indicate your level of agreement with the following statement:</p><p><i>In patients with CF, the F508del mutation manifests both Class II and Class III defects, which means that it may be possible to address both functional defects through combined use of a corrector such as VX-809 or VX-661 and a potentiator such as ivacaftor.</i></p>",
+      "qid":"AAAq4",
+      "type": "single",
+	  "answer":"false",
+      "answers": [
+        {
+          "answersid": "c1", "correct":"1",
+          "answerstxt": "<p>Levofloxacin</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Liposomal amikacin</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Colistin</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },    
+    {
+      "id": "prequestion5",
+	  "groupid": "1",
+      "template": "Question",
+      "title": "ProCME - Clinical Practice",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "question": "Dry powder formulation of which of the following inhaled antibiotics is currently under investigation in patients with CF?",
+      "qid":"AAAq5",
+      "type": "single",
+	  "answer":"false",
+      "answers": [
+        {
+          "answersid": "c1", "correct":"1",
+          "answerstxt": "<p>Agree</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Disagree</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Not sure</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "question",
+	  "groupid": "2",
+      "template": "Question",
+      "title": "ProCME - Clinical Practice",
+      "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
+      "question": "Which of the following gene therapy strategies are currently being evaluated in clinical trials in patients with cystic fibrosis (CF)?",
+      "qid":"AAAq1",
+      "type": "single",
+	  "answer":"true",
       "answers": [
         {
           "answersid": "c1", "correct":"1", "correct":"1",
@@ -248,12 +578,14 @@
     },
     {
       "id": "question2",
+	  "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Ivacaftor is a small-molecular-weight compound approved to treat patients with CF with which of the following mutations?",
       "qid":"AAAq2",
       "type": "multiplechoice",
+	  "answer":"true",
       "answers": [
         {
           "answersid": "c1", "correct":"1",
@@ -273,12 +605,14 @@
     },
     {
       "id": "question3",
+	  "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Which of the following agents represent “corrector” molecules currently undergoing clinical trials in CF that assist with <i>F508del</i> folding and allow <i>F508del</i> CFTR to be transported to the apical surface of expressing cells?",
       "type": "multiplechoice",
       "qid":"AAAq3",
+	  "answer":"true",
       "answers": [
         {
           "answersid": "c1", "correct":"1",
@@ -306,12 +640,14 @@
     },
     {
       "id": "question4",
+	  "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "<p>Please indicate your level of agreement with the following statement:</p><p><i>In patients with CF, the F508del mutation manifests both Class II and Class III defects, which means that it may be possible to address both functional defects through combined use of a corrector such as VX-809 or VX-661 and a potentiator such as ivacaftor.</i></p>",
       "qid":"AAAq4",
       "type": "single",
+	  "answer":"true",
       "answers": [
         {
           "answersid": "c1", "correct":"1",
@@ -331,12 +667,14 @@
     },    
     {
       "id": "question5",
+	  "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
       "headline": "From Research to Clinical Practice: What's New in the Treatment of Cystic Fibrosis?",
       "question": "Dry powder formulation of which of the following inhaled antibiotics is currently under investigation in patients with CF?",
       "qid":"AAAq5",
       "type": "single",
+	  "answer":"true",
       "answers": [
         {
           "answersid": "c1", "correct":"1",
