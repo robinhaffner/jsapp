@@ -1,3 +1,6 @@
+//Log() - a Lightweight Wrapper for console.log
+window.log=function(){log.history=log.history||[];log.history.push(arguments);if(this.console){console.log(Array.prototype.slice.call(arguments))}};
+
 var multiselectArr = new Array();
 var specialty, paramObj, passedJoinedVars, startPageNum;
 
