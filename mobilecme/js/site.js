@@ -89,7 +89,7 @@ var showanswers = {
     answercall: function (_qtype,_qid,_qalist) {
         if (_qtype == "single") { _qtype = "multiplechoice"; }
         var request = $.ajax({
-            url: window.config.path.quizapi+"/js/peer_quiz/answer",
+            url: window.config.path.quizapi+"/js/pquiz/answer",
             type: "POST",
             data: {
                 type:   _qtype,
