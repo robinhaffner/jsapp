@@ -124,8 +124,10 @@ var showanswers = {
     inputdata: function (data) {
         $(document).find('.listview li').removeClass('selected');
 
-        var tempcorrect = Math.floor(Math.random() * $(document).find('.listview li').length) + 1;
-        $(document).find('.listview li:eq('+tempcorrect+')').addClass('selectedresult')
+        /**random correct**/
+        var tempcorrect = Math.floor(Math.random() * $(document).find('.listview li').length);
+        $(document).find('.listview li:eq('+tempcorrect+')').addClass('selectedresult');
+        /**end**/
 
         $.each(data, function(index, val) {
             var _qlist = $(document).find('.listview li#'+index+' .color-fill');
@@ -202,37 +204,40 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.next-control', function(event) {
-        if ($(document).hasClass('.listview.answered') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {
-            
-            if ($(document).find('.listview').data('role') == "listview" && !$(this).hasClass('click-control')) {
-                event.preventDefault();
+        var questionpage = $('.content-wrapper.questionstpl').length; //check for question template
+        if (questionpage) {
+            if ($(document).hasClass('.listview.answered') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {
+                
+                if ($(document).find('.listview').data('role') == "listview" && !$(this).hasClass('click-control')) {
+                    event.preventDefault();
 
-                $(this).addClass('click-control');
-                var _qalist = [],
-                    _list = $(document).find('.listview'),
-                    listviewType = _list.data('listview-type'),
-                    listviewQid = _list.data('qid'),
-                    listselect = _list.find('li.selected');
+                    $(this).addClass('click-control');
+                    var _qalist = [],
+                        _list = $(document).find('.listview'),
+                        listviewType = _list.data('listview-type'),
+                        listviewQid = _list.data('qid'),
+                        listselect = _list.find('li.selected');
 
-                if(listselect.length > 0){
-                    $(listselect).each(function(index, val) {
-                         _qalist.push($(val).attr('id'));
-                    });
-                    showanswers.answercall(listviewType,listviewQid,_qalist)
-                } 
-                return;
-            } else if($(this).hasClass('click-control')) {
-                $(this).removeClass('click-control');
+                    if(listselect.length > 0){
+                        $(listselect).each(function(index, val) {
+                             _qalist.push($(val).attr('id'));
+                        });
+                        showanswers.answercall(listviewType,listviewQid,_qalist)
+                    } 
+                    return;
+                } else if($(this).hasClass('click-control')) {
+                    $(this).removeClass('click-control');
+                }
+
             }
-
-        }
-        else { 
-            event.preventDefault(); 
-            var htmlAlert = '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Warning!</strong> Please select an answer</div>';
-            $(".alert").remove();
-            $(htmlAlert).insertBefore('.content-wrapper h1');
-            return; 
-        }
+            else { 
+                event.preventDefault(); 
+                var htmlAlert = '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Warning!</strong> Please select an answer</div>';
+                $(".alert").remove();
+                $(htmlAlert).insertBefore('.content-wrapper h1');
+                return; 
+            }
+        } else { return; }
 
     });
 

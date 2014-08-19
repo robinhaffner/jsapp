@@ -16,7 +16,7 @@ define(function (require) {
         };
 
         this.render = function (content) {
-            this.$el.html(finalstepTpl(content));
+            this.$el.html(finalstepTpl(content)).addClass('finalsteptpl');
             $(".next-control").hide();
             return this;
         };

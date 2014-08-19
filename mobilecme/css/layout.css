@@ -44,11 +44,12 @@ a, a:hover, a:focus, a:active {
     font-weight: 200;
     line-height: 40px;
     margin: 0;
-    padding: 0 32px 0 0;
+    padding: 0 28px 0 0;
     text-align: right;
     text-decoration: none;
     display: block;
     outline: none;
+    height: 37px;
 }
 #hdr .icon-loading {
     display: block;
@@ -300,6 +301,8 @@ a, a:hover, a:focus, a:active {
  * --------------------------------------------------
  */
 @media screen and (max-width: 767px) {
+  .fixed-hdr-bar .main-canvas { padding-top: 100px; }
+  .fixed-hdr-bar #nav-container { width: 100%; }
   .row-offcanvas {
     position: relative;
     -webkit-transition: all .25s ease-out;

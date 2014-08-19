@@ -18,7 +18,12 @@ define(function (require) {
         this.render = function (content) {
             startPageNum = siteAdapter.getStartPage("start")
             this.$el.html(mainTpl(content));
-            $('#hdr .next-control').remove()
+
+            var getStoredSpecialty = Cookies.get('specialty');
+            if (getStoredSpecialty == undefined) {
+                $('#hdr .next-control').remove();
+            };
+            
             return this;
         };
 

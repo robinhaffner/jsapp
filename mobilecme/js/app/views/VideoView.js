@@ -16,7 +16,7 @@ define(function (require) {
         };
 
         this.render = function (content) {
-            this.$el.html(videoTpl(content));
+            this.$el.html(videoTpl(content)).addClass('videotpl');
             Cookies.set("cmeaudio","pause");
             return this;
         };
