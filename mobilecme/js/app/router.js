@@ -29,10 +29,10 @@ define(function (require) {
             
             console.log("route",specialty,hashpath,match,programIDView,getStoredSpecialty);
             console.log("startPageNum",startPageNum);
-            
+
             $('body').data('programid', programIDView);
 
-            if (!hashpath || !specialty && getStoredSpecialty == '') {
+            if ( (!hashpath && specialty) || (!hashpath && !specialty) || getStoredSpecialty == '') {
                 siteAdapter.getData("sitecontent","main").done(function(_content) {
                   var tpl = eval(_content.template+"View");
                   var handler = new tpl();
