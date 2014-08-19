@@ -87,8 +87,6 @@ function selectSpecialty(s) {
 
 var showanswers = {
     answercall: function (_qtype,_qid,_qalist) {
-        var msg, 
-            htmlErr = '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Error!</strong> </div>';
 
         if (_qtype == "single") { _qtype = "multiplechoice"; }
         var request = $.ajax({
@@ -113,23 +111,20 @@ var showanswers = {
         request.done(function( data ) {
             console.log("done",data);
             if (data) {
-                showanswers.inputdata(data.responses);
-                $('.icon-loading').remove();
-                $('.next-control').show();
+                if(data.status = 0){
+                    showanswers.errorhandler(data.err);
+                } else {
+                    showanswers.inputdata(data.responses);
+                    $('.icon-loading').remove();
+                    $('.next-control').show();
+                }
             };
         });
 
         request.fail(function( jqXHR, textStatus ) {
             console.log("jqXHR, textStatus",jqXHR, textStatus);
-            msg = jqXHR.statusText;
-
-            $(".alert").remove();
-            $(htmlErr).insertBefore('.content-wrapper h1');
-            $('.alert').append(msg);
-
-            $(document).find('.listview').addClass('pass');
-            $('.icon-loading').remove();
-            $('.next-control').show();
+            var msg = jqXHR.statusText;
+            showanswers.errorhandler(msg)
         });
     },
     inputdata: function (data) {
@@ -169,6 +164,19 @@ var showanswers = {
 
         $(document).find('.listview').addClass('pass'); //answers completed
         $(".alert").remove(); //remove alert box
+    },
+    errorhandler: function(_msg){
+        var msg, 
+            htmlErr = '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Message!</strong> </div>';
+
+        $(".alert").remove();
+        $(htmlErr).insertBefore('.content-wrapper h1');
+        $('.alert').append(_msg);
+
+        $(document).find('.listview').addClass('pass');
+        $('.icon-loading').remove();
+        $('.next-control').show();
+
     }
 }
 
