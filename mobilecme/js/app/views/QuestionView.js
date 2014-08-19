@@ -16,7 +16,8 @@ define(function (require) {
         };
 
         this.render = function (content) {
-            this.$el.html(questionTpl(content)).addClass('questionstpl');
+            this.$el.html(questionTpl(content));
+            this.$el.data('template', '').data('template', 'questionstpl');
             return this;
         };
 

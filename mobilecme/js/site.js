@@ -111,7 +111,7 @@ var showanswers = {
         request.done(function( data ) {
             console.log("done",data);
             if (data) {
-                if(data.status = 0){
+                if(data.status == 0){
                     showanswers.errorhandler(data.err);
                 } else {
                     showanswers.inputdata(data.responses);
@@ -223,7 +223,7 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.next-control', function(event) {
-        var questionpage = $('.content-wrapper.questionstpl').length; //check for question template
+        var questionpage = $('.content-wrapper').data('template') == "questionstpl" ? true : false; //check for question template
         if (questionpage) {
             if ($(document).hasClass('.listview.pass') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {
                 
@@ -254,7 +254,7 @@ $(document).ready(function () {
                 var htmlAlert = '<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Warning!</strong> Please select an answer</div>';
                 $(".alert").remove();
                 $(htmlAlert).insertBefore('.content-wrapper h1');
-                return; 
+                //return; 
             }
         } else { return; }
 
