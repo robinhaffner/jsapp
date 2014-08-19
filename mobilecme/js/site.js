@@ -89,17 +89,18 @@ function selectSpecialty(s) {
 }
 
 var showanswers = {
-    answercall: function (_qtype,_qid,_qalist) {
+    answercall: function (_qtype,_qid,_qalist,_gid,_async) {
 
         if (_qtype == "single") { _qtype = "multiplechoice"; }
         var request = $.ajax({
             url: window.config.path.quizapi+"/js/pquiz/answer",
             type: "POST",
             data: {
-                type:   _qtype,
-                qid:    _qid,
-                cid:    _qalist,
-                programid: $('body').data('programid')
+                type:       _qtype,
+                qid:        _qid,
+                cid:        _qalist,
+                groupid:    _gid,
+                programid:  $('body').data('programid')
             },
             dataType: "json",
             beforeSend: function(){
@@ -238,13 +239,15 @@ $(document).ready(function () {
                         _list = $(document).find('.listview'),
                         listviewType = _list.data('listview-type'),
                         listviewQid = _list.data('qid'),
+                        listviewGid = _list.data('groupid'),
+                        listviewAsync = _list.data('async-answer'),
                         listselect = _list.find('li.selected');
 
                     if(listselect.length > 0){
                         $(listselect).each(function(index, val) {
                              _qalist.push($(val).attr('id'));
                         });
-                        showanswers.answercall(listviewType,listviewQid,_qalist)
+                        showanswers.answercall(listviewType,listviewQid,_qalist,listviewGid,listviewAsync)
                     } 
                     return;
                 } else if($(this).hasClass('click-control')) {

@@ -1,5 +1,5 @@
 <h1>{{{this.question}}}</h1>
-<ul data-role="listview" data-qid="{{this.qid}}" data-listview-type="{{this.type}}" class="listview selection-list {{this.type}} qlist">
+<ul data-role="listview" data-qid="{{this.qid}}" data-groupid="{{this.groupid}}" data-async-answer="{{this.async-answer}}" data-listview-type="{{this.type}}" class="listview selection-list {{this.type}} qlist">
 	{{#this.answers}}
 	<li id="{{this.answersid}}"><div class="color-fill"></div>{{{this.answerstxt}}}</li>
 	{{/this.answers}}
