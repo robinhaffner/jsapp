@@ -16,7 +16,7 @@ a, a:hover, a:focus, a:active {
 .container-fluid, .main-canvas { padding:0; }
 .row { margin-left: 0; margin-right: 0; }
 
-.fixed-hdr-bar .main-canvas { padding-top: 84px; position: relative; }
+.fixed-hdr-bar .main-canvas { padding-top: 50px; position: relative; }
 .fixed-hdr-bar #nav-container { position: fixed; top: 0; width: 66.6667%; z-index: 999; }
 
 #hdr { background-color: rgb(102,102,102); color: rgb(255,255,255); border: 0; }
@@ -306,7 +306,7 @@ a, a:hover, a:focus, a:active {
  * --------------------------------------------------
  */
 @media screen and (max-width: 767px) {
-  .fixed-hdr-bar .main-canvas { padding-top: 100px; }
+  /*.fixed-hdr-bar .main-canvas { padding-top: 50px; }*/
   .fixed-hdr-bar #nav-container { width: 100%; }
   .row-offcanvas {
     position: relative;
