@@ -275,8 +275,10 @@ $(document).ready(function () {
 
 	$('#footerModal').on('show.bs.modal', function (e) {
 		var container = $(e.currentTarget).attr('id');
+        var htmlCloseBtn = '<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>';
 		$.get( $(e.relatedTarget).attr('href'), function( data ) {
 		  $( "#"+container + " .modal-content").html( data );
+          $(htmlCloseBtn).insertBefore( "#"+container + " .modal-body");
 		});
 	});
 

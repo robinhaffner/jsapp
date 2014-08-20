@@ -272,7 +272,12 @@ a, a:hover, a:focus, a:active {
   text-decoration: none;
   outline: 0; 
 }
-
+#footerModal .modal-header {
+    border-bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 /*
  * Style Sidebar
  * --------------------------------------------------
