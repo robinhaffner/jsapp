@@ -3,6 +3,7 @@
     "id": "question"
   }], 
   "manifesto": [{
+  "manifest": [{
     "pages": [
       "main",
       "question",
