@@ -122,10 +122,11 @@ var showanswers = {
                     if (_async) {
                         showanswers.inputdata(data.responses);
                     } else {
-                        var htmlInfo = '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Success!</strong> </div>';
-                        $(document).find('.listview').addClass('pass'); //answers completed
                         $(".alert").remove();
-                        $(htmlInfo).insertBefore('.content-wrapper h1');
+                        $(document).find('.listview').addClass('pass'); //answers completed
+                        var currentURL = document.location.href;
+                        var res = currentURL.replace(location.hash, $('.next-control').attr('href'));
+                        document.location = res;
                     }
                     
                     $('.icon-loading').remove();
