@@ -31,17 +31,17 @@ define(function (require) {
         };
 
         this.setNextPage = function (_h) {
-            siteAdapter.getData("manifesto",0).done(function(manifesto) {
-                console.log("manifesto",manifesto);
+            siteAdapter.getData("manifest",0).done(function(manifest) {
+                console.log("manifest",manifest);
                 
-                var pagemax = manifesto.pages.length;
+                var pagemax = manifest.pages.length;
                 $(".page-ctn .num").empty().append(pagemax);
 
-                for (var key in manifesto.pages){
+                for (var key in manifest.pages){
                     
-                    if (manifesto.pages[key] == _h) {
+                    if (manifest.pages[key] == _h) {
                         $(".page-ctn .pgenum").empty().append(parseInt(key)+1);
-                        $(".next-control").show().attr('href', "#"+manifesto.pages[parseInt(key)+1]);
+                        $(".next-control").show().attr('href', "#"+manifest.pages[parseInt(key)+1]);
                     }
                 }
 

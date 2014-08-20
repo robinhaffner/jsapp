@@ -3,7 +3,7 @@
   "start": [{
     "id": "faculty"
   }], 
-  "manifesto": [{
+  "manifest": [{
     "pages": [
     "main",
     "faculty",

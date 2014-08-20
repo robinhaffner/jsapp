@@ -2,7 +2,7 @@
   "start": [{
     "id": "instructions"
   }], 
-  "manifesto": [{
+  "manifest": [{
     "pages": [
       "main",
       "instructions",
