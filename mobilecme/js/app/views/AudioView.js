@@ -43,26 +43,28 @@ define(function (require) {
    
 
             if (apContainer.length == 1 ){ // set up the jwPlayer for audio
-                jwplayer('audioPlayer').setup({
+              jwplayer('audioPlayer').setup({
                     file: getAudioURL,
                     height: '0',
-                    width: '0'
+                    width: '0',
+					//skin: 'jw/audio/procmeaudio.xml'
                 });
+				
 	
                 //console.log("_playState",_playState);
                 if (_playState != "pause" && getAutoPlay){ //set the icon state and play or pause the video
                         jwplayer('audioPlayer').play(true);
-			$('.icon-sound').removeClass('none pause');
+						$('.icon-sound').removeClass('none pause');
                         $('.icon-sound').addClass('on');
                         //console.log('Play!');
                  }else {			
                         jwplayer('audioPlayer').play(false);
-		 	$('.icon-sound').removeClass('none on');
+		 				$('.icon-sound').removeClass('none on');
                         $('.icon-sound').addClass('pause');
                         //console.log('Pause!');
                  }
             } else { //No video for this page
-		$('.icon-sound').removeClass('pause on');
+				$('.icon-sound').removeClass('pause on');
                 $('.icon-sound').addClass('none');
 
                 return
