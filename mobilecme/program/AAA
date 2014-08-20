@@ -1,5 +1,6 @@
 {
   "programid": "1111",
+  "evaluation": "evaluation/standard",
   "start": [{
     "id": "faculty"
   }], 
