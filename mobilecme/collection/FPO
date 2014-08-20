@@ -2,16 +2,16 @@
   "sidebar": [
     {
       "name": "Company Name",
-      "logo": "http://c.pro-c.me/programs/demo/images/Penn.gif",
+      "logo": "http://c.answersincme.com/assets/images/logo.png",
       "header": "Company Header",
-      "headline": "Virtual Outcomes in CRC Patients",
+      "headline": "",
       "sidebarlist": [
         {
           "media": 1,
           "media-url": "index.html?collection=FPO&program=AAA",
           "media-img": "http://c.pro-c.me/programs/demo/images/fpo-img-1.jpg",
           "media-credit": "0.25 Credits",
-          "media-heading": "Virtual Patient Encounters: Improving Outcomes in Colorectal Cancer Patients",
+          "media-heading": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
           "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
         },
         {
@@ -19,7 +19,7 @@
           "media-url": "index.html?collection=FPO&program=BBB",
           "media-img": "http://c.pro-c.me/programs/demo/images/fpo-img-2.jpg",
           "media-credit": "0.25 Credits",
-          "media-heading": "Second Program BBB",
+          "media-heading": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
           "media-subtext": "<p>Mrs Green, MD, FACP</p>"
         }
       ]
