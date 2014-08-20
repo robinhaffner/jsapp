@@ -114,11 +114,20 @@ var showanswers = {
 
         request.done(function( data ) {
             console.log("done",data);
+            htmlErr = '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Message!</strong> </div>';
             if (data) {
                 if(data.status == 0){
                     showanswers.errorhandler(data.err);
                 } else {
-                    showanswers.inputdata(data.responses);
+                    if (_async) {
+                        showanswers.inputdata(data.responses);
+                    } else {
+                        var htmlInfo = '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Success!</strong> </div>';
+                        $(document).find('.listview').addClass('pass'); //answers completed
+                        $(".alert").remove();
+                        $(htmlInfo).insertBefore('.content-wrapper h1');
+                    }
+                    
                     $('.icon-loading').remove();
                     $('.next-control').show();
                 }
