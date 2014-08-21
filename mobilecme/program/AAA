@@ -36,7 +36,8 @@
     "equestion2",
     "equestion3",
     "equestion4",
-    "equestion5"
+    "equestion5",
+    "equestion6"
     ]
   }],
   "topnav": [{
@@ -261,7 +262,28 @@
       "qid":"eval6",
       "type": "freeform",
       "async-answer":"false",
-      "skip": "true",
+      "skip": "false",
+      "form": [
+        {
+          "tag": "input",
+          "label": "First Name",
+          "for": "name",
+          "name": "fname",
+          "attr": ""
+        },
+        {
+          "tag": "input",
+          "label": "Last Name",
+          "for": "name",
+          "name": "lname",
+          "attr": ""
+        },
+        {
+          "tag": "textarea",
+          "name": "fname",
+          "attr": "rows='4' cols='50' autofocus maxlength='250'"
+        }
+      ],
       "audio_url": "",
       "audio_autoplay": ""
     },

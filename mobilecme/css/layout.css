@@ -73,34 +73,38 @@ a, a:hover, a:focus, a:active {
     text-transform: none;
 }
 
-
-.content-wrapper .listview li {
-  margin: 0 0 17px 0; 
-  border: 1px solid rgb(204,204,204); 
-  border-radius: .6em; 
-  font-family: Helvetica, Arial, sans-serif; 
-  font-weight: normal; 
-  color: rgb(51,51,51); 
-  font-size: 1.125em;
-  background-image: none;
-  background-color: rgb(250,250,250);
-  text-shadow: none;
-  text-align: center;
-
-  display: block;
-  padding: 0.7em 1em;
-  overflow: visible;
-  position: relative;
-  text-transform: none;
-}
-.content-wrapper .listview > li p { margin: 0;  white-space: normal; font-size: 1em; font-weight: 200; }
-.content-wrapper .listview { 
+.content-wrapper .listview,
+.content-wrapper .listview-freeform { 
   box-shadow: none;
   margin: 1em 0;
   padding: 0;
   border-radius: 0.6em;
   cursor: pointer;
 }
+
+.content-wrapper .listview li,
+.content-wrapper .listview-freeform li {
+  font-family: Helvetica, Arial, sans-serif; 
+  font-weight: normal; 
+  text-shadow: none;
+
+  display: block;
+  margin: 0 0 17px 0; 
+  padding: 0.7em 1em;
+  overflow: visible;
+  position: relative;
+  text-transform: none;
+}
+.content-wrapper .listview li {
+  text-align: center;
+  border: 1px solid rgb(204,204,204); 
+  border-radius: .6em; 
+  color: rgb(51,51,51); 
+  font-size: 1.125em;
+  background-image: none;
+  background-color: rgb(250,250,250);
+}
+.content-wrapper .listview > li p { margin: 0;  white-space: normal; font-size: 1em; font-weight: 200; }
 
 .selection-list > li.selected {
   background-color: rgb(102,102,102);
@@ -160,7 +164,6 @@ a, a:hover, a:focus, a:active {
 .selection-list > li .choice-percent {
     color: rgb(51,51,51);
 }
-
 
 .instructions, .instructionslist { position: relative; min-height: 375px; list-style: none; }
 .instructionslist li.instructionposition {
