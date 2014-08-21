@@ -10,6 +10,7 @@ define(function (require) {
         navHtml         = require('text!tpl/nav.html'),
         errHtml         = require('text!tpl/404.html'),
 
+
         navTpl          = Handlebars.compile(navHtml);
         
     return function () {
@@ -32,6 +33,8 @@ define(function (require) {
         };
 
         this.setNextPage = function (_h) {
+			var next_page = "";
+			var prev_page = "";
             siteAdapter.getData("manifest",0).done(function(manifest) {
                 console.log("manifest",manifest);
                 
@@ -41,8 +44,11 @@ define(function (require) {
                 for (var key in manifest.pages){
                     
                     if (manifest.pages[key] == _h) {
+						next_page = manifest.pages[parseInt(key)+1];
+						prev_page = manifest.pages[parseInt(key)-1];
                         $(".page-ctn .pgenum").empty().append(parseInt(key)+1);
-                        $(".next-control").show().attr('href', "#"+manifest.pages[parseInt(key)+1]);
+                        $(".next-control").show().attr('href', "#"+next_page);
+						$(".prev-control").show().attr('href', "#"+prev_page);
                     }
                 }
 
@@ -58,10 +64,21 @@ define(function (require) {
                 .css("width", parseInt($(".page-ctn .pgenum").text()) / pagemax * 100 + "%");
 
             });
+			siteAdapter.getData("sitecontent",next_page).done(function(_obj) {
+				console.log("sitecontent",next_page, _obj.audio_url);
+							$(".next-control").attr('audio_url', _obj.audio_url);
+							$(".next-control").attr('audio_autoplay', _obj.audio_autoplay);
+			});
+			siteAdapter.getData("sitecontent",prev_page).done(function(_obj) {
+				console.log("sitecontent",prev_page, _obj.audio_url);
+							$(".prev-control").attr('audio_url', _obj.audio_url);
+							$(".prev-control").attr('audio_autoplay', _obj.audio_autoplay);
+			});
         }
 
         this.initialize();
     };
 
 });
+
 

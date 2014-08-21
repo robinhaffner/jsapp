@@ -201,6 +201,7 @@ $(document).ready(function () {
             offCanvas ();
         };
     });
+	
 
     //Questions function
     $(document).on('click','.selection-list li',function(event){
@@ -234,8 +235,12 @@ $(document).ready(function () {
             selectSpecialty($(this));
         };
     });
+	 $(document).on('click', '.prev-control', function(event) {
+		 playAudio('prev');
+	 });
 
     $(document).on('click', '.next-control', function(event) {
+		
         var questionpage = $('.content-wrapper').data('template') == "questionstpl" ? true : false; //check for question template
         if (questionpage) {
             
@@ -276,9 +281,63 @@ $(document).ready(function () {
                 $(htmlAlert).insertBefore('.content-wrapper h1');
                 //return; 
             }
-        } else { return; }
+        } else {
+			playAudio('next');
+			return;
+
+		}
 
     });
+	
+
+		 
+	function playAudio(_page){
+			var audio_url = $('.'+_page+'-control').attr('audio_url');
+			var audio_autoplay = $('.'+_page+'-control').attr('audio_autoplay');
+			var _playState = Cookies.get("cmeaudio");
+			console.log("next control", $('.next-control'), audio_url);
+			if (audio_url != ''){
+					jwplayer('audioPlayer').setup({
+							file: audio_url,
+							height: '35',
+							//skin: 'jw/audio/procmeaudio.xml'
+					});
+
+                if (_playState != "pause" && audio_autoplay){ //set the icon state and play or pause the video
+                        jwplayer('audioPlayer').play(true);
+						$('.icon-sound').removeClass('none pause');
+                        $('.icon-sound').addClass('on');
+                 }else {			
+                        jwplayer('audioPlayer').play(false);
+					 	$('.icon-sound').removeClass('none on');
+                        $('.icon-sound').addClass('pause');
+                 }
+            } else { //No video for this page
+				jwplayer('audioPlayer').remove();
+				$('.icon-sound').removeClass('pause on');
+                $('.icon-sound').addClass('none');
+				return;
+            }
+	
+}
+	
+	 $(document).on('click',".icon-sound", function(event) {
+            var _audioPlayer = jwplayer('audioPlayer');
+
+            var _playState =  _audioPlayer.getState();//Cookies.get("cmeaudio");
+			_audioPlayer.play();
+
+            if (_playState == 'PAUSED' || _playState == 'IDLE') {
+                $('.icon-sound').removeClass('none pause');
+                $('.icon-sound').addClass('on');
+				Cookies.set('cmeaudio','play');
+            } else if (_playState == 'PLAYING') {
+                $('.icon-sound').removeClass('none on');
+                $('.icon-sound').addClass('pause');
+                Cookies.set('cmeaudio','pause');
+            } else { return }
+                
+        });
 
 
 	$('#footerModal').on('show.bs.modal', function (e) {

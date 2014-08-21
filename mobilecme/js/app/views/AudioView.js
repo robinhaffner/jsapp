@@ -15,7 +15,7 @@ define(function (require) {
             this.$el = $('.audio-container');
         };
 
-        this.render = function (_currentpage,_audiocontainer) {
+        this.render = function (_currentpage,_audiocontainer) {`
             if (_currentpage != undefined) {
                 _getaudio = _audiocontainer;
                 this.getAudio(_currentpage);
@@ -23,32 +23,39 @@ define(function (require) {
         };
 
         this.getAudio = function (_cp) {
+			console.log(_cp);
+			var curr_audio = -1;
+			var next_audio = -1;
             siteAdapter.getData('sitecontent',"null").done(function (_sitedata) {
                 for(var i in _sitedata){
                     if (_sitedata[i].id == _cp) {
+						curr_audio = _sitedata[i]
+						next_audio = _sitedata[i+1]
                         $('.audio-container').html(audioTpl(_sitedata[i]));
                         return;                                
                     };
                 }
             });
 
-            this.pageAudioPlayer();
+            //this.pageAudioPlayer(curr_audio, next_audio);
         };
 
- this.pageAudioPlayer = function () {
-            var apContainer = $(_getaudio).find('.audioplay'),
+ this.pageAudioPlayer = function (_c, _n) {
+            /*var apContainer = $(_getaudio).find('.audioplay'),
                 getAudioURL = apContainer.data('audiourl'),
-                getAutoPlay = apContainer.data('autoplay');
+                getAutoPlay = apContainer.data('autoplay');*/
             var _playState = Cookies.get("cmeaudio"); //check to see if the user has paused the audio
-   
+	 		var getAudioURL = _c.audio_url;
+            var getAutoPlay = _c.audio_autoplay;
 
-            if (apContainer.length == 1 ){ // set up the jwPlayer for audio
-              jwplayer('audioPlayer').setup({
+            if (_c != -1 ){ // set up the jwPlayer for audio
+              /*jwplayer('audioPlayer').setup({
                     file: getAudioURL,
                     height: '0',
                     width: '0',
 					//skin: 'jw/audio/procmeaudio.xml'
                 });
+		*/
 				
 	
                 //console.log("_playState",_playState);
