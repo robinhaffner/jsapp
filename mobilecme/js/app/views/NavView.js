@@ -65,12 +65,12 @@ define(function (require) {
 
             });
 			siteAdapter.getData("sitecontent",next_page).done(function(_obj) {
-				console.log("sitecontent",next_page, _obj.audio_url);
+				console.log("next_page",next_page, _obj.audio_url);
 							$(".next-control").attr('audio_url', _obj.audio_url);
 							$(".next-control").attr('audio_autoplay', _obj.audio_autoplay);
 			});
 			siteAdapter.getData("sitecontent",prev_page).done(function(_obj) {
-				console.log("sitecontent",prev_page, _obj.audio_url);
+				console.log("prev_page",prev_page, _obj.audio_url);
 							$(".prev-control").attr('audio_url', _obj.audio_url);
 							$(".prev-control").attr('audio_autoplay', _obj.audio_autoplay);
 			});
