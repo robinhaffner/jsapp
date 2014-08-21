@@ -21,11 +21,6 @@ define(function (require) {
             return this;
         };
 
-        this.getDataAnswer = function (arg) {
-            console.log("getDataAnswer",arg,arg.originalEvent);
-            
-        }
-
         this.initialize();
 
     };

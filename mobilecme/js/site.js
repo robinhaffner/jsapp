@@ -122,11 +122,7 @@ var showanswers = {
                     if (_async) {
                         showanswers.inputdata(data.responses);
                     } else {
-                        $(".alert").remove();
-                        $(document).find('.listview').addClass('pass'); //answers completed
-                        var currentURL = document.location.href;
-                        var res = currentURL.replace(location.hash, $('.next-control').attr('href'));
-                        document.location = res;
+                        showanswers.bypass();
                     }
                     
                     $('.icon-loading').remove();
@@ -187,7 +183,13 @@ var showanswers = {
         $(document).find('.listview').addClass('pass');
         $('.icon-loading').remove();
         $('.next-control').show();
-
+    },
+    bypass: function(){
+        $(".alert").remove();
+        $(document).find('.listview').addClass('pass'); //answers completed
+        var currentURL = document.location.href;
+        var res = currentURL.replace(location.hash, $('.next-control').attr('href'));
+        document.location = res;
     }
 }
 
@@ -236,6 +238,11 @@ $(document).ready(function () {
     $(document).on('click', '.next-control', function(event) {
         var questionpage = $('.content-wrapper').data('template') == "questionstpl" ? true : false; //check for question template
         if (questionpage) {
+            
+            if ($(document).find('.listview').data('skip')) { //allow user to skip question
+                showanswers.bypass();
+            };
+
             if ($(document).hasClass('.listview.pass') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {
                 
                 if ($(document).find('.listview').data('role') == "listview" && !$(this).hasClass('click-control')) {

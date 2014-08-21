@@ -57,9 +57,7 @@ define(function (require) {
                   audiomedia(match[1]);
                   $("title").html(_content.title);
                 }).fail(function() {
-                  console.log("fail");
-                  // 404 goes here
-                  
+                  document.location = document.location.origin; // 404 page not found
                 });
                 
             }
