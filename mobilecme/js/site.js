@@ -301,6 +301,12 @@ $(document).ready(function () {
 							file: audio_url,
 							height: '35',
 							//skin: 'jw/audio/procmeaudio.xml'
+					}).onSetupError(function(event){
+						console.log("onsetuperror", event);
+					}).onPlay( function(event){
+						console.log("onplay", event);
+					}).onError(function(event){
+						console.log("onError", event);
 					});
 
                 if (_playState != "pause" && audio_autoplay){ //set the icon state and play or pause the video
@@ -313,7 +319,7 @@ $(document).ready(function () {
                         $('.icon-sound').addClass('pause');
                  }
             } else { //No video for this page
-				jwplayer('audioPlayer').remove();
+				//jwplayer('audioPlayer').remove();
 				$('.icon-sound').removeClass('pause on');
                 $('.icon-sound').addClass('none');
 				return;
