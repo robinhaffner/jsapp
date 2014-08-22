@@ -267,27 +267,69 @@
         {
           "tag": "input",
           "label": "First Name",
-          "for": "name",
+          "for": "fname",
           "name": "fname",
+          "type": "text",
           "attr": ""
         },
         {
           "tag": "input",
           "label": "Last Name",
-          "for": "name",
+          "for": "lname",
+          "type": "text",
           "name": "lname",
           "attr": ""
         },
         {
           "tag": "select",
           "label": "Professional Degree",
-          "for": "name",
+          "for": "professional",
           "name": "professional",
           "attr": "",
           "options": [
             { "val": "Text1" },
             { "val": "Text4" }
           ]
+        },
+        {
+          "tag": "input",
+          "label": "Email",
+          "for": "email",
+          "type": "email",
+          "name": "email",
+          "attr": ""
+        },
+        {
+          "tag": "input",
+          "label": "Address",
+          "for": "address",
+          "type": "text",
+          "name": "address",
+          "attr": ""
+        },
+        {
+          "tag": "input",
+          "label": "City",
+          "for": "city",
+          "type": "text",
+          "name": "city",
+          "attr": ""
+        },
+        {
+          "tag": "input",
+          "label": "Zip/Postal Code",
+          "for": "zpcode",
+          "type": "text",
+          "name": "zpcode",
+          "attr": ""
+        },
+        {
+          "tag": "input",
+          "label": "State/Province",
+          "for": "stateprovince",
+          "type": "text",
+          "name": "stateprovince",
+          "attr": ""
         },
         {
           "tag": "textarea",
