@@ -319,7 +319,7 @@ $(document).ready(function () {
                         $('.icon-sound').addClass('pause');
                  }
             } else { //No video for this page
-				//jwplayer('audioPlayer').remove();
+				jwplayer('audioPlayer').remove();
 				$('.icon-sound').removeClass('pause on');
                 $('.icon-sound').addClass('none');
 				return;
