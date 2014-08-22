@@ -253,16 +253,16 @@
       "audio_autoplay": ""
     },
     {
-      "id": "equestion6",
-      "groupid": "99",
+      "id": "certificate",
+      "groupid": "999",
       "template": "Question",
-      "title": "Course Evaluation",
-      "headline": "Evaluation",
-      "question": "Please provide any other feedback or comments regarding this activity.",
-      "qid":"eval6",
+      "title": "Certificate Request",
+      "headline": "Certificate",
+      "question": "Please complete the form below to receive your certificate.",
+      "qid":"cert",
       "type": "freeform",
       "async-answer":"false",
-      "skip": "false",
+      "skip": "true",
       "form": [
         {
           "tag": "input",
