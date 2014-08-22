@@ -288,7 +288,7 @@ a, a:hover, a:focus, a:active {
  */
 #sidebar.sidebar-offcanvas { padding: 10px 0 0 0; background-color: rgb(225,229,227); }
 #sidebar .sidebar-hdr { padding: 0; margin-left: 15px; }
-#sidebar .sidebar-hdr > img { display: block; margin: 0 auto; }
+#sidebar .sidebar-hdr > img { display: block; margin: 0 auto; width: 300px; }
 
 #sidebar .list-group { margin-bottom: 0; }
 #sidebar .list-group-item { background: url(../images/bg-sidebar.jpg) repeat scroll 0 0 transparent; padding: 15px; }

@@ -35,13 +35,10 @@
 						<label for="{{this.name}}">{{this.label}}</label>
 					{{/if}}
 					<select class="form-control" id="{{this.name}}">
-					</select>
-					<div>
-						<p>test</p>
 						{{#if_eq this.options}}
-							<p>{{this.val}}</p>
+							<option>{{this.val}}</option>
 						{{/if_eq}}
-					</div>
+					</select>
 				</div>
 			{{/if_eq}}
 

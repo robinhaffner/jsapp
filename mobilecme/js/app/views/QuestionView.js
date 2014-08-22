@@ -13,7 +13,17 @@ define(function (require) {
             if(a == b) // Or === depending on your needs
                 return opts.fn(this);
             else
-                return opts.inverse(this);
+                if(opts == undefined){
+                    var ret = "";
+
+                    for(var i=0, j=a.length; i<j; i++) {
+                        ret = ret + b.fn(a[i]);
+                    }
+                    return ret;
+                }
+                else {
+                    return opts.inverse(this);
+                }
         });
     return function () {
 
