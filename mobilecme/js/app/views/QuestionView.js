@@ -10,7 +10,6 @@ define(function (require) {
         questionTpl = Handlebars.compile(questionHtml);
 
         Handlebars.registerHelper('if_eq', function(a, b, opts) {
-            console.log("a, b, opts",a, b, opts);
             if(a == b) // Or === depending on your needs
                 return opts.fn(this);
             else

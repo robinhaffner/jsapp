@@ -13,21 +13,37 @@
 	<li>
 		{{#this.form}}
 
-	{{#if_eq this.tag "input"}}
-		<div class="form-group">
-			<label for="{{this.name}}">{{this.label}}</label>
-			<input type="text" class="form-control" id="{{this.name}}">
-		</div>
-	{{/if_eq}}
+			{{#if_eq this.tag "input"}}
+				<div class="form-group">
+					<label for="{{this.name}}">{{this.label}}</label>
+					<input type="text" class="form-control" id="{{this.name}}">
+				</div>
+			{{/if_eq}}
 
-	{{#if_eq this.tag "textarea"}}
-		<div class="form-group">
-			{{#if label}}
-				<label for="{{this.name}}">{{this.label}}</label>
-			{{/if}}
-			<textarea class="form-control" {{this.attr}} id="{{this.name}}"></textarea>
-		</div>
-	{{/if_eq}}
+			{{#if_eq this.tag "textarea"}}
+				<div class="form-group">
+					{{#if label}}
+						<label for="{{this.name}}">{{this.label}}</label>
+					{{/if}}
+					<textarea class="form-control" {{this.attr}} id="{{this.name}}"></textarea>
+				</div>
+			{{/if_eq}}
+
+			{{#if_eq this.tag "select"}}
+				<div class="form-group">
+					{{#if label}}
+						<label for="{{this.name}}">{{this.label}}</label>
+					{{/if}}
+					<select class="form-control" id="{{this.name}}">
+					</select>
+					<div>
+						<p>test</p>
+						{{#if_eq this.options}}
+							<p>{{this.val}}</p>
+						{{/if_eq}}
+					</div>
+				</div>
+			{{/if_eq}}
 
 		
 		{{/this.form}}
