@@ -7,7 +7,6 @@ define(function (require) {
         NavView             = require("views/NavView"),
         SidebarView         = require("views/SidebarView"),
         FooterView          = require("views/FooterView"),
-       // AudioView           = require("views/AudioView"),
         MainView            = require("views/MainView"),
         QuestionView        = require("views/QuestionView"),
         VideoView           = require("views/VideoView"),
@@ -17,7 +16,6 @@ define(function (require) {
         detailsURL = /^#(\w+)/,
         mainView = new MainView(),
         navView = new NavView(),
-        //audioView = new AudioView(),
         programIDView = siteAdapter.getProgramID("programid"),
         startPageNum = siteAdapter.getStartPage("start"),
 
@@ -54,7 +52,6 @@ define(function (require) {
                   handler.render(_content);
 
                   navView.setNextPage(match[1]);
-                  //audiomedia(match[1]);
                   $("title").html(_content.title);
                 }).fail(function() {
                   document.location = document.location.origin; // 404 page not found
@@ -81,9 +78,6 @@ define(function (require) {
             navView.render()
             navView.getTopNav()
         },
-       /* audiomedia = function (_c) {
-            audioView.render(_c, $('.audio-container'))
-        },*/
         sidebarCanvas = function () {
             var sidebarView = new SidebarView()
             sidebarView.render()

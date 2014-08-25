@@ -2,8 +2,11 @@
 .DS_Store
 
 
-mobilecme/program/AAA
 
 
+<<<<<<< HEAD
 
 mobilecme/js/.DS_Store
+=======
+mobilecme/program/AAA
+>>>>>>> FETCH_HEAD
