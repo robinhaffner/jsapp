@@ -1,0 +1,157 @@
+{
+  "programid":"1",
+  "questions":[
+    {
+      "id": "equestion1",
+      "groupid": "99",
+      "template": "Question",
+      "title": "Course Evaluation",
+      "headline": "Evaluation",
+      "question": "Please rate your level of agreement with the following statement: The content of this activity was fair, balanced, and free of commercial bias.",
+      "qid":"eval1",
+      "type": "single",
+      "async-answer":"false",
+      "skip": "true",
+      "answers": [
+        {
+          "answerstxt": "<p>Strongly Disagree</p>"
+        },
+        {
+          "answerstxt": "<p>Disagree</p>"
+        },
+        {
+          "answerstxt": "<p>Neither Agree nor Disagree</p>"
+        },
+        {
+          "answerstxt": "<p>Agree</p>"
+        },
+        {
+          "answerstxt": "<p>Strongly Agree</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "equestion2",
+      "groupid": "99",
+      "template": "Question",
+      "title": "Course Evaluation",
+      "headline": "Evaluation",
+      "question": "Please rate your level of agreement with the following statement: The content of this activity was evidence-based.",
+      "qid":"eval2",
+      "type": "single",
+      "async-answer":"false",
+      "skip": "true",
+      "answers": [
+        {
+          "answerstxt": "<p>Strongly Disagree</p>"
+        },
+        {
+          "answerstxt": "<p>Disagree</p>"
+        },
+        {
+          "answerstxt": "<p>Neither Agree nor Disagree</p>"
+        },
+        {
+          "answerstxt": "<p>Agree</p>"
+        },
+        {
+          "answerstxt": "<p>Strongly Agree</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "equestion3",
+      "groupid": "99",
+      "template": "Question",
+      "title": "Course Evaluation",
+      "headline": "Evaluation",
+      "question": "This activity has or will improve my (check all that apply)",
+      "qid":"eval3",
+      "type": "multiplechoice",
+      "async-answer":"false",
+      "skip": "false",
+      "answers": [
+        {
+          "answerstxt": "<p>Knowledge</p>"
+        },
+        {
+          "answerstxt": "<p>Competence</p>"
+        },
+        {
+          "answerstxt": "<p>Performance</p>"
+        },
+        {
+          "answerstxt": "<p>Patient Outcomes</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "equestion4",
+      "groupid": "99",
+      "template": "Question",
+      "title": "Course Evaluation",
+      "headline": "Evaluation",
+      "question": "Please rate the likelihood of participating in future activities on this topic presented in a similar format.",
+      "qid":"eval4",
+      "type": "single",
+      "async-answer":"false",
+      "skip": "true",
+      "answers": [
+        {
+          "answerstxt": "<p>Never</p>"
+        },
+        {
+          "answerstxt": "<p>Not Likely</p>"
+        },
+        {
+          "answerstxt": "<p>Neutral/Not Sure</p>"
+        },
+        {
+          "answerstxt": "<p>Likely</p>"
+        },
+        {
+          "answerstxt": "<p>Very Likely</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "equestion5",
+      "groupid": "99",
+      "template": "Question",
+      "title": "Course Evaluation",
+      "headline": "Evaluation",
+      "question": "Please rate your level of agreement with the following statement: The content of this activity was fair, balanced, and free of commercial bias.",
+      "qid":"eval5",
+      "type": "single",
+      "async-answer":"false",
+      "skip": "false",
+      "answers": [
+        {
+          "answerstxt": "<p>Strongly Disagree</p>"
+        },
+        {
+          "answerstxt": "<p>Disagree</p>"
+        },
+        {
+          "answerstxt": "<p>Neither Agree nor Disagree</p>"
+        },
+        {
+          "answerstxt": "<p>Agree</p>"
+        },
+        {
+          "answerstxt": "<p>Strongly Agree</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    }
+  ]
+}
