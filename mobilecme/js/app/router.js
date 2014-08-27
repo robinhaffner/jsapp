@@ -59,6 +59,20 @@ define(function (require) {
                 
             }
 
+            if ($(document).find('.imageGesture').length > 0) {
+                var imgEnlargeContainer = $(document).find('.imageGesture').attr('id');
+                console.log("images",imgEnlargeContainer);
+                var myScroll;
+                myScroll = new IScroll('#'+imgEnlargeContainer, {
+                    zoom: true,
+                    scrollX: true,
+                    scrollY: true,
+                    mouseWheel: true,
+                    wheelAction: 'zoom'
+                });
+                document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+            };  
+
         },
         nav = function () {
             navView.render()

@@ -793,6 +793,21 @@
       "audio_autoplay": ""
     },
     {
+      "id": "postquestion6",
+      "groupid": "2",
+      "template": "Question",
+      "title": "ProCME - Clinical Practice",
+      "headline": "Post-test Question",
+      "question": "Dry powder formulation of which of the following inhaled antibiotics is currently under investigation in patients with CF?",
+      "qid":"AAAq6",
+      "type": "freeform",
+      "async-answer":"true",
+      "skip": "true",
+      "staticform": "",
+      "audio_url": "",
+      "audio_autoplay": ""
+    },    
+    {
       "id": "video",
       "template": "Video",
       "title": "ProCME - Video",
