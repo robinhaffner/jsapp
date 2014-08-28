@@ -9,6 +9,21 @@
 
 </ul>
 {{/if}}
+{{#if comments}}
+<ul data-role="listview" data-qid="{{this.qid}}" data-groupid="{{this.groupid}}" data-async-answer="{{this.async-answer}}" data-skip="{{this.skip}}" data-listview-type="{{this.type}}" class="listview-freeform {{this.type}}">
+	{{#this.comments}}
+	<li>
+		<div class="form-group">
+			{{#if label}}
+				<label for="{{this.name}}">{{this.label}}</label>
+			{{/if}}
+			<textarea class="form-control" {{this.attr}} id="{{this.name}}"></textarea>
+		</div>
+	</li>
+	{{/this.comments}}
+
+</ul>
+{{/if}}
 
 {{#if form}}
 <ul data-role="listview" data-qid="{{this.qid}}" data-groupid="{{this.groupid}}" data-async-answer="{{this.async-answer}}" data-skip="{{this.skip}}" data-listview-type="{{this.type}}" class="listview-freeform {{this.type}}">
@@ -53,8 +68,9 @@
 {{/if}}
 {{#if staticform}}
 <ul data-role="listview" data-qid="{{this.qid}}" data-groupid="{{this.groupid}}" data-async-answer="{{this.async-answer}}" data-skip="{{this.skip}}" data-listview-type="{{this.type}}" class="listview-freeform {{this.type}}">
+	
 	<li>{{this.staticform}}</li>
-	<li><button type="submit" class="btn btn-default">Submit</button></li>
+<!--	<li><button type="submit" class="btn btn-default">Submit</button></li>-->
 </ul>
 {{/if}}
 

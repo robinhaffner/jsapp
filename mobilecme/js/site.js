@@ -231,8 +231,9 @@ $(document).ready(function () {
 		
         var questionpage = $('.content-wrapper').data('template') == "questionstpl" ? true : false; //check for question template
         if (questionpage) {
-            
+         
             if ($(document).find('.listview').data('skip')) { //allow user to skip question
+				
                 showanswers.bypass();
             };
 

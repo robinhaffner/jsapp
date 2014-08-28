@@ -1,4 +1,6 @@
 <h1>{{this.header}}</h1>
-{{#if content}}
-<div id="{{this.id}}" class="txtContainer">{{{this.content}}}</div>
+{{#if listcontent}}
+	{{#this.listcontent}}
+	<div id="{{this.id}}" class="txtContainer">{{{this.content}}}</div>
+	{{/this.listcontent}}
 {{/if}}

@@ -9,18 +9,18 @@
         {
           "media": 1,
           "media-url": "index.html?collection=FPO&program=AAA",
-          "media-img": "http://c.pro-c.me/programs/demo/images/fpo-img-1.jpg",
+          "media-img": "http://c.pro-c.me/programs/demo/images/Fiel_Stanley_1213.jpg",
           "media-credit": "0.25 Credits",
           "media-heading": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
-          "media-subtext": "<p>Cathy Eng, MD, FACP</p>"
+          "media-subtext": "<p>Stanley B. Fiel, MD, FACP, FCCP</p><p>Kadrin Wilfong, MD <br> Answers in CME, Inc. <br> Kadrin Wilfong, MD, has no financial interests/relationships or affiliations in relation to this activity.</p>"
         },
         {
           "media": 2,
           "media-url": "index.html?collection=FPO&program=BBB",
-          "media-img": "http://c.pro-c.me/programs/demo/images/fpo-img-2.jpg",
+          "media-img": "collection/ImanSamiZakhari.jpg",
           "media-credit": "0.25 Credits",
-          "media-heading": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
-          "media-subtext": "<p>Mrs Green, MD, FACP</p>"
+          "media-heading": "Cystic Fibrosis Advances and Controversies",
+          "media-subtext": "<p>Iman R. Sami-Zakhari, MD</p> "
         }
       ]
     }
