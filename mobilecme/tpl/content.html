@@ -1,17 +1,28 @@
 <div class="headline">{{{this.headline}}}</div>
 <h1>{{this.header}}</h1>
-{{#if content}}
-<div id="{{this.id}}" class="txtContainer">{{{this.content}}}</div>
+
+{{#if listcontent}}
+<ul class="list-inline small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+	{{#this.listcontent}}
+	<li>
+		<div id="{{this.id}}" class="txtContainer">{{{this.content}}}</div>
+		{{#if this.image}}
+			<div class="imageGesture" id="enlargetable"><img src="{{this.image}}" alt="" width="300" height="227" /></div>
+		{{/if}}
+	</li>
+	{{/this.listcontent}}
+</ul>
 {{/if}}
-{{#if enlargetable}}
-<div class="imageGesture" id="enlargetable"><img src="{{this.enlargetable}}" alt="" width="300" height="227" /></div>
-{{/if}}
+
+
 {{#if listmedia}}
 <ul class="list-inline small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 	{{#this.listmedia}}
 	<li>
 	  <div class="details media">
+		  {{#if this.media_thumbnail }}
 	    <a class="pull-left content-left" ><img src="{{this.media_thumbnail}}" alt="{{this.media_name}}" width="60"></a>
+		  {{/if}}
 	    <div class="content-right media-body">
 	      <h4 class="media-heading">{{this.media_name}}</h4>
 	      <p>{{this.media_accreditation}}</p>
@@ -27,3 +38,5 @@
 	{{/this.listmedia}}
 </ul>
 {{/if}}
+
+
