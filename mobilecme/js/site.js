@@ -183,7 +183,9 @@ var showanswers = {
 }
 
 $(document).ready(function () {
-
+    //Polyfill to remove click delays on browsers with touch UIs
+    FastClick.attach(document.body);
+    
     // Do responsive stuff
     $(window).on('resize', function(e){
         if ($("html").hasClass('no-touch')) {

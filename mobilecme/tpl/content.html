@@ -5,9 +5,11 @@
 <ul class="list-inline small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 	{{#this.listcontent}}
 	<li>
-		<div id="{{this.id}}" class="txtContainer">{{{this.content}}}</div>
+		<div id="{{../../id}}" class="txtContainer">{{{this.content}}}</div>
 		{{#if this.image}}
-			<div class="imageGesture" id="enlargetable"><img src="{{this.image}}" alt="" width="300" height="227" /></div>
+			<div class="imageGesture" id="enlargetable">
+				<a href="{{this.image}}" data-lightbox="{{../../id}}"><img src="{{this.image}}" alt="" width="300" height="227" /></a>
+			</div>
 		{{/if}}
 	</li>
 	{{/this.listcontent}}

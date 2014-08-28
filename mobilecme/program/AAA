@@ -31,7 +31,6 @@
     "postquestion3",
     "postquestion4",
     "postquestion5",
-    "video",
     "equestion1",
     "equestion2",
     "equestion3",
@@ -593,7 +592,7 @@
         "skip": "true",
         "answers": [
           {
-            "answersid": "c1", "correct":"1",
+            "answersid": "c1", 
             "answerstxt": "<p>F508D</p>"
           },
           {
@@ -601,7 +600,7 @@
             "answerstxt": "<p>G551D</p>"
           },
           {
-            "answersid": "c3",
+            "answersid": "c3","correct":"1",
             "answerstxt": "<p>R117H-CFTR</p>"
           }
         ],
@@ -621,11 +620,11 @@
       "skip": "true",
         "answers": [
           {
-            "answersid": "c1", "correct":"1",
+            "answersid": "c1", 
             "answerstxt": "<p>Ivacaftor</p>"
           },
           {
-            "answersid": "c2",
+            "answersid": "c2","correct":"1",
             "answerstxt": "<p>Lumacaftor (VX-809)</p>"
           },
           {
@@ -657,7 +656,7 @@
       "skip": "true",
       "answers": [
         {
-          "answersid": "c1", "correct":"1",
+          "answersid": "c1", 
           "answerstxt": "<p>Levofloxacin</p>"
         },
         {
@@ -665,7 +664,7 @@
           "answerstxt": "<p>Liposomal amikacin</p>"
         },
         {
-          "answersid": "c3",
+          "answersid": "c3","correct":"1",
           "answerstxt": "<p>Colistin</p>"
         }
       ],
@@ -677,7 +676,7 @@
       "groupid": "1",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
-      "headline": "Post-test Question",
+      "headline": "Pre-test Question",
       "question": "Dry powder formulation of which of the following inhaled antibiotics is currently under investigation in patients with CF?",
       "qid":"AAAq5",
       "type": "single",
@@ -685,11 +684,11 @@
       "skip": "true",
       "answers": [
         {
-          "answersid": "c1", "correct":"1",
+          "answersid": "c1",
           "answerstxt": "<p>Agree</p>"
         },
         {
-          "answersid": "c2",
+          "answersid": "c2", "correct":"1",
           "answerstxt": "<p>Disagree</p>"
         },
         {
@@ -713,7 +712,7 @@
       "skip": "false",
       "answers": [
         {
-          "answersid": "c1", "correct":"1",
+          "answersid": "c1", 
           "answerstxt": "<p>Use of lentivirus-based vectors for CFTR gene transfer to airway epithelium</p>"
         },
         {
@@ -721,7 +720,7 @@
           "answerstxt": "<p>Use of adeno-associated virus-based vectors for CFTR gene transfer to airway epithelium</p>"
         },
         {
-          "answersid": "c3",
+          "answersid": "c3", "correct":"1",
           "answerstxt": "<p>Use of liposomes to transfer plasmids containing a functional CFTR cDNA to airway epithelium</p>"
         }
       ],
@@ -769,7 +768,7 @@
       "skip": "false",
       "answers": [
         {
-          "answersid": "c1", "correct":"1",
+          "answersid": "c1", 
           "answerstxt": "<p>Ivacaftor</p>"
         },
         {
@@ -781,7 +780,7 @@
           "answerstxt": "<p>VX-661</p>"
         },
         {
-          "answersid": "c4",
+          "answersid": "c4","correct":"1",
           "answerstxt": "<p>Both a and b</p>"
         },
         {
@@ -833,11 +832,11 @@
       "skip": "false",
       "answers": [
         {
-          "answersid": "c1", "correct":"1",
+          "answersid": "c1", 
           "answerstxt": "<p>Agree</p>"
         },
         {
-          "answersid": "c2",
+          "answersid": "c2", "correct":"1",
           "answerstxt": "<p>Disagree</p>"
         },
         {
@@ -847,30 +846,6 @@
       ],
       "audio_url": "",
       "audio_autoplay": ""
-    },    
-    {
-      "id": "video",
-      "template": "Video",
-      "title": "ProCME - Video",
-      "headline": "Program Video",
-      "header": "Video",
-      "details": "",
-      "popupVideo": "http://c.pro-c.me/programs/demo/images/fpo-video-1.jpg",
-      "poster": "http://c.pro-c.me/programs/demo/images/fpo-video-1.jpg",
-      "media": [
-        {
-          "mediatype": "video/mp4;codecs='avc1.42E01E, mp4a.40.2'",
-          "mediavideo": "http://c.pro-c.me/programs/demo/video/mov_bbb.mp4"
-        },
-        {
-          "mediatype": "video/ogg",
-          "mediavideo": "http://c.pro-c.me/programs/demo/video/mov_bbb.mp4"
-        }
-      ],
-      "video_url": "//jwpsrv.com/feed/IzCBNLVw.rss",
-      "video_autoplay": "false",
-      "audio_url": "http://c.pro-c.me/programs/demo/audio/cf_s12.mp3",
-      "audio_autoplay": "true"
     },
     {
       "id": "finalstep",

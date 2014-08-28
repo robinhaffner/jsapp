@@ -8,23 +8,7 @@
     "pages": [
     "main",
     "faculty",
-    "prequestion1",
-    "prequestion2",
-    "prequestion3",
-    "prequestion4",
-    "prequestion5",
-    "video",
-    "postquestion1",
-    "postquestion2",
-    "postquestion3",
-    "postquestion4",
-    "postquestion5",
-    "equestion1",
-    "equestion2",
-    "equestion3",
-    "equestion4",
-    "equestion5",
-	"certificate"
+    "video"
     ]
   }],
   "topnav": [{
