@@ -1,0 +1,44 @@
+<div class="headline">{{{this.headline}}}</div>
+<h1>{{this.header}}</h1>
+
+{{#if listcontent}}
+<ul class="list-inline small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+	{{#this.listcontent}}
+	<li>
+		<div id="{{../../id}}" class="txtContainer">{{{this.content}}}</div>
+		{{#if this.image}}
+			<div class="imageGesture" id="enlargetable">
+				<a href="{{this.image}}" data-lightbox="{{../../id}}"><img src="{{this.image}}" alt="" width="300" height="227" /></a>
+			</div>
+		{{/if}}
+	</li>
+	{{/this.listcontent}}
+</ul>
+{{/if}}
+
+
+{{#if listmedia}}
+<ul class="list-inline small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+	{{#this.listmedia}}
+	<li>
+	  <div class="details media">
+		  {{#if this.media_thumbnail }}
+	    <a class="pull-left content-left" ><img src="{{this.media_thumbnail}}" alt="{{this.media_name}}" width="60"></a>
+		  {{/if}}
+	    <div class="content-right media-body">
+	      <h4 class="media-heading">{{this.media_name}}</h4>
+	      <p>{{this.media_accreditation}}</p>
+	      {{#if media_descript }}
+	          <p>{{this.media_descript}}</p>
+          {{/if}}
+	      {{#if media_disclaimer }}
+	          <p>{{{this.media_disclaimer}}}</p>
+          {{/if}}
+	    </div>
+	  </div>
+	</li>
+	{{/this.listmedia}}
+</ul>
+{{/if}}
+
+
