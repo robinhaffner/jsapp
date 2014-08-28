@@ -286,17 +286,7 @@ $(document).ready(function () {
 			var _playState = Cookies.get("cmeaudio");
 			console.log("next control", $('.next-control'), audio_url);
 			if (audio_url != ''){
-					jwplayer('audioPlayer').setup({
-							file: audio_url,
-							height: '35',
-							//skin: 'jw/audio/procmeaudio.xml'
-					}).onSetupError(function(event){
-						console.log("onsetuperror", event);
-					}).onPlay( function(event){
-						console.log("onplay", event);
-					}).onError(function(event){
-						console.log("onError", event);
-					});
+					initPlayer('audio',audio_url);
 
                 if (_playState != "pause" && audio_autoplay){ //set the icon state and play or pause the video
                         jwplayer('audioPlayer').play(true);
@@ -307,14 +297,29 @@ $(document).ready(function () {
 					 	$('.icon-sound').removeClass('none on');
                         $('.icon-sound').addClass('pause');
                  }
-            } else { //No video for this page
-				jwplayer('audioPlayer').remove();
+            } else { //No audio for this page; initialize player with a blank audio file
+				initPlayer('audio', '//jwpsrv.com/feed/VqEsf9Va.rss');
 				$('.icon-sound').removeClass('pause on');
                 $('.icon-sound').addClass('none');
 				return;
             }
 	
 }
+	
+	function initPlayer(type, file) {
+					jwplayer(type +'Player').setup({
+							file: file,
+							height: '35'
+					}).onSetupError(function(event){
+						console.log("onsetuperror", event);
+					}).onPlay( function(event){
+						console.log("onplay", event);
+					}).onError(function(event){
+						console.log("onError", event);
+					});
+		
+		//console.log(jwplayer('audioPlayer'));
+	}
 	
 	 $(document).on('click',".icon-sound", function(event) {
             var _audioPlayer = jwplayer('audioPlayer');
