@@ -47,7 +47,6 @@ define(function (require) {
                 if (match == null) { match= []; match[1] = startPageNum; }; // setcookie
 
                 siteAdapter.getData("sitecontent",match[1]).done(function(_content){
-                    console.log("_content",_content);
                   var tpl = eval(_content.template+"View");
                   var handler = new tpl();
                   handler.render(_content);
