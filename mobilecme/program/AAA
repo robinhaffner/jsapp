@@ -589,23 +589,23 @@
       "qid":"AAAq2",
       "type": "multiplechoice",
   	  "async-answer":"false",
-        "skip": "true",
-        "answers": [
-          {
-            "answersid": "c1", 
-            "answerstxt": "<p>F508D</p>"
-          },
-          {
-            "answersid": "c2",
-            "answerstxt": "<p>G551D</p>"
-          },
-          {
-            "answersid": "c3","correct":"1",
-            "answerstxt": "<p>R117H-CFTR</p>"
-          }
-        ],
-        "audio_url": "",
-        "audio_autoplay": ""
+      "skip": "true",
+      "answers": [
+        {
+          "answersid": "c1", 
+          "answerstxt": "<p>F508D</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>G551D</p>"
+        },
+        {
+          "answersid": "c3","correct":"1",
+          "answerstxt": "<p>R117H-CFTR</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
     },
     {
       "id": "prequestion3",
@@ -737,20 +737,20 @@
       "qid":"AAAq2",
       "type": "multiplechoice",
       "async-answer":"true",
-	  "skip": "false",
+      "skip": "false",
       "answers": [
-        {
-          "answersid": "c1", "correct":"1",
-          "answerstxt": "<p>F508D</p>"
-        },
-        {
-          "answersid": "c2",
-          "answerstxt": "<p>G551D</p>"
-        },
-        {
-          "answersid": "c3",
-          "answerstxt": "<p>R117H-CFTR</p>"
-        }
+      {
+        "answersid": "c1", "correct":"1",
+        "answerstxt": "<p>F508D</p>"
+      },
+      {
+        "answersid": "c2",
+        "answerstxt": "<p>G551D</p>"
+      },
+      {
+        "answersid": "c3",
+        "answerstxt": "<p>R117H-CFTR</p>"
+      }
       ],
       "audio_url": "",
       "audio_autoplay": ""
@@ -853,11 +853,11 @@
       "title": "Get Certificate",
       "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
       "header": "Get Certificate",
-        "listcontent":[
-		{
-		"content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, excepturi, vero, quidem nisi inventore odit totam quos earum facere iure veritatis magnam nobis necessitatibus voluptates quibusdam recusandae quaerat facilis. Debitis.</p>"
-		}
-		]
+      "listcontent":[
+        {
+          "content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, excepturi, vero, quidem nisi inventore odit totam quos earum facere iure veritatis magnam nobis necessitatibus voluptates quibusdam recusandae quaerat facilis. Debitis.</p>"
+        }
+      ]
     }
 
   ]
