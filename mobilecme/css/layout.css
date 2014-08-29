@@ -257,6 +257,8 @@ a, a:hover, a:focus, a:active {
 
 .inner { padding:20px; }
 
+.form-group button { display: block; margin: 0 auto; }
+
 /* ==========================================================================
       Custom Styles: Footer
    ========================================================================== */
@@ -287,6 +289,7 @@ a, a:hover, a:focus, a:active {
     right: 0;
     top: 0;
 }
+
 /*
  * Style Sidebar
  * --------------------------------------------------

@@ -358,6 +358,12 @@
           "tag": "textarea",
           "name": "fname",
           "attr": "rows='4' cols='50' autofocus maxlength='250'"
+        },
+        {
+          "tag": "submit",
+          "name": "submit",
+          "attr": "",
+          "btn": "Submit"
         }
       ],
       "audio_url": "",
