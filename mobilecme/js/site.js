@@ -78,7 +78,7 @@ function selectSpecialty(s) {
 }
 
 var showanswers = {
-    answercall: function (_qtype,_qid,_qalist,_gid,_async) {
+    answercall: function (_qtype,_qid,_qalist,_gid,_qtext,_async) {
 
         if (_qtype == "single") { _qtype = "multiplechoice"; }
         var request = $.ajax({
@@ -87,8 +87,9 @@ var showanswers = {
             data: {
                 type:       _qtype,
                 qid:        _qid,
-                cid:        _qalist,
+                cid:        _qalist, //null
                 groupid:    _gid,
+                text:       _qtext,
                 programid:  $('body').data('programid')
             },
             dataType: "json",
@@ -183,6 +184,7 @@ var showanswers = {
 }
 
 $(document).ready(function () {
+
     //Polyfill to remove click delays on browsers with touch UIs
     FastClick.attach(document.body);
     

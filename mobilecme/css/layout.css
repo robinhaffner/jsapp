@@ -17,7 +17,7 @@ a, a:hover, a:focus, a:active {
 .row { margin-left: 0; margin-right: 0; }
 
 .fixed-hdr-bar .main-canvas { padding-top: 50px; position: relative; }
-.fixed-hdr-bar #nav-container { position: fixed; top: 0; width: 66.6667%; z-index: 999; }
+.fixed-hdr-bar #nav-container { position: fixed; top: 0; left: 0; width: 66.6667%; z-index: 999; }
 
 #hdr { background-color: rgb(102,102,102); color: rgb(255,255,255); border: 0; }
 #hdr .navicons {
@@ -294,7 +294,7 @@ a, a:hover, a:focus, a:active {
  * Style Sidebar
  * --------------------------------------------------
  */
-#sidebar.sidebar-offcanvas { padding: 10px 0 0 0; background-color: rgb(225,229,227); }
+#sidebar.sidebar-offcanvas { padding: 10px 0 0 0; background-color: rgb(225,229,227); z-index: 1000; }
 #sidebar .sidebar-hdr { padding: 0; /*margin-left: 15px;*/ }
 #sidebar .sidebar-hdr > img { display: block; margin: 0 auto; width: 300px; }
 

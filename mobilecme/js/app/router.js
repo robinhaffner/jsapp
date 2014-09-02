@@ -58,6 +58,8 @@ define(function (require) {
                 });
                 
             }
+            
+            $(document).scrollTop(0); //force scroll to top at value 0
 
         },
         nav = function () {
