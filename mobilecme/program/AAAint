@@ -30,9 +30,7 @@
     "postquestion2",
     "postquestion3",
     "postquestion4",
-    "postquestion5",
-    "video",
-	"certificate"
+    "postquestion5"
     ]
   }],
   "topnav": [{
@@ -67,294 +65,6 @@
       "listviewer": [
         "Pulmonology",
         "Other"
-      ],
-      "audio_url": "",
-      "audio_autoplay": ""
-    },
-	 {
-      "id": "equestion1",
-      "groupid": "99",
-      "template": "Question",
-      "title": "Course Evaluation",
-      "headline": "Evaluation (1 of 5)",
-      "question": "Please rate your level of agreement with the following statement: The content of this activity was fair, balanced, and free of commercial bias.",
-      "qid":"eval1",
-      "type": "single",
-      "async-answer":"false",
-      "skip": "false",
-      "answers": [
-        {
-          "answersid": "c1",
-          "answerstxt": "<p>Strongly Disagree</p>"
-        },
-        {
-          "answersid": "c2",
-          "answerstxt": "<p>Disagree</p>"
-        },
-        {
-          "answersid": "c3",
-          "answerstxt": "<p>Neither Agree nor Disagree</p>"
-        },
-        {
-          "answersid": "c4",
-          "answerstxt": "<p>Agree</p>"
-        },
-        {
-          "answersid": "c5",
-          "answerstxt": "<p>Strongly Agree</p>"
-        }
-      ],
-      "audio_url": "",
-      "audio_autoplay": ""
-    },
-    {
-      "id": "equestion2",
-      "groupid": "99",
-      "template": "Question",
-      "title": "Course Evaluation",
-      "headline": "Evaluation (2 of 5)",
-      "question": "Please rate your level of agreement with the following statement: The content of this activity was evidence-based.",
-      "qid":"eval2",
-      "type": "single",
-      "async-answer":"false",
-      "skip": "false",
-      "answers": [
-        {
-          "answersid": "c1",
-          "answerstxt": "<p>Strongly Disagree</p>"
-        },
-        {
-          "answersid": "c2",
-          "answerstxt": "<p>Disagree</p>"
-        },
-        {
-          "answersid": "c3",
-          "answerstxt": "<p>Neither Agree nor Disagree</p>"
-        },
-        {
-          "answersid": "c4",
-          "answerstxt": "<p>Agree</p>"
-        },
-        {
-          "answersid": "c5",
-          "answerstxt": "<p>Strongly Agree</p>"
-        }
-      ],
-      "audio_url": "",
-      "audio_autoplay": ""
-    },
-    {
-      "id": "equestion3",
-      "groupid": "99",
-      "template": "Question",
-      "title": "Course Evaluation",
-      "headline": "Evaluation (3 of 5)",
-      "question": "This activity has or will improve my (check all that apply)",
-      "qid":"eval3",
-      "type": "multiplechoice",
-      "async-answer":"false",
-      "skip": "false",
-      "answers": [
-        {
-          "answersid": "c1",
-          "answerstxt": "<p>Knowledge</p>"
-        },
-        {
-          "answersid": "c2",
-          "answerstxt": "<p>Competence</p>"
-        },
-        {
-          "answersid": "c3",
-          "answerstxt": "<p>Performance</p>"
-        },
-        {
-          "answersid": "c4",
-          "answerstxt": "<p>Patient Outcomes</p>"
-        }
-      ],
-      "audio_url": "",
-      "audio_autoplay": ""
-    },
-    {
-      "id": "equestion4",
-      "groupid": "99",
-      "template": "Question",
-      "title": "Course Evaluation",
-      "headline": "Evaluation (4 of 5)",
-      "question": "Please rate the likelihood of participating in future activities on this topic presented in a similar format.",
-      "qid":"eval4",
-      "type": "single",
-      "async-answer":"false",
-      "skip": "false",
-      "answers": [
-        {
-          "answersid": "c1",
-          "answerstxt": "<p>Never</p>"
-        },
-        {
-          "answersid": "c2",
-          "answerstxt": "<p>Not Likely</p>"
-        },
-        {
-          "answersid": "c3",
-          "answerstxt": "<p>Neutral/Not Sure</p>"
-        },
-        {
-          "answersid": "c4",
-          "answerstxt": "<p>Likely</p>"
-        },
-        {
-          "answersid": "c5",
-          "answerstxt": "<p>Very Likely</p>"
-        }
-      ],
-      "audio_url": "",
-      "audio_autoplay": ""
-    },
-    {
-      "id": "equestion5",
-      "groupid": "99",
-      "template": "Question",
-      "title": "Course Evaluation",
-      "headline": "Evaluation (5 of 5)",
-      "question": "Please rate your level of agreement with the following statement: The content of this activity was fair, balanced, and free of commercial bias.",
-      "qid":"eval5",
-      "type": "single",
-      "async-answer":"false",
-      "skip": "false",
-      "answers": [
-        {
-          "answersid": "c1",
-          "answerstxt": "<p>Strongly Disagree</p>"
-        },
-        {
-          "answersid": "c2",
-          "answerstxt": "<p>Disagree</p>"
-        },
-        {
-          "answersid": "c3",
-          "answerstxt": "<p>Neither Agree nor Disagree</p>"
-        },
-        {
-          "answersid": "c4",
-          "answerstxt": "<p>Agree</p>"
-        },
-        {
-          "answersid": "c5",
-          "answerstxt": "<p>Strongly Agree</p>"
-        }
-      ],
-      "audio_url": "",
-      "audio_autoplay": ""
-    },
-    {
-      "id": "equestion6",
-      "groupid": "99",
-      "template": "Question",
-      "title": "ProCME - Clinical Practice",
-      "headline": "Evaluation (Comments)",
-      "question": "Please provide any other feedback or comments.",
-      "qid":"eval6",
-      "type": "freeform",
-      "async-answer":"true",
-      "skip": "true",
-	  "comments": [
-        {
-          "tag": "textarea",
-          "label": "Comments",
-          "for": "comments",
-          "name": "comments",
-          "type": "text",
-          "attr": "rows='8' cols='50' autofocus maxlength='250'"
-        }
-      ],
-      "audio_url": "",
-      "audio_autoplay": ""
-    },
-    {
-      "id": "certificate",
-      "groupid": "999",
-      "template": "Question",
-      "title": "Certificate Request",
-      "headline": "Certificate",
-      "question": "Please complete the form below to receive your certificate.",
-      "qid":"cert",
-      "type": "freeform",
-      "async-answer":"false",
-      "skip": "true",
-      "form": [
-        {
-          "tag": "input",
-          "label": "First Name",
-          "for": "fname",
-          "name": "fname",
-          "type": "text",
-          "attr": ""
-        },
-        {
-          "tag": "input",
-          "label": "Last Name",
-          "for": "lname",
-          "type": "text",
-          "name": "lname",
-          "attr": ""
-        },
-        {
-          "tag": "select",
-          "label": "Professional Degree",
-          "for": "professional",
-          "name": "professional",
-          "attr": "",
-          "options": [
-            { "val": "Text1" },
-            { "val": "Text4" }
-          ]
-        },
-        {
-          "tag": "input",
-          "label": "Email",
-          "for": "email",
-          "type": "email",
-          "name": "email",
-          "attr": ""
-        },
-        {
-          "tag": "input",
-          "label": "Address",
-          "for": "address",
-          "type": "text",
-          "name": "address",
-          "attr": ""
-        },
-        {
-          "tag": "input",
-          "label": "City",
-          "for": "city",
-          "type": "text",
-          "name": "city",
-          "attr": ""
-        },
-        {
-          "tag": "input",
-          "label": "Zip/Postal Code",
-          "for": "zpcode",
-          "type": "text",
-          "name": "zpcode",
-          "attr": ""
-        },
-        {
-          "tag": "input",
-          "label": "State/Province",
-          "for": "stateprovince",
-          "type": "text",
-          "name": "stateprovince",
-          "attr": ""
-        },
-        {
-          "tag": "textarea",
-          "name": "fname",
-          "attr": "rows='4' cols='50' autofocus maxlength='250'"
-        }
       ],
       "audio_url": "",
       "audio_autoplay": ""
@@ -552,7 +262,7 @@
       "groupid": "1",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
-      "headline": "Pre-test Question",
+      "headline": "Pre-test Question (1 of 5)",
       "question": "Which of the following gene therapy strategies are currently being evaluated in clinical trials in patients with cystic fibrosis (CF)?",
       "qid":"AAAq1",
       "type": "single",
@@ -580,35 +290,35 @@
       "groupid": "1",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
-      "headline": "Pre-test Question",
+      "headline": "Pre-test Question (2 of 5)",
       "question": "Ivacaftor is a small-molecular-weight compound approved to treat patients with CF with which of the following mutations?",
       "qid":"AAAq2",
       "type": "multiplechoice",
   	  "async-answer":"false",
-        "skip": "true",
-        "answers": [
-          {
-            "answersid": "c1", "correct":"1",
-            "answerstxt": "<p>F508D</p>"
-          },
-          {
-            "answersid": "c2",
-            "answerstxt": "<p>G551D</p>"
-          },
-          {
-            "answersid": "c3",
-            "answerstxt": "<p>R117H-CFTR</p>"
-          }
-        ],
-        "audio_url": "",
-        "audio_autoplay": ""
+      "skip": "true",
+      "answers": [
+        {
+          "answersid": "c1", 
+          "answerstxt": "<p>F508D</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>G551D</p>"
+        },
+        {
+          "answersid": "c3","correct":"1",
+          "answerstxt": "<p>R117H-CFTR</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
     },
     {
       "id": "prequestion3",
       "groupid": "1",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
-      "headline": "Pre-test Question",
+      "headline": "Pre-test Question (3 of 5)",
       "question": "Which of the following agents represent “corrector” molecules currently undergoing clinical trials in CF that assist with <i>F508del</i> folding and allow <i>F508del</i> CFTR to be transported to the apical surface of expressing cells?",
       "type": "multiplechoice",
       "qid":"AAAq3",
@@ -616,11 +326,11 @@
       "skip": "true",
         "answers": [
           {
-            "answersid": "c1", "correct":"1",
+            "answersid": "c1", 
             "answerstxt": "<p>Ivacaftor</p>"
           },
           {
-            "answersid": "c2",
+            "answersid": "c2","correct":"1",
             "answerstxt": "<p>Lumacaftor (VX-809)</p>"
           },
           {
@@ -644,7 +354,7 @@
       "groupid": "1",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
-      "headline": "Pre-test Question",
+      "headline": "Pre-test Question (4 of 5)",
       "question": "<p>Please indicate your level of agreement with the following statement:</p><p><i>In patients with CF, the F508del mutation manifests both Class II and Class III defects, which means that it may be possible to address both functional defects through combined use of a corrector such as VX-809 or VX-661 and a potentiator such as ivacaftor.</i></p>",
       "qid":"AAAq4",
       "type": "single",
@@ -652,7 +362,7 @@
       "skip": "true",
       "answers": [
         {
-          "answersid": "c1", "correct":"1",
+          "answersid": "c1", 
           "answerstxt": "<p>Levofloxacin</p>"
         },
         {
@@ -660,7 +370,7 @@
           "answerstxt": "<p>Liposomal amikacin</p>"
         },
         {
-          "answersid": "c3",
+          "answersid": "c3","correct":"1",
           "answerstxt": "<p>Colistin</p>"
         }
       ],
@@ -672,7 +382,7 @@
       "groupid": "1",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
-      "headline": "Post-test Question",
+      "headline": "Pre-test Question (5 of 5)",
       "question": "Dry powder formulation of which of the following inhaled antibiotics is currently under investigation in patients with CF?",
       "qid":"AAAq5",
       "type": "single",
@@ -680,11 +390,11 @@
       "skip": "true",
       "answers": [
         {
-          "answersid": "c1", "correct":"1",
+          "answersid": "c1",
           "answerstxt": "<p>Agree</p>"
         },
         {
-          "answersid": "c2",
+          "answersid": "c2", "correct":"1",
           "answerstxt": "<p>Disagree</p>"
         },
         {
@@ -700,7 +410,7 @@
       "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
-      "headline": "Post-test Question",
+      "headline": "Post-test Question (1 of 5)",
       "question": "Which of the following gene therapy strategies are currently being evaluated in clinical trials in patients with cystic fibrosis (CF)?",
       "qid":"AAAq1",
       "type": "single",
@@ -708,7 +418,7 @@
       "skip": "false",
       "answers": [
         {
-          "answersid": "c1", "correct":"1",
+          "answersid": "c1", 
           "answerstxt": "<p>Use of lentivirus-based vectors for CFTR gene transfer to airway epithelium</p>"
         },
         {
@@ -716,7 +426,7 @@
           "answerstxt": "<p>Use of adeno-associated virus-based vectors for CFTR gene transfer to airway epithelium</p>"
         },
         {
-          "answersid": "c3",
+          "answersid": "c3", "correct":"1",
           "answerstxt": "<p>Use of liposomes to transfer plasmids containing a functional CFTR cDNA to airway epithelium</p>"
         }
       ],
@@ -728,25 +438,25 @@
       "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
-      "headline": "Post-test Question",
+      "headline": "Post-test Question (2 of 5)",
       "question": "Ivacaftor is a small-molecular-weight compound approved to treat patients with CF with which of the following mutations?",
       "qid":"AAAq2",
       "type": "multiplechoice",
       "async-answer":"true",
-	  "skip": "false",
+      "skip": "false",
       "answers": [
-        {
-          "answersid": "c1", "correct":"1",
-          "answerstxt": "<p>F508D</p>"
-        },
-        {
-          "answersid": "c2",
-          "answerstxt": "<p>G551D</p>"
-        },
-        {
-          "answersid": "c3",
-          "answerstxt": "<p>R117H-CFTR</p>"
-        }
+      {
+        "answersid": "c1", "correct":"1",
+        "answerstxt": "<p>F508D</p>"
+      },
+      {
+        "answersid": "c2",
+        "answerstxt": "<p>G551D</p>"
+      },
+      {
+        "answersid": "c3",
+        "answerstxt": "<p>R117H-CFTR</p>"
+      }
       ],
       "audio_url": "",
       "audio_autoplay": ""
@@ -756,7 +466,7 @@
       "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
-      "headline": "Post-test Question",
+      "headline": "Post-test Question (3 of 5)",
       "question": "Which of the following agents represent “corrector” molecules currently undergoing clinical trials in CF that assist with <i>F508del</i> folding and allow <i>F508del</i> CFTR to be transported to the apical surface of expressing cells?",
       "type": "multiplechoice",
       "qid":"AAAq3",
@@ -764,7 +474,7 @@
       "skip": "false",
       "answers": [
         {
-          "answersid": "c1", "correct":"1",
+          "answersid": "c1", 
           "answerstxt": "<p>Ivacaftor</p>"
         },
         {
@@ -776,7 +486,7 @@
           "answerstxt": "<p>VX-661</p>"
         },
         {
-          "answersid": "c4",
+          "answersid": "c4","correct":"1",
           "answerstxt": "<p>Both a and b</p>"
         },
         {
@@ -792,7 +502,7 @@
       "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
-      "headline": "Post-test Question",
+      "headline": "Post-test Question (4 of 5)",
       "question": "<p>Please indicate your level of agreement with the following statement:</p><p><i>In patients with CF, the F508del mutation manifests both Class II and Class III defects, which means that it may be possible to address both functional defects through combined use of a corrector such as VX-809 or VX-661 and a potentiator such as ivacaftor.</i></p>",
       "qid":"AAAq4",
       "type": "single",
@@ -820,7 +530,7 @@
       "groupid": "2",
       "template": "Question",
       "title": "ProCME - Clinical Practice",
-      "headline": "Post-test Question",
+      "headline": "Post-test Question (5 of 5)",
       "question": "Dry powder formulation of which of the following inhaled antibiotics is currently under investigation in patients with CF?",
       "qid":"AAAq5",
       "type": "single",
@@ -828,11 +538,11 @@
       "skip": "false",
       "answers": [
         {
-          "answersid": "c1", "correct":"1",
+          "answersid": "c1", 
           "answerstxt": "<p>Agree</p>"
         },
         {
-          "answersid": "c2",
+          "answersid": "c2", "correct":"1",
           "answerstxt": "<p>Disagree</p>"
         },
         {
@@ -842,30 +552,6 @@
       ],
       "audio_url": "",
       "audio_autoplay": ""
-    },    
-    {
-      "id": "video",
-      "template": "Video",
-      "title": "ProCME - Video",
-      "headline": "Program Video",
-      "header": "Video",
-      "details": "",
-      "popupVideo": "http://c.pro-c.me/programs/demo/images/fpo-video-1.jpg",
-      "poster": "http://c.pro-c.me/programs/demo/images/fpo-video-1.jpg",
-      "media": [
-        {
-          "mediatype": "video/mp4;codecs='avc1.42E01E, mp4a.40.2'",
-          "mediavideo": "http://c.pro-c.me/programs/demo/video/mov_bbb.mp4"
-        },
-        {
-          "mediatype": "video/ogg",
-          "mediavideo": "http://c.pro-c.me/programs/demo/video/mov_bbb.mp4"
-        }
-      ],
-      "video_url": "//jwpsrv.com/feed/IzCBNLVw.rss",
-      "video_autoplay": "false",
-      "audio_url": "http://c.pro-c.me/programs/demo/audio/cf_s12.mp3",
-      "audio_autoplay": "true"
     },
     {
       "id": "finalstep",
@@ -873,11 +559,11 @@
       "title": "Get Certificate",
       "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
       "header": "Get Certificate",
-        "listcontent":[
-		{
-		"content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, excepturi, vero, quidem nisi inventore odit totam quos earum facere iure veritatis magnam nobis necessitatibus voluptates quibusdam recusandae quaerat facilis. Debitis.</p>"
-		}
-		]
+      "listcontent":[
+        {
+          "content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, excepturi, vero, quidem nisi inventore odit totam quos earum facere iure veritatis magnam nobis necessitatibus voluptates quibusdam recusandae quaerat facilis. Debitis.</p>"
+        }
+      ]
     }
 
   ]

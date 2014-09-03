@@ -1,31 +1,36 @@
 {
   "programid":"1",
-  "questions":[
+  "items":[
     {
       "id": "equestion1",
       "groupid": "99",
       "template": "Question",
       "title": "Course Evaluation",
-      "headline": "Evaluation",
+      "headline": "Evaluation (1 of 5)",
       "question": "Please rate your level of agreement with the following statement: The content of this activity was fair, balanced, and free of commercial bias.",
       "qid":"eval1",
       "type": "single",
       "async-answer":"false",
-      "skip": "true",
+      "skip": "false",
       "answers": [
         {
+          "answersid": "c1",
           "answerstxt": "<p>Strongly Disagree</p>"
         },
         {
+          "answersid": "c2",
           "answerstxt": "<p>Disagree</p>"
         },
         {
+          "answersid": "c3",
           "answerstxt": "<p>Neither Agree nor Disagree</p>"
         },
         {
+          "answersid": "c4",
           "answerstxt": "<p>Agree</p>"
         },
         {
+          "answersid": "c5",
           "answerstxt": "<p>Strongly Agree</p>"
         }
       ],
@@ -37,26 +42,31 @@
       "groupid": "99",
       "template": "Question",
       "title": "Course Evaluation",
-      "headline": "Evaluation",
+      "headline": "Evaluation (2 of 5)",
       "question": "Please rate your level of agreement with the following statement: The content of this activity was evidence-based.",
       "qid":"eval2",
       "type": "single",
       "async-answer":"false",
-      "skip": "true",
+      "skip": "false",
       "answers": [
         {
+          "answersid": "c1",
           "answerstxt": "<p>Strongly Disagree</p>"
         },
         {
+          "answersid": "c2",
           "answerstxt": "<p>Disagree</p>"
         },
         {
+          "answersid": "c3",
           "answerstxt": "<p>Neither Agree nor Disagree</p>"
         },
         {
+          "answersid": "c4",
           "answerstxt": "<p>Agree</p>"
         },
         {
+          "answersid": "c5",
           "answerstxt": "<p>Strongly Agree</p>"
         }
       ],
@@ -68,7 +78,7 @@
       "groupid": "99",
       "template": "Question",
       "title": "Course Evaluation",
-      "headline": "Evaluation",
+      "headline": "Evaluation (3 of 5)",
       "question": "This activity has or will improve my (check all that apply)",
       "qid":"eval3",
       "type": "multiplechoice",
@@ -76,15 +86,19 @@
       "skip": "false",
       "answers": [
         {
+          "answersid": "c1",
           "answerstxt": "<p>Knowledge</p>"
         },
         {
+          "answersid": "c2",
           "answerstxt": "<p>Competence</p>"
         },
         {
+          "answersid": "c3",
           "answerstxt": "<p>Performance</p>"
         },
         {
+          "answersid": "c4",
           "answerstxt": "<p>Patient Outcomes</p>"
         }
       ],
@@ -96,26 +110,31 @@
       "groupid": "99",
       "template": "Question",
       "title": "Course Evaluation",
-      "headline": "Evaluation",
+      "headline": "Evaluation (4 of 5)",
       "question": "Please rate the likelihood of participating in future activities on this topic presented in a similar format.",
       "qid":"eval4",
       "type": "single",
       "async-answer":"false",
-      "skip": "true",
+      "skip": "false",
       "answers": [
         {
+          "answersid": "c1",
           "answerstxt": "<p>Never</p>"
         },
         {
+          "answersid": "c2",
           "answerstxt": "<p>Not Likely</p>"
         },
         {
+          "answersid": "c3",
           "answerstxt": "<p>Neutral/Not Sure</p>"
         },
         {
+          "answersid": "c4",
           "answerstxt": "<p>Likely</p>"
         },
         {
+          "answersid": "c5",
           "answerstxt": "<p>Very Likely</p>"
         }
       ],
@@ -127,7 +146,7 @@
       "groupid": "99",
       "template": "Question",
       "title": "Course Evaluation",
-      "headline": "Evaluation",
+      "headline": "Evaluation (5 of 5)",
       "question": "Please rate your level of agreement with the following statement: The content of this activity was fair, balanced, and free of commercial bias.",
       "qid":"eval5",
       "type": "single",
@@ -135,19 +154,136 @@
       "skip": "false",
       "answers": [
         {
+          "answersid": "c1",
           "answerstxt": "<p>Strongly Disagree</p>"
         },
         {
+          "answersid": "c2",
           "answerstxt": "<p>Disagree</p>"
         },
         {
+          "answersid": "c3",
           "answerstxt": "<p>Neither Agree nor Disagree</p>"
         },
         {
+          "answersid": "c4",
           "answerstxt": "<p>Agree</p>"
         },
         {
+          "answersid": "c5",
           "answerstxt": "<p>Strongly Agree</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "equestion6",
+      "groupid": "99",
+      "template": "Question",
+      "title": "ProCME - Clinical Practice",
+      "headline": "Evaluation (Comments)",
+      "question": "Please provide any other feedback or comments.",
+      "qid":"eval6",
+      "type": "freeform",
+      "async-answer":"true",
+      "skip": "true",
+	  "comments": [
+        {
+          "tag": "textarea",
+          "label": "Comments",
+          "for": "comments",
+          "name": "comments",
+          "type": "text",
+          "attr": "rows='8' cols='50' autofocus maxlength='250'"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "certificate",
+      "groupid": "999",
+      "template": "Question",
+      "title": "Certificate Request",
+      "headline": "Certificate",
+      "question": "Please complete the form below to receive your certificate.",
+      "qid":"cert",
+      "type": "freeform",
+      "async-answer":"false",
+      "skip": "true",
+      "form": [
+        {
+          "tag": "input",
+          "label": "First Name",
+          "for": "fname",
+          "name": "fname",
+          "type": "text",
+          "attr": ""
+        },
+        {
+          "tag": "input",
+          "label": "Last Name",
+          "for": "lname",
+          "type": "text",
+          "name": "lname",
+          "attr": ""
+        },
+        {
+          "tag": "select",
+          "label": "Professional Degree",
+          "for": "professional",
+          "name": "professional",
+          "attr": "",
+          "options": [
+            { "val": "Text1" },
+            { "val": "Text4" }
+          ]
+        },
+        {
+          "tag": "input",
+          "label": "Email",
+          "for": "email",
+          "type": "email",
+          "name": "email",
+          "attr": ""
+        },
+        {
+          "tag": "input",
+          "label": "Address",
+          "for": "address",
+          "type": "text",
+          "name": "address",
+          "attr": ""
+        },
+        {
+          "tag": "input",
+          "label": "City",
+          "for": "city",
+          "type": "text",
+          "name": "city",
+          "attr": ""
+        },
+        {
+          "tag": "input",
+          "label": "Zip/Postal Code",
+          "for": "zpcode",
+          "type": "text",
+          "name": "zpcode",
+          "attr": ""
+        },
+        {
+          "tag": "input",
+          "label": "State/Province",
+          "for": "stateprovince",
+          "type": "text",
+          "name": "stateprovince",
+          "attr": ""
+        },
+        {
+          "tag": "textarea",
+          "name": "fname",
+          "attr": "rows='4' cols='50' autofocus maxlength='250'"
         }
       ],
       "audio_url": "",
