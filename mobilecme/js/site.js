@@ -264,20 +264,27 @@ $(document).ready(function () {
 		 playAudio('prev');
 	 });
 
+    $(document).on('click', '.freeform button[type="submit"]', function(event) {
+        event.preventDefault();
+        console.log("this",this);
+
+    });
+    
     $(document).on('click', '.next-control', function(event) {
 		
         var questionpage = $('.content-wrapper').data('template') == "questionstpl" ? true : false; //check for question template
         if (questionpage) {
             var _qaObj = {},
                 req = $(document).find('.form-control');
+
+            console.log("message",$(document).find('.form-control.required').val());
          
             if ($(document).find('.listview').data('skip')) { //allow user to skip question
                 questionhandler.bypass();
                 return false;
             }
 
-
-            if ($(document).find('.form-control.required').val().length > 0 || $(document).hasClass('.listview.pass') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {
+            if ($(document).find('.form-control.required').val() != "" || $(document).hasClass('.listview.pass') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {
                 if ($(document).find('.freeform').data('role') == "listview" && !$(this).hasClass('click-control')) {
                     event.preventDefault();
 
