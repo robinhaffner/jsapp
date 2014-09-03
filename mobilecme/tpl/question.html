@@ -9,21 +9,6 @@
 
 </ul>
 {{/if}}
-{{#if comments}}
-<ul data-role="listview" data-qid="{{this.qid}}" data-groupid="{{this.groupid}}" data-async-answer="{{this.async-answer}}" data-skip="{{this.skip}}" data-listview-type="{{this.type}}" class="listview-freeform {{this.type}}">
-	{{#this.comments}}
-	<li>
-		<div class="form-group">
-			{{#if label}}
-				<label for="{{this.name}}">{{this.label}}</label>
-			{{/if}}
-			<textarea class="form-control" {{this.attr}} id="{{this.name}}"></textarea>
-		</div>
-	</li>
-	{{/this.comments}}
-
-</ul>
-{{/if}}
 
 {{#if form}}
 <ul data-role="listview" data-qid="{{this.qid}}" data-groupid="{{this.groupid}}" data-async-answer="{{this.async-answer}}" data-skip="{{this.skip}}" data-listview-type="{{this.type}}" class="listview-freeform {{this.type}}">
@@ -33,7 +18,7 @@
 			{{#if_eq this.tag "input"}}
 				<div class="form-group">
 					<label for="{{this.name}}">{{this.label}}</label>
-					<input type="{{this.type}}" class="form-control" id="{{this.name}}">
+					<input type="{{this.type}}" class="form-control {{#if required}}{{this.required}}{{/if}}" id="{{this.name}}" name="{{this.name}}" required="{{this.required}}">
 				</div>
 			{{/if_eq}}
 
@@ -42,7 +27,7 @@
 					{{#if label}}
 						<label for="{{this.name}}">{{this.label}}</label>
 					{{/if}}
-					<textarea class="form-control" {{this.attr}} id="{{this.name}}"></textarea>
+					<textarea class="form-control {{#if required}}{{this.required}}{{/if}}" {{this.attr}} id="{{this.name}}" name="{{this.name}}"></textarea>
 				</div>
 			{{/if_eq}}
 
@@ -51,7 +36,7 @@
 					{{#if label}}
 						<label for="{{this.name}}">{{this.label}}</label>
 					{{/if}}
-					<select class="form-control" id="{{this.name}}">
+					<select class="form-control {{#if required}}{{this.required}}{{/if}}" id="{{this.name}}" name="{{this.name}}">
 						{{#if_eq this.options}}
 							<option>{{this.val}}</option>
 						{{/if_eq}}
