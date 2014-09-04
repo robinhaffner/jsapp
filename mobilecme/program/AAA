@@ -1,6 +1,7 @@
 {
   "programid": "1111",
   "evaluation": "evaluation/standard",
+  "certificate": "245",
   "start": [{
     "id": "faculty"
   }], 
@@ -300,24 +301,24 @@
         {
           "tag": "input",
           "label": "First Name",
-          "for": "fname",
-          "name": "fname",
+          "for": "firstname",
+          "name": "firstname",
           "type": "text",
           "attr": ""
         },
         {
           "tag": "input",
           "label": "Last Name",
-          "for": "lname",
+          "for": "lastname",
           "type": "text",
-          "name": "lname",
+          "name": "lastname",
           "attr": ""
         },
         {
           "tag": "select",
-          "label": "Professional Degree",
-          "for": "professional",
-          "name": "professional",
+          "label": "Degree Type",
+          "for": "degree_type",
+          "name": "degree_type",
           "attr": "",
           "options": [
             { "val": "Text1" },
@@ -351,17 +352,17 @@
         {
           "tag": "input",
           "label": "Zip/Postal Code",
-          "for": "zpcode",
+          "for": "zip",
           "type": "text",
-          "name": "zpcode",
+          "name": "zip",
           "attr": ""
         },
         {
           "tag": "input",
           "label": "State/Province",
-          "for": "stateprovince",
+          "for": "state",
           "type": "text",
-          "name": "stateprovince",
+          "name": "state",
           "attr": ""
         },
         {
