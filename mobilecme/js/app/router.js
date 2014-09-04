@@ -17,6 +17,7 @@ define(function (require) {
         mainView = new MainView(),
         navView = new NavView(),
         programIDView = siteAdapter.getProgramID("programid"),
+        certificateIDView = siteAdapter.getCertificateID("certificate"),
         startPageNum = siteAdapter.getStartPage("start"),
 
         route = function () {
@@ -29,6 +30,7 @@ define(function (require) {
             console.log("startPageNum",startPageNum);
 
             $('body').data('programid', programIDView);
+            $('body').data('certificate', certificateIDView);
 
             if ( (!hashpath && specialty) || (!hashpath && !specialty) || getStoredSpecialty == '') {
                 siteAdapter.getData("sitecontent","main").done(function(_content) {
@@ -58,7 +60,7 @@ define(function (require) {
                 });
                 
             }
-            
+
             $(document).scrollTop(0); //force scroll to top at value 0
 
         },

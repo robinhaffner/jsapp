@@ -50,6 +50,9 @@ define(['json!server/program/'+program, 'json!server/collection/'+collection], f
   getProgramID = function (section) {
     return data[section];
   },
+  getCertificateID = function (section) {
+    return data[section];
+  },
   getStartPage = function (section) {
     return data[section][0].id;
   },
@@ -94,6 +97,7 @@ define(['json!server/program/'+program, 'json!server/collection/'+collection], f
   return {
     getData: getData,
     getProgramID: getProgramID,
+    getCertificateID: getCertificateID,
     getStartPage: getStartPage,
     getSidebarData: getSidebarData,
     getAnswers: getAnswers
