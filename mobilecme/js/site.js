@@ -77,21 +77,73 @@ function selectSpecialty(s) {
     }
 }
 
-var showanswers = {
-    answercall: function (_qtype,_qid,_qalist,_gid,_qtext,_async) {
+var questionhandler = {
+    errorhandler: function(_msg){
+        var msg, 
+            htmlErr = '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Message!</strong> </div>';
 
-        if (_qtype == "single") { _qtype = "multiplechoice"; }
+        $(".alert").remove();
+        $(htmlErr).insertBefore('.content-wrapper h1');
+        $('.alert').append(_msg);
+
+        $(document).find('.listview').addClass('pass');
+        $('.icon-loading').remove();
+        $('.next-control').show();
+    },
+    bypass: function(){
+        $(".alert").remove();
+        $(document).find('.listview').addClass('pass'); //answers completed
+        var currentURL = document.location.href;
+        var res = currentURL.replace(location.hash, $('.next-control').attr('href'));
+        document.location = res;
+    }
+}
+var submitform = {
+    formaction: function (_formdata) {
+        console.log("_formdata",_formdata);
+        var request = $.ajax({
+            url: "http://int.pro-cme.pslgroup.com/pcertificates/ajax/submit",
+            type: "POST",
+            data: _formdata,
+            dataType: "json",
+            beforeSend: function(){
+                var storebtn = $('.next-control').parent();
+                $('.next-control').hide();
+                if($(document).find('.icon-loading').length <= 0){
+                    $(storebtn).append("<img src='images/loading.gif' class='icon-loading'>");
+                }
+            }
+        });
+        request.done(function( data ) {
+            console.log("done",data);
+            var msg = '<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Success!</strong> </div>'
+            if (data) {
+                if(data.status == 0){
+                    questionhandler.errorhandler(data.err);
+                } else {
+                    $(msg).insertBefore('.content-wrapper h1');
+                    $('.icon-loading').remove();
+                    $('.next-control').show();
+                }
+            }
+        });
+
+        request.fail(function( jqXHR, textStatus ) {
+            console.log("jqXHR, textStatus",jqXHR, textStatus);
+            var msg = jqXHR.statusText;
+            questionhandler.errorhandler(msg)
+        });
+    }
+}
+
+var showanswers = {
+    answercall: function (_qadata,_async) {
+
+        if (_qadata.type == "single") { _qadata.type = "multiplechoice"; }
         var request = $.ajax({
             url: window.config.path.quizapi+"/js/pquiz/answer",
             type: "POST",
-            data: {
-                type:       _qtype,
-                qid:        _qid,
-                cid:        _qalist, //null
-                groupid:    _gid,
-                text:       _qtext,
-                programid:  $('body').data('programid')
-            },
+            data: _qadata,
             dataType: "json",
             beforeSend: function(){
                 var storebtn = $('.next-control').parent();
@@ -107,12 +159,12 @@ var showanswers = {
             htmlErr = '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Message!</strong> </div>';
             if (data) {
                 if(data.status == 0){
-                    showanswers.errorhandler(data.err);
+                    questionhandler.errorhandler(data.err);
                 } else {
                     if (_async) {
                         showanswers.inputdata(data.responses);
                     } else {
-                        showanswers.bypass();
+                        questionhandler.bypass();
                     }
                     
                     $('.icon-loading').remove();
@@ -124,7 +176,7 @@ var showanswers = {
         request.fail(function( jqXHR, textStatus ) {
             console.log("jqXHR, textStatus",jqXHR, textStatus);
             var msg = jqXHR.statusText;
-            showanswers.errorhandler(msg)
+            questionhandler.errorhandler(msg)
         });
     },
     inputdata: function (data) {
@@ -161,25 +213,6 @@ var showanswers = {
 
         $(document).find('.listview').addClass('pass'); //answers completed
         $(".alert").remove(); //remove alert box
-    },
-    errorhandler: function(_msg){
-        var msg, 
-            htmlErr = '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Message!</strong> </div>';
-
-        $(".alert").remove();
-        $(htmlErr).insertBefore('.content-wrapper h1');
-        $('.alert').append(_msg);
-
-        $(document).find('.listview').addClass('pass');
-        $('.icon-loading').remove();
-        $('.next-control').show();
-    },
-    bypass: function(){
-        $(".alert").remove();
-        $(document).find('.listview').addClass('pass'); //answers completed
-        var currentURL = document.location.href;
-        var res = currentURL.replace(location.hash, $('.next-control').attr('href'));
-        document.location = res;
     }
 }
 
@@ -231,19 +264,41 @@ $(document).ready(function () {
 		 playAudio('prev');
 	 });
 
+    $(document).on('click', '.freeform button[type="submit"]', function(event) {
+        event.preventDefault();
+        console.log("this",this);
+
+    });
+    
     $(document).on('click', '.next-control', function(event) {
 		
         var questionpage = $('.content-wrapper').data('template') == "questionstpl" ? true : false; //check for question template
         if (questionpage) {
+            var _qaObj = {},
+                req = $(document).find('.form-control');
+
+            console.log("message",$(document).find('.form-control.required').val());
          
             if ($(document).find('.listview').data('skip')) { //allow user to skip question
-				
-                showanswers.bypass();
-            };
+                questionhandler.bypass();
+                return false;
+            }
 
-            if ($(document).hasClass('.listview.pass') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {
-                
-                if ($(document).find('.listview').data('role') == "listview" && !$(this).hasClass('click-control')) {
+            if ($(document).find('.form-control.required').val() != "" || $(document).hasClass('.listview.pass') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {
+                if ($(document).find('.freeform').data('role') == "listview" && !$(this).hasClass('click-control')) {
+                    event.preventDefault();
+
+                    $(this).addClass('click-control');
+                    $(req).removeClass('has-error');
+                    var formObj = {};
+                    $.each(req, function(i, field) {
+                         var    fname = $(field).attr('name'),
+                                fval = $(field).val();
+                         formObj[fname] = fval;
+                    });
+                    submitform.formaction(formObj);
+                }
+                else if ($(document).find('.listview').data('role') == "listview" && !$(this).hasClass('click-control')) {
                     event.preventDefault();
 
                     $(this).addClass('click-control');
@@ -259,7 +314,12 @@ $(document).ready(function () {
                         $(listselect).each(function(index, val) {
                              _qalist.push($(val).attr('id'));
                         });
-                        showanswers.answercall(listviewType,listviewQid,_qalist,listviewGid,listviewAsync)
+                        _qaObj.type = listviewType;
+                        _qaObj.qid = listviewQid;
+                        _qaObj.cid = _qalist; //null
+                        _qaObj.groupid = listviewGid;
+                        _qaObj.programid = $('body').data('programid');
+                        showanswers.answercall(_qaObj,listviewAsync)
                     } 
                     return;
                 } else if($(this).hasClass('click-control')) {
@@ -269,10 +329,16 @@ $(document).ready(function () {
             }
             else { 
                 event.preventDefault(); 
-                var htmlAlert = '<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Warning!</strong> Please select an answer</div>';
+                var htmlAlert = '<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Warning!</strong> Please answer question</div>';
                 $(".alert").remove();
+                if ($(document).find('.freeform')) {
+                    $(".form-control").each(function(index, field) {
+                         if($(field).hasClass('required') && $(field).val() == "") {
+                            $(field).parent().addClass('has-error')
+                         }
+                    });
+                };
                 $(htmlAlert).insertBefore('.content-wrapper h1');
-                //return; 
             }
         } else {
 			playAudio('next');

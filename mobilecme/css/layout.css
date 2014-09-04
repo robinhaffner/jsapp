@@ -17,7 +17,7 @@ a, a:hover, a:focus, a:active {
 .row { margin-left: 0; margin-right: 0; }
 
 .fixed-hdr-bar .main-canvas { padding-top: 50px; position: relative; }
-.fixed-hdr-bar #nav-container { position: fixed; top: 0; left: 0; width: 66.6667%; z-index: 999; }
+.fixed-hdr-bar #nav-container { position: fixed; top: 0; width: 66.6667%; z-index: 999; }
 
 #hdr { background-color: rgb(102,102,102); color: rgb(255,255,255); border: 0; }
 #hdr .navicons {
@@ -278,7 +278,7 @@ a, a:hover, a:focus, a:active {
 #ftr a:hover, #ftr a:link,
 #ftr a:active, #ftr a:visited, #ftr a:focus { 
   color: rgb(255,255,255); 
-  padding: 0; margin: 0; 
+  padding: 15px; margin: 0; 
   text-transform: capitalize;
   text-decoration: none;
   outline: 0; 
@@ -314,11 +314,15 @@ a, a:hover, a:focus, a:active {
 #sidebar .media .media-heading { padding-right: 28px; font-size: 16px; }
 #sidebar .media .media-object { width: 60px; }
 
+html[xmlns*=""] .fixed-hdr-bar #nav-container { left: 0; }
+
 /*
  * Off Canvas
  * --------------------------------------------------
  */
 @media screen and (max-width: 767px) {
+  html { overflow-x: hidden; }
+
   /*.fixed-hdr-bar .main-canvas { padding-top: 100px; }*/
   .fixed-hdr-bar #nav-container { width: 100%; }
   .row-offcanvas {
@@ -364,7 +368,7 @@ a, a:hover, a:focus, a:active {
   }
 }
 @media (max-width: 480px) {
-  #ftr footer > div { padding-right: 5px; padding-left: 5px; } 
+  #ftr footer > div { padding: 0px; } 
   #hdr .next-control {
     padding: 0;
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
