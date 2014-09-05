@@ -38,7 +38,7 @@
 					{{/if}}
 					<select class="form-control {{#if required}}{{this.required}}{{/if}}" id="{{this.name}}" name="{{this.name}}">
 						{{#if_eq this.options}}
-							<option>{{this.val}}</option>
+							<option value="{{this.val}}">{{this.text}}</option>
 						{{/if_eq}}
 					</select>
 				</div>

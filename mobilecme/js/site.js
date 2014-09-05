@@ -292,9 +292,14 @@ $(document).ready(function () {
                     $(this).addClass('click-control');
                     $(req).removeClass('has-error');
                     var formObj = {};
+                    console.log("req",req);
                     $.each(req, function(i, field) {
+                        console.log("i, field",i, field);
                          var    fname = $(field).attr('name'),
                                 fval = $(field).val();
+                                if ($(field).is('select')) {
+                                    formObj[$(this).attr('name')] = $(this).find("option:selected").text();
+                                };
                          formObj[fname] = fval;
                     });
                     formObj["certificate"] = $('body').data('certificate');

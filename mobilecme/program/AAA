@@ -357,8 +357,8 @@
           "name": "degree_type",
           "attr": "",
           "options": [
-            { "val": "Text1" },
-            { "val": "Text4" }
+            { "val": "t1", "text": "Text1" },
+            { "val": "t2", "text": "Text4" }
           ]
         },
         {
@@ -400,11 +400,6 @@
           "type": "text",
           "name": "state",
           "attr": ""
-        },
-        {
-          "tag": "textarea",
-          "name": "fname",
-          "attr": "rows='4' cols='50' autofocus maxlength=250"
         },
         {
           "tag": "submit",
