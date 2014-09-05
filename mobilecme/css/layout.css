@@ -316,6 +316,23 @@ a, a:hover, a:focus, a:active {
 
 html[xmlns*=""] .fixed-hdr-bar #nav-container { left: 0; }
 
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.ui-sortable-handle {
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
 /*
  * Off Canvas
  * --------------------------------------------------

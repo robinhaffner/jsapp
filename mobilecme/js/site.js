@@ -78,6 +78,19 @@ function selectSpecialty(s) {
     }
 }
 
+function getListView(){    
+    $('#'+whichListView)
+        .sortable({
+            'containment': 'parent',
+            'opacity': 0.6,
+            update: function(event, ui) {
+                console.log("event, ui",event, ui);
+            }
+        })
+        .disableSelection()
+        .listview().listview('refresh');
+}
+
 var questionhandler = {
     errorhandler: function(_msg){
         var msg, 
@@ -228,7 +241,7 @@ $(document).ready(function () {
             offCanvas ();
         };
     });
-
+    
     //Questions function
     $(document).on('click','.selection-list li',function(event){
         event.preventDefault();
@@ -268,7 +281,23 @@ $(document).ready(function () {
     $(document).on('click', '.freeform button[type="submit"]', function(event) {
         event.preventDefault();
         console.log("this",this);
+        var _qaObj = {},
+            req = $(document).find('.form-control');
 
+        $(req).removeClass('has-error');
+        var formObj = {};
+        console.log("req",req);
+        $.each(req, function(i, field) {
+            console.log("i, field",i, field);
+             var    fname = $(field).attr('name'),
+                    fval = $(field).val();
+                    if ($(field).is('select')) {
+                        formObj[$(this).attr('name')] = $(this).find("option:selected").text();
+                    };
+             formObj[fname] = fval;
+        });
+        formObj["certificate"] = $('body').data('certificate');
+        submitform.formaction(formObj);
     });
     
     $(document).on('click', '.next-control', function(event) {
