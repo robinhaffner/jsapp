@@ -39,10 +39,33 @@ define(function (require) {
  
 
             var sortcontainer = $("ul.sortable").attr('id'); //find sortable ul id
-            if (sortcontainer) {  $("#"+sortcontainer).sortable(); }; //sortable jquery-ui function
+            if (sortcontainer) {  this.sortableQueston(sortcontainer) }; //sortable jquery-ui function
      
             return this;
         };
+
+        this.sortableQueston = function (container) {
+            var sortObj = {}, listArr = [], sortedlistArr = [];
+            $("#"+container)
+                .sortable({
+                    'containment': 'parent',
+                    'opacity': 0.6,
+                    create: function( event, ui ) {
+                        $(this).find('li').each(function(index, el) {
+                            listArr.push($(el).attr('id'));
+                        });
+                        sortObj["listArr"] = listArr;
+                        $(this).data('sortJSON', sortObj);
+                    },
+                    update: function(event, ui) {
+                        $(this).find('li').each(function(index, el) {
+                            sortedlistArr.push($(el).attr('id'));
+                        });
+                        sortObj["sortedlistArr"] = sortedlistArr;
+                    }
+                })
+                .disableSelection();
+        }
 
         this.initialize();
 
