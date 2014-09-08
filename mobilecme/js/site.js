@@ -300,16 +300,17 @@ $(document).ready(function () {
             }
 
             if ($("ul.sortable").data('sortJSON')) {
-                console.log("sortObj",$("ul.sortable").data('sortJSON'));
                 var sortJSON = $("ul.sortable").data('sortJSON'),
                     orgList = sortJSON.listArr,
                     sortList = sortJSON.sortedlistArr;
                 
                 console.log("sortJSON",orgList,sortList);
+                Cookies.set('plot1',orgList);
+                Cookies.set('plot2',sortList);
 
-                if(sortList !=  undefined){
+                /*if(sortList !=  undefined){
                     showanswers.answercall(sortList,"sort");
-                }
+                }*/
             };
 
             if ($(document).find('.form-control.required').val() != "" || $(document).hasClass('.listview.pass') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {

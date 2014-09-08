@@ -52,14 +52,14 @@ define(function (require) {
                     'opacity': 0.6,
                     create: function( event, ui ) {
                         $(this).find('li').each(function(index, el) {
-                            listArr.push($(el).attr('id'));
+                            listArr.push([ $(el).text(), parseFloat( $(el).data( "avg" ) ) ]);
                         });
                         sortObj["listArr"] = listArr;
                         $(this).data('sortJSON', sortObj);
                     },
                     update: function(event, ui) {
                         $(this).find('li').each(function(index, el) {
-                            sortedlistArr.push($(el).attr('id'));
+                            sortedlistArr.push([ $(el).text(), parseFloat( $(el).data( "avg" ) ) ]);
                         });
                         sortObj["sortedlistArr"] = sortedlistArr;
                     }

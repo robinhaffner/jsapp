@@ -268,23 +268,28 @@
       "answers": [
         {
           "answersid": "c1",
-          "answerstxt": "<p>Strongly Disagree</p>"
+          "answerstxt": "<p>Strongly Disagree</p>",
+          "score": 2.0
         },
         {
           "answersid": "c2",
-          "answerstxt": "<p>Disagree</p>"
+          "answerstxt": "<p>Disagree</p>",
+          "score": 7.0
         },
         {
           "answersid": "c3",
-          "answerstxt": "<p>Neither Agree nor Disagree</p>"
+          "answerstxt": "<p>Neither Agree nor Disagree</p>",
+          "score": 6.0
         },
         {
           "answersid": "c4",
-          "answerstxt": "<p>Agree</p>"
+          "answerstxt": "<p>Agree</p>",
+          "score": 10.5
         },
         {
           "answersid": "c5",
-          "answerstxt": "<p>Strongly Agree</p>"
+          "answerstxt": "<p>Strongly Agree</p>",
+          "score": 3.888
         }
       ],
       "audio_url": "",
