@@ -12,6 +12,7 @@ define(function (require) {
         VideoView           = require("views/VideoView"),
         ContentView         = require("views/ContentView"),
         FinalstepView       = require("views/FinalstepView"),
+		ChartView        	= require("views/ChartView"),
 
         detailsURL = /^#(\w+)/,
         mainView = new MainView(),

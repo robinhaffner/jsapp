@@ -1,0 +1,31 @@
+<div class="row"><div class="headline">{{{this.headline}}}</div>
+<h1>{{{this.question}}}</h1>
+
+	{{#if answers}}
+    <div data-role="listview" data-qid="{{this.qid}}" data-groupid="{{this.groupid}}" data-async-answer="{{this.async-answer}}" data-skip="{{this.skip}}" data-listview-type="{{this.type}}" class="listview selection-list {{this.type}} qlist">
+		<ul class="chartData" id="chartData" data-type={{this.type}} style="display:none">
+		 {{#this.answers}}
+				<li  width="0" height="0" id="data_{{this.answersid}}" data-text="{{this.answerstxt}}" data-id="{{this.answersid}}" data-score="{{this.score}}"></li>
+        {{/this.answers}}
+		</ul>
+	    </div>
+    {{/if}}	
+
+{{#if_eq this.type "bubbles"}}
+	<!--<div id="bubbleContainer" style="position: relative; hieght:200px">-->
+		{{#this.answers}}
+		<div id="positionBubble_{{this.answersid}}" style="position: relative">
+			<div id=bubbleLabel_{{this.answersid}} style="z-index: 500; position:relative;left:30px;top:85px;">{{{this.answerstxt}}}</div>
+				<canvas width="20" height="20" id="bubble_{{this.answersid}}" data-text="{{{this.answerstxt}}}" data-id="{{this.answersid}}" data-score="{{this.score}}"></canvas>
+		</div>
+		{{/this.answers}}
+<!--	</div>-->
+{{/if_eq}}
+    
+{{#if_eq this.type "bar"}}
+       	<div class="rotateChart">
+    	 	<canvas id="interactive-bar" width="400" height="400"></canvas>	
+  		</div>
+    </div>
+{{/if_eq}}
+
