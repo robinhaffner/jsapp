@@ -3,7 +3,6 @@ window.log=function(){log.history=log.history|| new Array(1000);log.history.shif
 
 var multiselectArr = new Array();
 var specialty, paramObj, passedJoinedVars, startPageNum;
-var whichListView = $(document).find(".listview.sortable").attr('id');
 
 Cookies.defaults = {
     path: '/',
@@ -76,19 +75,6 @@ function selectSpecialty(s) {
     }else{
         document.location = strsplit+"?specialty="+userselectedspecialty+"&"+passedJoinedVars+"#"+startPageNum;
     }
-}
-
-function getListView(){    
-    $('#'+whichListView)
-        .sortable({
-            'containment': 'parent',
-            'opacity': 0.6,
-            update: function(event, ui) {
-                console.log("event, ui",event, ui);
-            }
-        })
-        .disableSelection()
-        .listview().listview('refresh');
 }
 
 var questionhandler = {
@@ -241,7 +227,7 @@ $(document).ready(function () {
             offCanvas ();
         };
     });
-    
+
     //Questions function
     $(document).on('click','.selection-list li',function(event){
         event.preventDefault();
@@ -383,8 +369,6 @@ $(document).ready(function () {
 		}
 
     });
-	
-
 		 
 	function playAudio(_page){
 			var audio_url = $('.'+_page+'-control').attr('audio_url');
