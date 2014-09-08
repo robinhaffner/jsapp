@@ -9,6 +9,8 @@ define(function (require) {
 
         questionTpl = Handlebars.compile(questionHtml);
 
+        require('js/lib/vendor/jquery-ui.min.js'); //file plugin need to execute sortable funtion
+        
         Handlebars.registerHelper('if_eq', function(a, b, opts) {
             if(a == b) // Or === depending on your needs
                 return opts.fn(this);
@@ -34,6 +36,11 @@ define(function (require) {
         this.render = function (content) {
             this.$el.html(questionTpl(content));
             this.$el.data('template', '').data('template', 'questionstpl');
+ 
+
+            var sortcontainer = $("ul.sortable").attr('id'); //find sortable ul id
+            if (sortcontainer) {  $("#"+sortcontainer).sortable(); }; //sortable jquery-ui function
+     
             return this;
         };
 
