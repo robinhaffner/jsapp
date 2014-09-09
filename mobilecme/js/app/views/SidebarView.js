@@ -22,7 +22,13 @@ define(function (require) {
 
         this.getSidebar = function () {
             siteAdapter.getSidebarData('sidebar',0).done(function (_sidebar) {
-                $('.sidebar-offcanvas').html(sidebarTpl(_sidebar));
+				if(_sidebar.showSidebar == "true"){
+					this.render();
+                	$('.sidebar-offcanvas').html(sidebarTpl(_sidebar));
+				} else {
+					console.log("sidebar");
+					$("#sidebar").remove();
+				}
                 return;
             });
             var highlightchapter = Cookies("highlightchapter");

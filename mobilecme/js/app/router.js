@@ -69,12 +69,12 @@ define(function (require) {
             navView.getTopNav()
         },
         sidebarCanvas = function () {
-            var sidebarView = new SidebarView()
-            sidebarView.render()
-            sidebarView.getSidebar()
+            var sidebarView = new SidebarView();
+            //sidebarView.render();
+            sidebarView.getSidebar();
         },
         ftr = function () {
-            var footerView = new FooterView()
+            var footerView = new FooterView();
             footerView.render();
             footerView.getFooter();
         },

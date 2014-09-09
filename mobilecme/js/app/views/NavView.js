@@ -12,6 +12,24 @@ define(function (require) {
 
 
         navTpl          = Handlebars.compile(navHtml);
+	
+	 Handlebars.registerHelper('if_eq', function(a, b, opts) {
+		 console.log("if_eg",a, b, opts);
+            if(a == b) // Or === depending on your needs
+                return opts.fn(this);
+            else
+                if(opts == undefined){
+                    var ret = "";
+
+                    for(var i=0, j=a.length; i<j; i++) {
+                        ret = ret + b.fn(a[i]);
+                    }
+                    return ret;
+                }
+                else {
+                    return opts.inverse(this);
+                }
+        });
         
     return function () {
 

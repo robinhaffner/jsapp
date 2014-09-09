@@ -58,10 +58,14 @@ define(function (require) {
                         $(this).data('sortJSON', sortObj);
                     },
                     update: function(event, ui) {
+						var sortedlistArr = [];
                         $(this).find('li').each(function(index, el) {
-                            sortedlistArr.push([ $(el).text(), parseFloat( $(el).data( "avg" ) ) ]);
+                            //sortedlistArr.push([ $(el).text(), parseFloat( $(el).data( "avg" ) ) ]);
+							sortedlistArr.push( $(el).data("id"));
                         });
                         sortObj["sortedlistArr"] = sortedlistArr;
+						console.log(sortObj["sortedlistArr"]);
+						Cookies.set('sortResults',sortObj["sortedlistArr"]);
                     }
                 })
                 .disableSelection();

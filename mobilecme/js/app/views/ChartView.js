@@ -35,18 +35,14 @@ define(function (require) {
 		
 		this.renderChart = function(content){
 			console.log(content);
-			require(['js/lib/Chart.js'], function(Chart) {
-				var yourSelections =[5,4,3,2,1],
-				peerSelections = [],
-				_labels = [],
-				_type = content.type;
-	
-				for (var i = 0; i <content.answers.length; ++i){
-					console.log(content.answers[i]);
-					peerSelections[i] = content.answers[i].score;
-					_labels[i] = jQuery(content.answers[i].answerstxt).text();
-				}
+			var _labels = [],_type = content.type;
+			for (var j = 0; j <content.answers.length; ++j){
+				_labels[j] = jQuery(content.answers[j].answerstxt).text();
+			}
 			
+
+			require(['js/lib/Chart.js'], function(Chart) {
+
 				// Colour variables
 				var selectedColor = "#f96802",defaultColor = "#dcd2ba",red = "#bf616a",blue = "#5B90BF",orange = "#d08770",yellow = "#ebcb8b",green = "#a3be8c",teal = "#96b5b4",pale_blue = "#8fa1b3",purple = "#b48ead",brown = "#ab7967";
 				 
@@ -138,8 +134,17 @@ define(function (require) {
 						
 						helpers.addEvent(bubble.canvas, 'click', function(evt){
 							 console.log(evt, this.parentElement);
+							var sortedlistArr = [];
+							helpers.each(contexts, function(bubble){
+								//sortedlistArr.push( canvas.data("id"));
+                        	});
+							
+							//console.log(sortObj["sortedlistArr"]);
+							//Cookies.set('sortResults',sortedlistArr);
 							this.style.display = 'none';
 							this.parentElement.innerHTML = '';
+							
+							
 							//1. record the selection - these are used to display the results
 							//2. animate and destroy the object
 						});
@@ -150,6 +155,29 @@ define(function (require) {
 					
 				} //end create bubbles
 				else if (_type == 'bar'){
+					
+				var _sortResults = Cookies.get('sortResults').split(",");
+			
+				console.log('sortResults',_sortResults);
+				
+				var sortedSelections =[],yourSelections =[],peerSelections = [];
+
+				for (var i = 0; i <_sortResults.length; ++i){
+					var _index = parseFloat(_sortResults[i]);
+					yourSelections[i] = i+1;
+					console.log("index: ",_index);
+					console.log("i+1: ",i+1);
+					for (var j = 0; j <content.answers.length; ++j){
+						//console.log(content.answers[j].score, jQuery(content.answers[j].answerstxt).text());
+						if (_index == parseFloat(content.answers[j].answersid)){
+							peerSelections[i] = content.answers[j].score;
+							_labels[i] = jQuery(content.answers[j].answerstxt).text();
+						}
+					}
+				}
+				console.log(yourSelections);	
+				console.log(peerSelections);
+				console.log(_labels);
 					var canvas = $id('interactive-bar');
 					var ctx =  $id('interactive-bar').getContext('2d');
 		
@@ -162,7 +190,7 @@ define(function (require) {
 							highlightFill: selectedColor,
 							data: yourSelections//[random(), random(), random(), random(), random()]
 						},
-								  {
+						{
 							label: "Peer Selections",
 							fillColor : defaultColor,
 							strokeColor : "rgba(0,0,0,0)",

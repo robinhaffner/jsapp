@@ -307,7 +307,6 @@ $(document).ready(function () {
                 console.log("sortJSON",orgList,sortList);
                 Cookies.set('plot1',orgList);
                 Cookies.set('plot2',sortList);
-
                 /*if(sortList !=  undefined){
                     showanswers.answercall(sortList,"sort");
                 }*/

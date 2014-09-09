@@ -25,12 +25,12 @@
     "topnav": [
         {
             "next-control": "Next",
+			"navType": "score",
             "headline": "<p>Meaningful Efficacy Across Multiple Endpoints</p>"
         }
     ],
     "footer": [
         {
-            "showSidebar": "false",
 			"col-1": {
 
             },
@@ -117,17 +117,17 @@
             "answers": [
                 {
                     "answersid": "1",
-                    "answerstxt": "<p>Abdominal pain</p>",
+                    "answerstxt": "<p>Abdominal <br>pain</p>",
 					"score":"3.5"
                 },
                 {
                     "answersid": "2",
-                    "answerstxt": "<p>Difficulty swallowing</p>",
+                    "answerstxt": "<p>Difficulty<br>swallowing</p>",
 					"score":"1.75"
                 },
                 {
                     "answersid": "3",
-                    "answerstxt": "<p>Smooth muscle spasm</p>",
+                    "answerstxt": "<p>Smooth muscle<br> spasm</p>",
 					"score":"4.0"
                 },
                 {
@@ -137,7 +137,7 @@
                 },
                 {
                     "answersid": "5",
-                    "answerstxt": "<p>Pain while urinating</p>",
+                    "answerstxt": "<p>Pain while <br>urinating</p>",
 					"score":"1.5"
                 }
             ],
@@ -174,7 +174,7 @@
                 {
                     "answersid": "4",
                     "answerstxt": "<p>Budd-Chiari <br>syndrome</p>",
-					"score":"2"
+					"score":"4"
                 },
                 {
                     "answersid": "5",
@@ -197,30 +197,30 @@
             "async-answer": "false",
 			"skip": "true",
             "answers": [
-                {
+            {
                     "answersid": "1",
-                    "answerstxt": "<p>PIGA enzyme</p>",
-					"score":"3.5"
+                    "answerstxt": "<p>Blood <br>transfusion<br> risks</p>",
+					"score":"2.8"
                 },
                 {
                     "answersid": "2",
-                    "answerstxt": "<p>Nitric oxide</p>",
-					"score":"2"
+                    "answerstxt": "<p>Cost of <br>treatment</p>",
+					"score":"0.5"
                 },
                 {
                     "answersid": "3",
-                    "answerstxt": "<p>Carbon dioxide</p>",
-					"score":"1.5"
+                    "answerstxt": "<p>CVT risk</p>",
+					"score":"3.5"
                 },
                 {
                     "answersid": "4",
-                    "answerstxt": "<p>C3-convertase</p>",
-					"score":".9"
+                    "answerstxt": "<p>Budd-Chiari <br>syndrome</p>",
+					"score":"4"
                 },
                 {
                     "answersid": "5",
-                    "answerstxt": "<p>DAF/CD55</p>",
-					"score":"4"
+                    "answerstxt": "<p>Pulmonary <br>embolism</p>",
+					"score":"1.5"
                 }
             ],
             "audio_url": "http://c.pro-c.me/programs/demo/audio/applause.mp3",
@@ -279,7 +279,7 @@
             "async-answer": "false",
 			"skip": "true",
             "answers": [
-                {
+           {
                     "answersid": "1",
                     "answerstxt": "<p>PIGA enzyme</p>",
 					"score":"3.5"
@@ -287,22 +287,22 @@
                 {
                     "answersid": "2",
                     "answerstxt": "<p>Nitric oxide</p>",
-					"score":"3.5"
+					"score":"2"
                 },
                 {
                     "answersid": "3",
                     "answerstxt": "<p>Carbon dioxide</p>",
-					"score":"3.5"
+					"score":"1.5"
                 },
                 {
                     "answersid": "4",
                     "answerstxt": "<p>C3-convertase</p>",
-					"score":"3.5"
+					"score":".9"
                 },
                 {
                     "answersid": "5",
                     "answerstxt": "<p>DAF/CD55</p>",
-					"score":"3.5"
+					"score":"4"
                 }
             ],
             "audio_url": "http://c.pro-c.me/programs/demo/audio/applause.mp3",

@@ -1,13 +1,7 @@
 {
   "sidebar": [
-    {
-      "name": "",
-      "logo": "",
-      "header": "",
-      "headline": "",
-      "sidebarlist": [
-        
-      ]
-    }
+  {
+  	"showSidebar": "false"
+	}
   ]
 }
