@@ -73,7 +73,7 @@ define(function (require) {
 				   };
 
 					var config = {
-						animation: true,
+						animation: false,
 						animateScale: true,
 						responsive : true, percentageInnerCutout: 0, animateRotate : false, segmentStrokeWidth : 0, segmentShowStroke : false,
 						onAnimationComplete: function(){
@@ -132,13 +132,10 @@ define(function (require) {
 								}
 							]
 						}
-						//bubble.canvas.left = 100; //window.innerHeight / 2;
-						//bubble.canvas.top = 100; 
-						
+						bubble.canvas.parentElement.style.display= 'inline';
 						var _chart = new Chart(bubble).Doughnut(data.segments, config);
-						//add the text label for the bubble. It should come from the view div that was loaded from the json when the template was loaded
+
 						
-						//console.log(_chart);
 						helpers.addEvent(bubble.canvas, 'click', function(evt){
 							 console.log(evt, this.parentElement);
 							this.style.display = 'none';
@@ -219,6 +216,89 @@ define(function (require) {
 			});
 		}
 		
+//		this.renderJQPlot = function(content){
+//			var whichBubble = $(".canvasBubble")
+//			console.log(whichBubble);
+//			
+//
+//
+//
+//				var yourSelections =[5,4,3,2,1],
+//				peerSelections = [],
+//				_labels = [],
+//				_type = content.type;
+//				//var whichBubble = document.getElementById("canvasBubble");
+//				for (var i = 0; i <content.answers.length; ++i){
+//					//console.log(content.answers[i]);
+//					peerSelections[i] = content.answers[i].score;
+//					_labels[i] = $(content.answers[i].answerstxt).text();
+//				}
+//			console.log(_labels);
+//		 	var bubblePlot = [];
+//			var arr = [];
+//			bubblePlot = [[45,25,50,_labels[0]],[25,60,50,_labels[1]],[55,80,50,_labels[2]],[80,50,50,_labels[3]]];
+//		
+//			var colorArray=[];
+//			colorArray = ['#8bcffa', '#8bcffa', '#8bcffa', '#8bcffa','#8bcffa'];
+//			
+//			
+//			require(['js/lib/jqplot/jquery.jqplot.min.js'], function() {
+//								//$.jqplot.config.enablePlugins = true;
+//			console.log($.jqplot);
+//			var plot2 = $.jqplot(whichBubble,[bubblePlot],{
+//				animate: true,
+//				seriesColors:colorArray,
+//				 grid: {
+//					drawGridLines: false,        // wether to draw lines across the grid or not.
+//					gridLineColor: '#ffffff',    // *Color of the grid lines.
+//					background: '#ffffff',      // CSS color spec for background color of grid.
+//					borderColor: '#ffffff',     // CSS color spec for border around grid.
+//					borderWidth: 0,           // pixel width of border around grid.
+//					shadow: false,               // draw a shadow for grid.
+//					shadowAngle: 0,            // angle of the shadow.  Clockwise from x axis.
+//					shadowOffset: 0,          // offset from the line of the shadow.
+//					shadowWidth: 0,             // width of the stroke for the shadow.
+//					shadowDepth: 0,             // Number of strokes to make when drawing shadow.
+//												// Each stroke offset by shadowOffset from the last.
+//					shadowAlpha: 0,           // Opacity of the shadow
+//					renderer: $.jqplot.CanvasGridRenderer,  // renderer to use to draw the grid.
+//					rendererOptions: {}         // options to pass to the renderer.  Note, the default
+//												// CanvasGridRenderer takes no additional options.
+//				},
+//				seriesDefaults:{
+//					renderer: $.jqplot.BubbleRenderer,
+//					rendererOptions: {
+//						bubbleAlpha: 0.6,
+//						highlightAlpha: 0.8,
+//						highlightMouseDown: false, //diesable jqplotDataHighlight
+//						highlightMouseOver: false, //diesable jqplotDataHighlight
+//						autoscaleBubbles: false,
+//						escapeHtml: false
+//					},
+//					shadow: true,
+//					shadowAlpha: 0.05
+//				},
+//				
+//				 axesDefaults: {
+//					show: false,    // wether or not to renderer the axis.  Determined automatically.
+//					showTickMarks:false,
+//					tickInterval: 10,
+//					ticks: [10,20,30,40,50,60,70,80,100],
+//					showTicks: false, 
+//					drawMajorGridlines: false,
+//					drawMinorGridlines: false,
+//					drawMajorTickMarks: false,
+//					rendererOptions: {
+//						tickInset: 0,
+//						minorTicks: 0
+//					}
+//							  
+//			   }
+//			});	
+//		});
+//		};
+
+		
 
         this.render = function (content) {
             this.$el.html(chartTpl(content));
@@ -227,7 +307,6 @@ define(function (require) {
             return this;
         };
 		
-
 
         this.initialize();
 
