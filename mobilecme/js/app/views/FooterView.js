@@ -22,9 +22,9 @@ define(function (require) {
 
         this.getFooter = function () {
             siteAdapter.getData('footer',0).done(function (_ftr) {
-				console.log("col-1",_ftr["col-1"].length)
+				console.log("col-1",_ftr["col-1"].link)
                 $("#ftr").html(footerTpl(_ftr));
-				if(_ftr["col-1"].length==undefined){ $(".btn-offcanvas").remove(); }
+				//if(_ftr["col-1"].length==undefined){ $(".btn-offcanvas").remove(); }
                 return;
             });
         };

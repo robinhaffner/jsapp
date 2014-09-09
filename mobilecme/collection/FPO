@@ -5,6 +5,7 @@
       "logo": "http://c.pro-c.me/programs/demo/images/Penn.png",
       "header": "Company Header",
       "headline": "",
+	  "showSidebar": "true",
       "sidebarlist": [
         {
           "media": 1,

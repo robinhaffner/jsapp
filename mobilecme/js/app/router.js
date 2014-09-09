@@ -71,7 +71,7 @@ define(function (require) {
         sidebarCanvas = function () {
             var sidebarView = new SidebarView();
             //sidebarView.render();
-            sidebarView.getSidebar();
+            sidebarView.getSidebar(sidebarView);
         },
         ftr = function () {
             var footerView = new FooterView();

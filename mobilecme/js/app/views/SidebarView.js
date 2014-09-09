@@ -20,14 +20,12 @@ define(function (require) {
             return this;
         };
 
-        this.getSidebar = function () {
+        this.getSidebar = function (s) {
             siteAdapter.getSidebarData('sidebar',0).done(function (_sidebar) {
+				console.log('s',s);
 				if(_sidebar.showSidebar == "true"){
-					this.render();
+					//this.render();
                 	$('.sidebar-offcanvas').html(sidebarTpl(_sidebar));
-				} else {
-					console.log("sidebar");
-					$("#sidebar").remove();
 				}
                 return;
             });

@@ -48,6 +48,7 @@
       "headline": "<p>From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?</p>"
     }],
   "footer": [{
+  	  "sidebar": {},
       "col-1": {
         "txt": "Privacy",
         "link": "tpl/privacy.html"

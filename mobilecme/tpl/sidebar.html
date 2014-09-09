@@ -6,6 +6,7 @@
 	{{/if}}
 	<p>{{this.headline}}<p>
 </div>
+{{#if sidebarlist}}
 <div class="list-group sidebar-list">
 	{{#this.sidebarlist}}
 	<div class="list-group-item" id="list-{{@index}}">
@@ -21,3 +22,4 @@
 	</div>
 	{{/this.sidebarlist}}
 </div>
+{{/if}}
