@@ -224,7 +224,7 @@ $(document).ready(function () {
     // Do responsive stuff
     $(window).on('resize', function(e){
         if ($("html").hasClass('no-touch')) {
-            offCanvas ();
+            if ($('.sidebar-offcanvas').length) { offCanvas (); };            
         };
     });
 

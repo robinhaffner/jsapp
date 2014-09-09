@@ -24,9 +24,11 @@ define(function (require) {
             siteAdapter.getSidebarData('sidebar',0).done(function (_sidebar) {
 				console.log('s',s);
 				if(_sidebar.showSidebar == "true"){
-					//this.render();
                 	$('.sidebar-offcanvas').html(sidebarTpl(_sidebar));
-				}
+				} else {
+                    $('.sidebar-offcanvas').remove();
+                    $('.main-canvas, #nav-container').width("100%");
+                }
                 return;
             });
             var highlightchapter = Cookies("highlightchapter");
