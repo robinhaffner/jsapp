@@ -70,7 +70,7 @@ define(function (require) {
         },
         sidebarCanvas = function () {
             var sidebarView = new SidebarView();
-            //sidebarView.render();
+            sidebarView.render();
             sidebarView.getSidebar(sidebarView);
         },
         ftr = function () {

@@ -22,7 +22,6 @@ define(function (require) {
 
         this.getSidebar = function (s) {
             siteAdapter.getSidebarData('sidebar',0).done(function (_sidebar) {
-				console.log('s',s);
 				if(_sidebar.showSidebar == "true"){
                 	$('.sidebar-offcanvas').html(sidebarTpl(_sidebar));
 				} else {
