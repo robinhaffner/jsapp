@@ -228,6 +228,14 @@ $(document).ready(function () {
         };
     });
 
+    //sidebar clickable container
+    /*$(document).on('click', '#sidebar .list-group-item', function(event) {
+        event.preventDefault();
+        var chapterurlpath = document.location.host+document.location.pathname+$(this).data('chapterurl');
+        console.log("chapterurlpath",chapterurlpath);
+        document.location = chapterurlpath;
+    });*/
+
     //Questions function
     $(document).on('click','.selection-list li',function(event){
         event.preventDefault();

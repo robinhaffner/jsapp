@@ -299,7 +299,7 @@ a, a:hover, a:focus, a:active {
 #sidebar .sidebar-hdr > img { display: block; margin: 0 auto; width: 300px; }
 
 #sidebar .list-group { margin-bottom: 0; }
-#sidebar .list-group-item { background: url(../images/bg-sidebar.jpg) repeat scroll 0 0 transparent; padding: 15px; }
+#sidebar .list-group-item { cursor: pointer; background: url(../images/bg-sidebar.jpg) repeat scroll 0 0 transparent; padding: 15px; }
 #sidebar .list-group-item:first-child, #sidebar .list-group-item:last-child { border-radius: 0; }
 #sidebar .list-group-item.selected { 
   background-color: #999; 

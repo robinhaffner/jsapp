@@ -9,7 +9,7 @@
 {{#if sidebarlist}}
 <div class="list-group sidebar-list">
 	{{#this.sidebarlist}}
-	<div class="list-group-item" id="list-{{@index}}">
+	<div class="list-group-item" id="list-{{@index}}" data-chapterurl="{{this.media-url}}">
 		<div class="media">
 		  <a class="pull-left" href="{{this.media-url}}">
 		    <img class="media-object" src="{{this.media-img}}" alt="">
