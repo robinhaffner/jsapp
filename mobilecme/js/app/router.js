@@ -19,6 +19,7 @@ define(function (require) {
         navView = new NavView(),
         programIDView = siteAdapter.getSettings("programid"),
         certificateIDView = siteAdapter.getSettings("certificate"),
+        specialtyView = siteAdapter.getSettings("specialtyRequired"),
         startPageNum = siteAdapter.getStartPage("start"),
 
         route = function () {
@@ -33,17 +34,27 @@ define(function (require) {
             $('body').data('programid', programIDView);
             $('body').data('certificate', certificateIDView);
 
-            if ( (!hashpath && specialty) || (!hashpath && !specialty) || getStoredSpecialty == '') {
-            //if ( !hashpath || !specialty || getStoredSpecialty == '') {
-                siteAdapter.getData("sitecontent","main").done(function(_content) {
-                  var tpl = eval(_content.template+"View");
-                  var handler = new tpl();
+            if (specialtyView == "true" || !hashpath) {
+                //if ( (!hashpath && specialty) || (!hashpath && !specialty) || getStoredSpecialty == '') {
+                //if ( !hashpath || !specialty || getStoredSpecialty == '') {
+                    siteAdapter.getData("sitecontent","main").done(function(_content) {
+                      var tpl = eval(_content.template+"View");
+                      var handler = new tpl();
 
-                  handler.render(_content);
-                  navView.setNextPage(startPageNum);
-                  $("title").html(_content.title);
+                      handler.render(_content);
+                      navView.setNextPage("main");
+                      $("title").html(_content.title);
+                    });
+                //}
+            } else {
+                siteAdapter.getData("sitecontent",startPageNum).done(function(_content) {
+                    var tpl = eval(_content.template+"View");
+                    var handler = new tpl();
+
+                    handler.render(_content);
+                    navView.setNextPage(startPageNum);
+                    $("title").html(_content.title);
                 });
-                
             }
 
             if (match && specialty || getStoredSpecialty != undefined) {
