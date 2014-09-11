@@ -308,9 +308,8 @@ $(document).ready(function () {
         if (questionpage) {
             var _qaObj = {},
                 req = $(document).find('.form-control');
-         
 
-            if ($(document).find('.listview').data('skip')) { //allow user to skip question
+            if ($(document).find('.listview').data('skip') == "true") { //allow user to skip question
                 questionhandler.bypass();
                 return;
             }
@@ -328,7 +327,8 @@ $(document).ready(function () {
                 }*/
             };
 
-            if ($(document).find('.form-control.required').val() != "" || $(document).hasClass('.listview.pass') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {
+            if ($(document).find('.form-control.required').val() != undefined || $(document).hasClass('.listview.pass') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {
+                console.log("if");
                 if ($(document).find('.freeform').data('role') == "listview" && !$(this).hasClass('click-control')) {
                     event.preventDefault();
 
@@ -378,6 +378,7 @@ $(document).ready(function () {
 
             }
             else { 
+                console.log("else");
                 event.preventDefault(); 
                 var htmlAlert = '<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Warning!</strong> Please answer question</div>';
                 $(".alert").remove();
