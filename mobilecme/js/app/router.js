@@ -47,6 +47,14 @@ define(function (require) {
                 Cookies.set('specialty', "None");
                 specialty = getStoredSpecialty;
                 if (match == null) { match = []; match[1] = startPageNum; };
+                siteAdapter.getData("sitecontent",startPageNum).done(function(_content) {
+                  var tpl = eval(_content.template+"View");
+                  var handler = new tpl();
+
+                  handler.render(_content);
+                  navView.setNextPage(startPageNum);
+                  $("title").html(_content.title);
+                });
             }
             console.log("message",match,specialty,getStoredSpecialty);
 
