@@ -34,15 +34,18 @@ define(function (require) {
             $('body').data('programid', programIDView);
             $('body').data('certificate', certificateIDView);
 
-            if (specialtyView == "true") {
-                siteAdapter.getData("sitecontent","main").done(function(_content) {
-                  var tpl = eval(_content.template+"View");
-                  var handler = new tpl();
 
-                  handler.render(_content);
-                  navView.setNextPage("main");
-                  $("title").html(_content.title);
-                });
+            if (specialtyView == "true") {
+                if (specialty != false && !hashpath) {
+                    siteAdapter.getData("sitecontent","main").done(function(_content) {
+                      var tpl = eval(_content.template+"View");
+                      var handler = new tpl();
+
+                      handler.render(_content);
+                      navView.setNextPage("main");
+                      $("title").html(_content.title);
+                    });
+                };
             } else {
                 Cookies.set('specialty', "None");
                 specialty = getStoredSpecialty;
