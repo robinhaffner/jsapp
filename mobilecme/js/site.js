@@ -71,6 +71,7 @@ function getPageParam() {
 
 
 function selectSpecialty(s) {
+    console.log("selectSpecialty",s, window.location.hash);
     var doclocation = document.location.href,
     search = /([^&=]+)=?([^&]*)/g,
     strsplit = doclocation.split(document.location.search)[0],    
