@@ -33,14 +33,14 @@ define(function (require) {
             $('body').data('programid', programIDView);
             $('body').data('certificate', certificateIDView);
 
-            //if ( (!hashpath && specialty) || (!hashpath && !specialty) || getStoredSpecialty == '') {
-            if ( !hashpath || !specialty || getStoredSpecialty == '') {
+            if ( (!hashpath && specialty) || (!hashpath && !specialty) || getStoredSpecialty == '') {
+            //if ( !hashpath || !specialty || getStoredSpecialty == '') {
                 siteAdapter.getData("sitecontent","main").done(function(_content) {
                   var tpl = eval(_content.template+"View");
                   var handler = new tpl();
 
                   handler.render(_content);
-                  navView.setNextPage("main");
+                  navView.setNextPage(startPageNum);
                   $("title").html(_content.title);
                 });
                 
@@ -48,7 +48,7 @@ define(function (require) {
 
             if (match && specialty || getStoredSpecialty != undefined) {
 
-                if (match == null) { match= []; match[1] = startPageNum; }; // setcookie
+                if (match == null) { match = []; match[1] = startPageNum; }; // setcookie
 
                 siteAdapter.getData("sitecontent",match[1]).done(function(_content){
                   var tpl = eval(_content.template+"View");
