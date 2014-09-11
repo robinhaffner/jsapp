@@ -47,13 +47,7 @@ define(['json!server/program/'+program, 'json!server/collection/'+collection], f
     return deferred.promise();
     
   },
-  getSpecialtyRequired = function (section) {
-    return data[section];
-  },
-  getProgramID = function (section) {
-    return data[section];
-  },
-  getCertificateID = function (section) {
+  getSettings = function (section) {
     return data[section];
   },
   getStartPage = function (section) {
@@ -99,12 +93,10 @@ define(['json!server/program/'+program, 'json!server/collection/'+collection], f
   // The public API
   return {
     getData: getData,
-    getProgramID: getProgramID,
-    getCertificateID: getCertificateID,
+    getSettings: getSettings,
     getStartPage: getStartPage,
     getSidebarData: getSidebarData,
-    getAnswers: getAnswers,
-	getSpecialtyRequired: getSpecialtyRequired
+    getAnswers: getAnswers
   };
 
 });

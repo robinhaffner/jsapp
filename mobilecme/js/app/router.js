@@ -17,8 +17,8 @@ define(function (require) {
         detailsURL = /^#(\w+)/,
         mainView = new MainView(),
         navView = new NavView(),
-        programIDView = siteAdapter.getProgramID("programid"),
-        certificateIDView = siteAdapter.getCertificateID("certificate"),
+        programIDView = siteAdapter.getSettings("programid"),
+        certificateIDView = siteAdapter.getSettings("certificate"),
         startPageNum = siteAdapter.getStartPage("start"),
 
         route = function () {
@@ -33,7 +33,8 @@ define(function (require) {
             $('body').data('programid', programIDView);
             $('body').data('certificate', certificateIDView);
 
-            if ( (!hashpath && specialty) || (!hashpath && !specialty) || getStoredSpecialty == '') {
+            //if ( (!hashpath && specialty) || (!hashpath && !specialty) || getStoredSpecialty == '') {
+            if ( !hashpath || !specialty || getStoredSpecialty == '') {
                 siteAdapter.getData("sitecontent","main").done(function(_content) {
                   var tpl = eval(_content.template+"View");
                   var handler = new tpl();
