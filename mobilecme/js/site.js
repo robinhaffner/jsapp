@@ -64,17 +64,21 @@ function getPageParam() {
 }
 
 function selectSpecialty(s) {
-    console.log("selectSpecialty",s);
     var doclocation = document.location.href,
     search = /([^&=]+)=?([^&]*)/g,
     strsplit = doclocation.split(document.location.search)[0],    
-    userselectedspecialty = s.text();
+    userselectedspecialty = s.text(),
+    strhash = window.location.hash, gotopage;
+
+    if (strhash.split("#").length > 0) {
+        gotopage = strhash.split("#")[1]
+    } else { gotopage = startPageNum }
 
     Cookies.set('specialty', userselectedspecialty);
     if (passedJoinedVars == undefined){
-        document.location = document.location.href+"?specialty="+userselectedspecialty+"#"+startPageNum;
+        document.location = document.location.href+"?specialty="+userselectedspecialty+"#"+gotopage;
     }else{
-        document.location = strsplit+"?specialty="+userselectedspecialty+"&"+passedJoinedVars+"#"+startPageNum;
+        document.location = strsplit+"?specialty="+userselectedspecialty+"&"+passedJoinedVars+"#"+gotopage;
     }
 }
 
