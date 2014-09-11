@@ -62,7 +62,13 @@ define(function (require) {
                     Cookies.set('specialty', "None");
                 }
                 specialty = getStoredSpecialty;
-                if (match == null) { match = []; match[1] = startPageNum; };
+                console.log("gotopage",gotopage);
+
+                if (match == null) { 
+                    match = []; 
+                    match[1] = startPageNum; 
+                };
+                
                 siteAdapter.getData("sitecontent",match[1]).done(function(_content) {
                   var tpl = eval(_content.template+"View");
                   var handler = new tpl();

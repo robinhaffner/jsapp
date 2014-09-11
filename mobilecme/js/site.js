@@ -2,12 +2,18 @@
 window.log=function(){log.history=log.history|| new Array(1000);log.history.shift();log.history.push(arguments);if(this.console){console.log(Array.prototype.slice.call(arguments))}};
 
 var multiselectArr = new Array();
-var specialty, paramObj, passedJoinedVars, startPageNum;
+var specialty, paramObj, passedJoinedVars, startPageNum, gotopage;
 
 Cookies.defaults = {
     path: '/',
     expires: 600
 };
+
+strhash = window.location.hash;
+
+if (strhash.split("#").length > 0) {
+    gotopage = strhash.split("#")[1]
+} else { gotopage = startPageNum }
 
 function offCanvas () {
     var setwidth = $(window).width();
@@ -63,16 +69,12 @@ function getPageParam() {
     }
 }
 
+
 function selectSpecialty(s) {
     var doclocation = document.location.href,
     search = /([^&=]+)=?([^&]*)/g,
     strsplit = doclocation.split(document.location.search)[0],    
-    userselectedspecialty = s.text(),
-    strhash = window.location.hash, gotopage;
-
-    if (strhash.split("#").length > 0) {
-        gotopage = strhash.split("#")[1]
-    } else { gotopage = startPageNum }
+    userselectedspecialty = s.text();
 
     Cookies.set('specialty', userselectedspecialty);
     if (passedJoinedVars == undefined){
