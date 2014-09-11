@@ -1,5 +1,6 @@
 {
     "programid": "9001",
+	"specialtyRequired": "false",
     "start": [
         {
             "id": "question1"
@@ -8,7 +9,6 @@
     "manifest": [
         {
             "pages": [
-                "main",
                 "question1",
                 "page1",
                 "response1",
@@ -49,19 +49,6 @@
 		}
 	}],
     "sitecontent": [
-        {
-            "id": "main",
-            "template": "Main",
-            "title": "PeerPlay: Barndogesic",
-            "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
-            "header": "Select your Specialty",
-            "listviewer": [
-                "Pulmonology",
-                "Other"
-            ],
-            "audio_url": "",
-            "audio_autoplay": ""
-        },
         {
             "id": "question1",
             "groupid": "999",

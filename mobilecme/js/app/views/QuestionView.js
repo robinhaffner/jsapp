@@ -53,9 +53,11 @@ define(function (require) {
                     create: function( event, ui ) {
                         $(this).find('li').each(function(index, el) {
                             listArr.push([ $(el).text(), parseFloat( $(el).data( "avg" ) ) ]);
+							listArr.push( $(el).data("id"));
                         });
                         sortObj["listArr"] = listArr;
                         $(this).data('sortJSON', sortObj);
+						Cookies.set('sortResults',sortObj["listArr"]);
                     },
                     update: function(event, ui) {
 						var sortedlistArr = [];

@@ -1,5 +1,6 @@
 {
   "programid": "1111",
+  "specialtyRequired": "true",
   "evaluation": "evaluation/standard",
   "certificate": "245",
   "start": [{

@@ -47,6 +47,9 @@ define(['json!server/program/'+program, 'json!server/collection/'+collection], f
     return deferred.promise();
     
   },
+  getSpecialtyRequired = function (section) {
+    return data[section];
+  },
   getProgramID = function (section) {
     return data[section];
   },
@@ -100,7 +103,8 @@ define(['json!server/program/'+program, 'json!server/collection/'+collection], f
     getCertificateID: getCertificateID,
     getStartPage: getStartPage,
     getSidebarData: getSidebarData,
-    getAnswers: getAnswers
+    getAnswers: getAnswers,
+	getSpecialtyRequired: getSpecialtyRequired
   };
 
 });

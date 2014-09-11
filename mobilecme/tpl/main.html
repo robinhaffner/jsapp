@@ -1,6 +1,8 @@
+{{#if listviewer}}
 <h1>{{this.header}}</h1>
 <ul data-role="listview" data-listview-type="specialty" class="listview selection-list single">
 	{{#this.listviewer}}
 	<li>{{this}}</li>
 	{{/this.listviewer}}	
 </ul>
+{{/if}}
