@@ -17,16 +17,8 @@
         },
         {
           "media": 2,
-          "media-url": "?program=AAA&collection=PP",
+          "media-url": "?program=BBB&collection=FPO",
           "media-img": "collection/ImanSamiZakhari.jpg",
-          "media-credit": "0.25 Credits",
-          "media-heading": "Cystic Fibrosis Advances and Controversies",
-          "media-subtext": "<p>Iman R. Sami-Zakhari, MD</p> "
-        },
-        {
-          "media": 3,
-          "media-url": "?program=demo1&collection=PP",
-          "media-img": "http://c.pro-c.me/programs/demo/images/Fiel_Stanley_1213.jpg",
           "media-credit": "0.25 Credits",
           "media-heading": "Cystic Fibrosis Advances and Controversies",
           "media-subtext": "<p>Iman R. Sami-Zakhari, MD</p> "

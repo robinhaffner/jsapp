@@ -1,6 +1,8 @@
 {
     "programid": "9001",
-	"specialtyRequired": "false",
+	"specialtyRequired":"false",
+	"evaluation": "",
+  	"certificate": "",
     "start": [
         {
             "id": "question1"
@@ -143,30 +145,30 @@
             "async-answer": "false",
 			"skip": "true",
             "answers": [
-                {
+             {
                     "answersid": "1",
                     "answerstxt": "<p>Blood <br>transfusion<br> risks</p>",
-					"score":"2.8"
+					"score":"28"
                 },
                 {
                     "answersid": "2",
                     "answerstxt": "<p>Cost of <br>treatment</p>",
-					"score":"0.5"
+					"score":"5"
                 },
                 {
                     "answersid": "3",
                     "answerstxt": "<p>CVT risk</p>",
-					"score":"3.5"
+					"score":"40"
                 },
                 {
                     "answersid": "4",
                     "answerstxt": "<p>Budd-Chiari <br>syndrome</p>",
-					"score":"4"
+					"score":"32"
                 },
                 {
                     "answersid": "5",
                     "answerstxt": "<p>Pulmonary <br>embolism</p>",
-					"score":"1.5"
+					"score":"80"
                 }
             ],
             "audio_url": "http://c.pro-c.me/programs/demo/audio/bell.mp3",
@@ -180,34 +182,34 @@
            "headline": "<p>RESULTS</p>",
             "question": "What concerns your colleagues most about treating PNH?",
             "qid": "q2r",
-            "type": "bar",
+            "type": "bar1",
             "async-answer": "false",
 			"skip": "true",
             "answers": [
             {
                     "answersid": "1",
                     "answerstxt": "<p>Blood <br>transfusion<br> risks</p>",
-					"score":"2.8"
+					"score":"28"
                 },
                 {
                     "answersid": "2",
                     "answerstxt": "<p>Cost of <br>treatment</p>",
-					"score":"0.5"
+					"score":"5"
                 },
                 {
                     "answersid": "3",
                     "answerstxt": "<p>CVT risk</p>",
-					"score":"3.5"
+					"score":"40"
                 },
                 {
                     "answersid": "4",
                     "answerstxt": "<p>Budd-Chiari <br>syndrome</p>",
-					"score":"4"
+					"score":"32"
                 },
                 {
                     "answersid": "5",
                     "answerstxt": "<p>Pulmonary <br>embolism</p>",
-					"score":"1.5"
+					"score":"80"
                 }
             ],
             "audio_url": "http://c.pro-c.me/programs/demo/audio/applause.mp3",

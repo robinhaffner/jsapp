@@ -35,17 +35,48 @@ define(function (require) {
 		
 		this.renderChart = function(content){
 			console.log(content);
-			var _labels = [],_type = content.type;
-			for (var j = 0; j <content.answers.length; ++j){
-				_labels[j] = jQuery(content.answers[j].answerstxt).text();
+			var _sortResults = [];
+			if (!Cookies.get('sortResults')){
+				Cookies.set('sortResults',_sortResults);
 			}
-			
+			var sortedSelections =[],yourSelections =[],peerSelections = [];
+			var _labels = [],_type = content.type;
+			if (_type == 'bubbles'){ //all we need is the lables
+				for (var j = 0; j <content.answers.length; ++j){
+					_labels[j] = jQuery(content.answers[j].answerstxt).text();
+				}
+				console.log(_labels);
+			}else{ // we need the lables and the user selections in the correct order
+				_sortResults = Cookies.get('sortResults').split(",");
+				console.log(_sortResults);
+				for (var i = 0; i <_sortResults.length; ++i){
+					//if (_sortResults[i].length==0) _sortResults[i];
+				}
+				for (var i = 0; i <_sortResults.length; ++i){
+					//if (_sortResults[i].length>0){
+						var _index = parseFloat(_sortResults[i]);
+						yourSelections[i] = i+1;
+						console.log("index: ",_index);
+						console.log("i+1: ",i+1);
+						for (var j = 0; j <content.answers.length; ++j){
+							//console.log(content.answers[j].score, jQuery(content.answers[j].answerstxt).text());
+							if (_index == parseFloat(content.answers[j].answersid)){
+								peerSelections[i] = content.answers[j].score;
+								_labels[i] = jQuery(content.answers[j].answerstxt).text();
+							}
+						}
+					//}
+				}
+				console.log(yourSelections);	
+				console.log(peerSelections);
+				console.log(_labels);
+				
+			}
+			// Colour variables
+				var selectedColor = "#f96802",defaultColor = "#dcd2ba",red = "#bf616a",blue = "#5B90BF",orange = "#d08770",yellow = "#ebcb8b",green = "#a3be8c",teal = "#96b5b4",pale_blue = "#8fa1b3",purple = "#b48ead",brown = "#ab7967";
 
 			require(['js/lib/Chart.js'], function(Chart) {
-
-				// Colour variables
-				var selectedColor = "#f96802",defaultColor = "#dcd2ba",red = "#bf616a",blue = "#5B90BF",orange = "#d08770",yellow = "#ebcb8b",green = "#a3be8c",teal = "#96b5b4",pale_blue = "#8fa1b3",purple = "#b48ead",brown = "#ab7967";
-				 
+				var ctx, canvas;
 				var data = [],
 					barsCount = 50,
 					labels = new Array(barsCount),
@@ -56,10 +87,11 @@ define(function (require) {
 					random = function(max){ return Math.round(Math.random()*100)},
 					helpers = Chart.helpers;
 
-				Chart.defaults.global.responsive = true;
+				Chart.defaults.global.responsive = false;
 				
 				if (_type == "bubbles"){
-		
+					var sortedlistArr = [];
+					Cookies.set('sortResults',sortedlistArr);
 					var contexts = {
 						bubble0 : $id('bubble_1').getContext('2d'),
 						bubble1 : $id('bubble_2').getContext('2d'),
@@ -80,22 +112,15 @@ define(function (require) {
 
 					};
 					var myCircle = function(radius, steps, centerX, centerY){
-							var degrees = 360/steps;
 							var x,y;
 							var results = [];
 							for (var i=0; i<steps; ++i){
-								var angle = i*degrees;
-								//console.log(degrees, angle);
 								x = Math.round((centerX + radius * Math.cos(2*Math.PI * i / steps)));
     							y =  Math.round((centerY + radius * Math.sin(2*Math.PI * i / steps)));
 								results.push([x,y]);
-								//results.push([y,x]);
 								console.log(x,y);
-								//console.log(y,x);
 					   }
-						
 						return results;
-
 					}
 					//var dw = $('body').width,dh = $('body').height,x = dw/2,y = dh/2;
 					var posArray = [];
@@ -109,15 +134,12 @@ define(function (require) {
 						positionDiv.style.width = 130+"px";
 						positionDiv.style.height = 130+"px";
 						positionDiv.style.position = "absolute";
-						//positionDiv.innerHTML = _labels[i-1];
 						
 					};
 					
 
 					var index = 0;
 					helpers.each(contexts, function(bubble){
-					console.log(bubble.canvas.attributes);
-						
 						var data = {
 							segments : [
 								{
@@ -131,22 +153,17 @@ define(function (require) {
 						bubble.canvas.parentElement.style.display= 'inline';
 						var _chart = new Chart(bubble).Doughnut(data.segments, config);
 
-						
 						helpers.addEvent(bubble.canvas, 'click', function(evt){
-							 console.log(evt, this.parentElement);
-							var sortedlistArr = [];
-							helpers.each(contexts, function(bubble){
-								//sortedlistArr.push( canvas.data("id"));
-                        	});
-							
-							//console.log(sortObj["sortedlistArr"]);
-							//Cookies.set('sortResults',sortedlistArr);
+							// console.log(evt, this);
+							//console.log('$(this).data("id")', $(this).data("id"));
+							sortedlistArr = Cookies.get('sortResults').split(",");
+							console.log(sortedlistArr);
+							sortedlistArr.push($(this).data("id"));
+							Cookies.set('sortResults',sortedlistArr);
+							console.log(sortedlistArr);
 							this.style.display = 'none';
 							this.parentElement.innerHTML = '';
-							
-							
-							//1. record the selection - these are used to display the results
-							//2. animate and destroy the object
+
 						});
 						index+=1;
 					});
@@ -156,30 +173,9 @@ define(function (require) {
 				} //end create bubbles
 				else if (_type == 'bar'){
 					
-				var _sortResults = Cookies.get('sortResults').split(",");
-			
-				console.log('sortResults',_sortResults);
-				
-				var sortedSelections =[],yourSelections =[],peerSelections = [];
 
-				for (var i = 0; i <_sortResults.length; ++i){
-					var _index = parseFloat(_sortResults[i]);
-					yourSelections[i] = i+1;
-					console.log("index: ",_index);
-					console.log("i+1: ",i+1);
-					for (var j = 0; j <content.answers.length; ++j){
-						//console.log(content.answers[j].score, jQuery(content.answers[j].answerstxt).text());
-						if (_index == parseFloat(content.answers[j].answersid)){
-							peerSelections[i] = content.answers[j].score;
-							_labels[i] = jQuery(content.answers[j].answerstxt).text();
-						}
-					}
-				}
-				console.log(yourSelections);	
-				console.log(peerSelections);
-				console.log(_labels);
-					var canvas = $id('interactive-bar');
-					var ctx =  $id('interactive-bar').getContext('2d');
+					canvas = $id('interactive-bar');
+					ctx =  $id('interactive-bar').getContext('2d');
 		
 					var microBar = new Chart(ctx).Bar({
 						labels: _labels,
@@ -214,6 +210,61 @@ define(function (require) {
 						scaleSteps: 1,
 						// Number - The value jump in the hard coded scale
 						scaleStepWidth: 5,
+						// Number - The scale starting value
+						scaleStartValue: 0,
+						//String - A legend template
+						legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+		
+					});
+		
+				helpers.addEvent(canvas, 'mousemove', function(evt){
+		
+				});
+		
+				helpers.addEvent(canvas, 'click', function(evt){
+		
+				});
+		
+				}//end create bar chart
+				else if (_type == 'bar1'){
+					
+
+					canvas = $id('interactive-bar');
+					ctx =  $id('interactive-bar').getContext('2d');
+		
+					var microBar = new Chart(ctx).Bar({
+						labels: _labels,
+						datasets: [{
+							label: "Your Selections",
+							fillColor : selectedColor,
+							strokeColor : "rgba(0,0,0,0)",
+							highlightFill: selectedColor,
+							data: yourSelections//[random(), random(), random(), random(), random()]
+						},
+						{
+							label: "Peer Selections",
+							fillColor : defaultColor,
+							strokeColor : "rgba(0,0,0,0)",
+							highlightFill: defaultColor,
+							data:peerSelections//[random(), random(), random(), random(), random()]
+						}]
+					}, {
+						animation: true,
+						animateRotate : true,
+						showScale: true,
+						barShowStroke: true,
+						tooltipXPadding: 10,
+						tooltipYPadding: 6,
+						tooltipFontSize: 18,
+						tooltipFontStyle: 'bold',
+						// Boolean - If we want to override with a hard coded scale
+						scaleOverride: true,
+		
+						// ** Required if scaleOverride is true **
+						// Number - The number of steps in a hard coded scale
+						scaleSteps: 10,
+						// Number - The value jump in the hard coded scale
+						scaleStepWidth: 100,
 						// Number - The scale starting value
 						scaleStartValue: 0,
 						//String - A legend template

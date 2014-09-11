@@ -51,8 +51,9 @@ define(function (require) {
                     'containment': 'parent',
                     'opacity': 0.6,
                     create: function( event, ui ) {
+						Cookies.set('sortResults',[]);
                         $(this).find('li').each(function(index, el) {
-                            listArr.push([ $(el).text(), parseFloat( $(el).data( "avg" ) ) ]);
+                            //listArr.push([ $(el).text(), parseFloat( $(el).data( "avg" ) ) ]);
 							listArr.push( $(el).data("id"));
                         });
                         sortObj["listArr"] = listArr;

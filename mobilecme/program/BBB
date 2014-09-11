@@ -1,5 +1,6 @@
 {
   "programid": "1112",
+  "specialtyRequired":"true",
   "evaluation": "evaluation/standard",
   "start": [{
     "id": "faculty"
