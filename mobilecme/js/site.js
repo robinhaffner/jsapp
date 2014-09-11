@@ -308,8 +308,8 @@ $(document).ready(function () {
         if (questionpage) {
             var _qaObj = {},
                 req = $(document).find('.form-control');
-
-            if ($(document).find('.listview').data('skip') == "true") { //allow user to skip question
+         
+            if ($(document).find('.listview').data('skip')) { //allow user to skip question
                 questionhandler.bypass();
                 return;
             }
