@@ -27,27 +27,33 @@ define(function (require) {
                 view,
                 match = hashpath.match(detailsURL),
                 getStoredSpecialty = Cookies.get('specialty');
-            
+			
+			if (match != null) { 
+				gotopage = match[1];
+			}else{
+				gotopage = startPageNum;
+			}
+			
+			
             console.log("route",specialty,hashpath,match,programIDView,getStoredSpecialty);
             console.log("startPageNum",startPageNum);
 
             $('body').data('programid', programIDView);
             $('body').data('certificate', certificateIDView);
-
+			console.log('gotopage',gotopage);
 
             if (specialtyView == "true") {
-                if (specialty == true && !hashpath) {
-                    siteAdapter.getData("sitecontent",startPageNum).done(function(_content) {
+                if (specialty == true ) {
+                    siteAdapter.getData("sitecontent",gotopage).done(function(_content) {
                       var tpl = eval(_content.template+"View");
                       var handler = new tpl();
 
                       handler.render(_content);
-                      navView.setNextPage(startPageNum);
+                      navView.setNextPage(gotopage);
                       $("title").html(_content.title);
                     });
 
-                }
-                if (specialty == false) {
+                }else if (specialty == false) {
                     siteAdapter.getData("sitecontent","main").done(function(_content) {
                       var tpl = eval(_content.template+"View");
                       var handler = new tpl();
@@ -62,19 +68,14 @@ define(function (require) {
                     Cookies.set('specialty', "None");
                 }
                 specialty = getStoredSpecialty;
-                console.log("gotopage",gotopage);
 
-                if (match == null) { 
-                    match = []; 
-                    match[1] = startPageNum; 
-                };
-                
-                siteAdapter.getData("sitecontent",match[1]).done(function(_content) {
+                siteAdapter.getData("sitecontent",gotopage).done(function(_content) {
+
                   var tpl = eval(_content.template+"View");
                   var handler = new tpl();
 
                   handler.render(_content);
-                  navView.setNextPage(match[1]);
+                  navView.setNextPage(gotopage);
                   $("title").html(_content.title);
                 });
             }
@@ -82,14 +83,14 @@ define(function (require) {
 
             if (match && specialty || getStoredSpecialty != undefined) {
 
-                if (match == null) { match = []; match[1] = startPageNum; }; // setcookie
+               // if (match == null) { match = []; match[1] = startPageNum; }; // setcookie
 
-                siteAdapter.getData("sitecontent",match[1]).done(function(_content){
+                siteAdapter.getData("sitecontent",gotopage).done(function(_content){
                   var tpl = eval(_content.template+"View");
                   var handler = new tpl();
                   handler.render(_content);
 
-                  navView.setNextPage(match[1]);
+                  navView.setNextPage(gotopage);
                   $("title").html(_content.title);
                 }).fail(function() {
                   //document.location = document.location.origin; // 404 page not found
