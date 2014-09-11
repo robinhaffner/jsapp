@@ -34,28 +34,21 @@ define(function (require) {
             $('body').data('programid', programIDView);
             $('body').data('certificate', certificateIDView);
 
-            if (specialtyView == "true" || !hashpath) {
-                //if ( (!hashpath && specialty) || (!hashpath && !specialty) || getStoredSpecialty == '') {
-                //if ( !hashpath || !specialty || getStoredSpecialty == '') {
-                    siteAdapter.getData("sitecontent","main").done(function(_content) {
-                      var tpl = eval(_content.template+"View");
-                      var handler = new tpl();
+            if (specialtyView == "true") {
+                siteAdapter.getData("sitecontent","main").done(function(_content) {
+                  var tpl = eval(_content.template+"View");
+                  var handler = new tpl();
 
-                      handler.render(_content);
-                      navView.setNextPage("main");
-                      $("title").html(_content.title);
-                    });
-                //}
-            } else {
-                siteAdapter.getData("sitecontent",startPageNum).done(function(_content) {
-                    var tpl = eval(_content.template+"View");
-                    var handler = new tpl();
-
-                    handler.render(_content);
-                    navView.setNextPage(startPageNum);
-                    $("title").html(_content.title);
+                  handler.render(_content);
+                  navView.setNextPage("main");
+                  $("title").html(_content.title);
                 });
+            } else {
+                Cookies.set('specialty', "None");
+                specialty = getStoredSpecialty;
+                if (match == null) { match = []; match[1] = startPageNum; };
             }
+            console.log("message",match,specialty,getStoredSpecialty);
 
             if (match && specialty || getStoredSpecialty != undefined) {
 
@@ -69,7 +62,7 @@ define(function (require) {
                   navView.setNextPage(match[1]);
                   $("title").html(_content.title);
                 }).fail(function() {
-                  document.location = document.location.origin; // 404 page not found
+                  //document.location = document.location.origin; // 404 page not found
                 });
             }
 

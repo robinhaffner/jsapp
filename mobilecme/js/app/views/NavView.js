@@ -43,7 +43,6 @@ define(function (require) {
         };
 
         this.getTopNav = function () {
-			console.log("getnav");
             siteAdapter.getData('topnav',0).done(function (_nav) {
                 $("#nav-container").html(navTpl(_nav));
                 return;

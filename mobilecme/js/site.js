@@ -64,6 +64,7 @@ function getPageParam() {
 }
 
 function selectSpecialty(s) {
+    console.log("selectSpecialty",s);
     var doclocation = document.location.href,
     search = /([^&=]+)=?([^&]*)/g,
     strsplit = doclocation.split(document.location.search)[0],    
@@ -304,7 +305,7 @@ $(document).ready(function () {
 
             if ($(document).find('.listview').data('skip')) { //allow user to skip question
                 questionhandler.bypass();
-                return false;
+                return;
             }
 
             if ($("ul.sortable").data('sortJSON')) {
