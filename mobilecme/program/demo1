@@ -45,7 +45,11 @@
             "col-4": {
 
             },
-            "isi": { 
+            "sponsored": {
+                "logo": "../../images/logo-xgeva.png", 
+                "text": "this program sponsored by"
+            },
+            "disclaimer": { 
 				"txt": "<b>INDICATION</b><br><p>Brandogesic® is indicated for the management of moderate to severe chronic pain when analgesia is needed for an extended period of time.</p><b>CONTRAINDICATIONS</b><br><p>Brandogesic® is contraindicated in patients with a known hypersensitivity to muenkephalin or any of the ingredients of Brandogesic®.</p><p>Brandogesic® is contraindicated in patients with respiratory depression (unless monitored in a setting with resuscitative equipment), asthma, head injury or ileus.</p><p>Brandogesic® is not indicated for pain in the pre- or post-operative period.</p><b>WARNINGS</b><br><p>Respiratory depression that does not respond to hypercapnia is the most significant risk associated with Brandogesic®. Brandogesic® should be administered cautiously to patients with conditions accompanied by hypercapnia, hypoxia or impaired respiratory reserve.</p><p>Many medications, including alcohol, other analgesics or anesthetics, tranquilizers and sedatives, or other CNS depressants can potentiate the effects of Brandogesic®, resulting in respiratory or circulatory collapse, coma or death.</p><p>In the presence of closed head injury, the hypercapnic effects of Brandogesic® may elevate intracranial pressure.</p><p>Brandogesic® may exacerbate gastrointestinal obstruction, particularly in the setting of ileus.</p><p>Brandogesic® may cause spasm at the Sphincter of Oddi.</p><p>Brandogesic® is not recommended for women who are or may become pregnant, during labor and delivery, or while nursing.</p><p>Patients should not perform activities such as driving a car or operating machinery until they understand the effects of Brandogesic® on mental and physical abilities.</p><b>ADVERSE REACTIONS</b><br><p>Adverse reactions reported at (≥5%) in placebo-controlled trials were: sedation and somnolence or insomnia, nausea and/or vomiting, constipation or diarrhea, dizziness, pruritus and headache.</p><p>Dizziness, somnolence and confusion were seen more frequently in patients 65 years of age and over.</p>",
 		"link": ""		
 		}

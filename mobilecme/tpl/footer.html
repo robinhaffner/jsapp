@@ -24,4 +24,15 @@
 		<a href="{{this.col-3.link}}">{{{this.col-3.txt}}}</a>
 	</div>
 	{{/if}}
+	{{#if sponsored}}
+	<div class="sponsored pull-left">
+		{{this.sponsored.text}}<br/>
+		<img class="img-responsive" src="{{this.sponsored.logo}}" alt="">
+	</div>
+	{{/if}}
+	{{#if disclaimer}}
+	<div class="disclaimer pull-right">
+		<div class="marquee ftr-marquee"></div>
+	</div>
+	{{/if}}
 </footer>

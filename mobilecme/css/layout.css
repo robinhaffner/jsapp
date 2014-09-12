@@ -299,6 +299,24 @@ a, a:hover, a:focus, a:active {
     top: 0;
 }
 
+#ftr .sponsored { text-align: center; }
+
+#ftr .disclaimer {
+  position: relative;
+}
+#ftr .ftr-marquee {
+  position: absolute; 
+  width: 98%;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+}
+
+.ftr-marquee h1, .ftr-marquee h2, 
+.ftr-marquee h3, .ftr-marquee h4 { color: rgb(255,255,255); }
+.ftr-marquee a:link, .ftr-marquee a:visited, 
+.ftr-marquee a:active, .ftr-marquee a:hover { color: rgb(255, 78, 55); font-weight: normal; }
+
 /*
  * Style Sidebar
  * --------------------------------------------------
