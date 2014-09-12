@@ -12,7 +12,7 @@ define(function (require) {
         VideoView           = require("views/VideoView"),
         ContentView         = require("views/ContentView"),
         FinalstepView       = require("views/FinalstepView"),
-		ChartView        	= require("views/ChartView"),
+        ChartView        	  = require("views/ChartView"),
 
         detailsURL = /^#(\w+)/,
         mainView = new MainView(),
@@ -27,12 +27,12 @@ define(function (require) {
                 view,
                 match = hashpath.match(detailsURL),
                 getStoredSpecialty = Cookies.get('specialty');
-			
-			if (match != null) { 
-				gotopage = match[1];
-			}else{
-				gotopage = startPageNum;
-			}
+
+            if (match != null) { 
+            	gotopage = match[1];
+            }else{
+            	gotopage = startPageNum;
+            }
 			
 			
             console.log("route",specialty,hashpath,match,programIDView,getStoredSpecialty);
@@ -40,7 +40,6 @@ define(function (require) {
 
             $('body').data('programid', programIDView);
             $('body').data('certificate', certificateIDView);
-			console.log('gotopage',gotopage);
 
             if (specialtyView == "true") {
                 if (specialty == true ) {
@@ -53,7 +52,7 @@ define(function (require) {
                       $("title").html(_content.title);
                     });
 
-                }else if (specialty == false) {
+                } else if (specialty == false) {
                     siteAdapter.getData("sitecontent","main").done(function(_content) {
                       var tpl = eval(_content.template+"View");
                       var handler = new tpl();
@@ -62,7 +61,7 @@ define(function (require) {
                       navView.setNextPage("main");
                       $("title").html(_content.title);
                     });
-                };
+                } else { return; };
             } else {
                 if (specialty == false) {
                     Cookies.set('specialty', "None");
@@ -79,11 +78,8 @@ define(function (require) {
                   $("title").html(_content.title);
                 });
             }
-            console.log("message",match,specialty,getStoredSpecialty);
 
             if (match && specialty || getStoredSpecialty != undefined) {
-
-               // if (match == null) { match = []; match[1] = startPageNum; }; // setcookie
 
                 siteAdapter.getData("sitecontent",gotopage).done(function(_content){
                   var tpl = eval(_content.template+"View");

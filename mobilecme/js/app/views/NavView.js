@@ -54,7 +54,8 @@ define(function (require) {
 			var prev_page = "";
             siteAdapter.getData("manifest",0).done(function(manifest) {
                 console.log("manifest",manifest);
-                
+
+                var __score, __rank;                
                 var pagemax = manifest.pages.length;
                 $(".page-ctn .num").empty().append(pagemax);
 
@@ -79,6 +80,12 @@ define(function (require) {
                     "aria-valuemax": pagemax
                 })
                 .css("width", parseInt($(".page-ctn .pgenum").text()) / pagemax * 100 + "%");
+
+                __score = Cookies.get("__score");
+                __rank = Cookies.get("__rank");
+
+                $('span.score').empty().append(__score);
+                $('span.rank').empty().append(__rank);
 
             });
 			siteAdapter.getData("sitecontent",next_page).done(function(_obj) {

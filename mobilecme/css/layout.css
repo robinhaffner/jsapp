@@ -55,6 +55,15 @@ a, a:hover, a:focus, a:active {
     display: block;
     margin: 10px auto;
 }
+#hdr p { margin: 0; padding: 0; text-align: center; height: 50px; line-height: 20px; }
+#hdr p small { display: block; color: rgb(204,204,204); }
+#hdr p span {
+  font-size: 1.5em;
+  font-weight: 200;
+  line-height: 20px;
+  padding-top: 3px;
+}
+
 .headline {
     background-color: rgb(230, 234, 233);
     font-size: 14px;

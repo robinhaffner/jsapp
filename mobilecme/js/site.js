@@ -106,6 +106,7 @@ var questionhandler = {
         document.location = res;
     }
 }
+
 var submitform = {
     formaction: function (_formdata) {
         console.log("_formdata",_formdata);
@@ -236,14 +237,6 @@ $(document).ready(function () {
         };
     });
 
-    //sidebar clickable container
-    /*$(document).on('click', '#sidebar .list-group-item', function(event) {
-        event.preventDefault();
-        var chapterurlpath = document.location.host+document.location.pathname+$(this).data('chapterurl');
-        console.log("chapterurlpath",chapterurlpath);
-        document.location = chapterurlpath;
-    });*/
-
     //Questions function
     $(document).on('click','.selection-list li',function(event){
         event.preventDefault();
@@ -276,6 +269,7 @@ $(document).ready(function () {
             selectSpecialty($(this));
         };
     });
+
 	 $(document).on('click', '.prev-control', function(event) {
 		 playAudio('prev');
 	 });
@@ -318,17 +312,12 @@ $(document).ready(function () {
                 var sortJSON = $("ul.sortable").data('sortJSON'),
                     orgList = sortJSON.listArr,
                     sortList = sortJSON.sortedlistArr;
-                
-                console.log("sortJSON",orgList,sortList);
+
                 Cookies.set('plot1',orgList);
                 Cookies.set('plot2',sortList);
-                /*if(sortList !=  undefined){
-                    showanswers.answercall(sortList,"sort");
-                }*/
             };
 
             if ($(document).find('.form-control.required').val() != undefined || $(document).hasClass('.listview.pass') || $(document).find('.listview li.selected').length > 0 || $(document).find('.listview li.selectedresult').length > 0) {
-                console.log("if");
                 if ($(document).find('.freeform').data('role') == "listview" && !$(this).hasClass('click-control')) {
                     event.preventDefault();
 
@@ -378,7 +367,6 @@ $(document).ready(function () {
 
             }
             else { 
-                console.log("else");
                 event.preventDefault(); 
                 var htmlAlert = '<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Warning!</strong> Please answer question</div>';
                 $(".alert").remove();
