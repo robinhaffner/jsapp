@@ -181,21 +181,70 @@
       "id": "equestion6",
       "groupid": "99",
       "template": "Question",
+      "title": "Course Evaluation",
+      "headline": "Evaluation (sort)",
+      "question": "Please rate your level of agreement by <b>sorting</b> the list",
+      "qid":"eval6",
+      "type": "sortable",
+      "async-answer":"false",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Strongly Disagree</p>",
+          "score": 2.0
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Disagree</p>",
+          "score": 7.0
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Neither Agree nor Disagree</p>",
+          "score": 6.0
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Agree</p>",
+          "score": 10.5
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>Strongly Agree</p>",
+          "score": 3.888
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },    {
+      "id": "commenteval1",
+      "groupid": "99",
+      "template": "Question",
       "title": "ProCME - Clinical Practice",
       "headline": "Evaluation (Comments)",
       "question": "Please provide any other feedback or comments.",
-      "qid":"eval6",
+      "qid":"ceval1",
       "type": "freeform",
       "async-answer":"true",
       "skip": "true",
-	  "comments": [
+      "form": [
         {
           "tag": "textarea",
           "label": "Comments",
           "for": "comments",
           "name": "comments",
           "type": "text",
-          "attr": "rows='8' cols='50' autofocus maxlength='250'"
+          "required": "required",
+          "attr": "rows=8 cols=50 autofocus maxlength=250"
+        },
+        {
+          "tag": "textarea",
+          "label": "Comments",
+          "for": "comments2",
+          "name": "comments2",
+          "type": "text",
+          "attr": "rows=8 cols=50 autofocus maxlength=250"
         }
       ],
       "audio_url": "",
@@ -216,28 +265,28 @@
         {
           "tag": "input",
           "label": "First Name",
-          "for": "fname",
-          "name": "fname",
+          "for": "firstname",
+          "name": "firstname",
           "type": "text",
           "attr": ""
         },
         {
           "tag": "input",
           "label": "Last Name",
-          "for": "lname",
+          "for": "lastname",
           "type": "text",
-          "name": "lname",
+          "name": "lastname",
           "attr": ""
         },
         {
           "tag": "select",
-          "label": "Professional Degree",
-          "for": "professional",
-          "name": "professional",
+          "label": "Degree Type",
+          "for": "degree_type",
+          "name": "degree_type",
           "attr": "",
           "options": [
-            { "val": "Text1" },
-            { "val": "Text4" }
+            { "val": "t1", "text": "Text1" },
+            { "val": "t2", "text": "Text4" }
           ]
         },
         {
@@ -267,23 +316,26 @@
         {
           "tag": "input",
           "label": "Zip/Postal Code",
-          "for": "zpcode",
+          "for": "zip",
           "type": "text",
-          "name": "zpcode",
+          "name": "zip",
           "attr": ""
         },
         {
           "tag": "input",
           "label": "State/Province",
-          "for": "stateprovince",
+          "for": "state",
           "type": "text",
-          "name": "stateprovince",
+          "name": "state",
           "attr": ""
         },
         {
-          "tag": "textarea",
-          "name": "fname",
-          "attr": "rows='4' cols='50' autofocus maxlength='250'"
+          "tag": "submit",
+          "name": "submit",
+          "type": "submit",
+          "attr": "",
+          "url": "http://int.pro-cme.pslgroup.com/pcertificates/ajax/submit",
+          "btn": "Submit"
         }
       ],
       "audio_url": "",
