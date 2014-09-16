@@ -18,7 +18,6 @@
                 "page2",
 				"response2",
 				"question3",
-                "page3",
 				"response3",
                 "finalstep"
             ]
@@ -104,7 +103,7 @@
             "headline": "<p>RESULTS</p>",
             "question": "Rank what your PNH patients symptoms from most to least-frequent",
             "qid": "q1r",
-            "type": "bar",
+            "type": "bar2",
             "async-answer": "false",
 			"skip": "true",
             "answers": [
@@ -151,27 +150,27 @@
             "answers": [
              {
                     "answersid": "1",
-                    "answerstxt": "<p>Blood <br>transfusion<br> risks</p>",
+                    "answerstxt": "Blood transfusion risks",
 					"score":"28"
                 },
                 {
                     "answersid": "2",
-                    "answerstxt": "<p>Cost of <br>treatment</p>",
+                    "answerstxt": "Cost of treatment",
 					"score":"5"
                 },
                 {
                     "answersid": "3",
-                    "answerstxt": "<p>CVT risk</p>",
+                    "answerstxt": "CVT risk",
 					"score":"40"
                 },
                 {
                     "answersid": "4",
-                    "answerstxt": "<p>Budd-Chiari <br>syndrome</p>",
+                    "answerstxt": "Budd-Chiari syndrome",
 					"score":"32"
                 },
                 {
                     "answersid": "5",
-                    "answerstxt": "<p>Pulmonary <br>embolism</p>",
+                    "answerstxt": "Pulmonary embolism",
 					"score":"80"
                 }
             ],
@@ -192,7 +191,7 @@
             "answers": [
             {
                     "answersid": "1",
-                    "answerstxt": "<p>Blood <br>transfusion<br> risks</p>",
+                    "answerstxt": "<p>Blood transfusion<br> risks</p>",
 					"score":"28"
                 },
                 {
@@ -268,7 +267,7 @@
            "headline": "<p>RESULTS:</p>",
             "question": "Which of the following are involved in accelerating hemolytic anemia?",
             "qid": "q3r",
-            "type": "bar",
+            "type": "bar2",
             "async-answer": "false",
 			"skip": "true",
             "answers": [

@@ -34,355 +34,323 @@ define(function (require) {
         };
 		
 		this.renderChart = function(content){
-			console.log(content);
-			var _sortResults = [];
-			if (!Cookies.get('sortResults')){
-				Cookies.set('sortResults',_sortResults);
-			}
-			var sortedSelections =[],yourSelections =[],peerSelections = [];
-			var _labels = [],_type = content.type;
-			if (_type == 'bubbles'){ //all we need is the lables
-				for (var j = 0; j <content.answers.length; ++j){
-					_labels[j] = jQuery(content.answers[j].answerstxt).text();
-				}
-				console.log(_labels);
-			}else{ // we need the lables and the user selections in the correct order
-				_sortResults = Cookies.get('sortResults').split(",");
-				console.log(_sortResults);
-				for (var i = 0; i <_sortResults.length; ++i){
-					//if (_sortResults[i].length==0) _sortResults[i];
-				}
-				for (var i = 0; i <_sortResults.length; ++i){
-					//if (_sortResults[i].length>0){
-						var _index = parseFloat(_sortResults[i]);
-						yourSelections[i] = i+1;
-						console.log("index: ",_index);
-						console.log("i+1: ",i+1);
-						for (var j = 0; j <content.answers.length; ++j){
-							//console.log(content.answers[j].score, jQuery(content.answers[j].answerstxt).text());
-							if (_index == parseFloat(content.answers[j].answersid)){
-								peerSelections[i] = content.answers[j].score;
-								_labels[i] = jQuery(content.answers[j].answerstxt).text();
-							}
-						}
-					//}
-				}
-				console.log(yourSelections);	
-				console.log(peerSelections);
-				console.log(_labels);
+			var _type = content.type,colorArray=[];
+			//console.log(content);
+			require(['js/lib/jqplot/jquery.jqplot.min.js', 'js/lib/jqplot/plugins/jqplot.barRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.categoryAxisRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.pointLabels.min.js'], function(jqplot) {
 				
-			}
-			// Colour variables
-				var selectedColor = "#f96802",defaultColor = "#dcd2ba",red = "#bf616a",blue = "#5B90BF",orange = "#d08770",yellow = "#ebcb8b",green = "#a3be8c",teal = "#96b5b4",pale_blue = "#8fa1b3",purple = "#b48ead",brown = "#ab7967";
-
-			require(['js/lib/Chart.js'], function(Chart) {
-				var ctx, canvas;
-				var data = [],
-					barsCount = 50,
-					labels = new Array(barsCount),
-					updateDelayMax = 500,
-					$id = function(id){
-						return document.getElementById(id);
-					},
-					random = function(max){ return Math.round(Math.random()*100)},
-					helpers = Chart.helpers;
-
-				Chart.defaults.global.responsive = false;
 				
-				if (_type == "bubbles"){
-					var sortedlistArr = [];
-					Cookies.set('sortResults',sortedlistArr);
-					var contexts = {
-						bubble0 : $id('bubble_1').getContext('2d'),
-						bubble1 : $id('bubble_2').getContext('2d'),
-						bubble2 : $id('bubble_3').getContext('2d'),
-						bubble3 : $id('bubble_4').getContext('2d'),
-						bubble4 : $id('bubble_5').getContext('2d')
-				   };
+			$("#chart").empty();
+            $.jqplot.config.enablePlugins = true;
+ 			var __plot1, __plot2, __p1, __p2,bar1=[], bar2=[];
 
-					var config = {
-						animation: false,
-						animateScale: true,
-						responsive : true, percentageInnerCutout: 0, animateRotate : false, segmentStrokeWidth : 0, segmentShowStroke : false,
-						onAnimationComplete: function(){
-							this.options.animation = true;
-						},
-						legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
-
-
-					};
-					var myCircle = function(radius, steps, centerX, centerY){
-							var x,y;
-							var results = [];
-							for (var i=0; i<steps; ++i){
-								x = Math.round((centerX + radius * Math.cos(2*Math.PI * i / steps)));
-    							y =  Math.round((centerY + radius * Math.sin(2*Math.PI * i / steps)));
-								results.push([x,y]);
-								console.log(x,y);
-					   }
-						return results;
+            function makePlotArray (s, name){
+				var arr=[], i, s;
+                for (i in s) {
+                    if(name == "bar1"){
+                        arr = s[i].split(',')
+                        bar1.push([parseFloat(arr[0]),arr[1]]);
+                    }
+                    if(name == "bar2"){
+                        arr = s[i].split(',')
+                        bar2.push([parseFloat(arr[0]),arr[1]]);
+                    }
+                }
+				return bar1;
+            }
+				
+				
+			if (_type == 'bar1'){
+				//read q1 cookie
+				__plot1 = Cookies.get('__plot1'); 
+				var popArray = [];
+				popArray = Cookies.get('__popArray').split(',');
+				//decode cookie
+				__p1=__plot1.replace(/([^,]+,[^,]+),/g,'$1;');
+				var __bar1 = new String(__p1);
+				makePlotArray(__bar1.split(';'), "bar1");
+				for (var i = 0; i < bar1.length; i++){
+					if($.inArray(bar1[i][1], popArray) != -1) {
+						colorArray[i] = '#f96802';
+					}else{
+						colorArray[i] = '#dcd2ba';
 					}
-					//var dw = $('body').width,dh = $('body').height,x = dw/2,y = dh/2;
-					var posArray = [];
-					posArray = myCircle(130, 5, 120,280);
-
-					for (var i=1; i<= 5; ++i){
-						var positionDiv = document.getElementById("positionBubble_"+i);
-						console.log(positionDiv);
-						positionDiv.style.left=Math.round(posArray[i-1][0])+"px";
-						positionDiv.style.top=Math.round(posArray[i-1][1])+"px";
-						positionDiv.style.width = 130+"px";
-						positionDiv.style.height = 130+"px";
-						positionDiv.style.position = "absolute";
-						
-					};
-					
-
-					var index = 0;
-					helpers.each(contexts, function(bubble){
-						var data = {
-							segments : [
-								{
-									value : index+1,
-									color : pale_blue,
-									highlight : pale_blue,
-									label :_labels[index]
-								}
-							]
-						}
-						bubble.canvas.parentElement.style.display= 'inline';
-						var _chart = new Chart(bubble).Doughnut(data.segments, config);
-
-						helpers.addEvent(bubble.canvas, 'click', function(evt){
-							// console.log(evt, this);
-							//console.log('$(this).data("id")', $(this).data("id"));
-							sortedlistArr = Cookies.get('sortResults').split(",");
-							console.log(sortedlistArr);
-							sortedlistArr.push($(this).data("id"));
-							Cookies.set('sortResults',sortedlistArr);
-							console.log(sortedlistArr);
-							this.style.display = 'none';
-							this.parentElement.innerHTML = '';
-
-						});
-						index+=1;
-					});
-					
-		
-					
-				} //end create bubbles
-				else if (_type == 'bar'){
-					
-
-					canvas = $id('interactive-bar');
-					ctx =  $id('interactive-bar').getContext('2d');
-		
-					var microBar = new Chart(ctx).Bar({
-						labels: _labels,
-						datasets: [{
-							label: "Your Selections",
-							fillColor : selectedColor,
-							strokeColor : "rgba(0,0,0,0)",
-							highlightFill: selectedColor,
-							data: yourSelections//[random(), random(), random(), random(), random()]
-						},
-						{
-							label: "Peer Selections",
-							fillColor : defaultColor,
-							strokeColor : "rgba(0,0,0,0)",
-							highlightFill: defaultColor,
-							data:peerSelections//[random(), random(), random(), random(), random()]
-						}]
-					}, {
-						animation: true,
-						animateRotate : true,
-						showScale: true,
-						barShowStroke: true,
-						tooltipXPadding: 10,
-						tooltipYPadding: 6,
-						tooltipFontSize: 18,
-						tooltipFontStyle: 'bold',
-						// Boolean - If we want to override with a hard coded scale
-						scaleOverride: true,
-		
-						// ** Required if scaleOverride is true **
-						// Number - The number of steps in a hard coded scale
-						scaleSteps: 1,
-						// Number - The value jump in the hard coded scale
-						scaleStepWidth: 5,
-						// Number - The scale starting value
-						scaleStartValue: 0,
-						//String - A legend template
-						legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
-		
-					});
-		
-				helpers.addEvent(canvas, 'mousemove', function(evt){
-		
-				});
-		
-				helpers.addEvent(canvas, 'click', function(evt){
-		
-				});
-		
-				}//end create bar chart
-				else if (_type == 'bar1'){
-					
-
-					canvas = $id('interactive-bar');
-					ctx =  $id('interactive-bar').getContext('2d');
-		
-					var microBar = new Chart(ctx).Bar({
-						labels: _labels,
-						datasets: [{
-							label: "Your Selections",
-							fillColor : selectedColor,
-							strokeColor : "rgba(0,0,0,0)",
-							highlightFill: selectedColor,
-							data: yourSelections//[random(), random(), random(), random(), random()]
-						},
-						{
-							label: "Peer Selections",
-							fillColor : defaultColor,
-							strokeColor : "rgba(0,0,0,0)",
-							highlightFill: defaultColor,
-							data:peerSelections//[random(), random(), random(), random(), random()]
-						}]
-					}, {
-						animation: true,
-						animateRotate : true,
-						showScale: true,
-						barShowStroke: true,
-						tooltipXPadding: 10,
-						tooltipYPadding: 6,
-						tooltipFontSize: 18,
-						tooltipFontStyle: 'bold',
-						// Boolean - If we want to override with a hard coded scale
-						scaleOverride: true,
-		
-						// ** Required if scaleOverride is true **
-						// Number - The number of steps in a hard coded scale
-						scaleSteps: 10,
-						// Number - The value jump in the hard coded scale
-						scaleStepWidth: 100,
-						// Number - The scale starting value
-						scaleStartValue: 0,
-						//String - A legend template
-						legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
-		
-					});
-		
-				helpers.addEvent(canvas, 'mousemove', function(evt){
-		
-				});
-		
-				helpers.addEvent(canvas, 'click', function(evt){
-		
-				});
-		
-				}//end create bar chart
-		
-				$.fn.rotate = function(degrees) {
-					$(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
-								 '-moz-transform' : 'rotate('+ degrees +'deg)',
-								 '-ms-transform' : 'rotate('+ degrees +'deg)',
-								 'transform' : 'rotate('+ degrees +'deg)'});
-				};
-				var rotater = document.getElementById("interactive-bar");
-				$(rotater).rotate(90);
+				}
 				
-				 var Chartjs = Chart.noConflict();
-			});
-		}
-		
-//		this.renderJQPlot = function(content){
-//			var whichBubble = $(".canvasBubble")
-//			console.log(whichBubble);
-//			
-//
-//
-//
-//				var yourSelections =[5,4,3,2,1],
-//				peerSelections = [],
-//				_labels = [],
-//				_type = content.type;
-//				//var whichBubble = document.getElementById("canvasBubble");
-//				for (var i = 0; i <content.answers.length; ++i){
-//					//console.log(content.answers[i]);
-//					peerSelections[i] = content.answers[i].score;
-//					_labels[i] = $(content.answers[i].answerstxt).text();
-//				}
-//			console.log(_labels);
-//		 	var bubblePlot = [];
-//			var arr = [];
-//			bubblePlot = [[45,25,50,_labels[0]],[25,60,50,_labels[1]],[55,80,50,_labels[2]],[80,50,50,_labels[3]]];
-//		
-//			var colorArray=[];
-//			colorArray = ['#8bcffa', '#8bcffa', '#8bcffa', '#8bcffa','#8bcffa'];
-//			
-//			
-//			require(['js/lib/jqplot/jquery.jqplot.min.js'], function() {
-//								//$.jqplot.config.enablePlugins = true;
-//			console.log($.jqplot);
-//			var plot2 = $.jqplot(whichBubble,[bubblePlot],{
-//				animate: true,
-//				seriesColors:colorArray,
-//				 grid: {
-//					drawGridLines: false,        // wether to draw lines across the grid or not.
-//					gridLineColor: '#ffffff',    // *Color of the grid lines.
-//					background: '#ffffff',      // CSS color spec for background color of grid.
-//					borderColor: '#ffffff',     // CSS color spec for border around grid.
-//					borderWidth: 0,           // pixel width of border around grid.
-//					shadow: false,               // draw a shadow for grid.
-//					shadowAngle: 0,            // angle of the shadow.  Clockwise from x axis.
-//					shadowOffset: 0,          // offset from the line of the shadow.
-//					shadowWidth: 0,             // width of the stroke for the shadow.
-//					shadowDepth: 0,             // Number of strokes to make when drawing shadow.
-//												// Each stroke offset by shadowOffset from the last.
-//					shadowAlpha: 0,           // Opacity of the shadow
-//					renderer: $.jqplot.CanvasGridRenderer,  // renderer to use to draw the grid.
-//					rendererOptions: {}         // options to pass to the renderer.  Note, the default
-//												// CanvasGridRenderer takes no additional options.
-//				},
-//				seriesDefaults:{
-//					renderer: $.jqplot.BubbleRenderer,
-//					rendererOptions: {
-//						bubbleAlpha: 0.6,
-//						highlightAlpha: 0.8,
-//						highlightMouseDown: false, //diesable jqplotDataHighlight
-//						highlightMouseOver: false, //diesable jqplotDataHighlight
-//						autoscaleBubbles: false,
-//						escapeHtml: false
-//					},
-//					shadow: true,
-//					shadowAlpha: 0.05
-//				},
-//				
-//				 axesDefaults: {
-//					show: false,    // wether or not to renderer the axis.  Determined automatically.
-//					showTickMarks:false,
-//					tickInterval: 10,
-//					ticks: [10,20,30,40,50,60,70,80,100],
-//					showTicks: false, 
-//					drawMajorGridlines: false,
-//					drawMinorGridlines: false,
-//					drawMajorTickMarks: false,
-//					rendererOptions: {
-//						tickInset: 0,
-//						minorTicks: 0
-//					}
-//							  
-//			   }
-//			});	
-//		});
-//		};
+				
+			}else{
+				//read q1 cookie
+				__plot1 = Cookies.get('__plot1'); 
+				__plot2 = Cookies.get('__plot2');
+				console.log(__plot1);
+				console.log(__plot2);	
+				//decode cookie
+				__p1=__plot1.replace(/([^,]+,[^,]+),/g,'$1;');
+				__p2=__plot2.replace(/([^,]+,[^,]+),/g,'$1;');
+				var __bar1 = new String(__p1);
+            	var __bar2 = new String(__p2);
+				makePlotArray(__bar1.split(';'), "bar1");
+            	makePlotArray(__bar2.split(';'), "bar2");
+			}
 
+
+            
+
+            //The length of the plots determines the ticks and number of ticks
+            var numTicks = bar1.length;
+            var tickArray = new Array();
+            for (var i=0; i<numTicks+1; i++)
+            {
+                tickArray.push(i);                      
+            }
+			if(_type == 'bar2'){
+				
+            	colorArray = ['#f96802', '#dcd2ba'];
+				//console.log(__bar1, __bar2);
+            	var chart = $.jqplot('chart', [bar1, bar2],
+                {
+                    animate: true,
+                    captureRightClick: true,
+                    seriesColors:colorArray,
+                     grid: {
+                        drawGridLines: true,        // wether to draw lines across the grid or not.
+                        gridLineColor: '#cccccc',    // *Color of the grid lines.
+                        background: '#ffffff',      // CSS color spec for background color of grid.
+                        borderColor: '#999999',     // CSS color spec for border around grid.
+                        borderWidth: 0,           // pixel width of border around grid.
+                        shadow: false,               // draw a shadow for grid.
+                        shadowAngle: 0,            // angle of the shadow.  Clockwise from x axis.
+                        shadowOffset: 0,          // offset from the line of the shadow.
+                        shadowWidth: 0,             // width of the stroke for the shadow.
+                        shadowDepth: 0,             // Number of strokes to make when drawing shadow.
+                                                    // Each stroke offset by shadowOffset from the last.
+                        shadowAlpha: 0,           // Opacity of the shadow
+                        renderer: $.jqplot.CanvasGridRenderer,  // renderer to use to draw the grid.
+                        rendererOptions: {}         // options to pass to the renderer.  Note, the default
+                                                    // CanvasGridRenderer takes no additional options.
+                    },
+                    seriesDefaults:{
+                        renderer:$.jqplot.BarRenderer,
+                        shadowAngle: 0,
+                        shadowAlpha: 0,
+                        rendererOptions: {
+                            barDirection: 'horizontal',
+                            highlightMouseDown: true   ,
+                            barWidth: 18,
+                            barPadding: 0,
+                            barMargin: 0,
+                            shadowAngle: 0,
+                            shadowAlpha: 0
+                        },
+                        pointLabels: {show: false, formatString: '%d'},
+                    },
+
+                    axes: {
+                        yaxis: {
+                            renderer: $.jqplot.CategoryAxisRenderer
+                        },
+                        
+                        xaxis: {
+                            renderer: $.jqplot.LinearAxisRenderer,
+                            tickInterval: 1,
+                            ticks: tickArray,//[1,2,3,4,5],
+                            drawMajorGridlines: true,
+                            drawMinorGridlines: false,
+                            drawMajorTickMarks: false,
+                            rendererOptions: {
+                                tickInset: 0,
+                                minorTicks: 0
+                            }
+                        }
+                    }
+                });
+			}else if (_type=='bar1'){
+				//var colorArray = ['#f96802'];
+				makePlotArray(__bar1.split(';'), "bar1");
+			  	var plot1 = $.jqplot('chart', 
+					[bar1],//, plot1],
+					{
+						animate: true,
+						seriesColors:colorArray,
+						series:[
+							//{label:'Your picks'},
+						   // {label:'What your peers think'}
+							{pointLabels:{
+								show: true,
+								formatString: '%s%' 
+							  }}
+							],
+						 seriesDefaults:{
+							renderer:$.jqplot.BarRenderer,
+							shadowAngle: 0,
+							shadowAlpha: 0,
+							rendererOptions: {
+								varyBarColor: true,
+								barDirection: 'horizontal',
+								highlightMouseDown: true   ,
+								barWidth: 18,
+								barPadding: -5,
+								barMargin: 0,
+								shadowAngle: 0,
+								shadowAlpha: 0
+							},
+						},
+						grid: {
+							drawGridLines: false,        // wether to draw lines across the grid or not.
+							gridLineColor: '#fff',    // *Color of the grid lines.
+							background: '#ffffff',      // CSS color spec for background color of grid.
+							borderColor: '#fff',     // CSS color spec for border around grid.
+							borderWidth: 0,           // pixel width of border around grid.
+							shadow: false,               // draw a shadow for grid.
+							shadowAngle: 0,            // angle of the shadow.  Clockwise from x axis.
+							shadowOffset: 0,          // offset from the line of the shadow.
+							shadowWidth: 0,             // width of the stroke for the shadow.
+							shadowDepth: 0,             // Number of strokes to make when drawing shadow.
+														// Each stroke offset by shadowOffset from the last.
+							shadowAlpha: 0,           // Opacity of the shadow
+							renderer: $.jqplot.CanvasGridRenderer,  // renderer to use to draw the grid.
+							rendererOptions: {}         // options to pass to the renderer.  Note, the default
+														// CanvasGridRenderer takes no additional options.
+						},
+						axes: {
+							xaxis: {
+							   // renderer: $.jqplot.AxisLabelRenderer,
+								show: false,    // wether or not to renderer the axis.  Determined automatically.
+								min: 0, 
+								max: 120,
+								rendererOptions: {
+								   drawBaseline: false
+								},
+								tickRenderer: $.jqplot.CanvasAxisTickRenderer ,
+								 pad: 1.05,
+								tickOptions: { formatString: '%d%', showMark: false, showLabel: false },
+								showTickMarks: false,
+								showLabel: false,
+								textColor: "#fff"
+								
+							},
+							yaxis: {    
+								renderer: $.jqplot.CategoryAxisRenderer,
+								rendererOptions: {
+								   drawBaseline: false
+								}
+							}  
+						}
+					});//end render bar1
+				}//end if bar1/bar2
+        	});	//end require jqplot
+		};//end render chart
+
+		this.renderBubbles = function(content){
+						require(['js/lib/jqplot/jquery.jqplot.min.js', 'js/lib/jqplot/plugins/jqplot.bubbleRenderer.min.js'], function(jqplot) {
+							
+							//, 'js/lib/jqplot/plugins/jqplot.linearAxisRenderer.min.js
+							console.log('in render',content);
+			//$("#chart").empty();
+            $.jqplot.config.enablePlugins = true;
+			 var bubblePlot = [];
+			 var arr = [];
+			//define alternate plots for different answer counts
+			var bubblePlot5 = [[45,25,50,""],[25,60,50,""],[55,80,50,""],[90,70,50,""],[80,30,50,""],[50,50,50,""]];
+			var bubblePlot6 = [[45,25,50,""],[25,60,50,""],[55,80,50,""],[90,70,50,""],[80,30,50,""]];
+			var bubblePlot7 = [[45,25,50,""],[25,60,50,""],[55,80,50,""],[90,70,50,""],[80,30,50,""]];
+			//bubblePlot = bubblePlot+arr.length;
+			//arr = Cookies.get('__plot1').split(",");
+			var plot1 = [];
+			for (var i=0; i<content.answers.length; ++i){
+				console.log([content.answers[i].score, content.answers[i].answerstxt]);
+				plot1.push([content.answers[i].score, content.answers[i].answerstxt]);
+			}
+			Cookies.set("__plot1", plot1); 
+			//[x,y,radius, string]
+			bubblePlot = [[45,25,50,content.answers[0].answerstxt],[25,60,50,content.answers[1].answerstxt],[55,80,50,content.answers[2].answerstxt],[90,70,50,content.answers[3].answerstxt],[80,30,50,content.answers[4].answerstxt]];
 		
+		   //console.log(bubblePlot);
+			var colorArray=[];
+			colorArray = ['#ffffff', '#def5f9', '#8bcffa', '#eafcff','#8bcffa'];
+			var plot = $.jqplot('chart',[bubblePlot],{
+				animate: true,
+				seriesColors:colorArray,
+				 grid: {
+					drawGridLines: false,        // wether to draw lines across the grid or not.
+					//gridLineColor: '#d3eaee',    // *Color of the grid lines.
+					//background: '#d3eaee',      // CSS color spec for background color of grid.
+					//borderColor: '#d3eaee',     // CSS color spec for border around grid.
+					borderWidth: 0,           // pixel width of border around grid.
+					shadow: false,               // draw a shadow for grid.
+					shadowAngle: 0,            // angle of the shadow.  Clockwise from x axis.
+					shadowOffset: 0,          // offset from the line of the shadow.
+					shadowWidth: 0,             // width of the stroke for the shadow.
+					shadowDepth: 0,             // Number of strokes to make when drawing shadow.
+												// Each stroke offset by shadowOffset from the last.
+					shadowAlpha: 0,           // Opacity of the shadow
+					//renderer: $.jqplot.CanvasGridRenderer,  // renderer to use to draw the grid.
+					rendererOptions: {}         // options to pass to the renderer.  Note, the default
+												// CanvasGridRenderer takes no additional options.
+				},
+				seriesDefaults:{
+					renderer: $.jqplot.BubbleRenderer,
+					rendererOptions: {
+						bubbleAlpha: 0.6,
+						highlightAlpha: 0.8,
+						highlightMouseDown: false, //diesable jqplotDataHighlight
+						highlightMouseOver: false, //diesable jqplotDataHighlight
+						autoscaleBubbles: true,
+					},
+					shadow: true,
+					shadowAlpha: 0.05
+				},
+				
+				 axesDefaults: {
+					show: false,  
+					renderer: $.jqplot.LinearAxisRenderer,
+					showTickMarks:false,
+					tickInterval: 10,
+					ticks: [10,20,30,40,50,60,70,80,100],
+					showTicks: false, 
+					drawMajorGridlines: false,
+					drawMinorGridlines: false,
+					drawMajorTickMarks: false,
+					rendererOptions: {
+						tickInset: 0,
+						minorTicks: 0
+					}
+							  
+			   }
+			});//end create bubble chart
+			var canvasArr, labelArr;
+    		var selected;
+			var  popArray = [];
+			$('#chart').bind('jqplotDataClick',
+				function (ev, seriesIndex, pointIndex, data) {
+					canvasArr = $.makeArray( $(this).find(".jqplot-series-canvas .jqplot-bubble-point") );
+					labelArr = $.makeArray( $(this).find(".jqplot-series-canvas .jqplot-bubble-label") );
+					//search for click location and hide from canvas container
+					for(var t in labelArr){
+						if($.inArray($(labelArr[t]).html().toString(), data) != -1) {
+							//var options = {};
+							selected =  data[3];
+							//$(canvasArr[t]).effect( "puff", options, 300);
+							$(canvasArr[t]).hide();
+							$(labelArr[t]).hide();
+							popArray.push(selected);	
+						}
+					}
+					Cookies.set('__popArray', popArray);
+
+				});//.canvasBubble().bind('refresh');
+
+			});//end require jqplot
+		};//end render bubbles
 
         this.render = function (content) {
             this.$el.html(chartTpl(content));
             this.$el.data('template', '').data('template', 'charttpl');
-			this.renderChart(content);
+							console.log('content',content);
+			if(content.type == 'bubbles'){
+				this.renderBubbles(content);
+			}else{
+				this.renderChart(content);
+			}
             return this;
         };
 		
