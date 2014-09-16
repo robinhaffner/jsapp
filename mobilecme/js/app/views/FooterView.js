@@ -22,9 +22,15 @@ define(function (require) {
 
         this.getFooter = function () {
             siteAdapter.getData('footer',0).done(function (_ftr) {
-				console.log("col-1",_ftr["col-1"].link)
                 $("#ftr").html(footerTpl(_ftr));
-				//if(_ftr["col-1"].length==undefined){ $(".btn-offcanvas").remove(); }
+
+                //set disclaimer function and animation
+                $.map( _ftr, function( value, key ) {
+                    if (key == "disclaimer" && $(value.txt).length > 0 ) {
+                        initializeMarquee();
+                    };
+                });
+
                 return;
             });
         };

@@ -69,7 +69,6 @@ function getPageParam() {
     }
 }
 
-
 function selectSpecialty(s) {
     console.log("selectSpecialty",s, window.location.hash);
     var doclocation = document.location.href,
@@ -84,6 +83,36 @@ function selectSpecialty(s) {
         document.location = strsplit+"?specialty="+userselectedspecialty+"&"+passedJoinedVars+"#"+gotopage;
     }
 }
+
+
+var crossMarquee, scrollTime, delayBeforeScroll = 1000, marqueeSpeed = 2, pauseIt = 1;
+var copySpeed = marqueeSpeed;
+var pauseSpeed = (pauseIt == 0) ? copySpeed: 0;
+var actualHeight = '', leftTime;
+
+function scrollMarquee(){
+    if (parseInt(crossMarquee.css('top')) > (actualHeight*(-1)+8) ){
+        crossMarquee.animate({
+            top: (parseInt(crossMarquee.css('top')) - copySpeed+"px")
+        }, 0)
+    }
+    else { crossMarquee.css('top', parseInt(marqueeHeight)+8 ); }
+}
+
+function initializeMarquee(){
+    crossMarquee = $('.ftr-marquee');
+    crossMarquee.css('top', 0);
+    marqueeHeight = $('.disclaimer').height();
+
+    //actualHeight = crossMarquee.height();
+    actualHeight = 1077;
+
+    clearInterval(leftTime);
+    clearTimeout(scrollTime);
+
+    scrollTime = setTimeout('leftTime=setInterval("scrollMarquee()",50)', delayBeforeScroll);
+}
+
 
 var questionhandler = {
     errorhandler: function(_msg){
@@ -456,4 +485,21 @@ $(document).ready(function () {
 		});
 	});
 
+    //footer
+    $( "#ftr .disclaimer" ).hover(
+      function() {
+        copySpeed = pauseSpeed;
+      }, function() {
+        copySpeed = marqueeSpeed;
+      }
+    );
+    /*$( "[data-role='footer']#ftr .ftr-marquee" ).load( "isi.html", function(response, status, xhr) {
+        if ( status == "success" ) {
+            initializeMarquee();
+        }
+        if ( status == "error" ) {
+            console.log("$(this)",$(this));
+            $(this).append('Err: '+ xhr.status + " " + xhr.statusText)
+        }
+    });*/
 }); //ready

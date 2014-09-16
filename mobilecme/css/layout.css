@@ -282,7 +282,8 @@ a, a:hover, a:focus, a:active {
   color: rgb(255,255,255);
   font-size: 0.66em;
   border-top: 1px solid rgb(40,115,63);
-  max-height: 50px;
+  min-height: 50px;
+  overflow: hidden;
 }
 #ftr a:hover, #ftr a:link,
 #ftr a:active, #ftr a:visited, #ftr a:focus { 
@@ -299,17 +300,20 @@ a, a:hover, a:focus, a:active {
     top: 0;
 }
 
-#ftr .sponsored { text-align: center; }
+#ftr .sponsored { text-align: center; padding-bottom: 10px; }
 
 #ftr .disclaimer {
   position: relative;
+  text-align: left;
 }
 #ftr .ftr-marquee {
   position: absolute; 
-  width: 98%;
+  width: 50%;
   overflow: hidden;
   border: 0;
+  right: 0;
   background: transparent;
+  line-height: normal;
 }
 
 .ftr-marquee h1, .ftr-marquee h2, 
