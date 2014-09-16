@@ -104,8 +104,8 @@ function initializeMarquee(){
     crossMarquee.css('top', 0);
     marqueeHeight = $('.disclaimer').height();
 
-    //actualHeight = crossMarquee.height();
-    actualHeight = 1077;
+    actualHeight = crossMarquee.height() + 25;
+    //actualHeight = 1077;
 
     clearInterval(leftTime);
     clearTimeout(scrollTime);
@@ -486,20 +486,11 @@ $(document).ready(function () {
 	});
 
     //footer
-    $( "#ftr .disclaimer" ).hover(
-      function() {
+    $(document).on('mouseenter',  "#ftr .disclaimer" , function() {
         copySpeed = pauseSpeed;
-      }, function() {
+    });
+    $(document).on('mouseleave',  "#ftr .disclaimer" , function() {
         copySpeed = marqueeSpeed;
-      }
-    );
-    /*$( "[data-role='footer']#ftr .ftr-marquee" ).load( "isi.html", function(response, status, xhr) {
-        if ( status == "success" ) {
-            initializeMarquee();
-        }
-        if ( status == "error" ) {
-            console.log("$(this)",$(this));
-            $(this).append('Err: '+ xhr.status + " " + xhr.statusText)
-        }
-    });*/
+    });
+
 }); //ready
