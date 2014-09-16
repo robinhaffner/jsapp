@@ -72,7 +72,7 @@ define(function (require) {
 							plot2.push([parseFloat($(el).data( "avg" )), $(el).text()]);
                         });
                         sortObj["sortedlistArr"] = sortedlistArr;
-						console.log(sortObj["sortedlistArr"]);
+						//console.log(sortObj["sortedlistArr"]);
 						Cookies.set('sortResults',sortObj["sortedlistArr"]);
 
 						plot1.reverse();
@@ -80,7 +80,7 @@ define(function (require) {
 	
 						Cookies.set("__plot1", plot1); 
 						Cookies.set("__plot2", plot2); 
-						console.log(plot1, plot2);
+						//console.log(plot1, plot2);
 
                     }
                 })

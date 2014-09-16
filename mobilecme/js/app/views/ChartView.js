@@ -34,7 +34,18 @@ define(function (require) {
         };
 		
 		this.renderChart = function(content){
-			var _type = content.type,colorArray=[];
+			var _type = content.type,colorArray=[], plotTemp = [];
+			console.log("Cookies.get('__plot1')",Cookies.get('__plot1'));
+			var ctemp = Cookies.get('__plot1');
+			/*if (Cookies.get('__plot1') == '' || Cookies.get('__plot1')==undefined){
+				for (var i=0;i<content.answers;i++){
+					console.log(content.answers[i].score, content.answers[i].answerstxt);
+					plotTemp.push([content.answers[i].score, content.answers[i].answerstxt]);
+				
+				}
+				Cookies.set('__plot1', plotTemp);
+				Cookies.set('__plot2', plotTemp);
+			}*/
 			//console.log(content);
 			require(['js/lib/jqplot/jquery.jqplot.min.js', 'js/lib/jqplot/plugins/jqplot.barRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.categoryAxisRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.pointLabels.min.js'], function(jqplot) {
 				
