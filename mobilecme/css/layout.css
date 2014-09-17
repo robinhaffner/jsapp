@@ -358,7 +358,7 @@ html[xmlns*=""] .fixed-hdr-bar #nav-container { left: 0; }
   #ftr a:active, #ftr a:visited, #ftr a:focus { padding-right: 0; padding-left: 0; }
 
   /*.fixed-hdr-bar .main-canvas { padding-top: 100px; }*/
-  .fixed-hdr-bar #nav-container { width: 100%; }
+  .fixed-hdr-bar #nav-container { width: 100%; left: 0; }
   .row-offcanvas {
     position: relative;
     -webkit-transition: all .25s ease-out;
