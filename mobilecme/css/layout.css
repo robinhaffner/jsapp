@@ -285,13 +285,14 @@ a, a:hover, a:focus, a:active {
   min-height: 50px;
   overflow: hidden;
 }
-#ftr a:hover, #ftr a:link,
+#ftr a, #ftr a:hover, #ftr a:link,
 #ftr a:active, #ftr a:visited, #ftr a:focus { 
   color: rgb(255,255,255); 
   padding: 15px; margin: 0; 
   text-transform: capitalize;
   text-decoration: none;
   outline: 0; 
+  cursor: pointer;
 }
 #footerModal .modal-header {
     border-bottom: 0;
