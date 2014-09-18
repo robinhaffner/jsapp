@@ -72,11 +72,9 @@ define(function (require) {
 			var _type = content.type,colorArray=[];
 			this.initPlotArrays(content);
 			require(["jquery", "jqplot"], function ($, $jqplot) {
-				
-			
-			//require(['js/lib/jqplot/jquery.jqplot.min.js', 'js/lib/jqplot/plugins/jqplot.barRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.categoryAxisRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.pointLabels.min.js'], function(jqplot) {
-				console.log("Success..Inside Require JS");
-    		console.log("Plot...", $.jqplot);
+	
+			//console.log("Success..Inside Require JS");
+    		//console.log("Plot...", $.jqplot);
 				
 			$("#chart").empty();
             $.jqplot.config.enablePlugins = true;
@@ -145,9 +143,6 @@ define(function (require) {
             	makePlotArray(__bar2.split(';'), "bar2");
 			}
 
-
-            
-
             //The length of the plots determines the ticks and number of ticks
             var numTicks = bar1.length;
             var tickArray = new Array();
@@ -162,8 +157,17 @@ define(function (require) {
             	var chart = $.jqplot('chart', [bar1, bar2],
                 {
                     animate: true,
+					seriesColors:colorArray,
+					series:[
+						{label:'Your picks'},
+						{label:'What your peers think'}
+						/*{pointLabels:{
+							show: true,
+							formatString: '%s%' 
+						  }}*/
+					],
                     captureRightClick: true,
-                    seriesColors:colorArray,
+
                      grid: {
                         drawGridLines: true,        // wether to draw lines across the grid or not.
                         gridLineColor: '#cccccc',    // *Color of the grid lines.
@@ -220,18 +224,18 @@ define(function (require) {
 				//var colorArray = ['#f96802'];
 				makePlotArray(__bar1.split(';'), "bar1");
 			  	var plot1 = $.jqplot('chart', 
-					[bar1],//, plot1],
+					[bar1],
 					{
 						animate: true,
 						seriesColors:colorArray,
 						series:[
-							//{label:'Your picks'},
-						   // {label:'What your peers think'}
+							{label:'Your picks'},
+						   	{label:'What your peers think'},
 							{pointLabels:{
 								show: true,
 								formatString: '%s%' 
 							  }}
-							],
+						],
 						 seriesDefaults:{
 							renderer:$.jqplot.BarRenderer,
 							shadowAngle: 0,
@@ -295,11 +299,7 @@ define(function (require) {
 
 		this.renderBubbles = function(content){
 			require(["jquery", "jqplot"], function ($, $jqplot) {
-			//require(['js/lib/jqplot/jquery.jqplot.min.js', 'js/lib/jqplot/plugins/jqplot.bubbleRenderer.min.js'], 	
-					//function(jqplot) {
-			
-			console.log('in render',content);
-			//$("#chart").empty();
+
             $.jqplot.config.enablePlugins = true;
 			 var bubblePlot = [];
 			 var arr = [];
