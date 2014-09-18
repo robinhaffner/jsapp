@@ -109,7 +109,8 @@ a, a:hover, a:focus, a:active {
   border: 1px solid rgb(204,204,204); 
   border-radius: .6em; 
   color: rgb(51,51,51); 
-  font-size: 1.125em;
+  font-size: 1em;
+  font-weight: 200;
   background-image: none;
   background-color: rgb(250,250,250);
 }
@@ -347,6 +348,33 @@ a, a:hover, a:focus, a:active {
 #sidebar .media .media-object { width: 60px; }
 
 html[xmlns*=""] .fixed-hdr-bar #nav-container { left: 0; }
+
+
+/* ==========================================================================
+      Custom Styles: jqplot
+   ========================================================================== */
+
+table.jqplot-table-legend { display: none; }
+
+body table.jqplot-table-legend tr:nth-child(1) { float: left; }
+body table.jqplot-table-legend tr:nth-child(2) { float: right; }
+
+.jqplot-yaxis { margin: 0; }
+div.jqplot-bubble-label { text-align: center; text-shadow: none; }
+.jqplot-base-canvas, .jqplot-event-canvas, .jqplot-bubbleRenderer-highlight-canvas,
+.jqplot-series-shadowCanvas { background-color: transparent;}
+
+td.jqplot-table-legend.jqplot-table-legend-swatch{
+  text-align: center;
+  padding-top: 0px;
+  width: 10px;
+}
+
+body table.jqplot-table-legend tr:nth-child(2) { float: left; }
+table.jqplot-table-legend { top: 198px !important; }
+body table.jqplot-table-legend tr:nth-child(1) .jqplot-table-legend-swatch {
+  border-color: rgb(249, 104, 2) !important;
+}
 
 /*
  * Off Canvas
