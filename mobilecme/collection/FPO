@@ -9,7 +9,7 @@
       "sidebarlist": [
         {
           "media": 1,
-          "media-url": "?collection=FPO&program=AAA",
+          "media-url": "?collection=FPO&presentationid=AAA",
           "media-img": "http://c.pro-c.me/programs/demo/images/Fiel_Stanley_1213.jpg",
           "media-credit": "0.25 Credits",
           "media-heading": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
@@ -17,7 +17,7 @@
         },
         {
           "media": 2,
-          "media-url": "?program=BBB&collection=FPO",
+          "media-url": "?presentationid=BBB&collection=FPO",
           "media-img": "",
           "media-credit": "0.25 Credits",
           "media-heading": "Cystic Fibrosis Advances and Controversies",
