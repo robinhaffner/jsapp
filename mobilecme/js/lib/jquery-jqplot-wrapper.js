@@ -9,7 +9,8 @@ define([
     'jqplot.pointLabels',
     'jqplot.bubbleRenderer'
 ], 
-function() {
-    return $.jqplot;
+function($) {
+    var jqplot;
+    jqplot = $.jqplot;
+    return jqplot;
 });
- 

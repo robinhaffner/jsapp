@@ -73,13 +73,13 @@ define(function (require) {
 			this.initPlotArrays(content);
 			require(["jquery", "jqplot"], function ($, $jqplot) {
 				
-			console.log("Success..Inside Require JS");
-    		console.log("Plot...", $.jqplot, $jqplot);
+			
 			//require(['js/lib/jqplot/jquery.jqplot.min.js', 'js/lib/jqplot/plugins/jqplot.barRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.categoryAxisRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.pointLabels.min.js'], function(jqplot) {
-				
+				console.log("Success..Inside Require JS");
+    		console.log("Plot...", $.jqplot);
 				
 			$("#chart").empty();
-            $jqplot.config.enablePlugins = true;
+            $.jqplot.config.enablePlugins = true;
  			var __plot1, __plot2, __p1, __p2,bar1=[], bar2=[];
 
             function makePlotArray (s, name){

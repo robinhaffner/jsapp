@@ -45,7 +45,7 @@
 
             },
             "sponsored": {
-                "logo": "../../images/logo-xgeva.png", 
+                "logo": "", 
                 "text": "this program sponsored by"
             },
             "disclaimer": { 

@@ -9,9 +9,9 @@ require.config({
         views:'../../js/app/views',
         data: '../../data',
         server: window.config.path.server,
-		'jquery': '../../js/lib/jquery',
+		jquery: '../../js/lib/vendor/jquery.min',
 		'jqplot.core': '../../js/lib/jqplot/jquery.jqplot.min',
-        'jqplot': '../../js/lib/jquery-jqplot-wrapper',
+        jqplot: '../../js/lib/jquery-jqplot-wrapper',
 		'jqplot.barRenderer':   '../../js/lib/jqplot/plugins/jqplot.barRenderer.min',
     	'jqplot.categoryAxisRenderer': '../../js/lib/jqplot/plugins/jqplot.categoryAxisRenderer.min',
     	'jqplot.canvasTextRenderer': '../../js/lib/jqplot/plugins/jqplot.canvasTextRenderer.min',
@@ -30,7 +30,8 @@ require.config({
         'handlebars': {
             exports: 'Handlebars'
         },
-		'jqplot': ['jquery'],
+		"jqplot.core": {deps: ["jquery"]},
+        "jqplot": {deps: ["jqplot.core"]},
 		'../../js/lib/jqplot/plugins/jqplot.canvasTextRenderer': ['jqplot'],
 		'../../js/lib/jqplot/plugins/jqplot.pointLabels': ['jqplot'],
 		'../../js/lib/jqplot/plugins/jqplot.barRenderer': ['jqplot'],
