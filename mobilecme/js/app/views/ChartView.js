@@ -390,7 +390,7 @@ define(function (require) {
 					//search for click location and hide from canvas container
 					for(var t in labelArr){
 						if($.inArray($(labelArr[t]).html().toString(), data) != -1) {
-							//var options = {};
+							var options = {};
 							selected =  data[3];
 							//$(canvasArr[t]).effect( "puff", options, 300);
 							$(canvasArr[t]).hide();
@@ -408,7 +408,6 @@ define(function (require) {
         this.render = function (content) {
             this.$el.html(chartTpl(content));
             this.$el.data('template', '').data('template', 'charttpl');
-							console.log('content',content);
 			if(content.type == 'bubbles'){
 				this.renderBubbles(content);
 			}else{

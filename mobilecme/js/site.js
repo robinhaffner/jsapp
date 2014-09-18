@@ -2,7 +2,7 @@
 window.log=function(){log.history=log.history|| new Array(1000);log.history.shift();log.history.push(arguments);if(this.console){console.log(Array.prototype.slice.call(arguments))}};
 
 var multiselectArr = new Array();
-var specialty, paramObj, passedJoinedVars, startPageNum, gotopage, ansid;
+var specialty, memberid, emailid, paramObj, passedJoinedVars, startPageNum, gotopage, ansid;
 
 Cookies.defaults = {
     path: '/',
@@ -75,10 +75,13 @@ function getPageParam() {
         Cookies.set('user_passedpage_params', passedJoinedVars);
 
         specialty = 'specialty' in b;
-		ansid = b['ansid'];
+		if ('ansid' in b) ansid = b['ansid'];
+		if ('memberid' in b) memberid = b['memberid'];
+		if ('emailid' in b) emailid = b['emailid'];
+		if ('specialtyid' in b) specialty = b['specialtyid'];
         paramObj = b;
 
-        console.log("getPageParam b: ",b, 'ansid', ansid);
+        console.log("getPageParam b: ",b, 'ansid', ansid, 'memberid', memberid,'emailid', emailid, specialty);
     } else {
         Cookies.set('first_time_visit_program', 0);
     }

@@ -262,39 +262,39 @@
 		{
             "id": "question3",
             "groupid": "999",
-            "template": "Question",
+            "template": "Chart",
             "title": "PeerPlay: Barndogesic",
             "headline": "<p>QUESTION</p>",
             "question": "Which of the following are involved in accelerating hemolytic anemia?",
             "qid": "q3",
-            "type": "sortable",
+            "type": "bubbles",
             "async-answer": "false",
 			"skip": "true",
             "answers": [
-                     {
+           {
                     "answersid": "1",
                     "answerstxt": "PIGA enzyme",
-					"score":"3.5"
+					"score":"39"
                 },
                 {
                     "answersid": "2",
                     "answerstxt": "Nitric oxide",
-					"score":"2"
+					"score":"60"
                 },
                 {
                     "answersid": "3",
                     "answerstxt": "Carbon dioxide",
-					"score":"1.5"
+					"score":"27"
                 },
                 {
                     "answersid": "4",
                     "answerstxt": "C3-convertase",
-					"score":".9"
+					"score":"29"
                 },
                 {
                     "answersid": "5",
                     "answerstxt": "DAF/CD55",
-					"score":"4"
+					"score":"70"
                 }
             ],
             "audio_url": "http://c.pro-c.me/programs/demo/audio/bell.mp3",
@@ -308,34 +308,34 @@
            "headline": "<p>RESULTS:</p>",
             "question": "Which of the following are involved in accelerating hemolytic anemia?",
             "qid": "q3r",
-            "type": "bar2",
+            "type": "bar1",
             "async-answer": "false",
 			"skip": "true",
             "answers": [
            {
                     "answersid": "1",
                     "answerstxt": "PIGA enzyme",
-					"score":"3.5"
+					"score":"39"
                 },
                 {
                     "answersid": "2",
                     "answerstxt": "Nitric oxide",
-					"score":"2"
+					"score":"60"
                 },
                 {
                     "answersid": "3",
                     "answerstxt": "Carbon dioxide",
-					"score":"1.5"
+					"score":"27"
                 },
                 {
                     "answersid": "4",
                     "answerstxt": "C3-convertase",
-					"score":".9"
+					"score":"29"
                 },
                 {
                     "answersid": "5",
                     "answerstxt": "DAF/CD55",
-					"score":"4"
+					"score":"70"
                 }
             ],
             "audio_url": "http://c.pro-c.me/programs/demo/audio/applause.mp3",
