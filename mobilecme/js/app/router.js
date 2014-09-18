@@ -17,7 +17,7 @@ define(function (require) {
         detailsURL = /^#(\w+)/,
         mainView = new MainView(),
         navView = new NavView(),
-        programIDView = siteAdapter.getSettings("presentationid"),
+        presentationIDView = siteAdapter.getSettings("presentationid"),
         certificateIDView = siteAdapter.getSettings("certificate"),
         specialtyView = siteAdapter.getSettings("specialtyRequired"),
         startPageNum = siteAdapter.getStartPage("start"),
@@ -35,10 +35,10 @@ define(function (require) {
             }
 			
 			
-            console.log("route",specialty,hashpath,match,programIDView,getStoredSpecialty);
+            console.log("route",specialty,hashpath,match,presentationIDView,getStoredSpecialty);
             console.log("startPageNum",startPageNum);
 
-            $('body').data('programid', programIDView);
+            $('body').data('presentationid', presentationIDView);
             $('body').data('certificate', certificateIDView);
 
             if (specialtyView == "true") {

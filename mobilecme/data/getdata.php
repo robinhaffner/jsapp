@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 
 function resolveRequest() {
   switch($_GET['type']) {
-    case 'program':
+    case 'presentation':
     case 'collection':
       $return = getData($_GET['type'],$_GET['id']);
       break;

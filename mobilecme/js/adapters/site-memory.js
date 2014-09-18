@@ -1,20 +1,15 @@
-var params = {}, temp, i, l, collection, program, 
+var params = {}, temp, i, l, collection, presentation, 
 args = document.location.search.substring(1).split('&');
 if (document.location.search.length > 0) {
   for ( i = 0, l = args.length; i < l; i++ ) {
       temp = args[i].split('=');
       params[temp[0]] = temp[1];
   }
-  collection = params.collection, program = params.program;
-} /*else {
-  collection = "FPO", program = "BBB";
-};
-
-console.log("collection, program",params,collection, program);*/
-
+  collection = params.collection, presentation = params.presentationid;
+}
 
 //define(['json!data/getdata.php?type=program&id='+program, 'json!data/getdata.php?type=collection&id='+collection], function(data,sidebar){
-define(['json!server/program/'+program, 'json!server/collection/'+collection], function(data,sidebar){
+define(['json!server/presentation/'+presentation, 'json!server/collection/'+collection], function(data,sidebar){
 
   "use strict";
 
@@ -85,11 +80,6 @@ define(['json!server/program/'+program, 'json!server/collection/'+collection], f
     return answers[section][0];
   };
   
-  //data = require('json!data/jsontest.json'),
-  //data = require('json!data/getdata.php?type=program&id=AAA'),
-  //sidebar = require('json!data/getdata.php?type=collection&id=FPO'),
-  //answers = require('json!data/answer.json');
-
   // The public API
   return {
     getData: getData,

@@ -401,7 +401,7 @@ $(document).ready(function () {
                         _qaObj.qid = listviewQid;
                         _qaObj.cid = _qalist; //null
                         _qaObj.groupid = listviewGid;
-                        _qaObj.programid = $('body').data('programid');
+                        _qaObj.presentationid = $('body').data('presentationid');
                         showanswers.answercall(_qaObj,listviewAsync)
                     } 
                     return;
