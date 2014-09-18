@@ -158,6 +158,11 @@ define(function (require) {
                 {
                     animate: true,
 					seriesColors:colorArray,
+					legend: {
+					  show: true,
+					  location: 's',
+					  placement: 'outside'
+					}, 
 					series:[
 						{label:'Your picks'},
 						{label:'What your peers think'}
@@ -228,6 +233,11 @@ define(function (require) {
 					{
 						animate: true,
 						seriesColors:colorArray,
+						legend: {
+						  show: true,
+						  location: 's',
+						  placement: 'outside'
+						}, 
 						series:[
 							{label:'Your picks'},
 						   	{label:'What your peers think'},
@@ -323,6 +333,11 @@ define(function (require) {
 			var plot = $.jqplot('chart',[bubblePlot],{
 				animate: true,
 				seriesColors:colorArray,
+				legend: {
+				  show: true,
+				  location: 's',
+				  placement: 'outside'
+				},     
 				 grid: {
 					drawGridLines: false,        // wether to draw lines across the grid or not.
 					//gridLineColor: '#d3eaee',    // *Color of the grid lines.
