@@ -1,0 +1,563 @@
+{
+  "presentationid": "150202645",
+  "specialtyRequired": "true",
+  "evaluation": "evaluation/standard",
+  "certificate": "245",
+  "certificateData":
+  [{
+    "id":  "TBD",
+	"postTestScoreRequired": "70",
+	"certcredentials": ""
+  }], 
+  "start": [{
+    "id": "faculty"
+  }], 
+  "manifest": [{
+    "pages": [
+    "main",
+    "faculty",
+    "page1",
+    "page2",
+    "page3",
+    "page4",
+    "page5",
+    "page6",
+    "page7",
+    "page8",
+    "page9",
+    "page10",
+    "page11",
+    "page12",
+    "page13",
+    "page14",
+    "page15",
+    "page16",
+    "page17",
+    "page18",
+    "Conclusion",
+    "postquestion1",
+    "postquestion2",
+    "postquestion3",
+    "postquestion4",
+    "postexplanation",
+  	"certificate"
+    ]
+  }],
+  "topnav": [{
+      "next-control": "Next",
+	  "navType": "progress",
+      "headline": "<p>New Horizons in Kidney Transplant: Preventing Antibody-Mediated Rejection in Sensitized Patients</p>"
+    }],
+  "footer": [{
+  	  "sidebar": {},
+      "col-1": {
+        "txt": "Privacy",
+        "link": "tpl/privacy.html"
+      },
+      "col-2": {
+        "txt": "Feedback",
+        "link": "tpl/feedback.html"
+      },
+      "col-3": {
+        "txt": "Get Certificate&nbsp;&#62;",
+        "link": "#finalstep"
+      },
+      "col-4": {
+        "txt": "CME Info",
+        "link": "tpl/cmeinfo.html"
+      }
+    }],
+  "sitecontent": [
+    {
+      "id": "main",
+      "template": "Main",
+      "title": "ProCME - Specialty",
+      "headline": "New Horizons in Kidney Transplant: Preventing Antibody-Mediated Rejection in Sensitized Patients",
+      "header": "Select your Specialty",
+      "listviewer": [
+        "Renal Transplant",
+        "Transplant Surgery",
+        "Nephrology",
+        "Other"
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "faculty",
+      "template": "Content",
+      "title": "ProCME - Faculty",
+      "headline": "New Horizons in Kidney Transplant: Preventing Antibody-Mediated Rejection in Sensitized Patients",
+      "header": "",
+      "listmedia": [
+        {
+          "media_name": "<h1>Course Director</h1><p>Denis Glotz, MD, PhD</p>",
+          "media_thumbnail": "http://c.pro-c.me/programs/150202645/images/Glotz.jpg",
+          "media_accreditation": "<p>Saint-Louis Hospital<br>Paris, France</p>",
+          "media_descript": "",
+          "media_disclaimer": "<p><b>Denis Glotz, MD, PhD</b>, has a financial interest/relationship or affiliation in the form of:<br><i><u>Grant/Research Support</i></u> from CSL Behring and Thermo Fisher Scientific Inc.<br><i><u>Speakers Bureau Participant</i></u> with Alexion; F. Hoffmann-Roche; Sanofi; and Thermo Fisher Scientific Inc.</p>"
+        },
+        {
+          "media_name": "<h1>Co-Presenter</h1><p>Robert A. Montgomery, MD, DPhil, FACS</p>",
+          "media_thumbnail": "http://c.pro-c.me/programs/150202645/images/Montgomery.jpg",
+          "media_accreditation": "<p>The Johns Hopkins Hospital<br>Baltimore, Maryland</p>",
+          "media_descript": "",
+          "media_disclaimer": "<p><b>Robert A. Montgomery, MD, DPhil, FACS</b>, has a financial interest/relationship or affiliation in the form of:<br><i><u>Consultant</i></u> for iPierian Inc.<br><i><u>Grant/Research Support</i></u> from Alexion; Genzyme Corporation, a Sanofi company; and ViroPharma Incorporated, a wholly owned subsidiary of Shire, PLC.<br><i><u>Scientific Advisory</i></u> for Astellas Pharma US, Inc.; and Gambro.</p>"
+        },
+        {
+          "media_name": "<h1>CME Reviewer</h1><p>Pooja Singh, MD, FASN</p>",
+          "media_thumbnail": "",
+          "media_accreditation": "<p>University of New Mexico School of Medicine<br>Health Sciences Center<br>Albuquerque, New Mexico</p>",
+          "media_descript": "",
+          "media_disclaimer": "<p><b>Pooja Singh, MD, FASN<b>, has no financial interests/relationships or affiliations in relation to this activity.</p>"
+        },
+        {
+          "media_name": "<h1>Medical Director</h1><p>Kathryn Charalambous, PhD</p>",
+          "media_thumbnail": "",
+          "media_accreditation": "<p>PVI, PeerView Institute for Medical Education</p>",
+          "media_descript": "",
+          "media_disclaimer": "<p><b>Kathryn Charalambous, PhD</b>, has no financial interests/1relationships or affiliations in relation to this activity.</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+	  {
+      "id": "page1",
+      "template": "Content",
+      "title": "ProCME - Glotz: Antibody-Mediated Rejection: Clinical Phenotypes",
+      "headline": "Glotz: Antibody-Mediated Rejection: Clinical Phenotypes",
+      "header": "Rejection Is an Antibody-Mediated Process<sup>1,2</sup>",
+      "listcontent":[
+	   {"content": "<p><b>AMR in Renal Transplant</b></p><ul><li>Histological lesions</li></ul><ul><li>Acute tubular necrosis</li><li>Peritubular capillaritis, glomerulopathy, thrombosis</li><li>Arteritis</li></ul><ul><li>C4d+</li><li>Donor-specific antibody</li></ul>",
+	  "image": "http://c.pro-c.me/programs/150202645/images/slides/Slide01.png"
+	  },
+	  {"content": "<p>CDC: complement-dependent cytotoxicity; Ig: immunoglobulin.</p><ol><li> Racusen LC et al. <i>Am J Transplant.</i> 2003;3:708-714.</li><li>Taylor CJ et al. <i>Transplantation.</i> 1989;48:953-958.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR1.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page2",
+      "template": "Content",
+      "title": "ProCME - Glotz: Antibody-Mediated Rejection: Clinical Phenotypes",
+      "headline": "Glotz: Antibody-Mediated Rejection: Clinical Phenotypes",
+      "header": "AMR in KTRs: Biopsies for Cause<sup>1</sup>",
+      "listcontent":[
+	   {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide02.png"
+	  },
+	  {"content": "<p>AMR: antibody-mediated rejection; KTR: kidney-transplant recipient.</p><ol><li>Lefaucheur C et al. <i>J Am Soc Nephrol.</i> 2010.21:1398-1406.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR2.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page3",
+      "template": "Content",
+      "title": "ProCME - Glotz: Antibody-Mediated Rejection: Clinical Phenotypes",
+      "headline": "Glotz: Antibody-Mediated Rejection: Clinical Phenotypes",
+      "header": "AMR: An Evolutive Process<sup>1</sup>",
+      "listcontent":[
+	   {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide03.png"
+	  },
+	  {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide04.png"
+	  },
+	  {"content": "<p>DSA: donor-specific antibody; MFI: mean fluorescence intensity.</p><ol><li>Lefaucheur C et al. J Am Soc Nephrol. 2010;21:1398-1406.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR3.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page4",
+      "template": "Content",
+      "title": "ProCME - Glotz: Antibody-Mediated Rejection: Clinical Phenotypes",
+      "headline": "Glotz: Antibody-Mediated Rejection: Clinical Phenotypes",
+      "header": "Defining Subclinical AMR<sup>1-3</sup>",
+      "listcontent":[
+	   {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide05.png"
+	  },
+	  {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide06.png"
+	  },
+	  {"content": "<p>Ab: antibody; GFR: glomerular filtration rate; PTC: peritubular capillaritis.</p><ol><li>Gloor J et al. <i>Am J Transplant.</i> 2007;7:2124-2132.</li> <li>Haas M et al. <i>Am J Transplant.</i> 2007;7:576-585.</li> <li>Lerut E et al. <i>Translantation.</i> 2007;83:1416-1422.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR4.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page5",
+      "template": "Content",
+      "title": "ProCME - Glotz: Antibody-Mediated Rejection: Clinical Phenotypes",
+      "headline": "Glotz: Antibody-Mediated Rejection: Clinical Phenotypes",
+      "header": "Natural History of Subclinical AMR<sup>1</sup>",
+      "listcontent":[
+	   {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide07.png"
+	  },
+	  {"content": "<p>CG: chronic glomerulopathy; IF: interstitial fibrosis; SEM: standard error of mean; TA: tubular atrophy.</p><ol><li>Loupy A et al. <i>Am J Transplant.</i> 2009;9:2561-2570.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR5.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page6",
+      "template": "Content",
+      "title": "ProCME - Glotz: Antibody-Mediated Rejection: Clinical Phenotypes",
+      "headline": "Glotz: Antibody-Mediated Rejection: Clinical Phenotypes",
+      "header": "Post-Transplant DSA: Outcomes<sup>1</sup>",
+      "listcontent":[
+	   {"content": "<p>DSA+/C1q+ = higher risk of graft loss</p>",
+	   "image": "http://c.pro-c.me/programs/150202645/images/slides/Slide08.png"
+	  },
+	  {"content": "<ol><li>Loupy A et al. <i>N Engl J Med.</i> 2013;369:1215-1226.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR6.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page7",
+      "template": "Content",
+      "title": "ProCME - Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "headline": "Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "header": "AMR: Therapeutic Targets for Interrupting the Humoral Immune Response<sup>1</sup>",
+      "listcontent":[
+	   {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide09.png"
+	  },
+	  {"content": "<p> ATG: anti-thymocyte globulin; IVIg: intravenous immunoglobulin; LLPC: long-lived plasma cell.</p><ol><li>Montgomery RA et al. <i>Semin Immunol.</i> 2011;23:224-234.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR7.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page8",
+      "template": "Content",
+      "title": "ProCME - Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "headline": "Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "header": "Does Rituximab Prevent an Anamnestic Response?<sup>1</sup>",
+      "listcontent":[
+	   {"content": "<ul><li> Tetramers are used to determine the frequencies of B cells with HLA specificities that are not producing soluble antibody</li><li>Tetramers are available only for a limited number of HLA molecules</li></ul>",
+	   "image": "http://c.pro-c.me/programs/150202645/images/slides/Slide10.png"
+	  },
+	  {"content": "<ol><li>Zachary AA et al. <i>Transplantation.</i> 2013;95:701-704.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR8.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page9",
+      "template": "Content",
+      "title": "ProCME - Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "headline": "Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "header": "Placebo-Controlled, Randomized Trial of SOC ± Rituximab for Treatment of AMR",
+      "listcontent":[
+	   {"content": "<p><b>Primary endpoint</b></p><p>Composite criterion (graft loss or absence of improvement of renal function at d 12)</p><p><b>Results</b></p><ul><li>Among the 38 patients included with AMR, 52.6% (10/19) met the primary endpoint in the rituximab group vs 57.9% (11/19) in the placebo group (<i>P</i> = .744)</li><li>There were no differences in serum creatinine, proteinuria, and glomerulitis at 1, 6, or 12 mo</li></ul><ol><li>Sautenet B et al. 2013 American Transplant Congress (ATC 2013). Abstract 226.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR9.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page10",
+      "template": "Content",
+      "title": "ProCME - Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "headline": "Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "header": "AMR in HLA-Incompatible Transplants<sup>1</sup>",
+      "listcontent":[
+	   {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide11.png"
+	  },
+	  {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide12.png"
+	  },
+	  {"content": "<p>CMR: cell-mediated rejection; PP: plasmapheresis.</p><ol><li>Orandi BJ et al. <i>Am J Transplant.</i> 2014. In press.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR10.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page11",
+      "template": "Content",
+      "title": "ProCME - Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "headline": "Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "header": "Severe Oliguric AMR and the Impact of Rescue Splenectomy<sup>1</sup>",
+      "listcontent":[
+	   {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide13.png"
+	  },
+	   {"content": "<ol><li> Locke JE et al. <i>Am J Transplant.</i> 2007;7:842-846.</li><ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR11.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page12",
+      "template": "Content",
+      "title": "ProCME - Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "headline": "Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "header": "Classical Complement Pathway in Acute AMR in Sensitized KTRs<sup>1</sup>",
+      "listcontent":[
+	   {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide14.png"
+	  },
+	   {"content": "<p>aHUS: atypical hemolytic uremic syndrome; DAF: decay-accelerating factor; Ig: immunoglobulin; PNH: paroxysmal nocturnal hemoglobinuria; Y-CVF: Yunnan-cobra venom factor.</p><ol><li>Stegall MD et al. <i>Nat Rev Nephrol.</i> 2012;8:670-678.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR12.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page13",
+      "template": "Content",
+      "title": "ProCME - Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "headline": "Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "header": "Graft Survival After Severe AMR by Intervention<sup>1</sup>",
+      "listcontent":[
+	   {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide15.png"
+	  },
+	   {"content": "<ol><li>Orandi BJ et al. <i>Transplantation.</i> 2014 Aug 13. [Epub ahead of print]</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR13.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page14",
+      "template": "Content",
+      "title": "ProCME - Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "headline": "Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "header": "Transplant Glomerulopathy in Early Severe Oliguric AMR<sup>1</sup>",
+      "listcontent":[
+	   {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide16.png"
+	  },
+	   {"content": "<ol><li>Orandi BJ et al. <i>Transplantation.</i> 2014 Aug 13. [Epub ahead of print]</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR14.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page15",
+      "template": "Content",
+      "title": "ProCME - Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "headline": "Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "header": "Prevention of AMR in Desensitized Patients With Eculizumab: Mayo Approach<sup>1</sup>",
+      "listcontent":[
+	   {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide17.png"
+	  },
+	   {"content": "<p>BFXM: B-cell flow cytometric crossmatch; MESF: molecules of equivalent soluble fluorochrome.</p><ol><li>Stegall MD et al. <i>Am J Transplant.</i> 2011;11:2405-2413.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR15.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page16",
+      "template": "Content",
+      "title": "ProCME - Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "headline": "Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "header": "Prevention of AMR in Desensitized Patients<sup>1</sup>",
+      "listcontent":[
+	   {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide18.png"
+	  },
+	   {"content": "<ol><li> Stegall MD et al. <i>Am J Transplant.</i> 2011;11:2405-2413.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR16.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page17",
+      "template": "Content",
+      "title": "ProCME - Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "headline": "Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "header": "Using Eculizumab: Hopkins vs Mayo Approach<sup>1</sup>",
+      "listcontent":[
+	   {"image": "http://c.pro-c.me/programs/150202645/images/slides/Slide19.png"
+	  },
+	   {"content": "<p>POD: postoperative day; TG: transplant glomerulopathy.</p><ol><li>Stegall MD et al. <i>Am J Transplant.</i> 2011;11:2405-2413.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR17.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "page18",
+      "template": "Content",
+      "title": "ProCME - Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "headline": "Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "header": "AMR: C1 Esterase Inhibitor<sup>a</sup> Mechanistically Attractive Due to Proximal Complement Blockade<sup>1</sup>",
+      "listcontent":[
+	   {"content": "<ol><li>C1-esterase inhibitor is an alpha-globulin controlling the first part of the classic complement pathway and is a natural inhibitor of complement and contact system proteases</li><li>It is a major down-regulator of inflammatory processes in blood</li></ol>",
+	   "image": "http://c.pro-c.me/programs/150202645/images/slides/Slide20.png"
+	  },
+	   {"content": "<p><sup>a</sup> FDA approved for hereditary angioedema</p><p>FDP: fibrin degradation product; HMWK: high molecular weight kininogen; IL: interleukin; KK: kallikrein; MASP: MBP-associated serine protease; MBP: mannose-binding protein; TNF: tumor necrosis factor; tPA: tissue plasminogen activator.</p><ol><li>Levy J, O’Donnell P. <i>Expert Opin Investig Drugs.</i> 2006;15:1077-1090.</li></ol>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR18.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "Conclusion",
+      "template": "Content",
+      "title": "ProCME - Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "headline": "Montgomery: The Role of Complement Inhibition in Preventing and Treating AMR",
+      "header": "Conclusion",
+      "listcontent":[
+	   {"content": "<ul><li>The rate of AMR after desensitization is 24.7%, of which 8.9% is severe and nonresponsive to standard therapy and 15.8% is not graft-threatening and is responsive to PP; both phenotypes at risk for TG</li><li>Rituximab has an attractive mechanism and, when B-cell precursor rates are high, prevents anamnestic response</li></ul><ul><li>This does not seem to translate into efficacy for the prevention or treatment of AMR</li></ul><ul><li>Splenectomy is effective in rescuing kidneys with the severe AMR phenotype but does not protect against TG</li><li>A combination of splenectomy, PP/IVIg, and eculizumab is good rescue therapy and appears to prevent TG in the severe AMR phenotype</li><li>Eculizumab is very effective in reducing the rate of AMR in the first 3 mo after desensitization but, if high levels of DSA persist, there is a likelihood of chronic AMR/TG<.li><li>C1 esterase inhibitor provides more proximal complement blockade, and endogenous levels are depleted by PP</li></ul>"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/150202645/audio/SCR19.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "postquestion1",
+      "groupid": "1",
+      "template": "Question",
+      "title": "ProCME - Post-test Question 1",
+      "headline": "Post-test Question 1",
+      "question": "Which of the following is thought to be the primary mechanism of acute antibody-mediated rejection (AMR) in sensitized kidney-transplant recipients (KTRs)?",
+      "qid":"p1q1",
+      "type": "single",
+      "async-answer":"false",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1", 
+          "answerstxt": "<p>Activation of the complement cascade by donor-specific antibodies (DSAs)</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>C-cell proliferation, secondary to reduced cytokine production by T cells</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Dysregulated fibrosis</p>"
+        },
+        {
+          "answersid": "c4", "correct":"1",
+          "answerstxt": "<p>Activation of the complement cascade secondary to glomerulonephritis</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "postquestion2",
+      "groupid": "1",
+      "template": "Question",
+      "title": "ProCME - Post-test Question 2",
+      "headline": "Post-test Question 2",
+      "question": "Your patient with end-stage renal disease (ESRD) is about to undergo a renal transplant with a deceased donor kidney. At the time of transplantation, the patient showed pre-existing complement-binding donor-specific anti-HLA antibodies. Recent data suggest which of the following regarding his risk of AMR?",
+      "qid":"p1q2",
+      "type": "single",
+      "async-answer":"false",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1", "correct":"1",
+          "answerstxt": "<p>Without prophylactic treatment, his risk of AMR is four to five times greater than that of a nonsensitized KTR at 5 years</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>With prophylactic treatment, his risk of AMR is about three times greater than that of a nonsensitized KTR at 5 years</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>His status does not increase his risk of AMR compared with a nonsensitized KTR</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>His status will not increase his risk of AMR compared with a nonsensitized KTR if he undergoes induction therapy with rabbit anti-thymocyte globulin and remains compliant with his maintenance immunosupression</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "postquestion3",
+      "groupid": "1",
+      "template": "Question",
+      "title": "ProCME - Post-test Question 3",
+      "headline": "Post-test Question 3",
+      "question": "Eculizumab inhibits the complement pathway via which of the following mechanisms?",
+      "qid":"p1q3",
+      "type": "single",
+      "async-answer":"false",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>By binding to C4 and interrupting the C1 complex</p>"
+        },
+        {
+          "answersid": "c2", "correct":"1",
+          "answerstxt": "<p>By binding to C5 and preventing the formation of C5a and the membrane attack complex</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>By binding to CD55 and preventing the decay of C3 and C5 convertases</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>By binding to C4d at the site of complement activation</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "postquestion4",
+      "groupid": "1",
+      "template": "Question",
+      "title": "ProCME - Post-test Question 4",
+      "headline": "Post-test Question 4",
+      "question": "What is the leading cause of late graft failure in KTRs?",
+      "qid":"p1q4",
+      "type": "single",
+      "async-answer":"false",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Nephrotoxicity</p>"
+        },
+        {
+          "answersid": "c2", "correct":"1",
+          "answerstxt": "<p>AMR</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>T-cell–mediated rejection</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Acute kidney injury</p>"
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>Polyomavirus nephropathy </p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "postexplanation",
+      "template": "Content",
+      "title": "ProCME - Post-Test Explanation",
+      "headline": "Post-Test Explanation",
+      "header": "Post-Test Explanation",
+      "listcontent":[
+	   {"content": "<ol><li>DSA activation of the complement cascade may be the primary mechanism of acute AMR in sensitized KTRs. Activation may cause injury by enhancing cellular infiltration and inflammation or by directly damaging the allograft or might modulate T-cell activity and adaptive immune responses. [Stegall MD et al. <i>Nat Rev Nephrol.</i> 2012;8:670-678.]</li><li>Anti-HLA antibodies hamper successful transplantation, and activation of the complement cascade is involved in AMR. A recent study investigating whether the complement-binding capacity of anti-HLA antibodies has a role in kidney-allograft failure found that complement-binding DSA HLA antibodies improved the stratification of patients at risk for graft failure. [Loupy A et al. <i>N Engl J Med.</i> 2013;369:1215-1226.]</li><li>Eculizumab binds to C5 with high affinity and prevents the formation of C5a and the membrane attack complex. Treatment with eculizumab has been shown to decrease the incidence of acute AMR in sensitized KTRs. [Stegall MD et al. <i>Am J Transplant.</i> 2011;11:2405-2413.]</li><li>It has been found that failure is rare after T-cell–mediated rejection and acute kidney injury and common after AMR or glomerulonephritis. Fifty-six failures were attributed to four causes: rejection (36; 64%), glomerulonephritis (10; 18%), polyomavirus nephropathy (4; 7%), and intercurrent events (6; 11%), with every rejection loss showing evidence of AMR by the time of failure [Sellarés J et al. <i>Am J Translant.</i> 2012;12:388-399.]</li></ol>"
+	  }
+	  ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    }
+
+  ]
+}

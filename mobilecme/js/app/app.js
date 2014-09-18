@@ -8,7 +8,17 @@ require.config({
         tpl: '../../tpl',
         views:'../../js/app/views',
         data: '../../data',
-        server: window.config.path.server
+        server: window.config.path.server,
+		'jquery': '../../js/lib/jquery',
+		'jqplot.core': '../../js/lib/jqplot/jquery.jqplot.min',
+        'jqplot': '../../js/lib/jquery-jqplot-wrapper',
+		'jqplot.barRenderer':   '../../js/lib/jqplot/plugins/jqplot.barRenderer.min',
+    	'jqplot.categoryAxisRenderer': '../../js/lib/jqplot/plugins/jqplot.categoryAxisRenderer.min',
+    	'jqplot.canvasTextRenderer': '../../js/lib/jqplot/plugins/jqplot.canvasTextRenderer.min',
+    	'jqplot.canvasAxisLabelRenderer': '../../js/lib/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min',
+    	'jqplot.enhancedLegendRenderer': '../../js/lib/jqplot/plugins/jqplot.enhancedLegendRenderer.min',
+    	'jqplot.pointLabels': '../../js/lib/jqplot/plugins/jqplot.pointLabels.min',
+    	'jqplot.bubbleRenderer': '../../js/lib/jqplot/plugins/jqplot.bubbleRenderer.min'
     },
 
     map: {
@@ -19,14 +29,22 @@ require.config({
     shim: {
         'handlebars': {
             exports: 'Handlebars'
-        }
+        },
+		'jqplot': ['jquery'],
+		'../../js/lib/jqplot/plugins/jqplot.canvasTextRenderer': ['jqplot'],
+		'../../js/lib/jqplot/plugins/jqplot.pointLabels': ['jqplot'],
+		'../../js/lib/jqplot/plugins/jqplot.barRenderer': ['jqplot'],
+		'../../js/lib/jqplot/plugins/jqplot.categoryAxisRenderer': ['jqplot'],
+		'../../js/lib/jqplot/plugins/jqplot.canvasAxisLabelRenderer': ['jqplot'],
+		'../../js/lib/jqplot/plugins/jqplot.enhancedLegendRenderer': ['jqplot'],
+		'../../js/lib/jqplot/plugins/jqplot.bubbleRenderer': ['jqplot']
     }
 
 });
 
 require(['app/router'], function (router) {
 
-    "use strict";
+    'use strict';
 
     router.start();
 

@@ -2,7 +2,7 @@
 window.log=function(){log.history=log.history|| new Array(1000);log.history.shift();log.history.push(arguments);if(this.console){console.log(Array.prototype.slice.call(arguments))}};
 
 var multiselectArr = new Array();
-var specialty, paramObj, passedJoinedVars, startPageNum, gotopage;
+var specialty, paramObj, passedJoinedVars, startPageNum, gotopage, ansid;
 
 Cookies.defaults = {
     path: '/',
@@ -61,9 +61,10 @@ function getPageParam() {
         Cookies.set('user_passedpage_params', passedJoinedVars);
 
         specialty = 'specialty' in b;
+		ansid = b['ansid'];
         paramObj = b;
 
-        console.log("getPageParam b: ",b);
+        console.log("getPageParam b: ",b, 'ansid', ansid);
     } else {
         Cookies.set('first_time_visit_program', 0);
     }
@@ -176,7 +177,7 @@ var submitform = {
 
 var showanswers = {
     answercall: function (_qadata,_async) {
-
+console.log(_qadata);
         if (_qadata.type == "single") { _qadata.type = "multiplechoice"; }
         var request = $.ajax({
             url: window.config.path.quizapi+"/js/pquiz/answer",

@@ -1,0 +1,21 @@
+{
+  "sidebar": [
+    {
+      "name": "University of New Mexico School of Medicine, Office of Continuing Medical Education",
+      "logo": "http://c.pro-c.me/programs/150202645/images/sideBarLogos.png",
+      "header": "",
+      "headline": "",
+	  "showSidebar": "true",
+      "sidebarlist": [
+        {
+          "media": 1,
+          "media-url": "?collection=150202645&presentation=p1",
+          "media-img": "http://c.pro-c.me/programs/150202645/images/Glotz.jpg",
+          "media-credit": "0.25 Credits",
+          "media-heading": "New Horizons in Kidney Transplant: Preventing Antibody-Mediated Rejection in Sensitized Patients",
+          "media-subtext": "<p>Saint-Louis Hospital<br>Paris, France</p>"
+        }
+      ]
+    }
+  ]
+}

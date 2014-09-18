@@ -33,25 +33,53 @@ define(function (require) {
             this.$el = $('.content-wrapper');
         };
 		
-		this.renderChart = function(content){
-			var _type = content.type,colorArray=[], plotTemp = [];
-			console.log("Cookies.get('__plot1')",Cookies.get('__plot1'));
+		this.initPlotArrays = function(content){
+			console.log('in initPlotArrays');
+			//initialize the plot arrays
+			var plotTemp=[];
 			var ctemp = Cookies.get('__plot1');
-			/*if (Cookies.get('__plot1') == '' || Cookies.get('__plot1')==undefined){
-				for (var i=0;i<content.answers;i++){
-					console.log(content.answers[i].score, content.answers[i].answerstxt);
+			if (new String(ctemp) == '' || Cookies.get('__plot1')==undefined){
+				for (var i=0;i<content.answers.length;i++){
+					console.log([content.answers[i].score, content.answers[i].answerstxt]);
 					plotTemp.push([content.answers[i].score, content.answers[i].answerstxt]);
 				
 				}
 				Cookies.set('__plot1', plotTemp);
+			}
+			ctemp = Cookies.get('__plot2');
+			plotTemp = [];
+			if (new String(ctemp) == '' || Cookies.get('__plot2')==undefined){
+				for (var i=0;i<content.answers.length;i++){
+					console.log([content.answers[i].score, content.answers[i].answerstxt]);
+					plotTemp.push([content.answers[i].score, content.answers[i].answerstxt]);
+				
+				}
 				Cookies.set('__plot2', plotTemp);
-			}*/
-			//console.log(content);
-			require(['js/lib/jqplot/jquery.jqplot.min.js', 'js/lib/jqplot/plugins/jqplot.barRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.categoryAxisRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.pointLabels.min.js'], function(jqplot) {
+			}
+			ctemp = Cookies.get('__popArray');
+			plotTemp = [];
+			if (new String(ctemp) == '' || Cookies.get('__popArray')==undefined){
+				for (var i=0;i<content.answers.length;i++){
+					console.log(content.answers[i].answerstxt.replace(/([^,]+,[^,]+),/g,'$1;'));
+					plotTemp.push(content.answers[i].answerstxt.replace(/([^,]+,[^,]+),/g,'$1;'));
+				
+				}
+				Cookies.set('__popArray', plotTemp);
+			}
+		}
+		
+		this.renderChart = function(content){
+			var _type = content.type,colorArray=[];
+			this.initPlotArrays(content);
+			require(["jquery", "jqplot"], function ($, $jqplot) {
+				
+			console.log("Success..Inside Require JS");
+    		console.log("Plot...", $.jqplot, $jqplot);
+			//require(['js/lib/jqplot/jquery.jqplot.min.js', 'js/lib/jqplot/plugins/jqplot.barRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.categoryAxisRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js', 'js/lib/jqplot/plugins/jqplot.pointLabels.min.js'], function(jqplot) {
 				
 				
 			$("#chart").empty();
-            $.jqplot.config.enablePlugins = true;
+            $jqplot.config.enablePlugins = true;
  			var __plot1, __plot2, __p1, __p2,bar1=[], bar2=[];
 
             function makePlotArray (s, name){
@@ -71,9 +99,23 @@ define(function (require) {
 				
 				
 			if (_type == 'bar1'){
-				//read q1 cookie
+				//check if the cookies exist and if not create them
+				//also - check to see if this is a promoquiz result page by chekcing for ansid in the querystring (set in site.js as a global var)
+				var popArray = [];//, p1=[];
+				if (ansid){
+					console.log('create popArray', ansid);
+					for (var i=0;i<content.answers.length;i++){
+						//p1.push([content.answers[i].score, content.answers[i].answerstxt]);
+						if(ansid == content.answers[i].answersid){
+							popArray.push(content.answers[i].answerstxt.replace(/([^,]+,[^,]+),/g,'$1;'));
+							console.log('create popArray', ansid, content.answers[i].answerstxt.replace(/([^,]+,[^,]+),/g,'$1;'));
+						}
+				
+					}
+					Cookies.set('__popArray', popArray);
+					//Cookies.set('__plot1', p1);
+				}
 				__plot1 = Cookies.get('__plot1'); 
-				var popArray = [];
 				popArray = Cookies.get('__popArray').split(',');
 				//decode cookie
 				__p1=__plot1.replace(/([^,]+,[^,]+),/g,'$1;');
@@ -252,10 +294,11 @@ define(function (require) {
 		};//end render chart
 
 		this.renderBubbles = function(content){
-						require(['js/lib/jqplot/jquery.jqplot.min.js', 'js/lib/jqplot/plugins/jqplot.bubbleRenderer.min.js'], function(jqplot) {
-							
-							//, 'js/lib/jqplot/plugins/jqplot.linearAxisRenderer.min.js
-							console.log('in render',content);
+			require(["jquery", "jqplot"], function ($, $jqplot) {
+			//require(['js/lib/jqplot/jquery.jqplot.min.js', 'js/lib/jqplot/plugins/jqplot.bubbleRenderer.min.js'], 	
+					//function(jqplot) {
+			
+			console.log('in render',content);
 			//$("#chart").empty();
             $.jqplot.config.enablePlugins = true;
 			 var bubblePlot = [];
@@ -264,18 +307,17 @@ define(function (require) {
 			var bubblePlot5 = [[45,25,50,""],[25,60,50,""],[55,80,50,""],[90,70,50,""],[80,30,50,""],[50,50,50,""]];
 			var bubblePlot6 = [[45,25,50,""],[25,60,50,""],[55,80,50,""],[90,70,50,""],[80,30,50,""]];
 			var bubblePlot7 = [[45,25,50,""],[25,60,50,""],[55,80,50,""],[90,70,50,""],[80,30,50,""]];
-			//bubblePlot = bubblePlot+arr.length;
-			//arr = Cookies.get('__plot1').split(",");
-			var plot1 = [];
+
+			var plot1 = [], tmp = [];
 			for (var i=0; i<content.answers.length; ++i){
 				console.log([content.answers[i].score, content.answers[i].answerstxt]);
 				plot1.push([content.answers[i].score, content.answers[i].answerstxt]);
+				tmp.push(content.answers[i].answerstxt);
 			}
 			Cookies.set("__plot1", plot1); 
-			//[x,y,radius, string]
+			Cookies.set("__popArray", tmp); 
 			bubblePlot = [[45,25,50,content.answers[0].answerstxt],[25,60,50,content.answers[1].answerstxt],[55,80,50,content.answers[2].answerstxt],[90,70,50,content.answers[3].answerstxt],[80,30,50,content.answers[4].answerstxt]];
-		
-		   //console.log(bubblePlot);
+
 			var colorArray=[];
 			colorArray = ['#ffffff', '#def5f9', '#8bcffa', '#eafcff','#8bcffa'];
 			var plot = $.jqplot('chart',[bubblePlot],{

@@ -17,7 +17,7 @@ define(function (require) {
         detailsURL = /^#(\w+)/,
         mainView = new MainView(),
         navView = new NavView(),
-        programIDView = siteAdapter.getSettings("programid"),
+        programIDView = siteAdapter.getSettings("presentationid"),
         certificateIDView = siteAdapter.getSettings("certificate"),
         specialtyView = siteAdapter.getSettings("specialtyRequired"),
         startPageNum = siteAdapter.getStartPage("start"),

@@ -1,7 +1,14 @@
 {
-  "programid": "1112",
+  "presentationid": "1112",
   "specialtyRequired":"true",
   "evaluation": "evaluation/standard",
+  "certificate": "245",
+  "certificateData":
+ 	[{
+    "id":  "245",
+	"postTestScoreRequired": "80",
+	"certcredentials": ""
+  }], 
   "start": [{
     "id": "faculty"
   }], 
@@ -9,7 +16,19 @@
     "pages": [
     "main",
     "faculty",
-    "video"
+    "video",
+	 "postquestion1",
+    "postquestion2",
+    "postquestion3",
+    "postquestion4",
+    "postquestion5",
+    "equestion1",
+    "equestion2",
+    "equestion3",
+    "equestion4",
+    "equestion5",
+    "equestion6",
+	"certificate"
     ]
   }],
   "topnav": [{
@@ -73,7 +92,7 @@
       "headline": "Program Video",
       "header": "Video",
       "details": "",
-      "video_url": "//jwpsrv.com/feed/IzCBNLVw.rss",
+      "video_url": "http://content.jwplatform.com/players/K0m4px6G-8BoIiQFT.js",
       "video_autoplay": "false",
       "audio_url": "",
       "audio_autoplay": ""
@@ -373,7 +392,7 @@
       "title": "ProCME - Clinical Practice",
       "headline": "Pre-test Question",
       "question": "Which of the following gene therapy strategies are currently being evaluated in clinical trials in patients with cystic fibrosis (CF)?",
-      "qid":"AAAq1",
+      "qid":"BBBq1",
       "type": "single",
       "async-answer":"false",
       "skip": "true",
@@ -401,7 +420,7 @@
       "title": "ProCME - Clinical Practice",
       "headline": "Pre-test Question",
       "question": "Ivacaftor is a small-molecular-weight compound approved to treat patients with CF with which of the following mutations?",
-      "qid":"AAAq2",
+      "qid":"BBBq2",
       "type": "multiplechoice",
   	  "async-answer":"false",
         "skip": "true",
@@ -430,7 +449,7 @@
       "headline": "Pre-test Question",
       "question": "Which of the following agents represent “corrector” molecules currently undergoing clinical trials in CF that assist with <i>F508del</i> folding and allow <i>F508del</i> CFTR to be transported to the apical surface of expressing cells?",
       "type": "multiplechoice",
-      "qid":"AAAq3",
+      "qid":"BBBq3",
       "async-answer":"false",
       "skip": "true",
         "answers": [
@@ -465,7 +484,7 @@
       "title": "ProCME - Clinical Practice",
       "headline": "Pre-test Question",
       "question": "<p>Please indicate your level of agreement with the following statement:</p><p><i>In patients with CF, the F508del mutation manifests both Class II and Class III defects, which means that it may be possible to address both functional defects through combined use of a corrector such as VX-809 or VX-661 and a potentiator such as ivacaftor.</i></p>",
-      "qid":"AAAq4",
+      "qid":"BBBq4",
       "type": "single",
       "async-answer":"false",
       "skip": "true",
@@ -493,7 +512,7 @@
       "title": "ProCME - Clinical Practice",
       "headline": "Post-test Question",
       "question": "Dry powder formulation of which of the following inhaled antibiotics is currently under investigation in patients with CF?",
-      "qid":"AAAq5",
+      "qid":"BBBq5",
       "type": "single",
       "async-answer":"false",
       "skip": "true",
@@ -521,7 +540,7 @@
       "title": "ProCME - Clinical Practice",
       "headline": "Post-test Question",
       "question": "Which of the following gene therapy strategies are currently being evaluated in clinical trials in patients with cystic fibrosis (CF)?",
-      "qid":"AAAq1",
+      "qid":"BBBq1",
       "type": "single",
       "async-answer":"true",
       "skip": "false",
@@ -549,7 +568,7 @@
       "title": "ProCME - Clinical Practice",
       "headline": "Post-test Question",
       "question": "Ivacaftor is a small-molecular-weight compound approved to treat patients with CF with which of the following mutations?",
-      "qid":"AAAq2",
+      "qid":"BBBq2",
       "type": "multiplechoice",
       "async-answer":"true",
 	  "skip": "false",
@@ -578,7 +597,7 @@
       "headline": "Post-test Question",
       "question": "Which of the following agents represent “corrector” molecules currently undergoing clinical trials in CF that assist with <i>F508del</i> folding and allow <i>F508del</i> CFTR to be transported to the apical surface of expressing cells?",
       "type": "multiplechoice",
-      "qid":"AAAq3",
+      "qid":"BBBq3",
       "async-answer":"true",
       "skip": "false",
       "answers": [
@@ -613,7 +632,7 @@
       "title": "ProCME - Clinical Practice",
       "headline": "Post-test Question",
       "question": "<p>Please indicate your level of agreement with the following statement:</p><p><i>In patients with CF, the F508del mutation manifests both Class II and Class III defects, which means that it may be possible to address both functional defects through combined use of a corrector such as VX-809 or VX-661 and a potentiator such as ivacaftor.</i></p>",
-      "qid":"AAAq4",
+      "qid":"BBBq4",
       "type": "single",
       "async-answer":"true",
       "skip": "false",
@@ -641,7 +660,7 @@
       "title": "ProCME - Clinical Practice",
       "headline": "Post-test Question",
       "question": "Dry powder formulation of which of the following inhaled antibiotics is currently under investigation in patients with CF?",
-      "qid":"AAAq5",
+      "qid":"BBBq5",
       "type": "single",
       "async-answer":"true",
       "skip": "false",

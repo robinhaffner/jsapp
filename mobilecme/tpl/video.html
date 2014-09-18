@@ -10,12 +10,17 @@
     </video>-->
     
     <div id='videoPlayer'></div>
+<!--	<script type="text/javascript" src="http://content.jwplatform.com/players/K0m4px6G-8BoIiQFT.js"></script>-->
+	
+
 <script type='text/javascript'>
+
     jwplayer('videoPlayer').setup({
         playlist: '{{this.video_url}}',
         width: '90%',
         aspectratio: '16:9',
-        autostart: '{{this.video_autoplay}}'
+       autostart: '{{this.video_autoplay}}'
     });
 </script>
 </div>
+
