@@ -5,7 +5,7 @@ if (document.location.search.length > 0) {
       temp = args[i].split('=');
       params[temp[0]] = temp[1];
   }
-  collection = params.collection, presentation = params.presentationid;
+  collection = params.collection, presentation = params.presentation;
 }
 
 //define(['json!data/getdata.php?type=program&id='+program, 'json!data/getdata.php?type=collection&id='+collection], function(data,sidebar){

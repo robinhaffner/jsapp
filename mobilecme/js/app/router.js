@@ -13,6 +13,7 @@ define(function (require) {
         ContentView         = require("views/ContentView"),
         FinalstepView       = require("views/FinalstepView"),
         ChartView        	  = require("views/ChartView"),
+        tracker             = require("server/tracking"),
 
         detailsURL = /^#(\w+)/,
         mainView = new MainView(),

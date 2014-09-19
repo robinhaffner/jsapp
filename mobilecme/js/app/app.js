@@ -38,7 +38,8 @@ require.config({
 		'../../js/lib/jqplot/plugins/jqplot.categoryAxisRenderer': ['jqplot'],
 		'../../js/lib/jqplot/plugins/jqplot.canvasAxisLabelRenderer': ['jqplot'],
 		'../../js/lib/jqplot/plugins/jqplot.enhancedLegendRenderer': ['jqplot'],
-		'../../js/lib/jqplot/plugins/jqplot.bubbleRenderer': ['jqplot']
+		'../../js/lib/jqplot/plugins/jqplot.bubbleRenderer': ['jqplot'],
+        "tracking": {deps: ["jquery"]}
     }
 
 });
