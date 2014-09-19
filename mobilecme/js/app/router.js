@@ -118,18 +118,12 @@ define(function (require) {
             footerView.render();
             footerView.getFooter();
         },
-        doTrack = function () {
+        initTrack = function () {
           
           $.ajax(window.config.path.api+'/js/pquiz/initialize',{
             success:function(data) {
               if(data.status) {
                 window.urlParams['qsession'] = data.qsession;
-                track('view',{
-                  ProgramID:window.urlParams['collection'],
-                  PromoCode:0,
-                  CampaignID:0,
-                  PresentationID:$('body').data('presentationid')
-                });
               }
             },
             dataType:'json'
@@ -138,7 +132,7 @@ define(function (require) {
         },
         start = function () {
             $(window).on('hashchange', route);
-            doTrack();
+            initTrack();
             getPageParam();
             nav();
             sidebarCanvas();
