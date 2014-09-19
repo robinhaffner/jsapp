@@ -13,7 +13,6 @@ define(function (require) {
         ContentView         = require("views/ContentView"),
         FinalstepView       = require("views/FinalstepView"),
         ChartView        	  = require("views/ChartView"),
-        piwik               = require("piwik"),
         tracker             = require("api/tracking"),
 
         detailsURL = /^#(\w+)/,
@@ -121,7 +120,7 @@ define(function (require) {
         },
         doTrack = function () {
           
-          $.ajax(window.config.path.server+'/js/pquiz/initialize',{
+          $.ajax(window.config.path.api+'/js/pquiz/initialize',{
             success:function(data) {
               if(data.status) {
                 window.urlParams['qsession'] = data.qsession;
