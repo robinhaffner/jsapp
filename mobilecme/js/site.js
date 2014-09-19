@@ -286,20 +286,6 @@ console.log(_qadata);
 
 $(document).ready(function () {
 
-    $.ajax(window.config.server+'/js/pquiz/initialize',{
-      success:function(data) {
-        if(data.success === "1") {
-          window.urlParams['qsession'] = data.qsession;
-          track('view',{
-            ProgramID:0,
-            PromoCode:window.urlParams['PromoCode'],
-            CampaignID:0,
-            PresentationID:''
-          });
-        }
-      }
-    });
-    
     //Polyfill to remove click delays on browsers with touch UIs
     FastClick.attach(document.body);
     

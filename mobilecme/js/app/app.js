@@ -18,7 +18,8 @@ require.config({
     	'jqplot.canvasAxisLabelRenderer': '../../js/lib/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min',
     	'jqplot.enhancedLegendRenderer': '../../js/lib/jqplot/plugins/jqplot.enhancedLegendRenderer.min',
     	'jqplot.pointLabels': '../../js/lib/jqplot/plugins/jqplot.pointLabels.min',
-    	'jqplot.bubbleRenderer': '../../js/lib/jqplot/plugins/jqplot.bubbleRenderer.min'
+    	'jqplot.bubbleRenderer': '../../js/lib/jqplot/plugins/jqplot.bubbleRenderer.min',
+        'piwik': window.config.path.piwik+'/piwik'
     },
 
     map: {
@@ -39,7 +40,8 @@ require.config({
 		'../../js/lib/jqplot/plugins/jqplot.canvasAxisLabelRenderer': ['jqplot'],
 		'../../js/lib/jqplot/plugins/jqplot.enhancedLegendRenderer': ['jqplot'],
 		'../../js/lib/jqplot/plugins/jqplot.bubbleRenderer': ['jqplot'],
-        "tracking": {deps: ["jquery"]}
+        "tracking": {deps: ["jquery"]},
+        "piwik":{deps:[]}
     }
 
 });

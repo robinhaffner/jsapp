@@ -13,6 +13,7 @@ define(function (require) {
         ContentView         = require("views/ContentView"),
         FinalstepView       = require("views/FinalstepView"),
         ChartView        	  = require("views/ChartView"),
+        piwik               = require("piwik"),
         tracker             = require("server/tracking"),
 
         detailsURL = /^#(\w+)/,
@@ -111,8 +112,27 @@ define(function (require) {
             footerView.render();
             footerView.getFooter();
         },
+        doTrack = function () {
+          
+          $.ajax(window.config.path.server+'/js/pquiz/initialize',{
+            success:function(data) {
+              if(data.status) {
+                window.urlParams['qsession'] = data.qsession;
+                track('view',{
+                  ProgramID:0,
+                  PromoCode:0,
+                  CampaignID:0,
+                  PresentationID:''
+                });
+              }
+            },
+            dataType:'json'
+          });
+    
+        },
         start = function () {
             $(window).on('hashchange', route);
+            doTrack();
             getPageParam();
             nav();
             sidebarCanvas();
