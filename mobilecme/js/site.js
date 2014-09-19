@@ -44,6 +44,18 @@ function offCanvas () {
     }
 }
 
+var urlParams = {};
+(function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+})();
+
 //url parse function
 function getPageParam() {
     var checkspecialty = -1;
@@ -274,6 +286,20 @@ console.log(_qadata);
 
 $(document).ready(function () {
 
+    $.ajax(window.config.server+'/js/pquiz/initialize',{
+      success:function(data) {
+        if(data.success === "1") {
+          window.urlParams['qsession'] = data.qsession;
+          track('view',{
+            ProgramID:0,
+            PromoCode:window.urlParams['PromoCode'],
+            CampaignID:0,
+            PresentationID:''
+          });
+        }
+      }
+    });
+    
     //Polyfill to remove click delays on browsers with touch UIs
     FastClick.attach(document.body);
     
