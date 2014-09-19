@@ -9,6 +9,7 @@ require.config({
         views:'../../js/app/views',
         data: '../../data',
         server: window.config.path.server,
+        api: window.config.path.quizapi,
 		jquery: '../../js/lib/vendor/jquery.min',
 		'jqplot.core': '../../js/lib/jqplot/jquery.jqplot.min',
         jqplot: '../../js/lib/jquery-jqplot-wrapper',

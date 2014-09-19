@@ -14,7 +14,7 @@ define(function (require) {
         FinalstepView       = require("views/FinalstepView"),
         ChartView        	  = require("views/ChartView"),
         piwik               = require("piwik"),
-        tracker             = require("server/tracking"),
+        tracker             = require("api/tracking"),
 
         detailsURL = /^#(\w+)/,
         mainView = new MainView(),
@@ -36,6 +36,12 @@ define(function (require) {
             	gotopage = startPageNum;
             }
 			
+            track('view/'+gotopage,{
+              ProgramID:window.urlParams['collection'],
+              PromoCode:0,
+              CampaignID:0,
+              PresentationID:$('body').data('presentationid')
+            });
 			
             console.log("route",specialty,hashpath,match,presentationIDView,getStoredSpecialty);
             console.log("startPageNum",startPageNum);
@@ -119,10 +125,10 @@ define(function (require) {
               if(data.status) {
                 window.urlParams['qsession'] = data.qsession;
                 track('view',{
-                  ProgramID:0,
+                  ProgramID:window.urlParams['collection'],
                   PromoCode:0,
                   CampaignID:0,
-                  PresentationID:''
+                  PresentationID:$('body').data('presentationid')
                 });
               }
             },
