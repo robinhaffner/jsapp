@@ -120,7 +120,7 @@ define(function (require) {
         },
         initTrack = function () {
           
-          $.ajax(window.config.path.api+'/js/pquiz/initialize',{
+          $.ajax(window.config.path.quizapi+'/js/pquiz/initialize',{
             success:function(data) {
               if(data.status) {
                 window.urlParams['qsession'] = data.qsession;
