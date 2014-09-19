@@ -36,18 +36,19 @@ define(function (require) {
             	gotopage = startPageNum;
             }
 			
-            track('view/'+gotopage,{
-              ProgramID:window.urlParams['collection'],
-              PromoCode:0,
-              CampaignID:0,
-              PresentationID:$('body').data('presentationid')
-            });
-			
+            
             console.log("route",specialty,hashpath,match,presentationIDView,getStoredSpecialty);
             console.log("startPageNum",startPageNum);
 
             $('body').data('presentationid', presentationIDView);
             $('body').data('certificate', certificateIDView);
+            
+            track('view/'+gotopage,{
+              ProgramID:window.urlParams['collection'],
+              PromoCode:0,
+              CampaignID:0,
+              PresentationID:presentationIDView
+            });
 
             if (specialtyView == "true") {
                 if (specialty == true ) {
