@@ -69,11 +69,12 @@
       },
       "col-3": {
         "txt": "Get Certificate&nbsp;&#62;",
-        "link": "#finalstep"
+        "link": "#certificate"
       },
       "col-4": {
         "txt": "CME Info",
-        "link": "tpl/cmeinfo.html"
+		"id": "cmeinfo",
+        "html": "<h1>Program Description &amp; Educational Objectives</h1><p>In this activity, an expert in cystic fibrosis responds to 3 questions submitted in a recent survey of US pulmonologists and pediatric pulmonologists. The discussion focuses on emerging/investigational therapies for cystic fibrosis.</p><p>Upon completion of this activity, participants should be better able to:</p><ul><li>Summarize best practices for improving outcomes in patients with cystic fibrosis</li><li>Review safety and efficacy of novel strategies for managing cystic fibrosis</li><li>Discuss challenges related to adherence to complex treatment regimens in cystic fibrosis and potential ways this can be improved</li></ul><h2>Target Audience</h2><p>This activity has been designed to meet the educational needs of pulmonologists and other healthcare professionals who care for patients with cystic fibrosis.</p><h2>Requirements for Successful Completion</h2><p>In order to receive credit, participants must view the activity and complete the post-test and evaluation form. There are no pre-requisites and there is no fee to participate in this activity or to receive CME credit. Statements of Credit are awarded upon successful completion of the post-test and evaluation form.</p><p><strong>Media:</strong> Internet</p><p><strong>Release and Expiration Dates:</strong> March 3, 2014 - March 2, 2015</p><p><strong>Time to Complete:</strong> 15 minutes</p>"
       }
     }],
   "sitecontent": [

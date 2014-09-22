@@ -10,15 +10,16 @@
 		{{#if col-1.id}}<div style="display:none" id="{{this.col-1.id}}">{{{this.col-1.html}}}</div>{{/if}}
 	</div>
 	{{/if}}
-	{{#if col-2.link}}
+	{{#if col-2}}
 	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 		<a data-toggle="modal" {{#if col-2.link}}href="{{this.col-2.link}}"{{/if}} {{#if col-2.id}}data-containerid="{{this.col-2.id}}"{{/if}} data-target="#footerModal">{{{this.col-2.txt}}}</a>
-		{{#if col-2.id}}<div style="display:none" id="{{this.col-1.id}}">{{{this.col-2.html}}}</div>{{/if}}
+		{{#if col-2.id}}<div style="display:none" id="{{this.col-2.id}}">{{{this.col-2.html}}}</div>{{/if}}
 	</div>
 	{{/if}}
-	{{#if col-4.link}}
+	{{#if col-4}}
 	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-		<a data-toggle="modal" href="{{this.col-4.link}}" data-target="#footerModal">{{{this.col-4.txt}}}</a>
+		<a data-toggle="modal" {{#if col-4.link}}href="{{this.col-4.link}}"{{/if}} {{#if col-4.id}}data-containerid="{{this.col-4.id}}"{{/if}} data-target="#footerModal">{{{this.col-4.txt}}}</a>
+		{{#if col-4.id}}<div style="display:none" id="{{this.col-4.id}}">{{{this.col-4.html}}}</div>{{/if}}
 	</div>
 	{{/if}}
 	{{#if col-3.link}}
