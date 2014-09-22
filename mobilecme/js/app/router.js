@@ -42,11 +42,13 @@ define(function (require) {
             $('body').data('presentationid', presentationIDView);
             $('body').data('certificate', certificateIDView);
             
-            track('view/'+gotopage,{
-              ProgramID:window.urlParams['collection'],
-              PromoCode:0,
-              CampaignID:0,
-              PresentationID:presentationIDView
+            require(["piwik"], function () {
+              track('view/'+gotopage,{
+                ProgramID:window.urlParams['collection'],
+                PromoCode:0,
+                CampaignID:0,
+                PresentationID:presentationIDView
+              });
             });
 
             if (specialtyView == "true") {
