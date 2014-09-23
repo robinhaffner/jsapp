@@ -64,7 +64,8 @@
       },
       "col-4": {
         "txt": "CME Info",
-        "link": "tpl/cmeinfo.html"
+		"id":	"cmeinfo",
+		"html": "<div class='modal-body'><b>Activity Description & Educational Objectives</b><p>In this activity, two experts on renal transplantdiscuss the role of antibody-mediated rejection (AMR) in kidney transplant recipients, as well as the role of complement inhibition in the prevention and treatment of AMR.</p.<br><p>Upon completion of this activity, participants should be better able to:</p><ul><li>Assess the role of complement inhibition in antibody-mediated rejection in kidney transplant recipients</li> <li>Recognize the importance of prophylaxis for antibody-mediated rejection on graft survival in kidney transplant recipients</li><li>Evaluate the role of current and emerging agents that act as prophylaxis for and reduce the occurrence of antibody-mediated rejection in kidney transplant recipients</li> <br><b>Target Audience</b><p>This activity has been designed to meet the educational needs of transplant surgeons and nephrologists.</p><br><b>Requirements for Successful Completion</b><p>In order to receive credit, participants must view the activity and complete the post-test and evaluation form. There are no pre-requisites and there is no fee to participate in this activity or to receive CME credit. Statements of Credit are awarded upon successful completion of the post-test and evaluation form.</p><br><b>Faculty and Disclosure / Conflict of Interest Policy</b><p>In accordance with ACCME requirements, the University of New Mexico School of Medicine, Office of Continuing Medical Education, has a conflict of interest policy that requires faculty to disclose relevant financial relationships related to the content of their presentations/materials. Any potential conflicts are resolved so that presentations are evidence-based and scientifically balanced.  p. 9The relationships were reviewed by UNM CME and conflicts of interest were resolved prior to the activity.</p><br><p>This activity is supported by an unrestricted educational grant from Alexion Pharmaceuticals.</p><br><b>Disclosure of Unlabeled Use</b><p>The faculty of this educational activity may include discussions of products or devices that are not currently labeled for use by the FDA. Faculty members have been advised to disclose to the audience any reference to an unlabeled or investigational use.</p><br><p>No endorsement of unapproved products or uses is made or implied by coverage of these products or uses in our reports. No responsibility is taken for errors or omissions in reports.</p><br><p>Please refer to the official prescribing information for each product for discussion of approved indications, contraindications and warnings.</p></div>"
       }
     }],
   "sitecontent": [
@@ -75,9 +76,12 @@
       "headline": "New Horizons in Kidney Transplant: Preventing Antibody-Mediated Rejection in Sensitized Patients",
       "header": "Select your Specialty",
       "listviewer": [
-        "Renal Transplant",
         "Transplant Surgery",
-        "Nephrology",
+        "Surgery",
+        "Nephrology", 
+        "Immunology",
+        "Internal Medicine",
+        "Pathology",
         "Other"
       ],
       "audio_url": "",
