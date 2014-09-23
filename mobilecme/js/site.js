@@ -90,7 +90,7 @@ function getPageParam() {
 		if ('ansid' in b) ansid = b['ansid'];
 		if ('memberid' in b) memberid = b['memberid'];
 		if ('emailid' in b) emailid = b['emailid'];
-		if ('specialtyid' in b) specialty = b['specialtyid'];
+		if ('specialtyid' in b) specialty = string.toLowerCase(b['specialtyid']);
         paramObj = b;
 
         console.log("getPageParam b: ",b, 'ansid', ansid, 'memberid', memberid,'emailid', emailid, specialty);

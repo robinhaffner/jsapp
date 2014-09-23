@@ -91,28 +91,32 @@
       "header": "",
       "listmedia": [
         {
-          "media_name": "<h1>Course Director</h1><p>Denis Glotz, MD, PhD</p>",
+          "media_header": "<h1>Course Director</h1>",
+          "media_name": "<p>Denis Glotz, MD, PhD</p>",
           "media_thumbnail": "http://c.pro-c.me/programs/150202645/images/Glotz.jpg",
           "media_accreditation": "<p>Saint-Louis Hospital<br>Paris, France</p>",
           "media_descript": "",
           "media_disclaimer": "<p><b>Denis Glotz, MD, PhD</b>, has a financial interest/relationship or affiliation in the form of:<br><i><u>Grant/Research Support</i></u> from CSL Behring and Thermo Fisher Scientific Inc.<br><i><u>Speakers Bureau Participant</i></u> with Alexion; F. Hoffmann-Roche; Sanofi; and Thermo Fisher Scientific Inc.</p>"
         },
         {
-          "media_name": "<h1>Co-Presenter</h1><p>Robert A. Montgomery, MD, DPhil, FACS</p>",
+          "media_header": "<h1>Co-Presenter</h1>",
+          "media_name": "<p>Robert A. Montgomery, MD, DPhil, FACS</p>",
           "media_thumbnail": "http://c.pro-c.me/programs/150202645/images/Montgomery.jpg",
           "media_accreditation": "<p>The Johns Hopkins Hospital<br>Baltimore, Maryland</p>",
           "media_descript": "",
           "media_disclaimer": "<p><b>Robert A. Montgomery, MD, DPhil, FACS</b>, has a financial interest/relationship or affiliation in the form of:<br><i><u>Consultant</i></u> for iPierian Inc.<br><i><u>Grant/Research Support</i></u> from Alexion; Genzyme Corporation, a Sanofi company; and ViroPharma Incorporated, a wholly owned subsidiary of Shire, PLC.<br><i><u>Scientific Advisory</i></u> for Astellas Pharma US, Inc.; and Gambro.</p>"
         },
         {
-          "media_name": "<h1>CME Reviewer</h1><p>Pooja Singh, MD, FASN</p>",
+          "media_header": "<h1>CME Reviewer</h1>",
+          "media_name": "<p>Pooja Singh, MD, FASN</p>",
           "media_thumbnail": "",
           "media_accreditation": "<p>University of New Mexico School of Medicine<br>Health Sciences Center<br>Albuquerque, New Mexico</p>",
           "media_descript": "",
-          "media_disclaimer": "<p><b>Pooja Singh, MD, FASN<b>, has no financial interests/relationships or affiliations in relation to this activity.</p>"
+          "media_disclaimer": "<p><b>Pooja Singh, MD, FASN</b>, has no financial interests/relationships or affiliations in relation to this activity.</p>"
         },
         {
-          "media_name": "<h1>Medical Director</h1><p>Kathryn Charalambous, PhD</p>",
+          "media_header": "<h1>Medical Director</h1>",
+          "media_name": "<p>Kathryn Charalambous, PhD</p>",
           "media_thumbnail": "",
           "media_accreditation": "<p>PVI, PeerView Institute for Medical Education</p>",
           "media_descript": "",
