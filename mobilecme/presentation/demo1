@@ -392,7 +392,7 @@
 				"listcontent": [
 					{
 						"content": "<h1>A unique mechanism of action<sup>1</sup></h1>",
-						"enlarge-image": "presentation/demo1_assets/Chart4.gif"
+						"image": "presentation/demo1_assets/Chart4.gif"
 					},
 					{
 						"content": "<p>Brandogesic works by binding to CD55 and inhibits hemolysis specifically under conditions where blood CO<sub>2</sub> exceeds 25mEq/L,<sup>1</sup> controlling hemolysis only when blood nitrates are low and symptoms thought to be most evident.<sup>2</sup> CO<sub>2</sub> levels are thought to be higher during the day than at night, adding a further level of control.<sup>3,4</sup></p>",
