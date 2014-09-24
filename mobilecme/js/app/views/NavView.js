@@ -45,6 +45,8 @@ define(function (require) {
         this.getTopNav = function () {
             siteAdapter.getData('topnav',0).done(function (_nav) {
                 $("#nav-container").html(navTpl(_nav));
+                $("#hdr").css('background-color', _nav.backgroundColor);
+                $(".progress-bar").css('background-color', _nav.progressbar);
                 return;
             });
         };

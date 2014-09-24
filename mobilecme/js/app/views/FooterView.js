@@ -22,7 +22,9 @@ define(function (require) {
 
         this.getFooter = function () {
             siteAdapter.getData('footer',0).done(function (_ftr) {
-                $("#ftr").html(footerTpl(_ftr));
+                console.log(_ftr);
+                $("#ftr").html(footerTpl(_ftr))
+                    .css('background-color', _ftr.backgroundColor);
 
                 //set disclaimer function and animation
                 $.map( _ftr, function( value, key ) {

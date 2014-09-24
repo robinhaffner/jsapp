@@ -51,6 +51,7 @@
   }],
   "topnav": [{
     "backgroundColor": "#006838",
+    "progressbar": "#fff",
     "next-control": "Next",
     "navType": "progress",
     "headline": "<p>From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?</p>"
