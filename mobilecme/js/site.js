@@ -25,7 +25,6 @@ function offCanvas () {
 
     	if ($('.row-offcanvas').position().left < setwidth) {
             $(".main-canvas").hide();
-            console.log("if");
             var fixedheight = $('.row-offcanvas .sidebar-offcanvas').height();
             /*if (setheight < $('.row-offcanvas .sidebar-offcanvas').height()) {
                 $("html").css('overflow-y', 'visible')
@@ -35,7 +34,6 @@ function offCanvas () {
     		$('.row-offcanvas').toggleClass('active').css('left', setwidth);
     	} else {
             $(".main-canvas").show();
-            console.log("else");
             /*if (setheight < $('.row-offcanvas .main-canvas').height()) { 
                 $("html").css('overflow-y', 'hidden'); 
             } else { $("html").css('overflow-y', 'visible'); }*/
