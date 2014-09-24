@@ -121,7 +121,7 @@ define(function (require) {
             footerView.getFooter();
         },
         initTrack = function () {
-          
+          //set the server session variable so that quiz results will link back to the server in the event that the visitor does not have a 'MemberId'
           $.ajax(window.config.path.quizapi+'/js/pquiz/initialize',{
             success:function(data) {
               if(data.status) {
