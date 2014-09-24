@@ -53,7 +53,8 @@ a, a:hover, a:focus, a:active {
 }
 #hdr .icon-loading {
     display: block;
-    margin: 10px auto;
+    float: right;
+    margin: 10px 30px 0 0;
 }
 #hdr p { margin: 0; padding: 0; text-align: center; height: 50px; line-height: 20px; }
 #hdr p small { display: block; color: rgb(204,204,204); }
@@ -382,6 +383,8 @@ body table.jqplot-table-legend tr:nth-child(1) .jqplot-table-legend-swatch {
  */
 @media screen and (max-width: 767px) {
   html { overflow-x: hidden; }
+  #hdr .icon-loading { margin: 10px auto; }
+
   #ftr a, #ftr a:hover, #ftr a:link,
   #ftr a:active, #ftr a:visited, #ftr a:focus { padding-right: 0; padding-left: 0; }
 

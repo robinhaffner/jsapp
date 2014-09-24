@@ -17,30 +17,33 @@ if (strhash.split("#").length > 0) {
 
 function offCanvas () {
     var setwidth = $(window).width();
+    console.log("setwidth",setwidth);
 
-    if ( setwidth < 767) {
+    if ( setwidth <= 767) {
         var setheight = $(window).height();
         $('.sidebar-offcanvas').width(setwidth);
+
     	if ($('.row-offcanvas').position().left < setwidth) {
-            $(".main-canvas").hide()
+            $(".main-canvas").hide();
+            console.log("if");
             var fixedheight = $('.row-offcanvas .sidebar-offcanvas').height();
-            if (setheight < $('.row-offcanvas .sidebar-offcanvas').height()) {
+            /*if (setheight < $('.row-offcanvas .sidebar-offcanvas').height()) {
                 $("html").css('overflow-y', 'visible')
             } else { 
                 $("html").css('overflow-y', 'hidden'); 
-            }
+            }*/
     		$('.row-offcanvas').toggleClass('active').css('left', setwidth);
     	} else {
-            $(".main-canvas").show()
-            if (setheight < $('.row-offcanvas .main-canvas').height()) { 
+            $(".main-canvas").show();
+            console.log("else");
+            /*if (setheight < $('.row-offcanvas .main-canvas').height()) { 
                 $("html").css('overflow-y', 'hidden'); 
-            } else { $("html").css('overflow-y', 'visible'); }
+            } else { $("html").css('overflow-y', 'visible'); }*/
     		$('.row-offcanvas').removeClass('active').css('left', 0);
     	}
         $(document).scrollTop(0); //force scroll to top at value 0
     } else {
-        $('.row-offcanvas').attr('style', '');
-        $('.sidebar-offcanvas').attr('style', '');
+        $('.row-offcanvas, .sidebar-offcanvas, .main-canvas').attr('style', '');
     }
 }
 
