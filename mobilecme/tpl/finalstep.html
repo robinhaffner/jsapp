@@ -1,4 +1,12 @@
 <h1>{{this.header}}</h1>
+<div id="timer" class="timer-progress">
+	<div id="progress" class="col-lg-12">
+		<div class="progress program round" data-meter-value="{{this.progresstime}}">
+			<span class="meter" style="width:0%; background-color: {{this.progressbar}}"></span>
+		</div>
+	</div>	
+</div>
+
 {{#if listcontent}}
 	{{#this.listcontent}}
 	<div id="{{this.id}}" class="txtContainer">{{{this.content}}}</div>

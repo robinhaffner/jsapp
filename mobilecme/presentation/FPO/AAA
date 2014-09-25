@@ -45,8 +45,7 @@
     "equestion4",
     "equestion5",
     "equestion6",
-    "commenteval1",
-  	"certificate"
+    "commenteval1"
     ]
   }],
   "topnav": [{
@@ -915,6 +914,8 @@
       "title": "Get Certificate",
       "headline": "From Research to Clinical Practice: What’s New in the Treatment of Cystic Fibrosis?",
       "header": "Get Certificate",
+      "progresstime": 30,
+      "progressbar": "#006838",
       "listcontent":[
         {
           "content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, excepturi, vero, quidem nisi inventore odit totam quos earum facere iure veritatis magnam nobis necessitatibus voluptates quibusdam recusandae quaerat facilis. Debitis.</p>"

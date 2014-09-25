@@ -2,7 +2,8 @@
 window.log=function(){log.history=log.history|| new Array(1000);log.history.shift();log.history.push(arguments);if(this.console){console.log(Array.prototype.slice.call(arguments))}};
 
 var multiselectArr = new Array();
-var specialty, memberid, emailid, paramObj, passedJoinedVars, startPageNum, gotopage, ansid;
+var specialty, memberid, emailid, paramObj, passedJoinedVars, startPageNum, gotopage, ansid, __count=0;
+var programSet = (Cookies.get('program_count') == null) ? 0 : Cookies.get('program_count');
 
 Cookies.defaults = {
     path: '/',
@@ -17,7 +18,6 @@ if (strhash.split("#").length > 0) {
 
 function offCanvas () {
     var setwidth = $(window).width();
-    console.log("setwidth",setwidth);
 
     if ( setwidth <= 767) {
         var setheight = $(window).height();
@@ -26,17 +26,9 @@ function offCanvas () {
     	if ($('.row-offcanvas').position().left < setwidth) {
             $(".main-canvas").hide();
             var fixedheight = $('.row-offcanvas .sidebar-offcanvas').height();
-            /*if (setheight < $('.row-offcanvas .sidebar-offcanvas').height()) {
-                $("html").css('overflow-y', 'visible')
-            } else { 
-                $("html").css('overflow-y', 'hidden'); 
-            }*/
     		$('.row-offcanvas').toggleClass('active').css('left', setwidth);
     	} else {
             $(".main-canvas").show();
-            /*if (setheight < $('.row-offcanvas .main-canvas').height()) { 
-                $("html").css('overflow-y', 'hidden'); 
-            } else { $("html").css('overflow-y', 'visible'); }*/
     		$('.row-offcanvas').removeClass('active').css('left', 0);
     	}
         $(document).scrollTop(0); //force scroll to top at value 0
@@ -207,7 +199,7 @@ var submitform = {
 
 var showanswers = {
     answercall: function (_qadata,_async) {
-console.log(_qadata);
+        console.log(_qadata);
         if (_qadata.type == "single") { _qadata.type = "multiplechoice"; }
         var request = $.ajax({
             url: window.config.path.quizapi+"/js/pquiz/answer",
@@ -284,6 +276,62 @@ console.log(_qadata);
         $(".alert").remove(); //remove alert box
     }
 }
+
+//next program progress bar timer
+var timer = {
+    highlightContainer: function (highlight) {
+        $(".list-group-item").removeClass('selected');
+        $(".list-group-item").eq(highlight).addClass('selected');
+        Cookies.set('program_count', highlight);
+    },
+    createMeter: function() {
+        var findC;
+        detailsLength = $("#sidebar .list-group-item").length;
+
+        visit = Cookies.get('visited_programs');
+        firstTime = Cookies.get('first_time_visit_program');
+        
+        if (firstTime == 0) {
+            Cookies.set('visited_programs', programSet);
+            Cookies.set('first_time_visit_program', 1);
+            findC = $("#sidebar .list-group-item").eq(0);
+            timer.highlightContainer(0)
+            timer.placement()
+            timer.animateMeter(findC);
+        } else {
+            __count = parseInt(programSet) + 1;
+            if (detailsLength != __count) {
+                findC = $("#sidebar .list-group-item").eq(__count);
+                timer.highlightContainer(__count)
+                timer.placement()
+                timer.animateMeter(findC);
+            } else { 
+                timer.placement();
+            }
+        }
+
+    },
+    placement: function() {
+        var txt = "Course Completed";
+        var __n = __count;
+        if (detailsLength == __count){
+            $("#progress").empty().wrapInner("<p><strong>"+txt+"</strong></p>");
+        }
+    },
+    animateMeter: function(container) {
+        var meterVal = $('.progress.program').data('meter-value')*1000;
+        $(".meter").stop().animate({
+            width: "100%"},
+            meterVal, function() {
+                var getFirstLink = $(container).data('course-url');
+                var doclocation = document.location.href,
+                search = /([^&=]+)=?([^&]*)/g,
+                strsplit = doclocation.split(document.location.search)[0];
+                window.location = strsplit+getFirstLink;
+        }).css("height", $('.progress.program').height());
+    }
+}
+
 
 $(document).ready(function () {
 

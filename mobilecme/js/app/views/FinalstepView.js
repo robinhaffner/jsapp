@@ -19,6 +19,7 @@ define(function (require) {
             this.$el.html(finalstepTpl(content));
             this.$el.data('template', '').data('template', 'finalsteptpl');
             $(".next-control").hide();
+            //timer.createMeter();
             return this;
         };
 

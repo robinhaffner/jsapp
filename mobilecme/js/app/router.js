@@ -93,12 +93,16 @@ define(function (require) {
             if (match && specialty || getStoredSpecialty != undefined) {
 
                 siteAdapter.getData("sitecontent",gotopage).done(function(_content){
+
                   var tpl = eval(_content.template+"View");
                   var handler = new tpl();
                   handler.render(_content);
 
                   navView.setNextPage(gotopage);
                   $("title").html(_content.title);
+                  if (_content.id == "finalstep") {
+                    timer.createMeter();
+                  };
                 }).fail(function() {
                   //document.location = document.location.origin; // 404 page not found
                 });
