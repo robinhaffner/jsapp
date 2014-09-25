@@ -9,7 +9,7 @@ if (document.location.search.length > 0) {
 }
 
 //define(['json!data/getdata.php?type=program&id='+program, 'json!data/getdata.php?type=collection&id='+collection], function(data,sidebar){
-define(['json!server/presentation/'+presentation, 'json!server/collection/'+collection], function(data,sidebar){
+define(['json!server/presentation/'+collection+'/'+presentation, 'json!server/presentation/'+collection+'/'+collection], function(data,sidebar){
 
   "use strict";
 

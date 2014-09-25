@@ -1,0 +1,626 @@
+{
+  "presentationid": "p4",
+  "specialtyRequired": "true",
+  "evaluation": "evaluation/standard",
+  "certificate": "245",
+  "certificateData":
+  [{
+    "id":  "TBD",
+	"postTestScoreRequired": "100",
+	"certcredentials": ""
+  }], 
+  "start": [{
+    "id": "faculty"
+  }], 
+  "manifest": [{
+    "pages": [
+    "main",
+    "faculty",
+    "video1",
+    "prequestion1",
+    "prequestion2",
+    "content1",
+    "content2",
+    "content3",
+    "content4",
+    "content5",
+    "content6",
+    "content7",
+    "content8",
+    "content9",
+    "content10",
+    "content11",
+    "content12",
+    "content13",
+    "content14",
+    "content15",
+    "video2",
+    "postquestion1",
+    "postquestion2",
+    "evalquestion1",
+    "evalquestion2",
+    "evalquestion3",
+    "evalquestion4"
+    ]
+  }],
+  "topnav": [{
+      "next-control": "Next",
+	  "navType": "progress",
+      "headline": "<p>Module 4: Mechanisms of Action: Targets and Opportunities</p>"
+    }],
+  "footer": [{
+  	  "sidebar": {},
+      "col-1": {
+        "txt": "Privacy",
+        "link": "tpl/privacy.html"
+      },
+      "col-2": {
+        "txt": "Feedback",
+        "link": "tpl/feedback.html"
+      },
+      "col-3": {
+        "txt": "Get Certificate&nbsp;&#62;",
+        "link": "#finalstep"
+      },
+      "col-4": {
+        "txt": "CME Info",
+		"id":	"cmeinfo",
+		"html": "<div class='modal-body'><p>This educational activity is supported by an educational grant from FORUM Pharmaceuticals.</p><h1>Activity Description</h1><p>Negative symptoms and cognitive dysfunction impose a significant burden upon patients, their families, and caregivers. While negative and cognitive symptoms do not respond to traditional pharmacologic treatment for schizophrenia, it is still important to establish that a patient's symptoms are not due to other causes that are potentially reversible. While more research is needed to better understand and treat negative and cognitive symptoms, they should nevertheless be monitored and targeted as much as possible in order to improve social and occupational functioning.</p><p>This activity is the first in a 4-module curriculum designed to improve clinicians' recognition of the degree to which persistent negative and cognitive symptoms impair functioning. Other modules focus on differentiating negative symptoms from other underlying psychiatric conditions (Module 2), assessing negative symptoms and cognitive function (Module 3), and current thinking around the neurobiology underlying these symptoms in schizophrenia and research that is exploring how to improve cognitive function and alleviate negative symptoms (Module 4).</p><h1>Learning Objectives</h1><p>As a result of participating in the activity, learners should be better able to:</p><ul> <li>Describe current hypotheses about the origins of negative and cognitive symptoms and treatments and interventions that may address them</li></ul><h1>Accreditation and Credit Designation</h1><p>This activity has been planned and implemented in accordance with the accreditation requirements and policies of the Accreditation Council for Continuing Medical Education (ACCME) through the joint providership of American Academy of CME, Inc., (Academy) and E&S MedEd Group, Inc. The American Academy of CME, Inc., is accredited by the ACCME to provide continuing medical education for physicians.</p><p>The American Academy of CME, Inc., designates this enduring material for a maximum of 0.25 </i>AMA PRA Category 1 Credits<sup>TM</sup>.</i> Physicians should claim only the credit commensurate with the extent of their participation in the activity.</p><p>Independent Clinical Reviewer: No relevant financial relationships with any commercial interests.</p><p>Planners: John J.D. Juchniewicz, MCIS, CCMEP, American Academy of CME and Laurie Ermentrout, and Wendy Gloffke, PhD, E&S MedEd Group: No relevant financial relationships with any commercial interests.</p><p>There is no off-label or investigational information discussed in this module.</p><p>This activity is designed for use by health care professionals for educational purposes only. The opinions expressed in this educational activity are those of the faculty, and do not represent those of the Academy or E&S MedEd Group. This activity is intended as a supplement to existing knowledge, published information, and practice guidelines. Learners should appraise the information presented critically, and draw conclusions only after careful consideration of all available scientific information.</p><h1>Method of Participation</h1><p>There are no fees to participate in the activity. Participants must review the CME information including the learning objectives and disclosure statements, as well as the content of the activity. To receive CME credit for your participation, please review activity content and complete the pre and post-test (achieving a passing grade of 100% on the post-test) and program evaluation.</p><h1>Software Requirements</h1><p>Pro-CME is available on Mac, PC, and has been optimized for multi-touch devices. For the best experience, we recommend using the latest versions of Safari, Google Chrome, Mozilla Firefox, or Microsoft Internet Explorer. Depending on your browser of choice, additional software, such as Adobe(r) Flash(r) Player and Adobe Reader may be required. Some programs may require your device is equipped with speakers or headphones. If you have any technical issues, feel free to contact us at <a href='mailto:info@pro-c.me'>info@pro-c.me</a>.</p><h1>Privacy</h1><p>For more information about the American Academy of CME privacy policy, please access http://www.academycme.org/privacy.htm </p><h1>Contact</h1><p>For any questions, please contact: <a href='mailto:CEServices@academycme.org'>CEServices@academycme.org</a></p><h1>Copyright</h1><p>© 2014. This CME-certified activity is held as copyrighted © by American Academy of CME, Inc. and E&S MedEd Group, Inc. Through this notice, the Academy and E&S MedEd Group grant permission of its use for educational purposes only. These materials may not be used, in whole or in part, for any commercial purposes without prior permission in writing from the copyright owner(s).</p></div>"
+      }
+    }],
+  "sitecontent": [
+    {
+      "id": "main",
+      "template": "Main",
+      "title": "ProCME - Specialty",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Select your Specialty",
+      "listviewer": [
+        "Psychiatrists",
+        "Psychiatric nurse practitioners",
+        "Physician assistants", 
+        "Nurses",
+        "Other"
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "faculty",
+      "template": "Content",
+      "title": "ProCME - Faculty",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "",
+      "listmedia": [
+        {
+          "media_header": "<h1>Activity Director</h1>",
+          "media_name": "<p>Leslie Citrome, MD, MPH</p>",
+          "media_thumbnail": "http://c.pro-c.me/programs/180200142/images/Citrome.jpg",
+          "media_accreditation": "<p>Clinical Professor of Psychiatry and Behavioral<br>Sciences, New York Medical College<br>Valhalla, New York</p>",
+          "media_descript": "",
+          "media_disclaimer": "<h2>Disclosure Statement</h2><p>According to the disclosure policy of the Academy, all faculty, planning committee members, editors, managers and other individuals who are in a position to control content are required to disclose any relevant relationships with any commercial interests related to this activity. The existence of these interests or relationships is not viewed as implying bias or decreasing the value of the presentation. All educational materials are reviewed for fair balance, scientific objectivity and levels of evidence. Disclosures are as follows:</p><p>Leslie Citrome, MD, MPH, discloses the following: Advisory Boards (Scientific and Marketing Purposes) and Consultant (Marketing and Clinical Trial Design): Alexza, Alkermes, Bristol-Myers Squibb, Eli Lilly, Forum (Envivo), Forest, Genentech, Janssen, Jazz, Lundbeck, Merck, Medivation, Mylan, Novartis, Noven, Otsuka, Pfizer, Reckitt Benckiser, Reviva, Shire, Sunovion, Takeda; Shareholder (small number of shares of common stock): Bristol-Myers Squibb, Eli Lilly, Johnson & Johnson, Merck, Pfizer; Promotional Speakers Bureaus: AstraZeneca, Forest, Lundbeck, Novartis, Otsuka, Sunovion, Takeda.</p>"
+        },
+        {
+          "media_header": "",
+          "media_name": "<p>Christoph U. Correll, MD</p>",
+          "media_thumbnail": "http://c.pro-c.me/programs/180200142/images/Correll.jpg",
+          "media_accreditation": "<p>Professor of Psychiatry <br> Hofstra North Shore LIJ School of Medicine<br> Medical Director<br> Recognition and Prevention Program<br> The Zucker Hillside Hospital<br>Glen Oaks, New York</p>",
+          "media_descript": "",
+          "media_disclaimer": "<p>Christoph Correll, MD, discloses the following: Advisory Board for Scientific Information: Genentech, Roche, Lundbeck, Sunovion, Supernus; Consultant for Clinical Trial Design: Eli Lilly, Genentech, Gerson Lehrman Group, IntraCellular Therapies, Janssen/J&J, Lundbeck, MedAvante, Medscape, Otsuka, Pfizer, Roche, Sunovion, Supernus, and Takeda; Grant/Research Support: BMS, Novo Nordisk A/S, Otsuka; Data Safety Monitoring Board: Janssen/Johnson & Johnson, Lundbeck, Pfizer; Lectures (non-promotional): Bristol-Myers Squibb, Janssen/Johnson & Johnson, Lundbeck, Otsuka, ProPhase</p>"
+        },
+        {
+          "media_header": "",
+          "media_name": "<p>Philip D. Harvey, PhD</p>",
+          "media_thumbnail": "http://c.pro-c.me/programs/180200142/images/Harvey.jpg",
+          "media_accreditation": "<p>Professor of Psychiatry<br>University of Miami Miller School of Medicine<br>Miami, Florida</p>",
+          "media_descript": "",
+          "media_disclaimer": "<p>Philip Harvey, PhD, discloses the following: Advisory Board for Scientific Information: Boehringer-Ingelheim, Forest, Forum, Genentech; Consultant for Clinical Trial Design: Otsuka, Sunovion, Takeda, Grant/Research Support: Genentech</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "video1",
+      "template": "Video",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Introduction",
+      "details": "",
+      "video_url": "//jwpsrv.com/feed/IzCBNLVw.rss",
+      "video_autoplay": "false",
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "prequestion1",
+      "groupid": "1",
+      "template": "Question",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Pre-test Question 1",
+      "question": "What effects may be achieved by targeting mesocortical pathways?",
+      "qid":"p4preq1",
+      "type": "single",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1", 
+          "answerstxt": "<p>Reduction in bioavailable dopamine</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Elevation of prolactin</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Attenuation of positive symptoms</p>"
+        },
+        {
+          "answersid": "c4", "correct":"1",
+          "answerstxt": "<p>Attenuation of negative and cognitive symptoms</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "prequestion2",
+      "groupid": "1",
+      "template": "Question",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Pre-test Question 2",
+      "question": "Which of the following describes α7 nicotinic receptors?",
+      "qid":"p4preq2",
+      "type": "single",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Are affected by cigarette smoking </p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Are found only in the hippocampus</p>"
+        },
+        {
+          "answersid": "c3", "correct":"1", 
+          "answerstxt": "<p>Can modulate presynaptic glutamate release</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Reduce dopamine output in the prefrontal cortex</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+	  {
+      "id": "content1",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Educational Objectives",
+      "listcontent":[
+	   {"content": "<ul><li>Describe current hypotheses about the origins of negative and cognitive symptoms and emerging treatments that may address them</li></ul>"
+	  }
+	  ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "content2",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Areas Implicated in Neurocognitive Dysfunction",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide3.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-0000-0015.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content3",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Potential Targets",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide4.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-0016-0129.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content4",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Dopamine Neurotransmitter/ Receptor Involvement in Schizophrenia",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide5.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-0130-0240.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content5",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Serotonin Neurotransmitter/ Receptor Involvement in Schizophrenia",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide6.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-0241-0321.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content6",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Which Action Predominates?",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide7.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-0322-0337.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content7",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Which Pathway Dominates?",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide8.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-0338-0511.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content8",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "What About Glutamate? ",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide9.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-0512-0641.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content9",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Cortical Glutamate Regulates Dopamine Neurons in 2 Possible Ways: Direct Accelerator or Indirect Brake",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide10.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-0642-0800.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content10",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "NMDA Model: Treatment Implications",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide11.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-0801-0859.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content11",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Clinical Trials of NMDA Agonists",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide12.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-0900-0928.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content12",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Glycine Reuptake Pump Inhibition",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide13.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-0928-1036.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content13",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Metabotropic Glutamate Receptor Agonists (mGluR2/3)",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide14.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-1037-1122.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content14",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Potential Role of Acetylcholine in Schizophrenia",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide15.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-1123-1148.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content15",
+      "template": "Content",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "α7 Nicotinic Receptors",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Citrome-4/Slide16.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Citrome-4/Citrome-4-1149-1316.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "video2",
+      "template": "Video",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Module 4: Mechanisms of Action: Targets and Opportunities",
+      "header": "Panel Discussion",
+      "details": "",
+      "video_url": "//jwpsrv.com/feed/IzCBNLVw.rss",
+      "video_autoplay": "false",
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "postquestion1",
+      "groupid": "2",
+      "template": "Question",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Post-test Question 1",
+      "question": "What effects may be achieved by targeting mesocortical pathways?",
+      "qid":"p4postq1",
+      "type": "single",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1", 
+          "answerstxt": "<p>Reduction in bioavailable dopamine</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Elevation of prolactin</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Attenuation of positive symptoms</p>"
+        },
+        {
+          "answersid": "c4", "correct":"1",
+          "answerstxt": "<p>Attenuation of negative and cognitive symptoms</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "postquestion2",
+      "groupid": "2",
+      "template": "Question",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Post-test Question 2",
+      "question": "Which of the following describes α7 nicotinic receptors?",
+      "qid":"p4postq2",
+      "type": "single",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Are affected by cigarette smoking </p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Are found only in the hippocampus</p>"
+        },
+        {
+          "answersid": "c3", "correct":"1", 
+          "answerstxt": "<p>Can modulate presynaptic glutamate release</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Reduce dopamine output in the prefrontal cortex</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "evalquestion1",
+      "groupid": "3",
+      "template": "Question",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Evaluation Question 1",
+      "question": "<b>Please rate your level of agreement with the following statement:</b> Describe current hypotheses about the origins of negative and cognitive symptoms and treatments and interventions that may address them",
+      "qid":"p3evalq1",
+      "type": "single",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Strongly Disagree</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Disagree</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Neutral</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Agree</p>"
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>Strongly Agree</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "evalquestion2",
+      "groupid": "3",
+      "template": "Question",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Evaluation Question 2",
+      "question": "<b>What will you do differently in the care of your patients?</b> (check all that apply)",
+      "qid":"p3evalq2",
+      "type": "multiplechoice",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Implement new information or skill in care of my patients</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Seek additional information</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Do nothing differently, current practice reflects activity recommendations</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Do nothing differently, system barriers prevent me from changing my practice</p>"
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>Do nothing differently, the content was not convincing</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "evalquestion3",
+      "groupid": "3",
+      "template": "Question",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Evaluation Question 3",
+      "question": "<b>Please indicate which (if any) of the following practice changes you intend to make.</b> (check all that apply)",
+      "qid":"p3evalq3",
+      "type": "multiplechoice",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>I intend to learn more about the molecular and neural pathways implicated in neurocognitive dysfunction in schizophrenia and potential targets for treatment.</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>I intend to make other practice changes based on what I learned.</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>I do not intend to make any practice changes at this time.</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Not applicable – I do not see patients.</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "evalquestion4",
+      "groupid": "3",
+      "template": "Question",
+      "title": "ProCME - Module 4: Mechanisms of Action: Targets and Opportunities",
+      "headline": "Evaluation Question 4",
+      "question": "<b>Approximately how many patients do you see per week who may be impacted by this education?</b>",
+      "qid":"p3evalq4",
+      "type": "single",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>0-10</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>11-20</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>21-30</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>31-40</p>"
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>&gt;40</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    }
+
+  ]
+}

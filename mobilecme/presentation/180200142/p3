@@ -1,0 +1,547 @@
+{
+  "presentationid": "p3",
+  "specialtyRequired": "true",
+  "evaluation": "evaluation/standard",
+  "certificate": "245",
+  "certificateData":
+  [{
+    "id":  "TBD",
+	"postTestScoreRequired": "100",
+	"certcredentials": ""
+  }], 
+  "start": [{
+    "id": "faculty"
+  }], 
+  "manifest": [{
+    "pages": [
+    "main",
+    "faculty",
+    "video1",
+    "prequestion1",
+    "prequestion2",
+    "content1",
+    "content2",
+    "content3",
+    "content4",
+    "content5",
+    "content6",
+    "content7",
+    "content8",
+    "content9",
+    "content10",
+    "video2",
+    "postquestion1",
+    "postquestion2",
+    "evalquestion1",
+    "evalquestion2",
+    "evalquestion3",
+    "evalquestion4"
+    ]
+  }],
+  "topnav": [{
+      "next-control": "Next",
+	  "navType": "progress",
+      "headline": "<p>Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning</p>"
+    }],
+  "footer": [{
+  	  "sidebar": {},
+      "col-1": {
+        "txt": "Privacy",
+        "link": "tpl/privacy.html"
+      },
+      "col-2": {
+        "txt": "Feedback",
+        "link": "tpl/feedback.html"
+      },
+      "col-3": {
+        "txt": "Get Certificate&nbsp;&#62;",
+        "link": "#finalstep"
+      },
+      "col-4": {
+        "txt": "CME Info",
+		"id":	"cmeinfo",
+		"html": "<div class='modal-body'><p>This educational activity is supported by an educational grant from FORUM Pharmaceuticals.</p><h1>Activity Description</h1><p>Negative symptoms and cognitive dysfunction impose a significant burden upon patients, their families, and caregivers. While negative and cognitive symptoms do not respond to traditional pharmacologic treatment for schizophrenia, it is still important to establish that a patient's symptoms are not due to other causes that are potentially reversible. While more research is needed to better understand and treat negative and cognitive symptoms, they should nevertheless be monitored and targeted as much as possible in order to improve social and occupational functioning.</p><p>This activity is the first in a 4-module curriculum designed to improve clinicians' recognition of the degree to which persistent negative and cognitive symptoms impair functioning. Other modules focus on differentiating negative symptoms from other underlying psychiatric conditions (Module 2), assessing negative symptoms and cognitive function (Module 3), and current thinking around the neurobiology underlying these symptoms in schizophrenia and research that is exploring how to improve cognitive function and alleviate negative symptoms (Module 4).</p><h1>Learning Objectives</h1><p>As a result of participating in the activity, learners should be better able to:</p><ul> <li>Review practical strategies to assess negative symptoms and cognitive function in patients with schizophrenia</li></ul><h1>Accreditation and Credit Designation</h1><p>This activity has been planned and implemented in accordance with the accreditation requirements and policies of the Accreditation Council for Continuing Medical Education (ACCME) through the joint providership of American Academy of CME, Inc., (Academy) and E&S MedEd Group, Inc. The American Academy of CME, Inc., is accredited by the ACCME to provide continuing medical education for physicians.</p><p>The American Academy of CME, Inc., designates this enduring material for a maximum of 0.25 </i>AMA PRA Category 1 Credits<sup>TM</sup>.</i> Physicians should claim only the credit commensurate with the extent of their participation in the activity.</p><p>Independent Clinical Reviewer: No relevant financial relationships with any commercial interests.</p><p>Planners: John J.D. Juchniewicz, MCIS, CCMEP, American Academy of CME and Laurie Ermentrout, and Wendy Gloffke, PhD, E&S MedEd Group: No relevant financial relationships with any commercial interests.</p><p>There is no off-label or investigational information discussed in this module.</p><p>This activity is designed for use by health care professionals for educational purposes only. The opinions expressed in this educational activity are those of the faculty, and do not represent those of the Academy or E&S MedEd Group. This activity is intended as a supplement to existing knowledge, published information, and practice guidelines. Learners should appraise the information presented critically, and draw conclusions only after careful consideration of all available scientific information.</p><h1>Method of Participation</h1><p>There are no fees to participate in the activity. Participants must review the CME information including the learning objectives and disclosure statements, as well as the content of the activity. To receive CME credit for your participation, please review activity content and complete the pre and post-test (achieving a passing grade of 100% on the post-test) and program evaluation.</p><h1>Software Requirements</h1><p>Pro-CME is available on Mac, PC, and has been optimized for multi-touch devices. For the best experience, we recommend using the latest versions of Safari, Google Chrome, Mozilla Firefox, or Microsoft Internet Explorer. Depending on your browser of choice, additional software, such as Adobe(r) Flash(r) Player and Adobe Reader may be required. Some programs may require your device is equipped with speakers or headphones. If you have any technical issues, feel free to contact us at <a href='mailto:info@pro-c.me'>info@pro-c.me</a>.</p><h1>Privacy</h1><p>For more information about the American Academy of CME privacy policy, please access http://www.academycme.org/privacy.htm </p><h1>Contact</h1><p>For any questions, please contact: <a href='mailto:CEServices@academycme.org'>CEServices@academycme.org</a></p><h1>Copyright</h1><p>© 2014. This CME-certified activity is held as copyrighted © by American Academy of CME, Inc. and E&S MedEd Group, Inc. Through this notice, the Academy and E&S MedEd Group grant permission of its use for educational purposes only. These materials may not be used, in whole or in part, for any commercial purposes without prior permission in writing from the copyright owner(s).</p></div>"
+      }
+    }],
+  "sitecontent": [
+    {
+      "id": "main",
+      "template": "Main",
+      "title": "ProCME - Specialty",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "Select your Specialty",
+      "listviewer": [
+        "Psychiatrists",
+        "Psychiatric nurse practitioners",
+        "Physician assistants", 
+        "Nurses",
+        "Other"
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "faculty",
+      "template": "Content",
+      "title": "ProCME - Faculty",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "",
+      "listmedia": [
+        {
+          "media_header": "<h1>Activity Director</h1>",
+          "media_name": "<p>Leslie Citrome, MD, MPH</p>",
+          "media_thumbnail": "http://c.pro-c.me/programs/180200142/images/Citrome.jpg",
+          "media_accreditation": "<p>Clinical Professor of Psychiatry and Behavioral<br>Sciences, New York Medical College<br>Valhalla, New York</p>",
+          "media_descript": "",
+          "media_disclaimer": "<h2>Disclosure Statement</h2><p>According to the disclosure policy of the Academy, all faculty, planning committee members, editors, managers and other individuals who are in a position to control content are required to disclose any relevant relationships with any commercial interests related to this activity. The existence of these interests or relationships is not viewed as implying bias or decreasing the value of the presentation. All educational materials are reviewed for fair balance, scientific objectivity and levels of evidence. Disclosures are as follows:</p><p>Leslie Citrome, MD, MPH, discloses the following: Advisory Boards (Scientific and Marketing Purposes) and Consultant (Marketing and Clinical Trial Design): Alexza, Alkermes, Bristol-Myers Squibb, Eli Lilly, Forum (Envivo), Forest, Genentech, Janssen, Jazz, Lundbeck, Merck, Medivation, Mylan, Novartis, Noven, Otsuka, Pfizer, Reckitt Benckiser, Reviva, Shire, Sunovion, Takeda; Shareholder (small number of shares of common stock): Bristol-Myers Squibb, Eli Lilly, Johnson & Johnson, Merck, Pfizer; Promotional Speakers Bureaus: AstraZeneca, Forest, Lundbeck, Novartis, Otsuka, Sunovion, Takeda.</p>"
+        },
+        {
+          "media_header": "",
+          "media_name": "<p>Philip D. Harvey, PhD</p>",
+          "media_thumbnail": "http://c.pro-c.me/programs/180200142/images/Harvey.jpg",
+          "media_accreditation": "<p>Professor of Psychiatry<br>University of Miami Miller School of Medicine<br>Miami, Florida</p>",
+          "media_descript": "",
+          "media_disclaimer": "<p>Philip Harvey, PhD, discloses the following: Advisory Board for Scientific Information: Boehringer-Ingelheim, Forest, Forum, Genentech; Consultant for Clinical Trial Design: Otsuka, Sunovion, Takeda, Grant/Research Support: Genentech</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "video1",
+      "template": "Video",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "Introduction",
+      "details": "",
+      "video_url": "//jwpsrv.com/feed/IzCBNLVw.rss",
+      "video_autoplay": "false",
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "prequestion1",
+      "groupid": "1",
+      "template": "Question",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Pre-test Question 1",
+      "question": "When are the interview-based assessments of cognition most useful?",
+      "qid":"p3preq1",
+      "type": "single",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1", 
+          "answerstxt": "<p>When the patient and caregiver are both interviewed</p>"
+        },
+        {
+          "answersid": "c2", "correct":"1",
+          "answerstxt": "<p>When performed by a high-contact clinician</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>When administered in a non-clinical setting</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Interview-based assessments are never reliable</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "prequestion2",
+      "groupid": "1",
+      "template": "Question",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Pre-test Question 2",
+      "question": "When assessing negative symptoms, specific inquiries (vs. simple observation) should be done for which symptoms?",
+      "qid":"p3preq2",
+      "type": "single",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Blunted effect and motivation</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Increased latency and anhedonia</p>"
+        },
+        {
+          "answersid": "c3", "correct":"1", 
+          "answerstxt": "<p>Motivation and anhedonia</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Blunted effect and increased latency</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+	  {
+      "id": "content1",
+      "template": "Content",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "Educational Objectives",
+      "listcontent":[
+	   {"content": "<ul><li>Review practical strategies to assess negative symptoms and cognitive function in patients with schizophrenia</li></ul>"
+	  }
+	  ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "content2",
+      "template": "Content",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "Office-Based Cognitive Assessments",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Harvey-3/Slide3.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Harvey-3/Harvey-3-0000-0028.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content3",
+      "template": "Content",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "Interview-Based Assessments of Cognition",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Harvey-3/Slide4.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Harvey-3/Harvey-3-0029-0056.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content4",
+      "template": "Content",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "High Contact Clinicians as Cognition Raters",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Harvey-3/Slide5.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Harvey-3/Harvey-3-0057-0127.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content5",
+      "template": "Content",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "Assessment of Negative Symptoms",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Harvey-3/Slide6.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Harvey-3/Harvey-3-0128-0156.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content6",
+      "template": "Content",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "Abbreviated Negative Symptom Assessment",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Harvey-3/Slide7.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Harvey-3/Harvey-3-0157-0226.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content7",
+      "template": "Content",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "Everyday Functioning",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Harvey-3/Slide8.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Harvey-3/Harvey-3-0227-0331.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content8",
+      "template": "Content",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "Correlations Between Ability Scores and Reported Functioning: Friend/Relative Informant",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Harvey-3/Slide9.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Harvey-3/Harvey-3-0302-0336.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content9",
+      "template": "Content",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "Correlations Between Ability Scores and Reported Functioning: Clinician Informant",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Harvey-3/Slide10.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Harvey-3/Harvey-3-0337-0401.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "content10",
+      "template": "Content",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "Outcomes of the Study: End of Treatment",
+      "listcontent":[
+	   {"content": "",
+	  "image": "http://c.pro-c.me/programs/180200142/images/Harvey-3/Slide11.png"
+	  }
+	  ],
+      "audio_url": "http://c.pro-c.me/programs/180200142/audio/Harvey-3/Harvey-3-0407-0501.mp3",
+      "audio_autoplay": "true"
+    },
+    {
+      "id": "video2",
+      "template": "Video",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "header": "Discussion",
+      "details": "",
+      "video_url": "//jwpsrv.com/feed/IzCBNLVw.rss",
+      "video_autoplay": "false",
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "postquestion1",
+      "groupid": "2",
+      "template": "Question",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Post-test Question 1",
+      "question": "When are the interview-based assessments of cognition most useful?",
+      "qid":"p3post1",
+      "type": "single",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1", 
+          "answerstxt": "<p>When the patient and caregiver are both interviewed</p>"
+        },
+        {
+          "answersid": "c2", "correct":"1",
+          "answerstxt": "<p>When performed by a high-contact clinician</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>When administered in a non-clinical setting</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Interview-based assessments are never reliable</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "postquestion2",
+      "groupid": "2",
+      "template": "Question",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Post-test Question 2",
+      "question": "When assessing negative symptoms, specific inquiries (vs. simple observation) should be done for which symptoms?",
+      "qid":"p3postq2",
+      "type": "single",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Blunted effect and motivation</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Increased latency and anhedonia</p>"
+        },
+        {
+          "answersid": "c3", "correct":"1", 
+          "answerstxt": "<p>Motivation and anhedonia</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Blunted effect and increased latency</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "evalquestion1",
+      "groupid": "3",
+      "template": "Question",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Evaluation Question 1",
+      "question": "<b>Please rate your level of agreement with the following statement:</b> I am better able to identify practical strategies to assess negative symptoms and cognitive function in patients with schizophrenia",
+      "qid":"p3evalq1",
+      "type": "single",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Strongly Disagree</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Disagree</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Neutral</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Agree</p>"
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>Strongly Agree</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "evalquestion2",
+      "groupid": "3",
+      "template": "Question",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Evaluation Question 2",
+      "question": "<b>What will you do differently in the care of your patients?</b> (check all that apply)",
+      "qid":"p3evalq2",
+      "type": "multiplechoice",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>Implement new information or skill in care of my patients</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>Seek additional information</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>Do nothing differently, current practice reflects activity recommendations</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>Do nothing differently, system barriers prevent me from changing my practice</p>"
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>Do nothing differently, the content was not convincing</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "evalquestion3",
+      "groupid": "3",
+      "template": "Question",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Evaluation Question 3",
+      "question": "<b>Please indicate which (if any) of the following practice changes you intend to make.</b> (check all that apply)",
+      "qid":"p3evalq3",
+      "type": "multiplechoice",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>I intend to more frequently perform office-based cognitive assessments for my patients with schizophrenia.</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>I intend to more frequently assess negative symptoms, including their impact on functioning, in my patients with schizophrenia.</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>I intend to make other practice changes based on what I learned.</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>I do not intend to make any practice changes at this time.</p>"
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>Not applicable – I do not see patients.</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    },
+    {
+      "id": "evalquestion4",
+      "groupid": "3",
+      "template": "Question",
+      "title": "ProCME - Module 3: Practical Assessments of Cognition, Negative Symptoms, and Everyday Functioning",
+      "headline": "Evaluation Question 4",
+      "question": "<b>Approximately how many patients do you see per week who may be impacted by this education?</b>",
+      "qid":"p3evalq4",
+      "type": "single",
+      "async-answer":"true",
+      "skip": "false",
+      "answers": [
+        {
+          "answersid": "c1",
+          "answerstxt": "<p>0-10</p>"
+        },
+        {
+          "answersid": "c2",
+          "answerstxt": "<p>11-20</p>"
+        },
+        {
+          "answersid": "c3",
+          "answerstxt": "<p>21-30</p>"
+        },
+        {
+          "answersid": "c4",
+          "answerstxt": "<p>31-40</p>"
+        },
+        {
+          "answersid": "c5",
+          "answerstxt": "<p>&gt;40</p>"
+        }
+      ],
+      "audio_url": "",
+      "audio_autoplay": ""
+    }
+
+  ]
+}

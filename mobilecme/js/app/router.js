@@ -39,7 +39,8 @@ define(function (require) {
             console.log("route",specialty,hashpath,match,presentationIDView,getStoredSpecialty);
             console.log("startPageNum",startPageNum);
 
-            $('body').data('presentationid', presentationIDView);
+            $('body').data('presentationid', window.urlParams['collection']+'-'+presentationIDView);
+			console.log( $('body').data('presentationid'));
             $('body').data('certificate', certificateIDView);
             
             require(["piwik"], function () {
