@@ -1,5 +1,5 @@
 {
-    "presentationid": "9001",
+    "presentationid": "demo1",
 	"specialtyRequired":"false",
 	"evaluation": "",
   	"certificate": "",
@@ -25,6 +25,7 @@
     ],
     "topnav": [
         {
+		 	"backgroundColor": "#00ffff",
             "next-control": "Next",
 			"navType": "score",
             "headline": "<p>Meaningful Efficacy Across Multiple Endpoints</p>"
@@ -32,6 +33,8 @@
     ],
     "footer": [
         {
+		    "backgroundColor": "#006838",
+	  		"sidebar": {},
 			"col-1": {
 
             },
