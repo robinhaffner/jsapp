@@ -1,5 +1,5 @@
 {
-  "presentationid": "1112",
+  "presentationid": "FPO-BBB",
   "specialtyRequired":"true",
   "evaluation": "evaluation/standard",
   "certificate": "245",
@@ -21,14 +21,7 @@
     "postquestion2",
     "postquestion3",
     "postquestion4",
-    "postquestion5",
-    "equestion1",
-    "equestion2",
-    "equestion3",
-    "equestion4",
-    "equestion5",
-    "equestion6",
-	"certificate"
+    "postquestion5"
     ]
   }],
   "topnav": [{

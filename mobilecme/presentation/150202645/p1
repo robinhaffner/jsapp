@@ -39,8 +39,7 @@
     "postquestion2",
     "postquestion3",
     "postquestion4",
-    "postexplanation",
-  	"certificate"
+    "postexplanation"
     ]
   }],
   "topnav": [{
@@ -60,7 +59,7 @@
       },
       "col-3": {
         "txt": "Get Certificate&nbsp;&#62;",
-        "link": "#finalstep"
+        "link": "#equestion1"
       },
       "col-4": {
         "txt": "CME Info",

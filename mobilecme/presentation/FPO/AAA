@@ -1,5 +1,5 @@
 {
-  "presentationid": "1111",
+  "presentationid": "FPO-AAA",
   "specialtyRequired": "true",
   "evaluation": "evaluation/standard",
   "certificate": "245",
@@ -39,13 +39,7 @@
     "postquestion3",
     "postquestion4",
     "postquestion5",
-    "equestion1",
-    "equestion2",
-    "equestion3",
-    "equestion4",
-    "equestion5",
-    "equestion6",
-    "commenteval1"
+	"finalstep"
     ]
   }],
   "topnav": [{
@@ -69,7 +63,7 @@
       },
       "col-3": {
         "txt": "Get Certificate&nbsp;&#62;",
-        "link": "#certificate"
+        "link": "#equestion1"
       },
       "col-4": {
         "txt": "CME Info",
