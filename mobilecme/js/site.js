@@ -335,6 +335,19 @@ var timer = {
 
 $(document).ready(function () {
 
+    //touchwipe plugin for mobile left and right (next and previous)
+    $(document).touchwipe({
+        wipeLeft: function() {
+            $(document).find('a.next-control')[0].click();
+        },
+        wipeRight: function() { 
+            $(document).find('a.prev-control')[0].click()
+        },
+        min_move_x: 20,
+        min_move_y: 20,
+        preventDefaultEvents: true
+    });
+
     //Polyfill to remove click delays on browsers with touch UIs
     FastClick.attach(document.body);
     
