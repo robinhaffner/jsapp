@@ -24,11 +24,11 @@ function offCanvas () {
         $('.sidebar-offcanvas').width(setwidth);
 
     	if ($('.row-offcanvas').position().left < setwidth) {
-            $(".main-canvas").hide();
+            //$(".main-canvas").hide();
             var fixedheight = $('.row-offcanvas .sidebar-offcanvas').height();
     		$('.row-offcanvas').toggleClass('active').css('left', setwidth);
     	} else {
-            $(".main-canvas").show();
+            //$(".main-canvas").show();
     		$('.row-offcanvas').removeClass('active').css('left', 0);
     	}
         $(document).scrollTop(0); //force scroll to top at value 0
