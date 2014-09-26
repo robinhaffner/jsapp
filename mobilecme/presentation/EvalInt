@@ -217,38 +217,6 @@
       ],
       "audio_url": "",
       "audio_autoplay": ""
-    },    {
-      "id": "commenteval1",
-      "groupid": "99",
-      "template": "Question",
-      "title": "ProCME - Clinical Practice",
-      "headline": "Evaluation (Comments)",
-      "question": "Please provide any other feedback or comments.",
-      "qid":"ceval1",
-      "type": "freeform",
-      "async-answer":"true",
-      "skip": "true",
-      "form": [
-        {
-          "tag": "textarea",
-          "label": "Comments",
-          "for": "comments",
-          "name": "comments",
-          "type": "text",
-          "required": "required",
-          "attr": "rows=8 cols=50 autofocus maxlength=250"
-        },
-        {
-          "tag": "textarea",
-          "label": "Comments",
-          "for": "comments2",
-          "name": "comments2",
-          "type": "text",
-          "attr": "rows=8 cols=50 autofocus maxlength=250"
-        }
-      ],
-      "audio_url": "",
-      "audio_autoplay": ""
     },
     {
       "id": "certificate",
