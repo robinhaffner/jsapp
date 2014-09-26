@@ -39,7 +39,7 @@ define(function (require) {
             console.log("route",specialty,hashpath,match,presentationIDView,getStoredSpecialty);
             console.log("startPageNum",startPageNum);
 
-            $('body').data('presentationid', window.urlParams['collection']+'-'+presentationIDView);
+            $('body').data('presentationid', presentationIDView);
             console.log( $('body').data('presentationid'));
             $('body').data('certificate', certificateIDView);
             
