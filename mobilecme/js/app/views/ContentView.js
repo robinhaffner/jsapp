@@ -18,6 +18,9 @@ define(function (require) {
         this.render = function (content) {
             this.$el.html(contentTpl(content));
             this.$el.data('template', '').data('template', 'contenttpl');
+            if($('#enlargetable a').data('lightbox')){
+                $('#enlargetable a').append('<span class="expandimg"></span>');
+            }
             return this;
         };
 
