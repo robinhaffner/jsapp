@@ -25,7 +25,7 @@
     ],
     "topnav": [
         {
-		 	"backgroundColor": "#00ffff",
+		 	"backgroundColor": "#006838",
             "next-control": "Next",
 			"navType": "score",
             "headline": "<p>Meaningful Efficacy Across Multiple Endpoints</p>"
@@ -34,7 +34,6 @@
     "footer": [
         {
 		    "backgroundColor": "#006838",
-	  		"sidebar": {},
 			"col-1": {
 
             },
@@ -352,7 +351,7 @@
             "header": "Meaningful Efficacy Across Multiple Endpoints",
             "listcontent": [
                 {
-                    "content": "",
+                    "content": "<div id='visaid'><a href='http://pi.amgen.com/united_states/xgeva/xgeva_pi.pdf' target='_blank'>Full Study</a></div>",
                     "image": "presentation/demo1_assets/chart1.png"
                 },
 				{
@@ -370,6 +369,10 @@
             "headline": "Meaningful Efficacy Across Multiple Endpoints",
             "header": "Meaningful Efficacy Across Multiple Endpoints",
             "listcontent": [
+			 {
+                    "content": "<div id='visaid'><a href='http://pi.amgen.com/united_states/xgeva/xgeva_pi.pdf' target='_blank'>Full Study</a></div>",
+                    "image": ""
+                },
                 {
                     "content": "<p><b>Respiratory depression that does not respond to hypercapnia is the most significant risk associated with Brandogesic®. Brandogesic® should be administered cautiously to patients with conditions accompanied by hypercapnia, hypoxia or impaired respiratory reserve.</b></p><h1>In a 2-year RCT of Brandogesic, 2.5% of patients experienced respiratory depression, vs. 2% on placebo.<sup>1</sup></h1>",
                     "image": "presentation/demo1_assets/Chart3.png"
@@ -393,6 +396,10 @@
 				"headline": "Meaningful Efficacy Across Multiple Endpoints",
 				"header": "Meaningful Efficacy Across Multiple Endpoints",
 				"listcontent": [
+				 	{
+                    "content": "<div id='visaid'><a href='http://pi.amgen.com/united_states/xgeva/xgeva_pi.pdf' target='_blank'>Full Study</a></div>",
+                    "image": ""
+                	},
 					{
 						"content": "<h1>A unique mechanism of action<sup>1</sup></h1>",
 						"image": "presentation/demo1_assets/Chart4.gif"
